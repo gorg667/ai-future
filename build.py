@@ -115,6 +115,20 @@ code{background:var(--code);padding:2px 5px;border-radius:4px;font-size:.9em}pre
 .admonition{padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--code);margin:1.3em 0}
 .admonition-title{font-weight:700;margin:0 0 6px}
 .admonition.warning{border-color:#d9a54a}.admonition.note{border-color:var(--acc)}.admonition.tip{border-color:#4fbf8b}.admonition.danger{border-color:#e05a5a}
+.admonition.abstract{border-left:4px solid var(--acc);background:linear-gradient(90deg,rgba(110,168,254,.08),transparent 60%),var(--code)}
+.admonition.abstract .admonition-title{color:var(--acc);text-transform:uppercase;letter-spacing:.06em;font-size:.8em}
+.admonition.abstract ul{margin:0;padding-left:1.1em}.admonition.abstract li{margin:.25em 0;max-width:none}
+figure{margin:2em 0;padding:14px 14px 10px;border:1px solid var(--border);border-radius:10px;background:var(--bg2)}
+figure img{width:100%;height:auto;display:block;border-radius:6px;background:#fff;padding:6px;box-sizing:border-box}
+[data-theme=light] figure img{background:transparent;padding:0}
+figcaption{font-size:.86em;color:var(--muted);margin-top:10px;line-height:1.5}
+#totop{position:fixed;right:22px;bottom:22px;width:40px;height:40px;border-radius:50%;border:1px solid var(--border);background:var(--bg2);color:var(--fg);cursor:pointer;opacity:0;transition:opacity .2s;z-index:60;font-size:18px}
+#totop.show{opacity:.9}
+.toolbar{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.kbd{font-family:ui-monospace,Menlo,monospace;font-size:11px;border:1px solid var(--border);border-radius:4px;padding:0 4px;color:var(--muted)}
+html[data-size=large]{font-size:112%}html[data-size=small]{font-size:92%}
+html[data-size=large] body,html[data-size=small] body{font-size:inherit}
+@media print{nav.side,aside.toc,.topbar,#progress,#totop,.pager,.toolbar{display:none!important}.layout{display:block}main{max-width:none;padding:0}body{font-size:11pt;color:#000;background:#fff}a{color:#000;text-decoration:underline}figure{break-inside:avoid;border:none}h2{break-after:avoid}table{font-size:9pt}}
 .meta{color:var(--muted);font-size:14px;margin-bottom:24px}
 .pager{display:flex;justify-content:space-between;gap:12px;margin-top:60px;padding-top:20px;border-top:1px solid var(--border)}
 .pager a{padding:10px 14px;border:1px solid var(--border);border-radius:8px;flex:1}
@@ -136,7 +150,16 @@ JS = r"""
   const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);
   window.toggleTheme=function(){const cur=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',cur);localStorage.setItem('theme',cur);};
   window.toggleNav=function(){document.querySelector('nav.side').classList.toggle('open');};
-  window.addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';});
+  const sz=localStorage.getItem('size');if(sz)document.documentElement.setAttribute('data-size',sz);
+  window.setSize=function(s){if(s)document.documentElement.setAttribute('data-size',s);else document.documentElement.removeAttribute('data-size');localStorage.setItem('size',s||'');};
+  const tt=document.getElementById('totop');
+  window.addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';if(tt)tt.classList.toggle('show',h.scrollTop>600);});
+  if(tt)tt.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+  // keyboard: ← → chapters, / search, t theme
+  document.addEventListener('keydown',e=>{if(e.target.tagName==='INPUT'||e.metaKey||e.ctrlKey||e.altKey)return;
+    if(e.key==='ArrowRight'&&window.NEXT_URL)location.href=window.NEXT_URL;else if(e.key==='ArrowLeft'&&window.PREV_URL)location.href=window.PREV_URL;
+    else if(e.key==='/'){e.preventDefault();const q=document.getElementById('q');if(q){document.querySelector('nav.side').classList.add('open');q.focus();}}
+    else if(e.key==='t')toggleTheme();});
   // sidebar filter + full-text search over search index
   const inp=document.getElementById('q');const list=document.getElementById('chlist');const res=document.getElementById('results');
   let idx=null;
@@ -155,7 +178,7 @@ JS = r"""
 """
 
 
-def page(chapters, title, body_html, toc_html="", active=None, prev=None, nxt=None, base="", meta=""):
+def page(chapters, title, body_html, toc_html="", active=None, prev=None, nxt=None, base="", meta="", slug="index.html", desc=None):
     nav_items = "".join(
         f'<li><a href="{base}{c["html_name"]}" class="{"active" if active == c["num"] else ""}">'
         f'{html.escape(c["title"])}<small>Chapter {int(c["num"])} · {c["words"]:,} words</small></a></li>'
@@ -166,22 +189,30 @@ def page(chapters, title, body_html, toc_html="", active=None, prev=None, nxt=No
         pager += (f'<a href="{base}{prev["html_name"]}"><span>← Previous</span>{html.escape(prev["title"])}</a>' if prev else '<a href="index.html"><span>←</span>Home</a>')
         pager += (f'<a href="{base}{nxt["html_name"]}" style="text-align:right"><span>Next →</span>{html.escape(nxt["title"])}</a>' if nxt else '<a href="index.html" style="text-align:right"><span>→</span>Home</a>')
         pager += "</div>"
+    desc = desc or SUBTITLE
+    full_title = f"{title} — {TITLE}" if title != "Home" else f"{TITLE} — {SUBTITLE}"
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{html.escape(title)} — {TITLE}</title>
-<meta name="description" content="{html.escape(SUBTITLE)}">
+<title>{html.escape(full_title)}</title>
+<meta name="description" content="{html.escape(desc)}">
+<meta name="author" content="The Future of AI review"><meta name="generator" content="build.py v{VERSION}">
+<link rel="canonical" href="{SITE_URL}{slug}">
+<link rel="icon" href="{FAVICON}">
+<meta property="og:type" content="article"><meta property="og:title" content="{html.escape(full_title)}"><meta property="og:description" content="{html.escape(desc)}"><meta property="og:url" content="{SITE_URL}{slug}"><meta property="og:site_name" content="{TITLE}">
+<meta name="twitter:card" content="summary">
 <style>{CSS}</style>
-<script>window.SITE_BASE="{base}";</script>
+<script>window.SITE_BASE="{base}";window.PREV_URL={json.dumps(base + prev["html_name"]) if prev else "null"};window.NEXT_URL={json.dumps(base + nxt["html_name"]) if nxt else "null"};</script>
 </head><body><div id="progress"></div>
 <div class="topbar"><button class="theme" onclick="toggleNav()">☰ Chapters</button><b>{TITLE}</b><span style="flex:1"></span><button class="theme" onclick="toggleTheme()">◐</button></div>
 <div class="layout">
 <nav class="side"><a class="brand" href="{base}index.html">{TITLE}</a><div class="sub">Comprehensive review · built {BUILD_DATE}</div>
 <input id="q" placeholder="Search all chapters…" autocomplete="off"><ol id="results"></ol><ol id="chlist">{nav_items}</ol>
-<div style="margin-top:14px"><button class="theme" onclick="toggleTheme()">◐ Toggle theme</button></div>
-<div class="sub" style="margin-top:14px"><a href="{base}../docs/THE_FUTURE_OF_AI.md">Single Markdown file</a> · <a href="https://github.com/gorg667/ai-future">GitHub</a></div></nav>
-<main>{meta}{body_html}{pager}<footer>Built {BUILD_DATE}. Text is provided as an analytical review; forecasts are uncertain by nature. </footer></main>
+<div class="toolbar"><button class="theme" onclick="toggleTheme()" title="Toggle theme (t)">◐ Theme</button><button class="theme" onclick="setSize('small')" title="Smaller text">A−</button><button class="theme" onclick="setSize('')" title="Default text">A</button><button class="theme" onclick="setSize('large')" title="Larger text">A+</button><button class="theme" onclick="window.print()" title="Print / save as PDF">⎙ Print</button></div>
+<div class="sub" style="margin-top:10px">Keys: <span class="kbd">←</span> <span class="kbd">→</span> chapters · <span class="kbd">/</span> search · <span class="kbd">t</span> theme</div>
+<div class="sub" style="margin-top:14px"><a href="{base}../docs/THE_FUTURE_OF_AI.md">Single Markdown file</a> · <a href="{base}THE_FUTURE_OF_AI.epub">EPUB</a> · <a href="{REPO_URL}">GitHub</a> · v{VERSION}</div></nav>
+<main>{meta}{body_html}{pager}<footer>Version {VERSION}, built {BUILD_DATE}. Text CC BY 4.0. This is an analytical review; forecasts are uncertain by nature and are stated so they can be checked (see the forecast register in Chapter 23).</footer></main>
 <aside class="toc">{toc_html}</aside>
-</div><script>{JS}</script></body></html>"""
+</div><button id="totop" title="Back to top" aria-label="Back to top">↑</button><script>{JS}</script></body></html>"""
 
 
 def build_site(chapters):
