@@ -1,0 +1,239 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Architectures Beyond the Transformer: What Might Replace or Extend the Current Paradigm — The Future of AI</title>
+<meta name="description" content="A comprehensive review and guide — technology, economics, society, geopolitics, safety, and what comes next">
+<style>
+:root{--bg:#0f1115;--bg2:#161a22;--fg:#e6e8ee;--muted:#9aa3b2;--acc:#6ea8fe;--acc2:#b388ff;--border:#262c38;--code:#1c2230;--mark:#3b3a1a}
+[data-theme=light]{--bg:#fbfbfd;--bg2:#ffffff;--fg:#1c1e26;--muted:#5b6473;--acc:#2457c5;--acc2:#6d3fd0;--border:#e3e6ec;--code:#f2f4f8;--mark:#fff3b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;font-size:17px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--acc),var(--acc2));width:0;z-index:99}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr) 240px;min-height:100vh}
+nav.side{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--bg2);padding:18px 14px}
+nav.side .brand{font-weight:800;font-size:18px;margin-bottom:6px;display:block;color:var(--fg)}
+nav.side .sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+nav.side input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--fg);margin-bottom:12px}
+nav.side ol{list-style:none;padding:0;margin:0}
+nav.side li a{display:block;padding:6px 8px;border-radius:6px;font-size:14px;color:var(--fg)}
+nav.side li a:hover{background:var(--code);text-decoration:none}
+nav.side li a.active{background:var(--code);color:var(--acc);font-weight:600}
+nav.side li a small{color:var(--muted);display:block;font-size:11px}
+main{padding:36px 56px 100px;max-width:900px;width:100%;margin:0 auto}
+aside.toc{position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 14px;border-left:1px solid var(--border);font-size:13px}
+aside.toc .toc ul{list-style:none;padding-left:10px;margin:0}
+aside.toc .toc>ul{padding-left:0}
+aside.toc a{color:var(--muted);display:block;padding:3px 0}
+aside.toc a:hover{color:var(--acc)}
+h1{font-size:2.2rem;line-height:1.2;margin:.2em 0 .6em}h2{font-size:1.6rem;margin-top:2.2em;border-bottom:1px solid var(--border);padding-bottom:.3em}h3{font-size:1.25rem;margin-top:1.8em}h4{font-size:1.05rem;margin-top:1.4em}
+.headerlink{opacity:0;margin-left:6px;font-size:.8em}h2:hover .headerlink,h3:hover .headerlink{opacity:.6}
+p,li{max-width:76ch}
+blockquote{margin:1.2em 0;padding:.6em 1.2em;border-left:4px solid var(--acc2);background:var(--code);border-radius:6px;color:var(--fg)}
+table{border-collapse:collapse;width:100%;margin:1.4em 0;font-size:.92em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+code{background:var(--code);padding:2px 5px;border-radius:4px;font-size:.9em}pre{background:var(--code);padding:14px;border-radius:8px;overflow-x:auto}pre code{background:none;padding:0}
+.admonition{padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--code);margin:1.3em 0}
+.admonition-title{font-weight:700;margin:0 0 6px}
+.admonition.warning{border-color:#d9a54a}.admonition.note{border-color:var(--acc)}.admonition.tip{border-color:#4fbf8b}.admonition.danger{border-color:#e05a5a}
+.meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:60px;padding-top:20px;border-top:1px solid var(--border)}
+.pager a{padding:10px 14px;border:1px solid var(--border);border-radius:8px;flex:1}
+.pager a span{display:block;color:var(--muted);font-size:12px}
+.topbar{display:none}
+button.theme{border:1px solid var(--border);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:13px}
+.hero{padding:30px 0 10px}.hero h1{font-size:3rem}.hero p.lead{font-size:1.25rem;color:var(--muted);max-width:70ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:26px 0}
+.card{border:1px solid var(--border);border-radius:12px;padding:16px;background:var(--bg2);display:block;color:var(--fg)}
+.card:hover{border-color:var(--acc);text-decoration:none}.card .n{color:var(--acc);font-weight:700;font-size:12px}.card h3{margin:.3em 0 .4em;font-size:1.05rem}.card small{color:var(--muted)}
+mark{background:var(--mark);color:inherit}
+footer{color:var(--muted);font-size:13px;margin-top:40px}
+@media(max-width:1200px){.layout{grid-template-columns:280px minmax(0,1fr)}aside.toc{display:none}}
+@media(max-width:860px){.layout{grid-template-columns:1fr}nav.side{position:fixed;left:-320px;width:300px;transition:left .2s;z-index:50}nav.side.open{left:0}.topbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg2);z-index:40}main{padding:20px 18px 80px}body{font-size:16px}}
+</style>
+<script>window.SITE_BASE="";</script>
+</head><body><div id="progress"></div>
+<div class="topbar"><button class="theme" onclick="toggleNav()">☰ Chapters</button><b>The Future of AI</b><span style="flex:1"></span><button class="theme" onclick="toggleTheme()">◐</button></div>
+<div class="layout">
+<nav class="side"><a class="brand" href="index.html">The Future of AI</a><div class="sub">Comprehensive review · built 2026-09-09</div>
+<input id="q" placeholder="Search all chapters…" autocomplete="off"><ol id="results"></ol><ol id="chlist"><li><a href="00-front-matter-and-executive-summary.html" class="">Front Matter and Executive Summary<small>Chapter 0 · 3,598 words</small></a></li><li><a href="01-history-and-why-this-moment-is-different.html" class="">A Brief History of AI, and Why This Moment Is Different<small>Chapter 1 · 5,116 words</small></a></li><li><a href="02-state-of-the-art-2026.html" class="">The State of the Art in 2026: What AI Can and Cannot Do<small>Chapter 2 · 4,484 words</small></a></li><li><a href="03-scaling-laws-compute-and-economics.html" class="">Scaling Laws, Compute, and the Economics of Training<small>Chapter 3 · 3,489 words</small></a></li><li><a href="04-hardware-and-infrastructure.html" class="">Hardware and Infrastructure: Chips, Datacenters, Energy, and the Physical Limits of AI<small>Chapter 4 · 3,533 words</small></a></li><li><a href="05-data.html" class="">Data: The Wall, the Workarounds, and the Fight Over Who Owns It<small>Chapter 5 · 3,137 words</small></a></li><li><a href="06-architectures-beyond-the-transformer.html" class="active">Architectures Beyond the Transformer: What Might Replace or Extend the Current Paradigm<small>Chapter 6 · 2,622 words</small></a></li></ol>
+<div style="margin-top:14px"><button class="theme" onclick="toggleTheme()">◐ Toggle theme</button></div>
+<div class="sub" style="margin-top:14px"><a href="../docs/THE_FUTURE_OF_AI.md">Single Markdown file</a> · <a href="https://github.com/gorg667/ai-future">GitHub</a></div></nav>
+<main><div class="meta">Chapter 6 of 7 · 2,622 words · ~11 min read</div><h1 id="architectures-beyond-the-transformer-what-might-replace-or-extend-the-current-paradigm">Architectures Beyond the Transformer: What Might Replace or Extend the Current Paradigm<a class="headerlink" href="#architectures-beyond-the-transformer-what-might-replace-or-extend-the-current-paradigm" title="Permanent link">¶</a></h1>
+<h2 id="framing">Framing<a class="headerlink" href="#framing" title="Permanent link">¶</a></h2>
+<p>The transformer has been the dominant architecture for nine years—an eternity in a field where the previous champions (LSTMs, convolutional networks) lasted a similar span before being displaced. Its dominance rests on three properties: it parallelizes across the sequence during training, it scales predictably, and it is general across modalities. Its weaknesses are also well understood: attention costs grow quadratically with sequence length; it has no persistent memory beyond its context window; it does not learn from experience after training; it processes the world as sequences of discrete tokens, which is natural for text and awkward for continuous perception and control; and it is a poor fit for the hierarchical, model-based planning that humans and animals use.</p>
+<p>This chapter surveys the research directions that aim to fix these weaknesses—some by modifying the transformer, some by replacing components, some by building fundamentally different systems—and assesses which are likely to matter by 2030. The organizing conclusion: <strong>the transformer will not be replaced wholesale before 2030, but frontier systems will be hybrids in which attention is one component among several, and the most important advances will be in memory and continual learning rather than in the sequence-mixing primitive itself.</strong></p>
+<h2 id="efficient-sequence-modeling-attention-and-its-alternatives">Efficient sequence modeling: attention and its alternatives<a class="headerlink" href="#efficient-sequence-modeling-attention-and-its-alternatives" title="Permanent link">¶</a></h2>
+<h3 id="the-quadratic-problem">The quadratic problem<a class="headerlink" href="#the-quadratic-problem" title="Permanent link">¶</a></h3>
+<p>Standard attention computes an interaction between every pair of tokens in the context, so cost grows with the square of sequence length. For a million-token context this is a trillion pairwise operations per layer. The key-value (KV) cache that stores past tokens for generation grows linearly and dominates inference memory for long contexts. These costs made long-context and long-horizon operation expensive, motivating a decade of research into alternatives.</p>
+<h3 id="approaches-that-modify-attention">Approaches that modify attention<a class="headerlink" href="#approaches-that-modify-attention" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Sparse and local attention</strong> restricts each token to a subset of others (a local window, strided patterns, learned blocks). Longformer and BigBird were early examples; DeepSeek's Native Sparse Attention (NSA) and DeepSeek Sparse Attention (DSA, used from V3.2 onward in 2025) learn which blocks to attend to and achieve large speedups on long sequences with minimal quality loss. Most frontier models now use sparse or sliding-window attention in a subset of layers.</li>
+<li><strong>Grouped-query and multi-head latent attention</strong> shrink the KV cache by sharing keys and values across heads (GQA, from Llama 2 onward) or compressing them into a low-rank latent (MLA, DeepSeek V2 onward). MLA cut DeepSeek's KV cache by more than 90% relative to standard attention and was a key enabler of its cost efficiency.</li>
+<li><strong>Sequence-parallel and ring attention</strong> distribute long sequences across many devices, enabling multi-million-token contexts at the cost of communication.</li>
+<li><strong>Hardware-aware kernels</strong> (FlashAttention 1–3) do not change the math but reorganize memory access to approach hardware limits; they made exact attention practical at lengths formerly infeasible.</li>
+</ul>
+<h3 id="approaches-that-replace-attention">Approaches that replace attention<a class="headerlink" href="#approaches-that-replace-attention" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Linear attention</strong> (Katharopoulos et al., 2020, and descendants) reformulates attention as a recurrent kernel with constant per-token cost. Early versions lost quality; later variants (RetNet, Gated Linear Attention, Gated DeltaNet, RWKV-7) close much of the gap.</li>
+<li><strong>State-space models</strong> (S4, 2021; Mamba, Gu and Dao, 2023; Mamba-2, 2024) treat sequences as a continuous dynamical system with a fixed-size hidden state, giving linear-time processing and constant-memory generation. At large scale, pure SSMs underperform on tasks requiring precise retrieval from context (exact copying, in-context learning of specific associations), because a fixed-size state cannot store arbitrary detail.</li>
+<li><strong>Hybrids</strong> combine SSM or linear-attention layers (for efficient bulk processing) with a minority of full-attention layers (for precise retrieval). Jamba (AI21, 2024), Nvidia's Nemotron-H (2025), Falcon-H1, IBM Granite 4, Google's Gemma 3n, Alibaba's Qwen3-Next (2025: Gated DeltaNet plus periodic full attention plus high-sparsity MoE, at frontier-class quality for a fraction of inference cost), and Moonshot's Kimi Linear (2025, at a trillion parameters) use hybrid designs.</li>
+</ul>
+<h3 id="assessment">Assessment<a class="headerlink" href="#assessment" title="Permanent link">¶</a></h3>
+<p>By 2026 the practical consensus is that <strong>hybrids win</strong>: roughly three-quarters of layers can be linear-time with a quarter full attention, at near-parity quality and large efficiency gains. Attention is not being replaced; it is being rationed. By 2030, "transformer" will likely refer to a family of hybrid architectures in which pure softmax attention is a minority component.</p>
+<h2 id="sparsity-mixture-of-experts-and-beyond">Sparsity: mixture-of-experts and beyond<a class="headerlink" href="#sparsity-mixture-of-experts-and-beyond" title="Permanent link">¶</a></h2>
+<h3 id="mixture-of-experts">Mixture-of-experts<a class="headerlink" href="#mixture-of-experts" title="Permanent link">¶</a></h3>
+<p>A mixture-of-experts (MoE) model replaces each dense feed-forward layer with many parallel "experts" and a router that sends each token to a few of them. Total parameters can be enormous (DeepSeek V3: 671 billion; Kimi K2: 1 trillion; Llama 4 Behemoth: ~2 trillion) while active parameters per token remain modest (37 billion for V3; 32 billion for K2), so compute scales with active parameters. MoE was introduced to modern deep learning by Shazeer et al. (2017), scaled by Google (GShard, Switch Transformer), reportedly used in GPT-4, and from 2024 became universal at the frontier.</p>
+<p>MoE's advantages: more knowledge per unit of compute; natural specialization; efficient scaling. Its costs: memory (all experts resident), load-balancing complexity, and communication overhead when experts are spread across devices. DeepSeek's contributions—auxiliary-loss-free load balancing, fine-grained experts (256 small experts, 8 active), shared experts, and FP8 training—made very sparse MoE practical and are now standard.</p>
+<p>The direction is toward <em>more</em> sparsity: more and smaller experts; sparsity in attention as well as feed-forward layers; eventually per-token routing over the whole network. Expert specialization also offers routes to modular updating (retraining one expert without touching others) and interpretability.</p>
+<h3 id="other-conditional-computation">Other conditional computation<a class="headerlink" href="#other-conditional-computation" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Mixture-of-depths</strong> lets tokens skip layers, allocating compute by difficulty.</li>
+<li><strong>Speculative and multi-token decoding</strong> (Medusa, EAGLE, DeepSeek V3's multi-token prediction) generate several tokens per forward pass.</li>
+<li><strong>Activation sparsity</strong> exploits the fact that most neurons are inactive for most inputs; it is central to on-device inference.</li>
+</ul>
+<h2 id="memory-and-continual-learning-the-unsolved-core">Memory and continual learning: the unsolved core<a class="headerlink" href="#memory-and-continual-learning-the-unsolved-core" title="Permanent link">¶</a></h2>
+<h3 id="the-problem">The problem<a class="headerlink" href="#the-problem" title="Permanent link">¶</a></h3>
+<p>Current models have three kinds of memory, none of which resembles human memory:</p>
+<ol>
+<li><strong>Parametric memory</strong>—knowledge in the weights. Vast, but frozen at the training cutoff; not updatable without retraining; not reliably editable.</li>
+<li><strong>Context (working) memory</strong>—the tokens in the current window. Precise but expensive, transient, and limited.</li>
+<li><strong>External memory</strong>—retrieval over databases, files, or vector stores, injected into context. Flexible but shallow: the model does not <em>learn</em> from what it retrieves.</li>
+</ol>
+<p>The consequence: a model cannot become better at a user's specific codebase, a physician's specific patient population, or a firm's specific processes through experience. It can be told, repeatedly, and given tools to look things up, but it does not consolidate experience into skill the way a human colleague does over months. This is arguably the largest single gap between current AI and the generality that AGI definitions require, and it is not obviously a scaling problem.</p>
+<h3 id="approaches">Approaches<a class="headerlink" href="#approaches" title="Permanent link">¶</a></h3>
+<p><strong>Longer contexts.</strong> Contexts went from 4,000 tokens (GPT-3) to 128,000 (GPT-4 Turbo) to 1–2 million (Gemini 1.5+) to 10 million in research settings. Effective use of long context has improved ("needle in a haystack" is saturated; realistic multi-hop long-context benchmarks are not). Long context plus retrieval is the dominant practical solution in 2026. But it is a workaround: cost grows with context; nothing is consolidated; the model starts every session from the same weights.</p>
+<p><strong>Retrieval-augmented generation and agentic memory.</strong> Products store summaries of past interactions, preferences, and documents and retrieve them at inference (ChatGPT memory, Claude projects and memory, enterprise systems). Research on structured memory—MemGPT/Letta, Mem0, Zep, hierarchical summarization, knowledge graphs—improves what is stored and how it is found. Useful and improving, but engineering scaffolds around a stateless model.</p>
+<p><strong>Test-time learning and fast weights.</strong> A more radical approach updates parameters during inference. Google's Titans (Behrouz et al., 2025) added a neural long-term memory module trained at test time to memorize surprising information; its successor framework, Nested Learning (NeurIPS 2025), reconceived a model as a hierarchy of learning systems updating at different rates—fast layers for immediate context, slower ones for consolidated knowledge—an explicit analogy to human memory consolidation. Test-time training (TTT) layers (Sun et al., 2024) make the hidden state itself a small model updated by gradient descent on the incoming sequence. These showed strong long-context results and are being incorporated into hybrid architectures, but no frontier model has yet shipped a system that visibly learns over time in the hands of users.</p>
+<p><strong>Continual and lifelong learning.</strong> The classical obstacle is catastrophic forgetting: fine-tuning on new data degrades performance on old. Decades of research (elastic weight consolidation, replay, progressive networks, parameter-efficient adapters like LoRA) yield partial solutions for narrow updates but not for open-ended accumulation of knowledge and skill. Frontier laboratories do periodic retraining rather than continual learning. Several researchers—Dwarkesh Patel's widely discussed 2025 essay made the case publicly—identify continual learning as the key missing capability and expect it within roughly three to seven years; others think long context plus retrieval plus periodic retraining will be "good enough" for most economic purposes.</p>
+<p><strong>Model editing.</strong> Techniques to surgically update facts in weights (ROME, MEMIT, successors) work for simple facts at small scale and degrade at large scale. Not a route to general continual learning.</p>
+<h3 id="assessment_1">Assessment<a class="headerlink" href="#assessment_1" title="Permanent link">¶</a></h3>
+<p>Memory and continual learning are the most important architectural frontier, the least solved, and the hardest to forecast. Practical workarounds will continue to improve and capture much of the economic value—a model that can be given a million tokens of relevant context and good retrieval is very useful even if it does not learn. But the qualitative gap—a system that becomes an expert in <em>your</em> problem through experience—likely requires test-time learning or nested-learning approaches to mature. The author's estimate: 50% by 2029, 75% by 2032. When it happens, it will be a discontinuity in usefulness comparable to the introduction of reasoning models.</p>
+<h2 id="world-models-and-non-autoregressive-approaches">World models and non-autoregressive approaches<a class="headerlink" href="#world-models-and-non-autoregressive-approaches" title="Permanent link">¶</a></h2>
+<h3 id="the-critique">The critique<a class="headerlink" href="#the-critique" title="Permanent link">¶</a></h3>
+<p>Yann LeCun has argued since 2022 that autoregressive language models are a dead end for human-level intelligence: they predict tokens rather than modeling the world; they cannot plan; they lack persistent memory; and text is too impoverished a medium to learn the physics and common sense a child learns by observation. His alternative, "A Path Towards Autonomous Machine Intelligence" (2022), centers on a <strong>world model</strong> that predicts abstract representations of future states (not pixels or tokens), trained by self-supervised learning on video and sensor data and used by a planner to choose actions. The Joint Embedding Predictive Architecture (JEPA) and its instantiations—I-JEPA, V-JEPA, V-JEPA 2 (2025, with demonstrated zero-shot robot planning)—implement this. LeCun left Meta in late 2025 to found Advanced Machine Intelligence (AMI) Labs in Paris, which raised over a billion dollars in early 2026 to pursue JEPA-based world models for physical and social reasoning.</p>
+<h3 id="generative-world-models">Generative world models<a class="headerlink" href="#generative-world-models" title="Permanent link">¶</a></h3>
+<p>A different strand builds world models as <em>generative</em> simulators. Google DeepMind's Genie, Genie 2, and Genie 3 (2025) generate interactive, controllable environments from a prompt, in real time, with state persisting over minutes—a learned game engine. World Labs' Marble (2025) generates navigable 3D worlds. Nvidia's Cosmos (2025) is a family of world foundation models for physical AI, generating physically plausible video conditioned on actions, used to train robots in simulation. Wayve's GAIA and Tesla's internal models simulate driving. Video generators (Sora, Veo) are implicitly world models.</p>
+<p>These systems (a) generate training data for robots and agents, (b) let agents plan by imagining consequences, and (c) provide interactive RL environments. Their weaknesses are physical inconsistency and compute cost.</p>
+<h3 id="diffusion-language-models">Diffusion language models<a class="headerlink" href="#diffusion-language-models" title="Permanent link">¶</a></h3>
+<p>Autoregressive generation is sequential and hard to revise. Diffusion models generate by iteratively denoising an entire sequence, offering parallel generation and natural in-filling. Discrete diffusion for text (LLaDA and others, 2024–25) and commercial efforts (Inception Labs' Mercury; Google's Gemini Diffusion, 2025) demonstrated text and code generation at several times autoregressive speed with competitive quality at small scale. Whether diffusion LMs reach frontier quality is unresolved; they are plausible as fast, cheap models for specific uses before 2030 and a long shot as a frontier replacement.</p>
+<h3 id="assessment_2">Assessment<a class="headerlink" href="#assessment_2" title="Permanent link">¶</a></h3>
+<p>World models matter most for robotics and embodied AI (Chapter 9), where the LeCun critique is strongest—text does not teach manipulation. For language and reasoning, autoregressive transformers plus RL have delivered so much that the "dead end" argument looks premature; reasoning models do plan, in the sense of exploring and revising chains of thought. The likely synthesis by 2030: language models with world-model components for physical and spatial reasoning trained on video; generative world models as simulators for training agents and robots; JEPA-style predictive representations as one input to multimodal systems rather than a replacement.</p>
+<h2 id="neurosymbolic-and-hybrid-reasoning-systems">Neurosymbolic and hybrid reasoning systems<a class="headerlink" href="#neurosymbolic-and-hybrid-reasoning-systems" title="Permanent link">¶</a></h2>
+<p>The oldest debate in AI—learning versus logic—has been partly dissolved by systems that combine them. AlphaGeometry (2024) pairs a language model proposing constructions with a symbolic deduction engine. AlphaProof works in Lean, so every step is machine-verified. Reasoning models call code interpreters, computer-algebra systems, and theorem provers as tools. The durable form of neurosymbolic AI is not a new architecture but a <em>system design</em>: learned components propose; formal components check. This is central to AI for mathematics (Chapter 10) and to reliability (Chapter 7).</p>
+<h2 id="small-models-on-device-ai-and-specialization">Small models, on-device AI, and specialization<a class="headerlink" href="#small-models-on-device-ai-and-specialization" title="Permanent link">¶</a></h2>
+<p>A counter-trend to frontier scaling is the rise of small, efficient models. Microsoft's Phi, Google's Gemma 3/3n, Meta's small Llamas, Alibaba's Qwen 3 0.6B–8B range, Apple's on-device foundation models, and Mistral's small models deliver 2023-frontier capability at 1–10 billion parameters, running on phones and laptops. Techniques: distillation, high-quality synthetic training data, quantization to 4 bits or below, and edge-designed architectures.</p>
+<p>By 2030 most AI inference will happen on devices or on small hosted models, with frontier models reserved for hard problems—a tiered architecture already visible in GPT-5's router and every hyperscaler's product line. Implications: privacy (data stays on device), cost (near-zero marginal), latency, and geopolitics (open small models spread capability everywhere).</p>
+<h2 id="what-the-frontier-architecture-of-2030-probably-looks-like">What the frontier architecture of 2030 probably looks like<a class="headerlink" href="#what-the-frontier-architecture-of-2030-probably-looks-like" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>2026 frontier</th>
+<th>Likely 2030 frontier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sequence mixing</td>
+<td>Mostly full attention with sparse/MLA variants; some hybrids</td>
+<td>Hybrid: majority linear/SSM layers, minority full attention</td>
+</tr>
+<tr>
+<td>Feed-forward</td>
+<td>Fine-grained MoE (hundreds of experts, ~5% active)</td>
+<td>Sparser MoE; routing at multiple granularities</td>
+</tr>
+<tr>
+<td>Precision</td>
+<td>FP8 training, FP4 inference</td>
+<td>FP4/FP6 training; sub-4-bit mixed-precision inference</td>
+</tr>
+<tr>
+<td>Context</td>
+<td>200K–2M tokens</td>
+<td>10M+ effective, with hierarchical memory</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>Context + RAG + agentic scaffolds</td>
+<td>Plus test-time learned memory modules; early continual learning</td>
+</tr>
+<tr>
+<td>Modalities</td>
+<td>Native text, image, audio; video in/out</td>
+<td>Plus 3D, action, and sensor streams; world-model components</td>
+</tr>
+<tr>
+<td>Reasoning</td>
+<td>RL-trained chain of thought; tool calls</td>
+<td>Plus learned search, verifiers, formal-method integration</td>
+</tr>
+<tr>
+<td>Training</td>
+<td>Pretrain → SFT → large RL</td>
+<td>Plus continual post-training on deployment data; many more RL environments</td>
+</tr>
+<tr>
+<td>Deployment</td>
+<td>Frontier cloud + small on-device</td>
+<td>Tiered routing across device, edge, cloud</td>
+</tr>
+</tbody>
+</table>
+<p>The deeper question—whether these incremental changes suffice for human-level generality, or whether a qualitatively new idea is needed—is taken up in Chapter 17. The architectural evidence cuts both ways. The transformer's critics have been right that its weaknesses (memory, continual learning, embodiment) are real and persistent; they have been wrong, repeatedly, about how far it could go without solving them. The most defensible forecast: the architecture keeps absorbing its critics' ideas as components, and the first system most people call AGI will be recognizably descended from the 2017 transformer, heavily modified.</p><div class="pager"><a href="05-data.html"><span>← Previous</span>Data: The Wall, the Workarounds, and the Fight Over Who Owns It</a><a href="index.html" style="text-align:right"><span>→</span>Home</a></div><footer>Built 2026-09-09. Text is provided as an analytical review; forecasts are uncertain by nature. </footer></main>
+<aside class="toc"><div class="sub" style="font-size:12px;color:var(--muted);margin-bottom:8px">On this page</div><div class="toc">
+<ul>
+<li><a href="#framing">Framing</a></li>
+<li><a href="#efficient-sequence-modeling-attention-and-its-alternatives">Efficient sequence modeling: attention and its alternatives</a><ul>
+<li><a href="#the-quadratic-problem">The quadratic problem</a></li>
+<li><a href="#approaches-that-modify-attention">Approaches that modify attention</a></li>
+<li><a href="#approaches-that-replace-attention">Approaches that replace attention</a></li>
+<li><a href="#assessment">Assessment</a></li>
+</ul>
+</li>
+<li><a href="#sparsity-mixture-of-experts-and-beyond">Sparsity: mixture-of-experts and beyond</a><ul>
+<li><a href="#mixture-of-experts">Mixture-of-experts</a></li>
+<li><a href="#other-conditional-computation">Other conditional computation</a></li>
+</ul>
+</li>
+<li><a href="#memory-and-continual-learning-the-unsolved-core">Memory and continual learning: the unsolved core</a><ul>
+<li><a href="#the-problem">The problem</a></li>
+<li><a href="#approaches">Approaches</a></li>
+<li><a href="#assessment_1">Assessment</a></li>
+</ul>
+</li>
+<li><a href="#world-models-and-non-autoregressive-approaches">World models and non-autoregressive approaches</a><ul>
+<li><a href="#the-critique">The critique</a></li>
+<li><a href="#generative-world-models">Generative world models</a></li>
+<li><a href="#diffusion-language-models">Diffusion language models</a></li>
+<li><a href="#assessment_2">Assessment</a></li>
+</ul>
+</li>
+<li><a href="#neurosymbolic-and-hybrid-reasoning-systems">Neurosymbolic and hybrid reasoning systems</a></li>
+<li><a href="#small-models-on-device-ai-and-specialization">Small models, on-device AI, and specialization</a></li>
+<li><a href="#what-the-frontier-architecture-of-2030-probably-looks-like">What the frontier architecture of 2030 probably looks like</a></li>
+</ul>
+</div>
+</aside>
+</div><script>
+(function(){
+  const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);
+  window.toggleTheme=function(){const cur=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',cur);localStorage.setItem('theme',cur);};
+  window.toggleNav=function(){document.querySelector('nav.side').classList.toggle('open');};
+  window.addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';});
+  // sidebar filter + full-text search over search index
+  const inp=document.getElementById('q');const list=document.getElementById('chlist');const res=document.getElementById('results');
+  let idx=null;
+  async function loadIdx(){if(idx)return idx;try{const r=await fetch(window.SITE_BASE+'search.json');idx=await r.json();}catch(e){idx=[];}return idx;}
+  if(inp){inp.addEventListener('input',async()=>{const q=inp.value.trim().toLowerCase();
+    [...list.querySelectorAll('li')].forEach(li=>{li.style.display=(!q||li.textContent.toLowerCase().includes(q))?'':'none';});
+    if(q.length<3){res.innerHTML='';return;}
+    const ix=await loadIdx();const out=[];
+    for(const d of ix){const i=d.text.toLowerCase().indexOf(q);if(i>=0){const s=Math.max(0,i-60);out.push({d,snip:d.text.slice(s,i+90)});if(out.length>=25)break;}}
+    res.innerHTML=out.map(o=>`<li><a href="${window.SITE_BASE}${o.d.url}"><b>${o.d.title}</b><small>…${o.snip.replace(/</g,'&lt;')}…</small></a></li>`).join('')||'<li><small>No matches</small></li>';
+  });}
+  // active TOC highlight
+  const heads=[...document.querySelectorAll('main h2, main h3')];const links=[...document.querySelectorAll('aside.toc a')];
+  if(heads.length&&links.length){const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.style.color='');const l=links.find(l=>l.getAttribute('href')==='#'+e.target.id);if(l)l.style.color='var(--acc)';}})},{rootMargin:'0px 0px -75% 0px'});heads.forEach(h=>obs.observe(h));}
+})();
+</script></body></html>
