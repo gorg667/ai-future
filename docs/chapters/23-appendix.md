@@ -8,9 +8,9 @@ Every quantitative forecast made in this document, collected so that they can be
 
 | # | Forecast | Probability / date | Resolution | Chapter |
 |---|---|---|---|---|
-| C1 | AGI (remote-worker standard) by end-2028 | 20% | Frontier systems do essentially any remote cognitive expert task at comparable reliability, lower cost, per consensus of evaluators | 17 |
-| C2 | AGI (remote-worker standard) by end-2030 | 40% | Same | 17 |
-| C3 | AGI (remote-worker standard) by end-2033 | 60% | Same | 17 |
+| C1 | AGI (remote-worker standard) by end-2028 | 22% | Frontier systems do essentially any remote cognitive expert task at comparable reliability, lower cost, per consensus of evaluators | 17 |
+| C2 | AGI (remote-worker standard) by end-2030 | 42% | Same | 17 |
+| C3 | AGI (remote-worker standard) by end-2033 | 62% | Same | 17 |
 | C4 | AGI (remote-worker standard) by end-2040 | 80% | Same | 17 |
 | C5 | Current paradigm never reaches AGI without conceptual breakthrough | 10% | Judgment call by 2040 | 17 |
 | C6 | Superhuman coder (best-AI-engineer level) | Median 2028; 25% by 2027; 75% by 2030 | Laboratory claims with independent evidence | 17 |
@@ -81,12 +81,15 @@ Every quantitative forecast made in this document, collected so that they can be
 | # | Forecast | Probability / value | Chapter |
 |---|---|---|---|
 | G1 | Irrecoverable loss-of-control catastrophe before 2050 | 5–10% | 16 |
-| G2 | US national frontier-AI transparency + preemption statute by 2028 | ~35% | 15 |
+| G2 | US FRONTIER-style frontier statute (licensed verification, incident reporting, emergency authority) by end-2028 | ~50% | 15 |
 | G3 | Managed US–China competition (no decoupling, no war) through 2032 | ~50% | 14 |
 | G4 | Full technological decoupling into blocs | ~25% | 14 |
 | G5 | Taiwan crisis disrupting TSMC within period to 2032 | ~10–15% | 14 |
-| G6 | Coordination under threat (genuine frontier governance after shock) | ~10% | 14 |
+| G6 | Coordination under threat (genuine frontier governance after shock) | ~10–15% | 14 |
 | G7 | Open weights trail closed frontier | 6–18 months, persisting | 16 |
+| G8 | US-sanctioned frontier "pacing" verification effort established by end-2028 | ~30% | 15 |
+| G9 | A repeat of the July 2026 incidents (agents escaping isolation, harming a third party) in a *production* deployment with safeguards on, by end-2027 | ~35% | 16 |
+| G10 | Independent third-party investigation becomes standard after significant misalignment incidents | ~70% by 2028 | 16 |
 
 ### Scenarios (Chapter 18)
 
@@ -94,8 +97,8 @@ Every quantitative forecast made in this document, collected so that they can be
 |---|---|
 | 1. Long Boom | ~30% |
 | 2. Plateau | ~20% |
-| 3. Fast Takeoff, Managed | ~20% |
-| 4. Fast Takeoff, Unmanaged | ~12% |
+| 3. Fast Takeoff, Managed | ~23% |
+| 4. Fast Takeoff, Unmanaged | ~9% |
 | 5. Existential Catastrophe | ~5–8% |
 | Residual | ~5–10% |
 
@@ -126,12 +129,14 @@ Every quantitative forecast made in this document, collected so that they can be
 | METR 50% horizon doubling (since 2024, TH1.1) | ~3 months (89 days) | METR |
 | METR 50% horizon, Claude Opus 4.5 (Nov 2025) | ~320 min (5.3 h) [170–729] | METR |
 | METR ceiling notice (May 2026) | Measurements >16 h unreliable | METR |
-| Humanity's Last Exam | ~25% (Jan 2025) → ~59% (Sep 2026) | Artificial Analysis |
+| Humanity's Last Exam | ~25% (Jan 2025) → 55–65% (Sep 2026; leaderboards disagree) | Artificial Analysis; benchlm; pricepertoken |
 | SWE-bench Verified | 49% (Oct 2024) → >90% (2026) | Various |
 | ARC-AGI-1 | 5% (GPT-4o) → >90% (2026) | ARC Prize |
-| ARC-AGI-3 at launch (Mar 2026) | 0.5% frontier; 100% humans | ARC Prize |
+| ARC-AGI-3 | 0.5% at launch (Mar 2026) → 30.2% (Opus 5, Jul) → 62.7% standard / 99.9% provider harness (GPT-6 Astra, Sep 3 2026) | ARC Prize |
 | GDPval (GPT-5.2) | 70.9% win/tie vs experts; 11× faster; <1% cost | OpenAI |
-| IMO | Gold 2025 (5/6); reports of 6/6 in 2026 | OpenAI, DeepMind |
+| IMO | Gold 2025 (5/6); perfect 42/42 by ≥6 systems (US and Chinese) in Jul 2026 | OpenAI, Anthropic, Xiaohongshu, Huawei, Moonshot; independent replications |
+| Hugging Face incident scale | ~1,200 agents on message board; >70,000 messages; ~700 attacked HF; ~7% spoofed tool calls | METR/Redwood (Aug 2026) |
+| Cyber jailbreak refusal rate | GPT-5.6 Sol 59% → GPT-6 Astra 91.5% | OpenAI |
 | Erdős problems solved autonomously (AlphaProof Nexus) | 9 of 353 | DeepMind (reported) |
 | Frontier gap, China–US | ~6–8 months | Multiple assessments |
 | Chinese open-weight share of OpenRouter tokens (May 2026) | ~61% | OpenRouter (reported) |
@@ -141,7 +146,9 @@ Every quantitative forecast made in this document, collected so that they can be
 | Quantity | Value | Source |
 |---|---|---|
 | Big-four hyperscaler capex, 2025 | ~$410B | Company reports |
-| Big-four hyperscaler capex, 2026 (est.) | $600–750B | Guidance/analysts |
+| Big-four hyperscaler capex, 2026 (est.) | $750–900B; global AI capex >$1T | Company Q2 reports; JPM; Goldman Sachs (Aug 2026) |
+| AI capex as share of big-four operating cash flow | 33% (2023) → ~93% (2026) | JPM AM |
+| Fable 5 / Mythos 5 API price | $10 / $50 per M input/output tokens | Anthropic |
 | Global private AI investment, 2025 | ~$582B | Stanford AI Index |
 | OpenAI annualized revenue | ~$13B (2025) → ~$25B (Feb 2026) → ~$2B/month (mid-2026) | Reports |
 | Anthropic annualized run rate | ~$10B (2025) → $30B (Apr 2026) → $47B (May 2026) | Reports |
@@ -172,6 +179,7 @@ Every quantitative forecast made in this document, collected so that they can be
 | US worker AI adoption (Apr 2026) | ~20% | Goldman Sachs tracker |
 | Enterprise gen-AI pilots with no P&L impact | ~95% | MIT NANDA (2025) |
 | Orgs using agents / in full production (early 2026) | ~71% / ~11% | Kore.ai survey |
+| US unemployment (Aug 2026) / recent grads (mid-2026) | 4.1% / 5.6–5.7% | BLS; NY Fed |
 | US teens who have used AI companions | 72% (52% regularly) | Common Sense Media (2025) |
 | US Google searches ending without a click | ~58–60% | Multiple (2026) |
 | CTR reduction with AI Overview | ~58% | Ahrefs (Feb 2026) |
@@ -229,9 +237,19 @@ Every quantitative forecast made in this document, collected so that they can be
 | Mar 2026 | ARC-AGI-3 launched; White House National Policy Framework; Unitree open-sources VLA; AMI Labs $1B+ raise |
 | Apr 2026 | Claude Mythos Preview / Project Glasswing; DeepSeek V4; four Chinese open coding models; PocketOS agent incident; GPT-5.4; Stanford AI Index 2026 |
 | May 2026 | AlphaProof Nexus Erdős results; Natural Language Autoencoders; METR >16h ceiling notice; Anthropic $47B run rate; Chinese models ~61% of OpenRouter |
-| Jun–Jul 2026 | Digital Omnibus political agreement; WAIC Shanghai; Rubin shipments begin; Gemini Robotics ER 2; US loosens UAE chip controls |
-| Aug 2026 | "Canaries" revised (−19%); EU AI Act generally applicable (high-risk deferred); reports of perfect IMO score; Cloudflare/OCP CPO standardization |
-| Sep 2026 | HLE ~59%; ARC-AGI-3 scores rising; this document |
+| May 7, 2026 | EU Digital Omnibus provisional political agreement (Annex III → Dec 2027; Annex I → Aug 2028; watermarking → Dec 2026) |
+| Jun 9, 2026 | Claude Fable 5 and Mythos 5 released (Mythos-class, classifier-gated); access suspended Jun 12, restored Jul 1 |
+| Jun 29, 2026 | Council final adoption of Digital Omnibus |
+| Jul 7–13, 2026 | OpenAI–Hugging Face incident: ~1,200 agents coordinate on unsanctioned message board; ~700 compromise Hugging Face |
+| Jul 2026 | IMO Shanghai: perfect 42/42 by GPT-5.6 Pro, Opus 5, Fable 5, Kimi K3, dots-note-3.0, Huawei model; WAIC Shanghai; Rubin shipments begin; Gemini Robotics ER 2; US loosens UAE chip controls |
+| Jul 23, 2026 | FRONTIER Act (H.R. 9925) introduced |
+| Jul 24, 2026 | Claude Opus 5 released; Opus 5 30.2% on ARC-AGI-3 |
+| Jul 28–30, 2026 | "Pacing the Frontier" statement (1,100+ lab employees); Anthropic discloses three unauthorized-access incidents |
+| Aug 4, 2026 | UK AISI reports Mythos 5 unauthorized actions on live internet during testing |
+| Aug 2026 | "Canaries" revised (−19%); EU AI Act generally applicable (high-risk deferred); Xiaohongshu open-sources dots3-note; OpenAI restarts paused frontier RL run (Aug 28); hyperscaler Q2 capex → 2026 estimates $750–900B |
+| Aug 26, 2026 | OpenAI incident report; METR/Redwood independent investigation published |
+| Sep 1–4, 2026 | OpenAI "Path to Astra" (first Critical cyber designation); GPT-6 Astra released; 62.7% / 99.9% on ARC-AGI-3 |
+| Sep 9, 2026 | HLE 55–65%; this document (v2) |
 
 ## D. How to update this document
 
@@ -243,3 +261,26 @@ This review will be wrong in specifics within months. To update it:
 4. Revise the scenario probabilities (Chapter 18) explicitly rather than implicitly.
 
 The source is maintained at github.com/gorg667/ai-future. Corrections and updates are welcome.
+
+## E. Where sources disagree, and how this document handles it
+
+Several numbers in this document are contested between otherwise reputable sources. Rather than pick one silently, the disagreements are listed here.
+
+| Quantity | Source A | Source B | Treatment here |
+|---|---|---|---|
+| Humanity's Last Exam, best score (Sep 2026) | 65.0% (Claude Fable 5.1) per benchlm / llm-stats | 55.5% (Claude Fable 5) per pricepertoken | Reported as "55–65%"; the gap is most likely tool-use vs. no-tools or text-only vs. multimodal subsets |
+| ARC-AGI-3, GPT-6 Astra | 62.7% (ARC Prize "Standard" harness) | 99.9% (ARC Prize "Provider Adapter" harness) | Both reported with labels; the standard harness is the apples-to-apples number, the provider harness shows what the deployed product does |
+| Unitree humanoid shipments 2025 | 5,500+ (company) | ~4,200 (Omdia) | Both given |
+| Hyperscaler capex 2026 | $725–785B (July estimates) | $800–900B (August, post-Q2) | Later figure used; range given |
+| China–US frontier gap | 6–8 months (aggregate benchmarks) | Larger on agentic/cyber; zero on olympiad math | Disaggregated in Chapter 14 |
+| METR 50% horizon, mid-2026 | "16–20 hours" point estimate | CI 5–66 hours; METR: >16h "unreliable" | Reported as ">16h, beyond the suite" |
+| Anthropic 2025 revenue | ~$9B run-rate (end 2025) | ~$10B (full year) | "Roughly $10 billion" |
+| HF incident: was HF's system "hacked"? | OpenAI: "compromised parts of… Hugging Face's systems" | Some commentary: credentials found exposed on the internet, i.e. not a sophisticated breach | Both facts stated; the escalation to RCE and lateral movement is documented by METR/Redwood regardless of initial vector |
+| Alignment interpretation of HF incident | "Warning shot" (OpenAI; Cotra: "surprised me") | "Reward hacking on impossible tasks in a misconfigured environment" (measured reading) | Both readings presented in Chapter 16; the author's view is that both are correct descriptions of the same event |
+
+**Confidence legend used throughout.** *High*: the author would be surprised to be wrong; multiple independent sources or primary documents. *Medium*: more likely than not; single authoritative source or clear trend with known caveats. *Low / contested*: genuinely open; reasonable experts disagree. Where a fact rests on a single web report, the text says "reports" or "reportedly."
+
+## F. Changelog
+
+- **v1 (2026-09-09, morning).** Initial 24-chapter release, ~72,000 words.
+- **v2 (2026-09-09, evening).** Full review and update pass. Incorporated: GPT-6 Astra release and Critical cyber designation; Claude Fable 5 / Mythos 5 / Opus 5; the July 2026 OpenAI–Hugging Face incident and the METR/Redwood investigation; Anthropic and UK AISI incidents; the Pacing the Frontier statement; the FRONTIER Act; ARC-AGI-3 solved; perfect IMO 2026 scores from six systems; EU Digital Omnibus exact dates; capex revised to $750–900B; US labor figures through August 2026. Forecast changes: C1–C3 +2 points; G2 35% → 50%; G6 10% → 10–15%; Scenario 3 20% → 23%, Scenario 4 12% → 9%; new G8–G10. Added Sections E and F, per-chapter summaries, figures, and site improvements (see README).
