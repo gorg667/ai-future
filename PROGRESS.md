@@ -49,7 +49,7 @@
 14 [x] Geopolitics: US–China, chips/export controls, sovereign AI, Europe, Gulf, Global South, military AI
 15 [x] Governance & regulation: EU AI Act, US executive orders/state laws, China, international bodies, standards, compute governance
 16 [x] Safety & alignment: technical alignment agenda, interpretability, evals, misuse (bio/cyber), loss of control, open weights debate
-17 [ ] AGI & superintelligence: definitions, timelines (expert surveys, forecasts), takeoff scenarios, intelligence explosion arguments
+17 [x] AGI & superintelligence: definitions, timelines (expert surveys, forecasts), takeoff scenarios, intelligence explosion arguments
 18 [ ] Scenarios 2026–2040: several detailed scenario narratives with probabilities & signposts
 19 [ ] Open problems & research frontiers (what we don't know)
 20 [ ] Practical guide: for individuals, students, workers, founders, executives, policymakers, researchers
@@ -80,3 +80,4 @@
 - Ch14 done. Next: Ch15 governance & regulation.
 - Ch15 done. Next: Ch16 safety & alignment.
 - Ch16 done. Next: Ch17 AGI & superintelligence.
+- Ch17 done. Next: Ch18 scenarios 2026–2040.

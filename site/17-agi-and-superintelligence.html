@@ -1,0 +1,311 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AGI and Superintelligence: Definitions, Timelines, Takeoff, and What to Believe — The Future of AI</title>
+<meta name="description" content="A comprehensive review and guide — technology, economics, society, geopolitics, safety, and what comes next">
+<style>
+:root{--bg:#0f1115;--bg2:#161a22;--fg:#e6e8ee;--muted:#9aa3b2;--acc:#6ea8fe;--acc2:#b388ff;--border:#262c38;--code:#1c2230;--mark:#3b3a1a}
+[data-theme=light]{--bg:#fbfbfd;--bg2:#ffffff;--fg:#1c1e26;--muted:#5b6473;--acc:#2457c5;--acc2:#6d3fd0;--border:#e3e6ec;--code:#f2f4f8;--mark:#fff3b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;font-size:17px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--acc),var(--acc2));width:0;z-index:99}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr) 240px;min-height:100vh}
+nav.side{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--bg2);padding:18px 14px}
+nav.side .brand{font-weight:800;font-size:18px;margin-bottom:6px;display:block;color:var(--fg)}
+nav.side .sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+nav.side input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--fg);margin-bottom:12px}
+nav.side ol{list-style:none;padding:0;margin:0}
+nav.side li a{display:block;padding:6px 8px;border-radius:6px;font-size:14px;color:var(--fg)}
+nav.side li a:hover{background:var(--code);text-decoration:none}
+nav.side li a.active{background:var(--code);color:var(--acc);font-weight:600}
+nav.side li a small{color:var(--muted);display:block;font-size:11px}
+main{padding:36px 56px 100px;max-width:900px;width:100%;margin:0 auto}
+aside.toc{position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 14px;border-left:1px solid var(--border);font-size:13px}
+aside.toc .toc ul{list-style:none;padding-left:10px;margin:0}
+aside.toc .toc>ul{padding-left:0}
+aside.toc a{color:var(--muted);display:block;padding:3px 0}
+aside.toc a:hover{color:var(--acc)}
+h1{font-size:2.2rem;line-height:1.2;margin:.2em 0 .6em}h2{font-size:1.6rem;margin-top:2.2em;border-bottom:1px solid var(--border);padding-bottom:.3em}h3{font-size:1.25rem;margin-top:1.8em}h4{font-size:1.05rem;margin-top:1.4em}
+.headerlink{opacity:0;margin-left:6px;font-size:.8em}h2:hover .headerlink,h3:hover .headerlink{opacity:.6}
+p,li{max-width:76ch}
+blockquote{margin:1.2em 0;padding:.6em 1.2em;border-left:4px solid var(--acc2);background:var(--code);border-radius:6px;color:var(--fg)}
+table{border-collapse:collapse;width:100%;margin:1.4em 0;font-size:.92em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+code{background:var(--code);padding:2px 5px;border-radius:4px;font-size:.9em}pre{background:var(--code);padding:14px;border-radius:8px;overflow-x:auto}pre code{background:none;padding:0}
+.admonition{padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--code);margin:1.3em 0}
+.admonition-title{font-weight:700;margin:0 0 6px}
+.admonition.warning{border-color:#d9a54a}.admonition.note{border-color:var(--acc)}.admonition.tip{border-color:#4fbf8b}.admonition.danger{border-color:#e05a5a}
+.meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:60px;padding-top:20px;border-top:1px solid var(--border)}
+.pager a{padding:10px 14px;border:1px solid var(--border);border-radius:8px;flex:1}
+.pager a span{display:block;color:var(--muted);font-size:12px}
+.topbar{display:none}
+button.theme{border:1px solid var(--border);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:13px}
+.hero{padding:30px 0 10px}.hero h1{font-size:3rem}.hero p.lead{font-size:1.25rem;color:var(--muted);max-width:70ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:26px 0}
+.card{border:1px solid var(--border);border-radius:12px;padding:16px;background:var(--bg2);display:block;color:var(--fg)}
+.card:hover{border-color:var(--acc);text-decoration:none}.card .n{color:var(--acc);font-weight:700;font-size:12px}.card h3{margin:.3em 0 .4em;font-size:1.05rem}.card small{color:var(--muted)}
+mark{background:var(--mark);color:inherit}
+footer{color:var(--muted);font-size:13px;margin-top:40px}
+@media(max-width:1200px){.layout{grid-template-columns:280px minmax(0,1fr)}aside.toc{display:none}}
+@media(max-width:860px){.layout{grid-template-columns:1fr}nav.side{position:fixed;left:-320px;width:300px;transition:left .2s;z-index:50}nav.side.open{left:0}.topbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg2);z-index:40}main{padding:20px 18px 80px}body{font-size:16px}}
+</style>
+<script>window.SITE_BASE="";</script>
+</head><body><div id="progress"></div>
+<div class="topbar"><button class="theme" onclick="toggleNav()">☰ Chapters</button><b>The Future of AI</b><span style="flex:1"></span><button class="theme" onclick="toggleTheme()">◐</button></div>
+<div class="layout">
+<nav class="side"><a class="brand" href="index.html">The Future of AI</a><div class="sub">Comprehensive review · built 2026-09-09</div>
+<input id="q" placeholder="Search all chapters…" autocomplete="off"><ol id="results"></ol><ol id="chlist"><li><a href="00-front-matter-and-executive-summary.html" class="">Front Matter and Executive Summary<small>Chapter 0 · 3,598 words</small></a></li><li><a href="01-history-and-why-this-moment-is-different.html" class="">A Brief History of AI, and Why This Moment Is Different<small>Chapter 1 · 5,116 words</small></a></li><li><a href="02-state-of-the-art-2026.html" class="">The State of the Art in 2026: What AI Can and Cannot Do<small>Chapter 2 · 4,484 words</small></a></li><li><a href="03-scaling-laws-compute-and-economics.html" class="">Scaling Laws, Compute, and the Economics of Training<small>Chapter 3 · 3,489 words</small></a></li><li><a href="04-hardware-and-infrastructure.html" class="">Hardware and Infrastructure: Chips, Datacenters, Energy, and the Physical Limits of AI<small>Chapter 4 · 3,533 words</small></a></li><li><a href="05-data.html" class="">Data: The Wall, the Workarounds, and the Fight Over Who Owns It<small>Chapter 5 · 3,137 words</small></a></li><li><a href="06-architectures-beyond-the-transformer.html" class="">Architectures Beyond the Transformer: What Might Replace or Extend the Current Paradigm<small>Chapter 6 · 2,622 words</small></a></li><li><a href="07-reasoning-rl-and-test-time-compute.html" class="">Reasoning, Reinforcement Learning, and Test-Time Compute: How Models Learned to Think<small>Chapter 7 · 3,268 words</small></a></li><li><a href="08-agents.html" class="">Agents: From Chatbots to Autonomous Systems<small>Chapter 8 · 3,304 words</small></a></li><li><a href="09-multimodality-and-embodiment.html" class="">Multimodality and Embodiment: Vision, Video, Voice, Robots, and Self-Driving<small>Chapter 9 · 2,664 words</small></a></li><li><a href="10-ai-for-science.html" class="">AI for Science: From Instrument to Participant<small>Chapter 10 · 2,814 words</small></a></li><li><a href="11-economics.html" class="">Economics: Productivity, Labor, Growth, and Who Captures the Gains<small>Chapter 11 · 3,442 words</small></a></li><li><a href="12-work-and-professions.html" class="">Work and Professions: A Sector-by-Sector Assessment<small>Chapter 12 · 2,792 words</small></a></li><li><a href="13-society-and-culture.html" class="">Society and Culture: Information, Relationships, Minds, and Meaning<small>Chapter 13 · 2,758 words</small></a></li><li><a href="14-geopolitics.html" class="">Geopolitics: The US–China Race, Sovereign AI, Chips, and War<small>Chapter 14 · 3,272 words</small></a></li><li><a href="15-governance-and-regulation.html" class="">Governance and Regulation: Laws, Standards, Institutions, and the Control of Compute<small>Chapter 15 · 2,989 words</small></a></li><li><a href="16-safety-and-alignment.html" class="">Safety and Alignment: Misuse, Misalignment, and the Problem of Control<small>Chapter 16 · 3,389 words</small></a></li><li><a href="17-agi-and-superintelligence.html" class="active">AGI and Superintelligence: Definitions, Timelines, Takeoff, and What to Believe<small>Chapter 17 · 3,002 words</small></a></li></ol>
+<div style="margin-top:14px"><button class="theme" onclick="toggleTheme()">◐ Toggle theme</button></div>
+<div class="sub" style="margin-top:14px"><a href="../docs/THE_FUTURE_OF_AI.md">Single Markdown file</a> · <a href="https://github.com/gorg667/ai-future">GitHub</a></div></nav>
+<main><div class="meta">Chapter 17 of 18 · 3,002 words · ~13 min read</div><h1 id="agi-and-superintelligence-definitions-timelines-takeoff-and-what-to-believe">AGI and Superintelligence: Definitions, Timelines, Takeoff, and What to Believe<a class="headerlink" href="#agi-and-superintelligence-definitions-timelines-takeoff-and-what-to-believe" title="Permanent link">¶</a></h1>
+<h2 id="the-question-everyone-asks">The question everyone asks<a class="headerlink" href="#the-question-everyone-asks" title="Permanent link">¶</a></h2>
+<p>"When will we get AGI?" is the question the public asks most and the one the field answers worst—because the term is ambiguous, the forecasts are contaminated by incentives, and the underlying uncertainty is genuine. This chapter tries to do the question justice: to define the terms precisely enough to forecast, to lay out the evidence and the arguments on each side, to survey what forecasters and experts actually predict and how their predictions have moved, to address the distinct and more consequential question of <em>takeoff</em> (how fast things go after human-level), and to offer the author's own calibrated estimates with reasoning exposed.</p>
+<h2 id="definitions">Definitions<a class="headerlink" href="#definitions" title="Permanent link">¶</a></h2>
+<p>The term "artificial general intelligence" is used to mean at least five different things, and most disagreements about timelines dissolve once one specifies which:</p>
+<ol>
+<li>
+<p><strong>Human-level on benchmarks.</strong> A system that matches or exceeds humans on a broad suite of cognitive tests. By this standard, frontier models arguably reached AGI in 2025–26: they exceed most humans on almost every academic and professional examination. Almost no one finds this definition satisfying, which is itself informative—it shows that what we mean by intelligence is not what tests measure.</p>
+</li>
+<li>
+<p><strong>Economic AGI: the remote-worker standard.</strong> A system that can do essentially any cognitive task that a human expert can do working remotely—at comparable quality, comparable or lower cost, and comparable reliability. This is roughly the AI Futures Project's "TED-AI" (transformative/economically dominant AI), OpenAI's charter definition ("highly autonomous systems that outperform humans at most economically valuable work"), and the "drop-in remote worker" of Leopold Aschenbrenner's <em>Situational Awareness</em>. Reliability and autonomy over long horizons—not raw capability—are what current systems lack under this definition.</p>
+</li>
+<li>
+<p><strong>Full labor automation.</strong> A system (or systems, with robotics) that can do every job, physical and cognitive. This adds the embodiment gap (Chapter 9) and is a decade or more behind definition 2.</p>
+</li>
+<li>
+<p><strong>Cognitive generality: the child standard.</strong> A system that learns new domains from little data, transfers knowledge flexibly, reasons about novel situations, and has robust common sense—the way a human child does. This is what the ARC-AGI benchmarks attempt to measure, what LeCun means when he says AGI is far off, and what current systems, for all their knowledge, most conspicuously lack (Chapter 6).</p>
+</li>
+<li>
+<p><strong>Superintelligence (ASI).</strong> A system that substantially exceeds the best humans at essentially all cognitive tasks, including scientific research and strategy. Bostrom's definition. This is what the "intelligence explosion" produces.</p>
+</li>
+</ol>
+<p>Two useful intermediate milestones from the forecasting literature: the <strong>superhuman coder</strong> (an AI that can do the job of the best human AI-research engineer, faster and cheaper) and the <strong>automated AI researcher</strong> (an AI that can run the full AI research loop, including having ideas). These matter because they are the thresholds at which AI research itself accelerates.</p>
+<p>For this chapter, "AGI" without qualification means definition 2—the remote-worker standard—because it is the one with the largest economic and strategic consequences and the one most forecasts implicitly target.</p>
+<h2 id="the-case-that-agi-is-close">The case that AGI is close<a class="headerlink" href="#the-case-that-agi-is-close" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p><strong>Trend extrapolation.</strong> METR's time horizon has doubled every four to seven months for six years; extrapolated, it reaches month-long tasks by 2027–28. Epoch's capabilities index rises 14 points a year. Benchmarks designed to last years fall in months. Every specific capability that skeptics said would require "real understanding"—commonsense reasoning, mathematical proof, coding, passing professional exams, ARC-AGI-1—has been achieved. Straight lines on log plots have been the best predictor of AI progress for a decade, and they point to AGI-by-definition-2 within a few years.</p>
+</li>
+<li>
+<p><strong>The inputs are secured.</strong> The compute for 2027–29 is funded and under construction; algorithmic progress continues at 3×/year; RL and inference-time scaling are early on their curves (Chapters 3–7). There is no known wall between here and there—only engineering.</p>
+</li>
+<li>
+<p><strong>The remaining gaps are being closed.</strong> Agentic reliability is improving on a measured trend; memory and continual learning have credible research paths (Chapter 6); the jagged profile is smoothing as RL environments cover more of the task distribution.</p>
+</li>
+<li>
+<p><strong>The people closest to the systems believe it.</strong> The leaders of OpenAI, Anthropic, and Google DeepMind have publicly forecast AI that can do most cognitive work within roughly two to five years; Dario Amodei has spoken of "a country of geniuses in a datacenter" by 2026–27; Sam Altman has said OpenAI knows how to build AGI as traditionally understood; Demis Hassabis gives five to ten years. Senior researchers who left the laboratories (Kokotajlo, Aschenbrenner, Sutskever) hold similar views. These people have private information about internal capabilities.</p>
+</li>
+<li>
+<p><strong>Recursive improvement has begun.</strong> AI writes most of the code at the laboratories; it designs experiments, curates data, and builds environments. The automated-researcher threshold is a stated near-term goal at OpenAI (2028) and others. Once crossed, progress accelerates.</p>
+</li>
+</ol>
+<h2 id="the-case-that-agi-is-far">The case that AGI is far<a class="headerlink" href="#the-case-that-agi-is-far" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p><strong>The gaps are qualitative, not quantitative.</strong> Current systems do not learn continually from experience, do not have robust common sense or physical intuition, fail on trivially novel problems (ARC-AGI-2/3), and are unreliable in ways no human expert is. These are not the kinds of gaps that closed under scaling before; they may require ideas that do not yet exist. Forecasts that assume they close on schedule are assuming the conclusion.</p>
+</li>
+<li>
+<p><strong>Trend extrapolation has a poor record in AI.</strong> Every previous wave produced impressive early progress on benchmarks, extrapolation to imminent general intelligence, and then a wall (Chapter 1). Self-driving's "two years away" lasted a decade. METR's own caveats say its trend measures clean, low-context software tasks and that performance on messy, holistic tasks is worse. Benchmarks are saturating partly because they measure what models are good at.</p>
+</li>
+<li>
+<p><strong>Incentives contaminate the forecasts.</strong> The people forecasting imminent AGI are raising hundreds of billions of dollars on the strength of those forecasts, recruiting on them, and lobbying on them. Their track record includes many missed near-term predictions (Musk's full self-driving; the 2023–24 predictions of AGI by 2025). Independent forecasters and academics are consistently more conservative.</p>
+</li>
+<li>
+<p><strong>The economy does not yet show it.</strong> If AI were on the verge of doing most cognitive work, one would expect visible productivity acceleration, collapsing white-collar employment, and firms restructuring wholesale. Instead: task-level gains, entry-level hiring softness, and 95% of pilots failing to show P&amp;L impact (Chapter 11). The gap between benchmark and economy is either a lag—or evidence that benchmarks mismeasure what matters.</p>
+</li>
+<li>
+<p><strong>"Jagged" may be the permanent shape.</strong> Perhaps the current paradigm produces systems that are superhuman at verifiable, data-rich tasks and permanently subhuman at judgment, novelty, and embodiment—very valuable, transformative even, but not general. This would be consistent with all the evidence, and it would make definition-2 AGI a much longer project.</p>
+</li>
+</ol>
+<h2 id="what-the-forecasts-say">What the forecasts say<a class="headerlink" href="#what-the-forecasts-say" title="Permanent link">¶</a></h2>
+<h3 id="surveys-of-researchers">Surveys of researchers<a class="headerlink" href="#surveys-of-researchers" title="Permanent link">¶</a></h3>
+<p>The largest survey of AI researchers (Grace et al., 2,778 respondents surveyed in late 2023, published in <em>JAIR</em> in 2025) gave a 50% probability of "high-level machine intelligence" (able to do every task better and cheaper than humans) by 2047—thirteen years earlier than the same survey's 2022 result—and a 10% probability by 2027. For "full automation of labor," the median was 2116. Researchers assigned a median 5% probability to extremely bad outcomes. The Forecasting Research Institute's Longitudinal Expert AI Panel (from 2025) tracks similar questions monthly; its early results show medians drifting earlier.</p>
+<h3 id="forecasting-communities">Forecasting communities<a class="headerlink" href="#forecasting-communities" title="Permanent link">¶</a></h3>
+<p>Metaculus's aggregated community forecast for a general AI system (a strong, multi-criteria definition) had a median around 2031–2033 in 2026, with roughly 25% probability by 2029; its weaker "weakly general AI" question resolved or was near resolution. The Metaculus "transformative AI" median moved from about 2057 in 2020 to about 2031 in 2024—a compression of a quarter-century in four years—and has been roughly stable since. Superforecasters in the FRI economic survey assigned about 13% to the "rapid" 2030 scenario (AI surpassing humans in most cognitive and physical tasks) versus 14% for economists and higher for AI-industry respondents.</p>
+<h3 id="the-ai-2027-authors">The AI 2027 authors<a class="headerlink" href="#the-ai-2027-authors" title="Permanent link">¶</a></h3>
+<p>The most scrutinized short-timeline forecast was <em>AI 2027</em> (Kokotajlo, Lifland, and colleagues, April 2025), a scenario in which superhuman coders arrive in 2027 and superintelligence follows within a year or two. Its authors published a detailed update in January 2026. Kokotajlo's median for AGI (TED-AI) moved from 2027 (where it had been since 2022) to 2028 (early 2025), to end-2029 (August 2025), to about 2030 (November 2025), to December 2030 (January 2026). Lifland's moved from 2031 (April 2025) to 2035 (January 2026). Their stated reasons: the pretraining slowdown, METR's finding that experienced developers were slowed by early-2025 tools, and corrections to their timelines model. They emphasized that they had never been confident in 2027, that they remain highly uncertain, and that their new AI Futures Model produces wide distributions. The episode is instructive: the most aggressive credible forecasters revised toward later dates by two to four years within a year of publishing—while remaining far earlier than academic surveys.</p>
+<h3 id="laboratory-leaders">Laboratory leaders<a class="headerlink" href="#laboratory-leaders" title="Permanent link">¶</a></h3>
+<p>Public statements from 2025–26 cluster around "AI that can do most cognitive work" by 2027–2030: Amodei (systems as capable as a country of geniuses by 2026–27; "powerful AI" by 2027 in his essays); Altman (AGI in the traditional sense within the current presidential term; superintelligence "in a few thousand days"); Hassabis (AGI in five to ten years, i.e., 2030–2035, with a stricter definition than his peers); Musk (AGI by 2026, a forecast he has made annually); Zuckerberg (superintelligence "in sight"); Chinese laboratory leaders (Liang Wenfeng of DeepSeek and others speak of AGI as a goal without dates). Discount for incentive; the fact remains that no laboratory leader gives a median beyond 2035.</p>
+<h3 id="summary-of-the-distribution">Summary of the distribution<a class="headerlink" href="#summary-of-the-distribution" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>50% date for AGI (approx. remote-worker or stronger)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Laboratory leaders</td>
+<td>2027–2032</td>
+<td>Incentive-laden; private information</td>
+</tr>
+<tr>
+<td>AI 2027 authors (Jan 2026)</td>
+<td>2030–2035</td>
+<td>Revised later by 2–4 years</td>
+</tr>
+<tr>
+<td>Metaculus community</td>
+<td>2031–2033</td>
+<td>25% by 2029</td>
+</tr>
+<tr>
+<td>Superforecasters (FRI)</td>
+<td>Later than 2030 for "rapid" scenario (~13%)</td>
+<td>Conservative track record</td>
+</tr>
+<tr>
+<td>AI researchers (Grace et al., 2023)</td>
+<td>2047</td>
+<td>Stricter definition; pre-reasoning-model</td>
+</tr>
+<tr>
+<td>Economists (FRI, 2026)</td>
+<td>Assign 14% to rapid-by-2030</td>
+<td>Focus on economic effects</td>
+</tr>
+<tr>
+<td>Skeptics (LeCun, Marcus, others)</td>
+<td>2040s or "not with current methods"</td>
+<td>Emphasize qualitative gaps</td>
+</tr>
+</tbody>
+</table>
+<p>The spread is enormous—2027 to 2047 for medians—and it has compressed every year since 2020. The direction of revision among researchers and forecasters has been consistently earlier; the direction among the most aggressive forecasters in 2025–26 was later. The two are converging on the early-to-mid 2030s.</p>
+<h2 id="takeoff-the-more-important-question">Takeoff: the more important question<a class="headerlink" href="#takeoff-the-more-important-question" title="Permanent link">¶</a></h2>
+<p>Whether AGI arrives in 2029 or 2035 matters less than what happens in the years after. "Takeoff" refers to the speed at which systems progress from roughly human-level to vastly superhuman, and the debate is between <strong>fast takeoff</strong> (months to a few years, driven by AI automating AI research—an "intelligence explosion") and <strong>slow takeoff</strong> (a decade or more, as capability diffuses gradually and is limited by compute, experiments, and institutions).</p>
+<h3 id="the-intelligence-explosion-argument">The intelligence-explosion argument<a class="headerlink" href="#the-intelligence-explosion-argument" title="Permanent link">¶</a></h3>
+<p>I. J. Good (1965): an ultraintelligent machine could design better machines, producing an explosion that leaves human intelligence far behind. The modern version (Yudkowsky; Bostrom; the AI 2027 scenario; Davidson's takeoff model for Open Philanthropy; the AI Futures Model): once AI can do AI research—the superhuman-coder and automated-researcher milestones—the effective research workforce grows by orders of magnitude and runs at machine speed; algorithmic progress, currently 3×/year with a few thousand human researchers, accelerates to 10× or 100×; each generation of models makes the next faster; and the gap between "as good as our researchers" and "vastly better than any human" is crossed in a year or two. The AI Futures Model's median parameters give roughly one to three years from automated coder to superintelligence.</p>
+<h3 id="the-counterarguments">The counterarguments<a class="headerlink" href="#the-counterarguments" title="Permanent link">¶</a></h3>
+<p>Compute is a bottleneck that intelligence does not remove: experiments take physical time on physical hardware, and a million AI researchers sharing the same cluster do not run a million times more experiments. Research has diminishing returns—the low-hanging fruit is gone. Ideas are the constraint, not labor, and it is unclear that more of the same intelligence produces qualitatively new ideas. Deployment in the world (building fabs, running trials, changing institutions) is slow regardless of how smart the planner is. Epoch's analysis of "software-only intelligence explosion" (2025) concluded it is plausible but bounded by compute and by the difficulty of the remaining problems, likely producing acceleration over years rather than months. The FRI economists' rapid-scenario forecasts—3.5% GDP growth, not 30%—reflect a belief that even superhuman AI meets an economy that changes slowly.</p>
+<h3 id="evidence-as-of-2026">Evidence as of 2026<a class="headerlink" href="#evidence-as-of-2026" title="Permanent link">¶</a></h3>
+<p>AI is used extensively in AI research: coding (most laboratory code is AI-written), literature synthesis, experiment design, data curation, environment construction, and increasingly hyperparameter and architecture search (AlphaEvolve improved TPU design and datacenter scheduling; automated research systems produce publishable machine-learning papers). No laboratory claims to have crossed the automated-researcher threshold; several claim to be within a few years. The rate of algorithmic progress has not visibly jumped. Epoch's estimate of 3×/year efficiency gains has held, not accelerated—yet.</p>
+<h3 id="assessment">Assessment<a class="headerlink" href="#assessment" title="Permanent link">¶</a></h3>
+<p>The author's view is that takeoff is likely to be <em>fast relative to historical technology diffusion and slow relative to the intelligence-explosion literature</em>: once AI can do most AI research (which the author places around 2029–2032), progress in the software layer accelerates markedly—perhaps to 10×/year effective efficiency gains—over two to four years, bounded by compute and experiments, producing systems that are decisively superhuman in research and strategy by the early-to-mid 2030s, while transformation of the physical economy lags by another five to fifteen years. The probability of a takeoff fast enough (under one year from AGI to ASI) to preclude meaningful human response the author puts at roughly 15%.</p>
+<h2 id="signposts">Signposts<a class="headerlink" href="#signposts" title="Permanent link">¶</a></h2>
+<p>What to watch to update these estimates:</p>
+<table>
+<thead>
+<tr>
+<th>Signpost</th>
+<th>Would shorten timelines</th>
+<th>Would lengthen timelines</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>METR 50% horizon</td>
+<td>Continues doubling ≤4 months; 80% horizon converges</td>
+<td>Doubling slows to &gt;9 months; 80% horizon stagnates</td>
+</tr>
+<tr>
+<td>ARC-AGI-3 and novel-rule induction</td>
+<td>Frontier models &gt;80% by 2027</td>
+<td>Stuck below 30% through 2028</td>
+</tr>
+<tr>
+<td>Continual learning</td>
+<td>A frontier model that visibly learns from deployment</td>
+<td>No progress beyond RAG and long context by 2029</td>
+</tr>
+<tr>
+<td>Agentic reliability</td>
+<td>Agents run unsupervised for days in production</td>
+<td>Enterprise production deployment stays a minority</td>
+</tr>
+<tr>
+<td>AI-driven algorithmic progress</td>
+<td>Epoch efficiency estimate jumps above 5×/year</td>
+<td>Stays at ~3×/year</td>
+</tr>
+<tr>
+<td>Laboratory statements</td>
+<td>A lab claims the automated-researcher milestone with evidence</td>
+<td>Public timeline revisions later, as in 2025–26</td>
+</tr>
+<tr>
+<td>Economic data</td>
+<td>Productivity acceleration and white-collar employment decline visible in aggregates</td>
+<td>Continued "pilots fail" pattern</td>
+</tr>
+<tr>
+<td>Compute</td>
+<td>10²⁹ FLOP runs by 2029</td>
+<td>Financial correction halts buildout</td>
+</tr>
+<tr>
+<td>Robotics</td>
+<td>General manipulation policies deployed at scale by 2029</td>
+<td>Humanoid deployment stays demo-level</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-authors-estimates">The author's estimates<a class="headerlink" href="#the-authors-estimates" title="Permanent link">¶</a></h2>
+<p>Stated as probabilities so they can be wrong in a checkable way:</p>
+<p><strong>AGI (remote-worker standard: can do essentially any cognitive task a remote human expert can, at comparable reliability and lower cost):</strong>
+- By end of 2028: 20%
+- By end of 2030: 40%
+- By end of 2033: 60%
+- By end of 2040: 80%
+- Never with current paradigm (requires a conceptual breakthrough with no timeline): 10%</p>
+<p><strong>Superhuman coder (best-AI-engineer level at the laboratories):</strong> median 2028; 25% by 2027; 75% by 2030.</p>
+<p><strong>Automated AI researcher (full research loop):</strong> median 2030–31; 25% by 2029; 75% by 2034.</p>
+<p><strong>Superintelligence (decisively better than best humans at essentially all cognitive tasks including research and strategy):</strong> median 2034; 25% by 2031; 75% by 2042.</p>
+<p><strong>Full labor automation (including physical):</strong> median 2045; wide.</p>
+<p><strong>Reasoning.</strong> The trend data and the resource commitment make it hard to justify medians much later than the early 2030s for the remote-worker standard; the qualitative gaps (continual learning, novelty, reliability) and the historical pattern of the last 10% taking longer than the first 90% make it hard to justify medians before 2029. The 2025–26 revisions by the most aggressive forecasters—toward 2030–2035—and the steady earlier drift of the conservative forecasters—toward the 2030s and 2040s—bracket a consensus zone. The author sits in it, slightly toward the early end because of the inference-time and RL scaling axes that most 2023-era forecasts did not anticipate, and because of the demonstrated use of AI in AI research.</p>
+<p><strong>What would make the author wrong toward "sooner":</strong> the continual-learning problem falling to a straightforward technique in 2027; agentic reliability converging with capability faster than METR's 80% horizons suggest; an internal laboratory milestone (automated researcher) already crossed but unannounced.</p>
+<p><strong>What would make the author wrong toward "later":</strong> the discovery that RL-on-verifiable-tasks does not transfer to judgment at all; a compute buildout collapse from a financial correction; a Taiwan crisis; the jagged profile proving permanent.</p>
+<h2 id="what-agi-would-and-would-not-mean">What "AGI" would and would not mean<a class="headerlink" href="#what-agi-would-and-would-not-mean" title="Permanent link">¶</a></h2>
+<p>Even under the remote-worker definition, AGI in 2031 would not mean instant transformation. Deployment takes years; regulation, liability, and institutional inertia slow adoption; the physical economy changes at the speed of construction and manufacturing; and the last-mile reliability problems in each domain take time. It would mean that the <em>ceiling</em> on what can be automated has been removed for cognitive work, that the economics of Chapter 11's rapid scenario apply, and that the safety questions of Chapter 16 stop being about laboratory demonstrations and start being about deployed systems with real power. The decade after AGI, whenever it comes, is the one that determines whether the transition is managed or not. That is the subject of the scenarios in the next chapter.</p><div class="pager"><a href="16-safety-and-alignment.html"><span>← Previous</span>Safety and Alignment: Misuse, Misalignment, and the Problem of Control</a><a href="index.html" style="text-align:right"><span>→</span>Home</a></div><footer>Built 2026-09-09. Text is provided as an analytical review; forecasts are uncertain by nature. </footer></main>
+<aside class="toc"><div class="sub" style="font-size:12px;color:var(--muted);margin-bottom:8px">On this page</div><div class="toc">
+<ul>
+<li><a href="#the-question-everyone-asks">The question everyone asks</a></li>
+<li><a href="#definitions">Definitions</a></li>
+<li><a href="#the-case-that-agi-is-close">The case that AGI is close</a></li>
+<li><a href="#the-case-that-agi-is-far">The case that AGI is far</a></li>
+<li><a href="#what-the-forecasts-say">What the forecasts say</a><ul>
+<li><a href="#surveys-of-researchers">Surveys of researchers</a></li>
+<li><a href="#forecasting-communities">Forecasting communities</a></li>
+<li><a href="#the-ai-2027-authors">The AI 2027 authors</a></li>
+<li><a href="#laboratory-leaders">Laboratory leaders</a></li>
+<li><a href="#summary-of-the-distribution">Summary of the distribution</a></li>
+</ul>
+</li>
+<li><a href="#takeoff-the-more-important-question">Takeoff: the more important question</a><ul>
+<li><a href="#the-intelligence-explosion-argument">The intelligence-explosion argument</a></li>
+<li><a href="#the-counterarguments">The counterarguments</a></li>
+<li><a href="#evidence-as-of-2026">Evidence as of 2026</a></li>
+<li><a href="#assessment">Assessment</a></li>
+</ul>
+</li>
+<li><a href="#signposts">Signposts</a></li>
+<li><a href="#the-authors-estimates">The author's estimates</a></li>
+<li><a href="#what-agi-would-and-would-not-mean">What "AGI" would and would not mean</a></li>
+</ul>
+</div>
+</aside>
+</div><script>
+(function(){
+  const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);
+  window.toggleTheme=function(){const cur=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',cur);localStorage.setItem('theme',cur);};
+  window.toggleNav=function(){document.querySelector('nav.side').classList.toggle('open');};
+  window.addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';});
+  // sidebar filter + full-text search over search index
+  const inp=document.getElementById('q');const list=document.getElementById('chlist');const res=document.getElementById('results');
+  let idx=null;
+  async function loadIdx(){if(idx)return idx;try{const r=await fetch(window.SITE_BASE+'search.json');idx=await r.json();}catch(e){idx=[];}return idx;}
+  if(inp){inp.addEventListener('input',async()=>{const q=inp.value.trim().toLowerCase();
+    [...list.querySelectorAll('li')].forEach(li=>{li.style.display=(!q||li.textContent.toLowerCase().includes(q))?'':'none';});
+    if(q.length<3){res.innerHTML='';return;}
+    const ix=await loadIdx();const out=[];
+    for(const d of ix){const i=d.text.toLowerCase().indexOf(q);if(i>=0){const s=Math.max(0,i-60);out.push({d,snip:d.text.slice(s,i+90)});if(out.length>=25)break;}}
+    res.innerHTML=out.map(o=>`<li><a href="${window.SITE_BASE}${o.d.url}"><b>${o.d.title}</b><small>…${o.snip.replace(/</g,'&lt;')}…</small></a></li>`).join('')||'<li><small>No matches</small></li>';
+  });}
+  // active TOC highlight
+  const heads=[...document.querySelectorAll('main h2, main h3')];const links=[...document.querySelectorAll('aside.toc a')];
+  if(heads.length&&links.length){const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.style.color='');const l=links.find(l=>l.getAttribute('href')==='#'+e.target.id);if(l)l.style.color='var(--acc)';}})},{rootMargin:'0px 0px -75% 0px'});heads.forEach(h=>obs.observe(h));}
+})();
+</script></body></html>
