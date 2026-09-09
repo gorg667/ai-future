@@ -41,7 +41,7 @@
 06 [x] Architectures beyond the transformer: SSMs, mixture-of-experts, diffusion LMs, world models, JEPA, neurosymbolic, continual learning
 07 [x] Reasoning, test-time compute, RL, verifiers, and the path to reliable problem-solving
 08 [x] Agents: autonomy, tool use, computer use, multi-agent systems, agent economies, protocols (MCP, A2A)
-09 [ ] Multimodality & embodiment: vision, audio, video generation, robotics, humanoids, self-driving
+09 [x] Multimodality & embodiment: vision, audio, video generation, robotics, humanoids, self-driving
 10 [ ] AI for science: AlphaFold-class breakthroughs, math, materials, drug discovery, AI scientists
 11 [ ] Economics: productivity, labor, wages, task automation, firm structure, GDP scenarios, inequality
 12 [ ] Work & professions: sector-by-sector (software, medicine, law, education, creative, finance, manufacturing)
@@ -72,3 +72,4 @@
 - Ch06 done (rewritten after interruption lost it). Next: Ch07 reasoning/RL/test-time compute. LESSON: commit immediately after each Write; if interrupted mid-write, check file exists.
 - Ch07 done. Next: Ch08 agents.
 - Ch08 done. Next: Ch09 multimodality & embodiment/robotics.
+- Ch09 done. Next: Ch10 AI for science.
