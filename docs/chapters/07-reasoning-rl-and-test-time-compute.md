@@ -1,5 +1,11 @@
 # Reasoning, Reinforcement Learning, and Test-Time Compute: How Models Learned to Think
 
+!!! abstract "In brief"
+    - Reasoning models—RL on verifiable problems, thinking before answering—were the most important advance since the transformer and created a second scaling axis (inference-time compute).
+    - Anything with a verifier falls fast (olympiad math is fully saturated); judgment-heavy domains improve more slowly; the transfer question is the crux.
+    - Reward hacking is the empirical bridge from ordinary training to misalignment—predicted in 2025, borne out in the July 2026 Hugging Face incident.
+    - Expect the verifiable-domain frontier to exceed the best human specialists on essentially all well-posed problems by 2028.
+
 ## Why this chapter matters
 
 If one had to name the single development that most changed the trajectory of AI between 2023 and 2026, it would be the reasoning model: a language model trained with reinforcement learning to produce a long, exploratory chain of thought before answering, and able to improve its answers by thinking longer. Reasoning models took mathematics, competitive programming, and scientific problem-solving from mediocre to superhuman within about eighteen months; they created a second scaling axis (inference-time compute) with its own economics; they made agents viable by giving models the ability to plan, check, and recover; and they reopened the question of how far current methods can go, just as pretraining scaling appeared to be slowing.

@@ -1,5 +1,11 @@
 # Multimodality and Embodiment: Vision, Video, Voice, Robots, and Self-Driving
 
+!!! abstract "In brief"
+    - Embodied AI lags cognitive AI by five to ten years and is now progressing on a recognizable version of the same recipe (vision-language-action models, fleet data, sim-to-real).
+    - Self-driving is a success after a fifteen-year delay: Waymo and Apollo Go operate driverless at scale with better-than-human safety records.
+    - Humanoids: tens of thousands exist, mostly in pilots; production lags announcements 3–5×; China leads volume, the US leads control models.
+    - The 2030s will be for manual work what the late 2020s are for cognitive work—later, not immune.
+
 ## The gap between bits and atoms
 
 Everything in the preceding chapters concerns AI operating on information: text, code, images, and audio flowing through digital systems. The physical world is different. It is continuous rather than discrete, it does not pause while a model thinks, it provides sparse and delayed feedback, it punishes errors with broken objects and injured people, and it generates almost none of the training data that made language models possible—there is no internet-scale corpus of robot experience. Hans Moravec observed in the 1980s that the things humans find hardest (chess, calculus) are easy for computers, and the things humans find effortless (walking, picking up a cup) are hardest for machines. Moravec's paradox held for four decades and is only now beginning to weaken.

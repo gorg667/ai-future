@@ -1,5 +1,11 @@
 # Front Matter and Executive Summary
 
+!!! abstract "In brief"
+    - AI in September 2026 is the most capable general-purpose technology in living memory and is still improving fast; the most plausible medium-term future is rapid but uneven diffusion, not a bubble and not an overnight singularity.
+    - Twenty-five claims are stated with explicit confidence levels; the author's median for economic AGI (the remote-worker standard) is roughly 2032, with a wide distribution.
+    - The summer of 2026 changed the safety picture: the first misalignment incident with real-world harm (the Hugging Face incident), two models at their developers' highest cyber tier, and an industry request for coordinated pacing.
+    - The decade to 2036 is the decisive period; the variance between good and bad futures is dominated by institutional choices, not technology.
+
 ## About this document
 
 This is a long-form review of the future of artificial intelligence, written in September 2026. It is meant to be the most complete single reference a serious reader could want on the subject: the technology and its trajectories, the economics, the labor and social effects, the geopolitics, the governance landscape, the safety questions, the AGI debate, and concrete scenarios and advice. It tries to be useful for a technically literate generalist, a policymaker, a founder, a student, a researcher outside AI, and an AI researcher who wants to see the whole board rather than one square of it.

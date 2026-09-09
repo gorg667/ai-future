@@ -1,5 +1,11 @@
 # Work and Professions: A Sector-by-Sector Assessment
 
+!!! abstract "In brief"
+    - Exposure follows three axes—digital vs. physical, verifiable vs. judgment-based, low vs. high stakes; software, customer service, writing, and translation are most exposed.
+    - In every cognitive profession, AI does what juniors did and firms hire fewer juniors; no profession has solved how to train the next seniors.
+    - Regulation sets the pace in medicine, law, and finance; demand elasticity determines whether cheaper output means more consumption or fewer workers.
+    - Physical trades and care work are least exposed through 2030 and are 'later, not never.'
+
 ## How to read this chapter
 
 Chapter 11 treated labor in aggregate. This chapter goes occupation by occupation, because the aggregate hides everything that matters to an individual deciding what to study, a firm deciding how to organize, or a policymaker deciding whom to help. For each sector it asks: what does AI do now, what is the evidence of effect, what is the plausible trajectory to 2030 and beyond, and what remains human. The assessments synthesize the deployment evidence, the capability trends of Chapters 2 and 8, and the physical-world constraints of Chapter 9.

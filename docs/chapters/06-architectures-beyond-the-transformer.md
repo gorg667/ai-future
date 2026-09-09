@@ -1,5 +1,11 @@
 # Architectures Beyond the Transformer: What Might Replace or Extend the Current Paradigm
 
+!!! abstract "In brief"
+    - The transformer will not be replaced wholesale before 2030, but frontier systems are becoming hybrids (mostly linear/SSM layers, minority full attention, fine-grained MoE).
+    - Memory and continual learning are the largest unsolved architectural gap and not obviously a scaling problem; the author estimates 50% by 2029, 75% by 2032.
+    - World models matter most for robotics; for language, the 'autoregression is a dead end' critique looks premature.
+    - The first system most people call AGI will be recognizably descended from the 2017 transformer, heavily modified.
+
 ## Framing
 
 The transformer has been the dominant architecture for nine years—an eternity in a field where the previous champions (LSTMs, convolutional networks) lasted a similar span before being displaced. Its dominance rests on three properties: it parallelizes across the sequence during training, it scales predictably, and it is general across modalities. Its weaknesses are also well understood: attention costs grow quadratically with sequence length; it has no persistent memory beyond its context window; it does not learn from experience after training; it processes the world as sequences of discrete tokens, which is natural for text and awkward for continuous perception and control; and it is a poor fit for the hierarchical, model-based planning that humans and animals use.

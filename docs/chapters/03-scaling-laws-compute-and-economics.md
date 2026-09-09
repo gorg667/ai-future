@@ -1,5 +1,11 @@
 # Scaling Laws, Compute, and the Economics of Training
 
+!!! abstract "In brief"
+    - Scaling laws are empirical power laws that have held across seven orders of magnitude; 'scaling' now means three things at once—pretraining, RL post-training, and inference-time compute.
+    - Frontier training compute grows ~5×/year, algorithmic efficiency ~3×/year, chip price-performance ~1.5×/year; a 10²⁹ FLOP run is feasible by 2030.
+    - Hyperscaler capex is $750–900B in 2026 (>$1T globally), ~93% of the big four's operating cash flow; a financial correction before 2030 is more likely than not, and would not falsify the technology.
+    - Author's estimate: scaling in the broad sense continues through 2028 with ~85% confidence; whether it closes the qualitative gaps (reliability, memory) is ~50%.
+
 ## The central question
 
 Almost every disagreement about the future of AI reduces to a disagreement about scaling: whether pouring more compute, data, and engineering into current methods will keep producing capability gains, and if so for how long and at what cost. If scaling continues, the trend lines of the last decade imply systems by 2030 that are qualitatively beyond anything now deployed. If it stalls, the current generation of models—very capable but jagged and unreliable—may be roughly what we live with for a long time, improved at the margins.

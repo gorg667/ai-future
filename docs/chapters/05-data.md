@@ -1,5 +1,11 @@
 # Data: The Wall, the Workarounds, and the Fight Over Who Owns It
 
+!!! abstract "In brief"
+    - The stock of high-quality human text is finite and largely consumed; the data wall is real for raw web text and has been partly circumvented.
+    - Synthetic data works where there is a verifier (math, code) and is fragile where there is not; RL environments are the new data industry.
+    - Courts are converging on: training on lawfully acquired data is fair use, piracy is penalized, outputs that reproduce works are actionable; licensing markets help large publishers only.
+    - The open web is contracting as a result of the models trained on it; interaction data and proprietary corpora favor incumbents.
+
 ## The problem stated
 
 A language model is a compression of its training data. Its knowledge, its style, its reasoning patterns, and its blind spots are inherited from what it read. For a decade, the recipe for a better model was a bigger model trained on more data, and the data was free: the public web, digitized books, code repositories, and scientific papers, scraped and filtered. That era is ending for three reasons. The stock of high-quality human text is finite and largely consumed. The legal and commercial terms under which it was taken are being contested in courts and renegotiated in licensing deals. And the internet is filling with model-generated content, so that future scrapes are increasingly of the outputs of past models.

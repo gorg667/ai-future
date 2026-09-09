@@ -1,5 +1,11 @@
 # Hardware and Infrastructure: Chips, Datacenters, Energy, and the Physical Limits of AI
 
+!!! abstract "In brief"
+    - AI is bounded by a physical stack—TSMC, ASML, three HBM makers, CoWoS packaging—that is extraordinarily concentrated and slow to expand.
+    - Power and grid interconnection, not chips, are now the binding constraint on US datacenter construction; responses include behind-the-meter gas, nuclear restarts, and multi-site training.
+    - Global datacenter electricity roughly doubles to ~950 TWh (~3% of global) by 2030—large but absorbable globally, disruptive locally.
+    - Export controls have slowed China's frontier and accelerated its chip industry; a Taiwan contingency is the single largest tail risk to everything in this document.
+
 ## Why the physical layer matters
 
 AI is often discussed as if it were software—weightless, infinitely copyable, constrained only by ideas. It is not. Every token a frontier model produces is the result of trillions of arithmetic operations executed on silicon that had to be designed, fabricated in one of a handful of factories on Earth, packaged with memory, networked into clusters of hundreds of thousands of units, housed in buildings with specialized cooling, and fed with electricity at a scale comparable to a mid-sized city. The pace of AI progress over the next decade is bounded by how fast this physical stack can be built, and the geography of AI power is determined by who controls it.

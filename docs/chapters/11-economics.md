@@ -1,5 +1,11 @@
 # Economics: Productivity, Labor, Growth, and Who Captures the Gains
 
+!!! abstract "In brief"
+    - Task-level productivity gains are large (15–55%); firm-level gains are smaller and uneven; aggregate TFP has not yet broken trend—the standard general-purpose-technology lag.
+    - Labor effects so far run through hiring, not layoffs: employment of 22–25-year-olds in AI-exposed occupations is ~19% below trend; headline unemployment is 4.1%.
+    - Author's estimate: +0.5–1.5 pp/year US productivity growth through the early 2030s; ~15% chance of >10% AI-driven unemployment by 2032.
+    - Distribution, not aggregate output, is the central economic question; current trajectories point toward concentration absent policy.
+
 ## The questions
 
 The economics of AI reduce to four questions, in rising order of difficulty. Does AI make workers and firms more productive, and by how much? What happens to employment and wages as it does? Does it change the long-run growth rate of the economy, or only its level? And who captures the gains—capital or labor, incumbents or entrants, rich countries or poor ones, this generation or the next?

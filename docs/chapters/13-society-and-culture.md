@@ -1,5 +1,11 @@
 # Society and Culture: Information, Relationships, Minds, and Meaning
 
+!!! abstract "In brief"
+    - The link economy is collapsing: ~60% of US Google searches end without a click; answer engines displace the traffic that funded publishing.
+    - Synthetic media's realized harms are fraud and non-consensual imagery, not (yet) decisive election deepfakes; provenance beats detection.
+    - AI companionship is a mass phenomenon (72% of US teens have used one) with documented benefits and harms; it is an uncontrolled experiment on attachment.
+    - AI has become a political issue in its own right, with cross-cutting coalitions; datacenter siting and entry-level jobs are its first mass politics.
+
 ## The scope
 
 Economic effects are measurable; social effects are pervasive and harder to count. This chapter treats the ways AI is changing how people know things, relate to each other, learn, think, create, and find meaning—domains where the evidence is newer, the effects are slower, and the stakes are arguably higher than in the labor market. It covers the information ecosystem (search, media, synthetic content, trust), AI companions and relationships, mental health, children and education, cognition and skills, creativity and culture, religion and meaning, and the politics of AI itself. Where evidence exists it is cited; where it does not, that is said.

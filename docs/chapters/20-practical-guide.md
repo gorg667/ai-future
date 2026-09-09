@@ -1,5 +1,11 @@
 # A Practical Guide: What to Do, for Individuals, Organizations, and Governments
 
+!!! abstract "In brief"
+    - Advice that works across scenarios: use the tools seriously, move toward judgment and accountability, build reversibly, verify isolation for agents.
+    - For policymakers: build evaluation capacity, make frameworks binding with independent verification (the FRONTIER model), harden the physical layer, prepare transition infrastructure before it is needed.
+    - Take the laboratories up on their pacing request: convene it, give it antitrust cover, make it verifiable.
+    - The two failure modes are denial and fatalism; the appropriate posture is to take the technology and the uncertainty seriously and act on what is robust.
+
 ## The principle: robustness across scenarios
 
 The preceding chapters describe a future with wide variance. Advice that depends on one scenario coming true is a bet; advice that helps across most scenarios is a strategy. This chapter tries to give the latter. For each audience it distinguishes actions that are robust (good in nearly every scenario), actions that are hedges (cheap insurance against particular scenarios), and actions to avoid (bets that look attractive in one scenario and fail badly in others). Where the advice is contested, it says so.

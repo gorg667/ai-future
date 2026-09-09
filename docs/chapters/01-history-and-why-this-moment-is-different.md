@@ -1,5 +1,11 @@
 # A Brief History of AI, and Why This Moment Is Different
 
+!!! abstract "In brief"
+    - Every AI forecast is implicitly a claim about which historical pattern is repeating; this chapter gives the history so the reader can judge.
+    - The mechanisms that ended earlier AI waves—hand-coded knowledge, inadequate compute, narrow methods—are absent now; the mechanism that persists is over-optimism about how fast impressive capability becomes reliable and deployed.
+    - Three 2026 events—Mythos Preview, six perfect IMO scores, and the Hugging Face incident—would not have been credible forecasts in 2023.
+    - Assessment: no 1970s-style winter, but repeated disappointment relative to the most aggressive forecasts; the gap between benchmark and economy is where the drama is.
+
 ## Why history matters for forecasting
 
 Every serious forecast about AI's future is implicitly a claim about which historical pattern is repeating. The skeptic says: we have been here before—in 1958, in 1970, in 1985—and each time the enthusiasm outran the technology and a "winter" followed. The optimist says: this time the inputs are different in kind, not degree, and the trend lines have held for over a decade through multiple predicted walls. Both are making historical arguments. To evaluate them one has to know the history reasonably well, and specifically to know *why* the previous waves failed, so that one can ask whether those causes still apply.

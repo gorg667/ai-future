@@ -1,5 +1,11 @@
 # Geopolitics: The US–China Race, Sovereign AI, Chips, and War
 
+!!! abstract "In brief"
+    - The US leads the frontier by months, not years; China leads diffusion, open weights, and energy buildout; the gap is smaller than either side's rhetoric.
+    - Export controls have slowed China and accelerated its chip industry; Taiwan is the decisive vulnerability.
+    - Most countries will be consumers of frontier models and deployers of (increasingly Chinese) open weights; the Gulf is the third infrastructure pole.
+    - Military AI is being decided by battlefield necessity, not treaty; the summer 2026 incidents and the industry's pacing request slightly raise the odds of coordination.
+
 ## AI as a strategic technology
 
 By 2026 every major government treats artificial intelligence as a determinant of national power comparable to nuclear energy in the 1950s or the internet in the 1990s—and unlike either, one whose frontier is held by private companies. The competition has several arenas: frontier capability, compute and its supply chain, energy, talent, data, standards and diffusion, and military application. This chapter treats the US–China rivalry that organizes the field, the "sovereign AI" movement among everyone else, the export-control regime and its effects, the militarization of AI, and the prospects for international coordination. The conclusion: **the US leads at the frontier by months, not years; China leads in diffusion, open weights, and industrial application; the gap is narrower than either side's rhetoric suggests; and the competition is shifting from models to the physical and institutional infrastructure around them.**

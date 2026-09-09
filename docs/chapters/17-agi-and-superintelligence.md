@@ -1,5 +1,11 @@
 # AGI and Superintelligence: Definitions, Timelines, Takeoff, and What to Believe
 
+!!! abstract "In brief"
+    - 'AGI' means at least five different things; this document uses the remote-worker standard—any cognitive task a remote human expert can do, at comparable reliability and lower cost.
+    - Forecast medians span 2027 (lab leaders) to 2047 (academic surveys) and are converging on the early-to-mid 2030s; the most aggressive forecasters revised later in 2025–26 while conservatives revised earlier.
+    - Author's estimates: AGI 22% by 2028, 42% by 2030, 62% by 2033, 80% by 2040; superintelligence median 2034; fast (<1 year) takeoff ~15%.
+    - Takeoff speed matters more than arrival date; the author expects fast relative to history, slow relative to the intelligence-explosion literature.
+
 ## The question everyone asks
 
 "When will we get AGI?" is the question the public asks most and the one the field answers worst—because the term is ambiguous, the forecasts are contaminated by incentives, and the underlying uncertainty is genuine. This chapter tries to do the question justice: to define the terms precisely enough to forecast, to lay out the evidence and the arguments on each side, to survey what forecasters and experts actually predict and how their predictions have moved, to address the distinct and more consequential question of *takeoff* (how fast things go after human-level), and to offer the author's own calibrated estimates with reasoning exposed.

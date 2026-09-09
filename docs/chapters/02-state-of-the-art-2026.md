@@ -1,5 +1,11 @@
 # The State of the Art in 2026: What AI Can and Cannot Do
 
+!!! abstract "In brief"
+    - Five to seven organizations train frontier models; China trails by roughly six to eight months on aggregate, is at parity on olympiad math, and leads open weights.
+    - Nearly every benchmark that existed in 2023 is saturated; ARC-AGI-3, designed in 2026 to resist current methods, was solved in six months (GPT-6 Astra, September 2026).
+    - Capability is jagged and reliability lags capability: the 80% agent horizon is a fifth of the 50% horizon; hallucination persists at 15–30% on hard factual tasks.
+    - The cost of fixed capability falls ~10×/year, so whatever the frontier does today is cheap everywhere in two to three years.
+
 ## Purpose of this chapter
 
 Forecasting requires a baseline. This chapter describes, as precisely as the evidence allows, what frontier AI systems can do as of September 2026, what they cannot, and how we know. It covers the landscape of models and laboratories, the benchmarks and what they measure, the pattern of "jagged" capability that makes AI hard to reason about, the reliability problem, and the cost curve that determines what is economically deployable. Readers who follow the field closely can skim; the chapter's value is in assembling the pieces in one place with their caveats attached.

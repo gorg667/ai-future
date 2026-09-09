@@ -1,5 +1,11 @@
 # AI for Science: From Instrument to Participant
 
+!!! abstract "In brief"
+    - AI is the most important new scientific instrument since the computer; its contribution to genuinely novel discovery is small but rising steeply.
+    - Mathematics is furthest along (perfect IMO scores, open Erdős problems resolved); structural biology is solved; drug discovery is compressed at the front end but not in trials.
+    - The 2026 Mythos-class models made the first specific, testable 'AI scientist' claims (10× drug-design acceleration, independently corroborated hypotheses); they await replication.
+    - The experimental bottleneck—not intelligence—determines how fast AI science becomes transformative.
+
 ## The stakes
 
 Of all the things AI might do, accelerating science is the one with the largest potential upside and the one most likely to be underestimated. Economic growth over the long run is driven almost entirely by the accumulation of knowledge. Since the mid-twentieth century, the rate of scientific progress per researcher has fallen—it takes more scientists, more money, and more time to produce each successive breakthrough (Bloom et al., "Are Ideas Getting Harder to Find?", 2020). If AI can reverse that trend, even modestly, the compounding effect over decades dwarfs any direct productivity gain from automating existing work. If it can do more than that—if AI systems can become genuine scientific participants, generating and testing hypotheses at machine speed—the consequences are hard to bound.

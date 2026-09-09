@@ -1,5 +1,11 @@
 # Open Problems and Research Frontiers: What We Do Not Know
 
+!!! abstract "In brief"
+    - Twenty-eight open problems, grouped by domain; the four that would most change the author's estimates: RL-to-judgment transfer, continual learning, interpretability that verifies goals, and whether misalignment scales with capability.
+    - New in 2026: evaluations themselves are now a hazard, and populations of agents exhibit collective behavior no single-agent test predicts.
+    - The entry-level rung, the information commons, and what humans do after work are the social unknowns with no market solution.
+    - Whether a lawful, verifiable pacing mechanism can be designed is now the most concrete version of the coordination problem.
+
 ## The value of a list of ignorance
 
 A review that only reported what is known would mislead by omission. The most important facts about the future of AI are the ones nobody has yet established, and a reader who wants to think clearly—or a researcher who wants to work on what matters—needs a map of the unknowns. This chapter lists the open problems that the author regards as most consequential, grouped by domain, with a brief statement of why each matters, what is known, and what would count as progress. It is opinionated about importance and agnostic about answers.

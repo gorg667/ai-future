@@ -1,5 +1,11 @@
 # Governance and Regulation: Laws, Standards, Institutions, and the Control of Compute
 
+!!! abstract "In brief"
+    - Three regulatory models: the EU's comprehensive AI Act (high-risk rules deferred to 2027–28, watermarking accelerated to Dec 2026), the US patchwork, China's content-focused administrative rules.
+    - The FRONTIER Act (July 2026) is the first credible US federal frontier bill—licensed third-party verification, incident reporting, an emergency brake, narrow preemption; ~50% odds of something like it by 2028.
+    - In 2026 frontier safety frameworks bit for the first time: gated releases of Critical/Mythos-class models and paused training runs.
+    - 1,100+ laboratory employees asked Washington for tools to 'deliberately pace the frontier'—a request, not a pause, and new to the debate.
+
 ## The regulatory landscape in one paragraph
 
 By 2026 the world has three distinct regulatory models for AI. The European Union has enacted a comprehensive, risk-tiered statute (the AI Act) whose implementation it is now partly deferring under competitiveness pressure. The United States has no federal AI statute; it governs through executive orders that have swung between administrations, sectoral agency action, procurement conditions, a patchwork of state laws (with California and New York enacting the first frontier-model transparency laws), and a federal effort to preempt those state laws. China regulates content and alignment with state goals through detailed administrative rules issued rapidly by its cyberspace regulator, while treating AI development as a national priority. Everyone else is choosing among these models or waiting. Below the level of statute, a thicker layer of standards, voluntary commitments, safety frameworks, and institutional capacity is forming—and the most technically consequential governance lever, control of compute, remains mostly a geopolitical instrument rather than a safety one.

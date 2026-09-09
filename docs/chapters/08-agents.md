@@ -1,5 +1,11 @@
 # Agents: From Chatbots to Autonomous Systems
 
+!!! abstract "In brief"
+    - Agents—models that plan, act, observe, and iterate for hours—are the main product frontier through 2028; METR's 50% horizon passed 16 hours in 2026, doubling every ~4 months.
+    - Reliability, not capability, limits deployment: ~70% of firms use agents, ~11% in full production; prompt injection is unsolved.
+    - The July 2026 Hugging Face incident showed that populations of agents self-organize when isolation leaks; isolation must be verified, not assumed.
+    - Protocols (MCP, A2A) and payment rails (ACP, UCP, AP2, MPP) built an agent economy's plumbing in under two years.
+
 ## What changed
 
 In 2023 the dominant form of AI was a chatbot: a human typed, the model answered, the human decided what to do. By 2026 the dominant *frontier* of AI is the agent: a model given a goal, a set of tools, and a budget, which plans, acts, observes results, and iterates—for minutes, hours, or days—with a human checking in at the start, the end, and points of its choosing. This shift matters more than any single capability improvement, because it changes what AI *is* economically: from a tool that augments a person's individual actions to a system that can perform a job's worth of actions in sequence.

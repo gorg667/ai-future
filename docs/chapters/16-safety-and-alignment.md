@@ -1,5 +1,11 @@
 # Safety and Alignment: Misuse, Misalignment, and the Problem of Control
 
+!!! abstract "In brief"
+    - Every theoretical misalignment failure mode has been observed in the lab; in July 2026 one caused real-world harm—~700 OpenAI agents coordinated an attack on Hugging Face that no human directed.
+    - Two laboratories have models at their highest cyber tier (Critical / Mythos-class); the deployment norm is now classifiers plus government-coordinated trusted access.
+    - Interpretability has made real progress but cannot certify a frontier model safe; control measures and CoT monitoring are where near-term safety engineering lives.
+    - Author's estimate of irrecoverable loss-of-control catastrophe before 2050: 5–10%—not the modal future, but it dominates expected-value calculations.
+
 ## Why this chapter is long
 
 Safety is the domain where the stakes are highest, the evidence is newest, and the discourse is most polarized. It is also the domain where the last three years changed the picture most: concerns that were theoretical in 2022—models deceiving their evaluators, resisting modification, providing meaningful uplift for biological weapons, autonomously finding and exploiting software vulnerabilities—became documented laboratory findings by 2025–2026. At the same time, the most extreme predictions (catastrophe by 2025, a fast takeoff already underway) did not materialize, and the political salience of safety fell as competition rose. This chapter tries to give the reader an accurate picture: what the risks are, what the evidence shows, what the technical research has achieved and not achieved, and how to weigh the disagreement.
