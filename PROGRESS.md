@@ -55,7 +55,7 @@
 20 [x] Practical guide: for individuals, students, workers, founders, executives, policymakers, researchers
 21 [x] Glossary
 22 [x] Bibliography / further reading
-23 [ ] Appendix: forecasting table, key numbers, timeline of milestones
+23 [x] Appendix: forecasting table, key numbers, timeline of milestones
 
 ## Workflow per chapter
 1. Write `docs/chapters/NN-slug.md` (aim 4,000–9,000 words each; dense, structured, with tables).
@@ -86,3 +86,4 @@
 - Ch20 done. Next: Ch21 glossary, 22 bibliography, 23 appendix.
 - Ch21 done. Next: 22 bibliography, 23 appendix.
 - Ch22 done. Next: 23 appendix (forecast table, key numbers, timeline), then final QA pass + README.
+- Ch23 done. ALL 24 CHAPTERS COMPLETE. Next: README.md, QA pass (check site renders, links), consider GitHub Pages deploy note.
