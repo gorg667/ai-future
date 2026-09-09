@@ -24,7 +24,7 @@ Dependence on Taiwan for leading-edge fabrication is the single largest vulnerab
 
 ### Assets
 
-China has the second-largest concentration of AI talent and produces more AI researchers than any country (by some measures nearly half of the world's top-tier AI researchers did undergraduate work in China); a large and fast-moving laboratory ecosystem (DeepSeek, Alibaba's Qwen, Moonshot, Zhipu, MiniMax, ByteDance Seed, Tencent, Baidu, and dozens more); the world's most complete manufacturing base and the largest deployment of industrial robots; a state that can direct capital, energy, and land at scale (China added more electricity generation in 2024–25 than the entire US grid's growth in a decade); an enormous domestic market and data; and a policy apparatus that has made AI a national priority since 2017 (the New Generation AI Development Plan; the 2025 "AI Plus" initiative to integrate AI across the economy; provincial subsidy programs; mandatory AI education).
+China has the second-largest concentration of AI talent and produces more AI researchers than any country (by some measures nearly half of the world's top-tier AI researchers did undergraduate work in China); a large and fast-moving laboratory ecosystem (DeepSeek, Alibaba's Qwen, Moonshot, Zhipu, MiniMax, ByteDance Seed, Tencent, Baidu, Huawei, Xiaohongshu—whose dots-note-3.0 was among the first systems to score a perfect 42/42 at the July 2026 IMO in Shanghai—and dozens more); the world's most complete manufacturing base and the largest deployment of industrial robots; a state that can direct capital, energy, and land at scale (China added more electricity generation in 2024–25 than the entire US grid's growth in a decade); an enormous domestic market and data; and a policy apparatus that has made AI a national priority since 2017 (the New Generation AI Development Plan; the 2025 "AI Plus" initiative to integrate AI across the economy; provincial subsidy programs; mandatory AI education).
 
 ### Strategy
 
@@ -40,7 +40,7 @@ Compute is the binding constraint: Chinese laboratories have access to perhaps a
 
 Reasonable assessments in 2026:
 
-- **Frontier capability**: US ahead by roughly six to eight months; the gap has been stable or narrowing slowly since DeepSeek-R1.
+- **Frontier capability**: US ahead by roughly six to eight months on aggregate measures, and further on the newest agentic and cyber capabilities (no Chinese laboratory has disclosed a Mythos- or Astra-class model); at parity on olympiad mathematics, where Chinese systems matched the best American ones in July 2026. The gap has been stable or narrowing slowly since DeepSeek-R1.
 - **Open weights**: China ahead; Chinese models are the default for self-hosted deployment worldwide.
 - **Compute**: US ahead by roughly an order of magnitude at the frontier; the gap is widening in absolute terms and China is substituting efficiency and volume of mid-tier chips.
 - **Diffusion and application**: China ahead in industrial robotics, manufacturing, and government adoption; the US ahead in enterprise software and consumer products.
@@ -108,7 +108,7 @@ The reasons are structural: the two actors who matter most see AI as a competiti
 
 **Taiwan crisis (~10–15% within the period).** A blockade or conflict disrupts TSMC; the frontier stalls for years everywhere; the US and its allies race to build fabs while China, already indigenizing, may gain relatively; global economic shock; AI development becomes a war-mobilization priority.
 
-**Cooperation under threat (~10%).** A shared shock—a major AI-enabled attack, a demonstrated loss-of-control incident, an AI-enabled pandemic—produces genuine coordination on frontier development, compute governance, and verification, along the lines proposed by safety advocates. Historically, this is how arms control has happened: after the crisis, not before.
+**Cooperation under threat (~10–15%).** A shared shock—a major AI-enabled attack, a demonstrated loss-of-control incident, an AI-enabled pandemic—produces genuine coordination on frontier development, compute governance, and verification, along the lines proposed by safety advocates. Historically, this is how arms control has happened: after the crisis, not before. The summer of 2026 supplied a smaller version of the shock (the Hugging Face and AISI incidents) and an unprecedented response from inside the industry—the "Pacing the Frontier" statement's explicit request for an *international* effort to build pacing tools (Chapter 15). Whether Washington channels that into anything Beijing would join is the open question; the author has nudged this scenario's probability up a few points.
 
 ## Summary
 
