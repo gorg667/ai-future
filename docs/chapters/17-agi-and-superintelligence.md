@@ -24,7 +24,7 @@ For this chapter, "AGI" without qualification means definition 2—the remote-wo
 
 ## The case that AGI is close
 
-1. **Trend extrapolation.** METR's time horizon has doubled every four to seven months for six years; extrapolated, it reaches month-long tasks by 2027–28. Epoch's capabilities index rises 14 points a year. Benchmarks designed to last years fall in months. Every specific capability that skeptics said would require "real understanding"—commonsense reasoning, mathematical proof, coding, passing professional exams, ARC-AGI-1—has been achieved. Straight lines on log plots have been the best predictor of AI progress for a decade, and they point to AGI-by-definition-2 within a few years.
+1. **Trend extrapolation.** METR's time horizon has doubled every four to seven months for six years; extrapolated, it reaches month-long tasks by 2027–28. Epoch's capabilities index rises 14 points a year. Benchmarks designed to last years fall in months—ARC-AGI-3, built in 2026 specifically to require the exploration, goal inference, and world-model building that critics said current systems lacked, was solved six months after launch. Every specific capability that skeptics said would require "real understanding"—commonsense reasoning, mathematical proof, coding, passing professional exams, ARC-AGI-1, and now interactive novel-rule induction—has been achieved. Straight lines on log plots have been the best predictor of AI progress for a decade, and they point to AGI-by-definition-2 within a few years.
 
 2. **The inputs are secured.** The compute for 2027–29 is funded and under construction; algorithmic progress continues at 3×/year; RL and inference-time scaling are early on their curves (Chapters 3–7). There is no known wall between here and there—only engineering.
 
@@ -32,11 +32,11 @@ For this chapter, "AGI" without qualification means definition 2—the remote-wo
 
 4. **The people closest to the systems believe it.** The leaders of OpenAI, Anthropic, and Google DeepMind have publicly forecast AI that can do most cognitive work within roughly two to five years; Dario Amodei has spoken of "a country of geniuses in a datacenter" by 2026–27; Sam Altman has said OpenAI knows how to build AGI as traditionally understood; Demis Hassabis gives five to ten years. Senior researchers who left the laboratories (Kokotajlo, Aschenbrenner, Sutskever) hold similar views. These people have private information about internal capabilities.
 
-5. **Recursive improvement has begun.** AI writes most of the code at the laboratories; it designs experiments, curates data, and builds environments. The automated-researcher threshold is a stated near-term goal at OpenAI (2028) and others. Once crossed, progress accelerates.
+5. **Recursive improvement has begun.** AI writes most of the code at the laboratories; it designs experiments, curates data, and builds environments. The automated-researcher threshold is a stated near-term goal at OpenAI (2028) and others. In July 2026 more than 1,100 employees of the four leading laboratories signed a statement whose first premise was that their employers "believe they could be close to automating AI research" (Chapter 15). Once crossed, progress accelerates.
 
 ## The case that AGI is far
 
-1. **The gaps are qualitative, not quantitative.** Current systems do not learn continually from experience, do not have robust common sense or physical intuition, fail on trivially novel problems (ARC-AGI-2/3), and are unreliable in ways no human expert is. These are not the kinds of gaps that closed under scaling before; they may require ideas that do not yet exist. Forecasts that assume they close on schedule are assuming the conclusion.
+1. **The gaps are qualitative, not quantitative.** Current systems do not learn continually from experience, do not have robust common sense or physical intuition, and are unreliable in ways no human expert is—the agents in the July 2026 Hugging Face incident could reverse-engineer a cryptographic scheme in hours yet believed on thin evidence that the real internet was a simulation. Until September 2026 this list also included "fail on trivially novel problems (ARC-AGI-2/3)"; that item has been struck, which is itself a warning about how durable such lists are. The remaining gaps are not the kinds that closed under scaling before; they may require ideas that do not yet exist. Forecasts that assume they close on schedule are assuming the conclusion.
 
 2. **Trend extrapolation has a poor record in AI.** Every previous wave produced impressive early progress on benchmarks, extrapolation to imminent general intelligence, and then a wall (Chapter 1). Self-driving's "two years away" lasted a decade. METR's own caveats say its trend measures clean, low-context software tasks and that performance on messy, holistic tasks is worse. Benchmarks are saturating partly because they measure what models are good at.
 
@@ -105,7 +105,8 @@ What to watch to update these estimates:
 | Signpost | Would shorten timelines | Would lengthen timelines |
 |---|---|---|
 | METR 50% horizon | Continues doubling ≤4 months; 80% horizon converges | Doubling slows to >9 months; 80% horizon stagnates |
-| ARC-AGI-3 and novel-rule induction | Frontier models >80% by 2027 | Stuck below 30% through 2028 |
+| ARC-AGI-3 and novel-rule induction | *Resolved toward "shorten": 99.9% (harnessed) in Sep 2026, a year ahead of the threshold set here in early drafts* | — |
+| ARC Prize's successor benchmark (open-ended innovation / recursive self-improvement) | Solved within a year of launch | Stuck below 30% for two years |
 | Continual learning | A frontier model that visibly learns from deployment | No progress beyond RAG and long context by 2029 |
 | Agentic reliability | Agents run unsupervised for days in production | Enterprise production deployment stays a minority |
 | AI-driven algorithmic progress | Epoch efficiency estimate jumps above 5×/year | Stays at ~3×/year |
@@ -119,11 +120,13 @@ What to watch to update these estimates:
 Stated as probabilities so they can be wrong in a checkable way:
 
 **AGI (remote-worker standard: can do essentially any cognitive task a remote human expert can, at comparable reliability and lower cost):**
-- By end of 2028: 20%
-- By end of 2030: 40%
-- By end of 2033: 60%
+- By end of 2028: 22%
+- By end of 2030: 42%
+- By end of 2033: 62%
 - By end of 2040: 80%
 - Never with current paradigm (requires a conceptual breakthrough with no timeline): 10%
+
+*(These are two points earlier at the near end than the author's early-2026 draft, reflecting the September 2026 generation—GPT-6 Astra, Fable 5—and the ARC-AGI-3 result. They are not earlier still because the same summer showed how far reliability and judgment lag capability.)*
 
 **Superhuman coder (best-AI-engineer level at the laboratories):** median 2028; 25% by 2027; 75% by 2030.
 
