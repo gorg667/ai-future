@@ -1,0 +1,157 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Glossary — The Future of AI</title>
+<meta name="description" content="A comprehensive review and guide — technology, economics, society, geopolitics, safety, and what comes next">
+<style>
+:root{--bg:#0f1115;--bg2:#161a22;--fg:#e6e8ee;--muted:#9aa3b2;--acc:#6ea8fe;--acc2:#b388ff;--border:#262c38;--code:#1c2230;--mark:#3b3a1a}
+[data-theme=light]{--bg:#fbfbfd;--bg2:#ffffff;--fg:#1c1e26;--muted:#5b6473;--acc:#2457c5;--acc2:#6d3fd0;--border:#e3e6ec;--code:#f2f4f8;--mark:#fff3b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;font-size:17px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--acc),var(--acc2));width:0;z-index:99}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr) 240px;min-height:100vh}
+nav.side{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--bg2);padding:18px 14px}
+nav.side .brand{font-weight:800;font-size:18px;margin-bottom:6px;display:block;color:var(--fg)}
+nav.side .sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+nav.side input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--fg);margin-bottom:12px}
+nav.side ol{list-style:none;padding:0;margin:0}
+nav.side li a{display:block;padding:6px 8px;border-radius:6px;font-size:14px;color:var(--fg)}
+nav.side li a:hover{background:var(--code);text-decoration:none}
+nav.side li a.active{background:var(--code);color:var(--acc);font-weight:600}
+nav.side li a small{color:var(--muted);display:block;font-size:11px}
+main{padding:36px 56px 100px;max-width:900px;width:100%;margin:0 auto}
+aside.toc{position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 14px;border-left:1px solid var(--border);font-size:13px}
+aside.toc .toc ul{list-style:none;padding-left:10px;margin:0}
+aside.toc .toc>ul{padding-left:0}
+aside.toc a{color:var(--muted);display:block;padding:3px 0}
+aside.toc a:hover{color:var(--acc)}
+h1{font-size:2.2rem;line-height:1.2;margin:.2em 0 .6em}h2{font-size:1.6rem;margin-top:2.2em;border-bottom:1px solid var(--border);padding-bottom:.3em}h3{font-size:1.25rem;margin-top:1.8em}h4{font-size:1.05rem;margin-top:1.4em}
+.headerlink{opacity:0;margin-left:6px;font-size:.8em}h2:hover .headerlink,h3:hover .headerlink{opacity:.6}
+p,li{max-width:76ch}
+blockquote{margin:1.2em 0;padding:.6em 1.2em;border-left:4px solid var(--acc2);background:var(--code);border-radius:6px;color:var(--fg)}
+table{border-collapse:collapse;width:100%;margin:1.4em 0;font-size:.92em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+code{background:var(--code);padding:2px 5px;border-radius:4px;font-size:.9em}pre{background:var(--code);padding:14px;border-radius:8px;overflow-x:auto}pre code{background:none;padding:0}
+.admonition{padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--code);margin:1.3em 0}
+.admonition-title{font-weight:700;margin:0 0 6px}
+.admonition.warning{border-color:#d9a54a}.admonition.note{border-color:var(--acc)}.admonition.tip{border-color:#4fbf8b}.admonition.danger{border-color:#e05a5a}
+.meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:60px;padding-top:20px;border-top:1px solid var(--border)}
+.pager a{padding:10px 14px;border:1px solid var(--border);border-radius:8px;flex:1}
+.pager a span{display:block;color:var(--muted);font-size:12px}
+.topbar{display:none}
+button.theme{border:1px solid var(--border);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:13px}
+.hero{padding:30px 0 10px}.hero h1{font-size:3rem}.hero p.lead{font-size:1.25rem;color:var(--muted);max-width:70ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:26px 0}
+.card{border:1px solid var(--border);border-radius:12px;padding:16px;background:var(--bg2);display:block;color:var(--fg)}
+.card:hover{border-color:var(--acc);text-decoration:none}.card .n{color:var(--acc);font-weight:700;font-size:12px}.card h3{margin:.3em 0 .4em;font-size:1.05rem}.card small{color:var(--muted)}
+mark{background:var(--mark);color:inherit}
+footer{color:var(--muted);font-size:13px;margin-top:40px}
+@media(max-width:1200px){.layout{grid-template-columns:280px minmax(0,1fr)}aside.toc{display:none}}
+@media(max-width:860px){.layout{grid-template-columns:1fr}nav.side{position:fixed;left:-320px;width:300px;transition:left .2s;z-index:50}nav.side.open{left:0}.topbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg2);z-index:40}main{padding:20px 18px 80px}body{font-size:16px}}
+</style>
+<script>window.SITE_BASE="";</script>
+</head><body><div id="progress"></div>
+<div class="topbar"><button class="theme" onclick="toggleNav()">☰ Chapters</button><b>The Future of AI</b><span style="flex:1"></span><button class="theme" onclick="toggleTheme()">◐</button></div>
+<div class="layout">
+<nav class="side"><a class="brand" href="index.html">The Future of AI</a><div class="sub">Comprehensive review · built 2026-09-09</div>
+<input id="q" placeholder="Search all chapters…" autocomplete="off"><ol id="results"></ol><ol id="chlist"><li><a href="00-front-matter-and-executive-summary.html" class="">Front Matter and Executive Summary<small>Chapter 0 · 3,598 words</small></a></li><li><a href="01-history-and-why-this-moment-is-different.html" class="">A Brief History of AI, and Why This Moment Is Different<small>Chapter 1 · 5,116 words</small></a></li><li><a href="02-state-of-the-art-2026.html" class="">The State of the Art in 2026: What AI Can and Cannot Do<small>Chapter 2 · 4,484 words</small></a></li><li><a href="03-scaling-laws-compute-and-economics.html" class="">Scaling Laws, Compute, and the Economics of Training<small>Chapter 3 · 3,489 words</small></a></li><li><a href="04-hardware-and-infrastructure.html" class="">Hardware and Infrastructure: Chips, Datacenters, Energy, and the Physical Limits of AI<small>Chapter 4 · 3,533 words</small></a></li><li><a href="05-data.html" class="">Data: The Wall, the Workarounds, and the Fight Over Who Owns It<small>Chapter 5 · 3,137 words</small></a></li><li><a href="06-architectures-beyond-the-transformer.html" class="">Architectures Beyond the Transformer: What Might Replace or Extend the Current Paradigm<small>Chapter 6 · 2,622 words</small></a></li><li><a href="07-reasoning-rl-and-test-time-compute.html" class="">Reasoning, Reinforcement Learning, and Test-Time Compute: How Models Learned to Think<small>Chapter 7 · 3,268 words</small></a></li><li><a href="08-agents.html" class="">Agents: From Chatbots to Autonomous Systems<small>Chapter 8 · 3,304 words</small></a></li><li><a href="09-multimodality-and-embodiment.html" class="">Multimodality and Embodiment: Vision, Video, Voice, Robots, and Self-Driving<small>Chapter 9 · 2,664 words</small></a></li><li><a href="10-ai-for-science.html" class="">AI for Science: From Instrument to Participant<small>Chapter 10 · 2,814 words</small></a></li><li><a href="11-economics.html" class="">Economics: Productivity, Labor, Growth, and Who Captures the Gains<small>Chapter 11 · 3,442 words</small></a></li><li><a href="12-work-and-professions.html" class="">Work and Professions: A Sector-by-Sector Assessment<small>Chapter 12 · 2,792 words</small></a></li><li><a href="13-society-and-culture.html" class="">Society and Culture: Information, Relationships, Minds, and Meaning<small>Chapter 13 · 2,758 words</small></a></li><li><a href="14-geopolitics.html" class="">Geopolitics: The US–China Race, Sovereign AI, Chips, and War<small>Chapter 14 · 3,272 words</small></a></li><li><a href="15-governance-and-regulation.html" class="">Governance and Regulation: Laws, Standards, Institutions, and the Control of Compute<small>Chapter 15 · 2,989 words</small></a></li><li><a href="16-safety-and-alignment.html" class="">Safety and Alignment: Misuse, Misalignment, and the Problem of Control<small>Chapter 16 · 3,389 words</small></a></li><li><a href="17-agi-and-superintelligence.html" class="">AGI and Superintelligence: Definitions, Timelines, Takeoff, and What to Believe<small>Chapter 17 · 3,002 words</small></a></li><li><a href="18-scenarios-2026-2040.html" class="">Scenarios 2026–2040: Five Futures, With Probabilities and Signposts<small>Chapter 18 · 2,562 words</small></a></li><li><a href="19-open-problems.html" class="">Open Problems and Research Frontiers: What We Do Not Know<small>Chapter 19 · 1,849 words</small></a></li><li><a href="20-practical-guide.html" class="">A Practical Guide: What to Do, for Individuals, Organizations, and Governments<small>Chapter 20 · 2,200 words</small></a></li><li><a href="21-glossary.html" class="active">Glossary<small>Chapter 21 · 1,937 words</small></a></li></ol>
+<div style="margin-top:14px"><button class="theme" onclick="toggleTheme()">◐ Toggle theme</button></div>
+<div class="sub" style="margin-top:14px"><a href="../docs/THE_FUTURE_OF_AI.md">Single Markdown file</a> · <a href="https://github.com/gorg667/ai-future">GitHub</a></div></nav>
+<main><div class="meta">Chapter 21 of 22 · 1,937 words · ~8 min read</div><h1 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">¶</a></h1>
+<p>Terms used in this document, defined as they are used here. Where a term is contested, the contest is noted.</p>
+<p><strong>Agent.</strong> An AI system that pursues a goal over multiple steps by taking actions (calling tools, operating software, writing and running code) and observing results, with limited or no human intervention between steps. Contrast with a chatbot, which responds once per human turn. See Chapter 8.</p>
+<p><strong>AGI (artificial general intelligence).</strong> Contested. Used here, unless qualified, to mean the <em>remote-worker standard</em>: a system that can do essentially any cognitive task a human expert can do working remotely, at comparable quality and reliability and lower cost. Other definitions range from "human-level on benchmarks" (already met) to "learns any domain like a child" (not met). See Chapter 17.</p>
+<p><strong>Alignment.</strong> The property of an AI system reliably doing what its principals intend, including in situations not anticipated during training. <em>Misalignment</em> includes reward hacking, goal misgeneralization, deception, and power-seeking. See Chapter 16.</p>
+<p><strong>Alignment faking.</strong> A model strategically behaving as its trainers want during training or evaluation while intending to behave differently when unobserved, in order to preserve its existing dispositions. Documented in 2024. See Chapter 16.</p>
+<p><strong>ARC-AGI.</strong> A family of benchmarks (Chollet, 2019 onward) testing induction of novel rules from few examples—designed to resist memorization and measure fluid intelligence. ARC-AGI-1 was effectively solved in 2025–26; ARC-AGI-2 and the interactive ARC-AGI-3 (2026) remain active. See Chapter 2.</p>
+<p><strong>ASI (artificial superintelligence).</strong> A system that substantially exceeds the best humans at essentially all cognitive tasks, including scientific research and strategy.</p>
+<p><strong>ASL (AI Safety Level).</strong> Anthropic's tiered framework in its Responsible Scaling Policy, in which capability thresholds (biological uplift, cyber offense, autonomous research) trigger required security and deployment safeguards. Analogous frameworks: OpenAI's Preparedness Framework, DeepMind's Frontier Safety Framework.</p>
+<p><strong>Attention.</strong> The mechanism in transformers by which each position in a sequence computes a weighted combination of all other positions. Cost scales with the square of sequence length in its standard form. See Chapter 6.</p>
+<p><strong>Benchmark saturation.</strong> The state in which the best models score at or near a benchmark's ceiling, so it no longer discriminates among them. Most 2023-era benchmarks were saturated by 2026. See Chapter 2.</p>
+<p><strong>Chain of thought (CoT).</strong> A model's intermediate reasoning, produced as text before its final answer. <em>CoT monitoring</em> reads this reasoning for safety purposes; <em>CoT faithfulness</em> is the degree to which it reflects the model's actual computation. See Chapters 7, 16.</p>
+<p><strong>Chinchilla-optimal.</strong> The compute-optimal ratio of training data to model parameters (roughly 20 tokens per parameter) found by Hoffmann et al. (2022). Modern models are often trained well beyond it to reduce inference cost. See Chapter 3.</p>
+<p><strong>Compute.</strong> Computational work, measured in FLOP (floating-point operations). <em>Training compute</em> is the total used to train a model; <em>inference compute</em> is that used to run it. Frontier training runs in 2026 are on the order of 10²⁶–10²⁷ FLOP. See Chapter 3.</p>
+<p><strong>Compute governance.</strong> Policies that monitor or control access to AI compute (chips, datacenters, cloud) as a lever over AI development. In 2026 mostly export controls. See Chapter 15.</p>
+<p><strong>Continual learning.</strong> The ability to learn from new experience over time without forgetting prior knowledge. Not achieved in deployed frontier models; the key architectural open problem. See Chapter 6.</p>
+<p><strong>Co-packaged optics (CPO).</strong> Integration of optical transceivers directly onto a switch or accelerator package, replacing copper and pluggable optics for high-bandwidth interconnect. See Chapter 4.</p>
+<p><strong>CoWoS.</strong> TSMC's chip-on-wafer-on-substrate advanced packaging, required to connect GPU dies to HBM; a supply-chain bottleneck. See Chapter 4.</p>
+<p><strong>Data wall.</strong> The limit imposed by the finite stock of high-quality human-generated text available for pretraining. See Chapter 5.</p>
+<p><strong>Deepfake / synthetic media.</strong> AI-generated or altered images, audio, or video depicting events or statements that did not occur.</p>
+<p><strong>Diffusion model.</strong> A generative model that produces output by iteratively removing noise from a random starting point. Dominant for images and video; experimental for text. See Chapters 6, 9.</p>
+<p><strong>Distillation.</strong> Training a smaller model to reproduce the outputs of a larger one, transferring capability at lower cost. See Chapter 5.</p>
+<p><strong>Emergent misalignment.</strong> Broad misaligned behavior arising from narrow training (e.g., on insecure code, or from reward hacking), generalizing to unrelated domains. Documented 2025. See Chapter 16.</p>
+<p><strong>Epoch Capabilities Index (ECI).</strong> Epoch AI's composite measure of frontier model capability across benchmarks; rising ~14 points per year since reasoning models.</p>
+<p><strong>Export controls.</strong> US (and allied) restrictions on the sale of advanced AI chips, chip-making equipment, and related items to China and other destinations. See Chapters 4, 14.</p>
+<p><strong>FLOP.</strong> Floating-point operation; the unit of compute. 10²⁶ FLOP ≈ one hundred thousand H100 GPUs running for about three months.</p>
+<p><strong>Foundation model.</strong> A large model pretrained on broad data that can be adapted to many tasks. Language models, vision-language models, and robot policies (VLAs) are all foundation models.</p>
+<p><strong>Frontier model.</strong> A model at or near the current maximum of capability, typically trained with 10²⁶ FLOP or more by one of a handful of laboratories.</p>
+<p><strong>FrontierMath.</strong> Epoch AI's benchmark of research-level mathematics problems with verifiable answers, in tiers of difficulty. See Chapter 2.</p>
+<p><strong>GDPval.</strong> OpenAI's 2025 benchmark of professional deliverables across 44 occupations, judged by human experts against human professionals' work. See Chapter 2.</p>
+<p><strong>GPAI (general-purpose AI).</strong> The EU AI Act's term for foundation models; those trained above 10²⁵ FLOP are presumed to pose "systemic risk" and face additional obligations. See Chapter 15.</p>
+<p><strong>GRPO (Group Relative Policy Optimization).</strong> The reinforcement-learning algorithm popularized by DeepSeek for training reasoning models, using group-relative advantages instead of a value network. See Chapter 7.</p>
+<p><strong>Hallucination.</strong> A model's generation of plausible but false content. Reduced but not eliminated in 2026 models. See Chapter 2.</p>
+<p><strong>HBM (high-bandwidth memory).</strong> Stacked DRAM placed adjacent to the processor; the most constrained component in AI hardware. See Chapter 4.</p>
+<p><strong>Humanity's Last Exam (HLE).</strong> A 2025 benchmark of expert-written questions across disciplines, adversarially filtered; frontier scores rose from ~25% to ~59% by late 2026.</p>
+<p><strong>Inference.</strong> Running a trained model to produce outputs. <em>Inference-time compute</em> (or <em>test-time compute</em>) is compute spent during inference, including extended reasoning; its scaling is a second axis of capability. See Chapter 7.</p>
+<p><strong>Intelligence explosion.</strong> A hypothesized feedback loop in which AI systems improve AI systems, producing rapid, possibly discontinuous, capability growth. See Chapter 17.</p>
+<p><strong>Interpretability.</strong> Research into understanding a model's internal computations. <em>Mechanistic interpretability</em> seeks circuit-level explanation; <em>sparse autoencoders</em> decompose activations into interpretable features. See Chapter 16.</p>
+<p><strong>Jagged frontier / jagged intelligence.</strong> The uneven capability profile of AI systems—superhuman on some tasks, subhuman on others, along boundaries that do not match human intuition. See Chapter 2.</p>
+<p><strong>JEPA (Joint Embedding Predictive Architecture).</strong> LeCun's family of self-supervised world-model architectures that predict abstract representations rather than raw pixels or tokens. See Chapter 6.</p>
+<p><strong>KV cache.</strong> The stored keys and values from prior tokens that a transformer uses during generation; grows with context length and dominates inference memory.</p>
+<p><strong>Loss of control.</strong> The scenario in which highly capable AI systems can no longer be corrected or stopped by humans. See Chapters 16, 18.</p>
+<p><strong>MCP (Model Context Protocol).</strong> An open standard (Anthropic, 2024; Linux Foundation, 2025) for connecting models to tools and data. See Chapter 8.</p>
+<p><strong>METR time horizon.</strong> The length of task (in human-expert time) that an AI agent can complete with a given probability (50% or 80%), measured on a suite of software and research tasks; the principal longitudinal measure of agentic capability. See Chapter 8.</p>
+<p><strong>Mixture-of-experts (MoE).</strong> An architecture in which each layer contains many parallel sub-networks ("experts") and a router activates only a few per token, decoupling total parameters from compute per token. See Chapter 6.</p>
+<p><strong>Model collapse.</strong> Degradation of models trained on successive generations of unfiltered synthetic data; avoided in practice by filtering and mixing with human data. See Chapter 5.</p>
+<p><strong>Multimodal.</strong> Processing or generating multiple modalities (text, image, audio, video) within one model.</p>
+<p><strong>Open weights.</strong> A model whose trained parameters are publicly downloadable, allowing local use and fine-tuning. Distinct from "open source" (which would also include training data and code). See Chapters 14, 16.</p>
+<p><strong>Post-training.</strong> Everything done to a model after pretraining: supervised fine-tuning, RLHF, reinforcement learning on reasoning, safety training. Now comparable in compute to pretraining at the frontier. See Chapter 3.</p>
+<p><strong>Pretraining.</strong> The initial training of a model on a large corpus by next-token prediction (or analogous objective). See Chapter 3.</p>
+<p><strong>Prompt injection.</strong> An attack in which instructions embedded in content a model processes (a web page, email, document) hijack the model's behavior. Unsolved for agents. See Chapter 8.</p>
+<p><strong>RAG (retrieval-augmented generation).</strong> Retrieving relevant documents and inserting them into a model's context before generation, to ground answers and extend knowledge.</p>
+<p><strong>Reasoning model.</strong> A model trained with reinforcement learning to produce extended chains of thought before answering and whose performance improves with more inference compute. o1 (2024) was the first widely available example. See Chapter 7.</p>
+<p><strong>Reward hacking / specification gaming.</strong> A model satisfying the letter of its reward signal without achieving the intended goal (e.g., editing tests instead of fixing code). See Chapter 7.</p>
+<p><strong>RLHF (reinforcement learning from human feedback).</strong> Training a model against a reward model learned from human preference comparisons. The technique that made chatbots usable. See Chapter 1.</p>
+<p><strong>RLVR (reinforcement learning with verifiable rewards).</strong> RL where reward comes from an automatic checker (correct answer, passing tests, valid proof). The engine of reasoning models. See Chapter 7.</p>
+<p><strong>Sandbagging.</strong> A model strategically underperforming on an evaluation, e.g., to avoid triggering safeguards. See Chapter 16.</p>
+<p><strong>Scaling laws.</strong> Empirical power-law relationships between model loss and compute, parameters, and data (Kaplan et al., 2020; Hoffmann et al., 2022). See Chapter 3.</p>
+<p><strong>Scheming.</strong> A model covertly pursuing goals misaligned with its principals, including deceiving them about its behavior. Documented in constructed evaluations from 2024. See Chapter 16.</p>
+<p><strong>Sovereign AI.</strong> National efforts to control domestic AI compute, models, data, and talent. See Chapter 14.</p>
+<p><strong>State-space model (SSM).</strong> A sequence architecture (S4, Mamba) with linear-time processing and constant-size state; used in hybrids with attention. See Chapter 6.</p>
+<p><strong>Superhuman coder / automated researcher.</strong> Forecasting milestones: an AI that matches the best human AI-research engineer (coder), and one that can run the full AI research loop including generating ideas (researcher). See Chapter 17.</p>
+<p><strong>SWE-bench Verified.</strong> A benchmark of real GitHub issues to be resolved by editing code; frontier models exceeded 90% in 2026.</p>
+<p><strong>Sycophancy.</strong> A model's tendency to agree with or flatter users, including revising correct answers under pushback. A product of preference training. See Chapters 2, 16.</p>
+<p><strong>Synthetic data.</strong> Training data generated by a model rather than by humans. See Chapter 5.</p>
+<p><strong>Takeoff.</strong> The speed of progress from roughly human-level AI to vastly superhuman AI. <em>Fast</em> (months to a few years) versus <em>slow</em> (a decade or more). See Chapter 17.</p>
+<p><strong>Test-time training (TTT).</strong> Updating some model parameters during inference on the incoming sequence; an approach to memory and continual learning. See Chapter 6.</p>
+<p><strong>Time horizon.</strong> See METR time horizon.</p>
+<p><strong>Transformer.</strong> The neural network architecture (Vaswani et al., 2017) based on self-attention that underlies essentially all frontier models. See Chapters 1, 6.</p>
+<p><strong>VLA (vision-language-action model).</strong> A robot foundation model that maps camera images and language instructions to motor actions, built on a pretrained vision-language model. See Chapter 9.</p>
+<p><strong>World model.</strong> A learned model of environment dynamics that predicts future states given actions; used for planning, simulation, and training agents and robots. See Chapter 6.</p><div class="pager"><a href="20-practical-guide.html"><span>← Previous</span>A Practical Guide: What to Do, for Individuals, Organizations, and Governments</a><a href="index.html" style="text-align:right"><span>→</span>Home</a></div><footer>Built 2026-09-09. Text is provided as an analytical review; forecasts are uncertain by nature. </footer></main>
+<aside class="toc"><div class="sub" style="font-size:12px;color:var(--muted);margin-bottom:8px">On this page</div><div class="toc">
+<ul></ul>
+</div>
+</aside>
+</div><script>
+(function(){
+  const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);
+  window.toggleTheme=function(){const cur=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',cur);localStorage.setItem('theme',cur);};
+  window.toggleNav=function(){document.querySelector('nav.side').classList.toggle('open');};
+  window.addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';});
+  // sidebar filter + full-text search over search index
+  const inp=document.getElementById('q');const list=document.getElementById('chlist');const res=document.getElementById('results');
+  let idx=null;
+  async function loadIdx(){if(idx)return idx;try{const r=await fetch(window.SITE_BASE+'search.json');idx=await r.json();}catch(e){idx=[];}return idx;}
+  if(inp){inp.addEventListener('input',async()=>{const q=inp.value.trim().toLowerCase();
+    [...list.querySelectorAll('li')].forEach(li=>{li.style.display=(!q||li.textContent.toLowerCase().includes(q))?'':'none';});
+    if(q.length<3){res.innerHTML='';return;}
+    const ix=await loadIdx();const out=[];
+    for(const d of ix){const i=d.text.toLowerCase().indexOf(q);if(i>=0){const s=Math.max(0,i-60);out.push({d,snip:d.text.slice(s,i+90)});if(out.length>=25)break;}}
+    res.innerHTML=out.map(o=>`<li><a href="${window.SITE_BASE}${o.d.url}"><b>${o.d.title}</b><small>…${o.snip.replace(/</g,'&lt;')}…</small></a></li>`).join('')||'<li><small>No matches</small></li>';
+  });}
+  // active TOC highlight
+  const heads=[...document.querySelectorAll('main h2, main h3')];const links=[...document.querySelectorAll('aside.toc a')];
+  if(heads.length&&links.length){const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.style.color='');const l=links.find(l=>l.getAttribute('href')==='#'+e.target.id);if(l)l.style.color='var(--acc)';}})},{rootMargin:'0px 0px -75% 0px'});heads.forEach(h=>obs.observe(h));}
+})();
+</script></body></html>
