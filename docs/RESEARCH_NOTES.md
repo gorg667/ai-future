@@ -80,3 +80,11 @@
 ## Company economics [W]
 - Anthropic: ~$10B revenue 2025 (≈$9B run-rate end 2025); $30B run-rate Apr 2026 (passed OpenAI's ~$25B); $47B annualized run-rate May 2026. Revenue heavily API/enterprise/coding.
 - OpenAI: $13B revenue 2025; ~$25B annualized Feb 2026; ~$2B/month by mid-2026; ChatGPT 900M WAU (Feb 2026), ~1B MAU; $122B funding round at $852B valuation (2026); reported to lose ~$14B in 2026.
+
+## Benchmarks (2026) [W]
+- Humanity's Last Exam: top ~25% (early 2025) → 53.3% (Oct 2025) → 59.1% (Claude Fable 5.1, Sep 2026 per Artificial Analysis).
+- ARC-AGI-2: frontier ~4–16% (Mar 2026), humans >60%. ARC-AGI-3 (interactive games) launched Mar 25 2026: humans 100%, frontier 0.51% at launch; by Sep 8 2026: "GPT-6 Astra" 62.7%, Claude Opus 5 30.2%, GPT-5.6 7.8% (benchlm.ai; low-medium confidence).
+- GPT-5.2 (Jan 2026): first >90% on ARC-AGI-1; 70.9% GDPval win/tie vs experts at 11× speed & <1% cost; 40.3% FrontierMath (tiers 1–3).
+- SWE-bench Verified: best models >90% (Opus 5 96.0% reported).
+- Hallucination: benchmarks show >15% for many models on hard factual tasks; AI Index 2026 cites 22–94% range across contexts/models (n1n blog summary). Kore.ai survey early 2026: 71% of orgs use agents in some form; only 11% in production.
+- Inference cost: GPT-4-class went from $30–60/M tokens (2023) to ~$0.40/M (2026) ≈ 1,000× in 3 years; Epoch: 9×–900×/yr decline depending on milestone; a16z "LLMflation" 10×/yr.
