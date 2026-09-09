@@ -1,0 +1,190 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Practical Guide: What to Do, for Individuals, Organizations, and Governments — The Future of AI</title>
+<meta name="description" content="A comprehensive review and guide — technology, economics, society, geopolitics, safety, and what comes next">
+<style>
+:root{--bg:#0f1115;--bg2:#161a22;--fg:#e6e8ee;--muted:#9aa3b2;--acc:#6ea8fe;--acc2:#b388ff;--border:#262c38;--code:#1c2230;--mark:#3b3a1a}
+[data-theme=light]{--bg:#fbfbfd;--bg2:#ffffff;--fg:#1c1e26;--muted:#5b6473;--acc:#2457c5;--acc2:#6d3fd0;--border:#e3e6ec;--code:#f2f4f8;--mark:#fff3b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;font-size:17px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--acc),var(--acc2));width:0;z-index:99}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr) 240px;min-height:100vh}
+nav.side{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--bg2);padding:18px 14px}
+nav.side .brand{font-weight:800;font-size:18px;margin-bottom:6px;display:block;color:var(--fg)}
+nav.side .sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+nav.side input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--fg);margin-bottom:12px}
+nav.side ol{list-style:none;padding:0;margin:0}
+nav.side li a{display:block;padding:6px 8px;border-radius:6px;font-size:14px;color:var(--fg)}
+nav.side li a:hover{background:var(--code);text-decoration:none}
+nav.side li a.active{background:var(--code);color:var(--acc);font-weight:600}
+nav.side li a small{color:var(--muted);display:block;font-size:11px}
+main{padding:36px 56px 100px;max-width:900px;width:100%;margin:0 auto}
+aside.toc{position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 14px;border-left:1px solid var(--border);font-size:13px}
+aside.toc .toc ul{list-style:none;padding-left:10px;margin:0}
+aside.toc .toc>ul{padding-left:0}
+aside.toc a{color:var(--muted);display:block;padding:3px 0}
+aside.toc a:hover{color:var(--acc)}
+h1{font-size:2.2rem;line-height:1.2;margin:.2em 0 .6em}h2{font-size:1.6rem;margin-top:2.2em;border-bottom:1px solid var(--border);padding-bottom:.3em}h3{font-size:1.25rem;margin-top:1.8em}h4{font-size:1.05rem;margin-top:1.4em}
+.headerlink{opacity:0;margin-left:6px;font-size:.8em}h2:hover .headerlink,h3:hover .headerlink{opacity:.6}
+p,li{max-width:76ch}
+blockquote{margin:1.2em 0;padding:.6em 1.2em;border-left:4px solid var(--acc2);background:var(--code);border-radius:6px;color:var(--fg)}
+table{border-collapse:collapse;width:100%;margin:1.4em 0;font-size:.92em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+code{background:var(--code);padding:2px 5px;border-radius:4px;font-size:.9em}pre{background:var(--code);padding:14px;border-radius:8px;overflow-x:auto}pre code{background:none;padding:0}
+.admonition{padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--code);margin:1.3em 0}
+.admonition-title{font-weight:700;margin:0 0 6px}
+.admonition.warning{border-color:#d9a54a}.admonition.note{border-color:var(--acc)}.admonition.tip{border-color:#4fbf8b}.admonition.danger{border-color:#e05a5a}
+.meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:60px;padding-top:20px;border-top:1px solid var(--border)}
+.pager a{padding:10px 14px;border:1px solid var(--border);border-radius:8px;flex:1}
+.pager a span{display:block;color:var(--muted);font-size:12px}
+.topbar{display:none}
+button.theme{border:1px solid var(--border);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:13px}
+.hero{padding:30px 0 10px}.hero h1{font-size:3rem}.hero p.lead{font-size:1.25rem;color:var(--muted);max-width:70ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:26px 0}
+.card{border:1px solid var(--border);border-radius:12px;padding:16px;background:var(--bg2);display:block;color:var(--fg)}
+.card:hover{border-color:var(--acc);text-decoration:none}.card .n{color:var(--acc);font-weight:700;font-size:12px}.card h3{margin:.3em 0 .4em;font-size:1.05rem}.card small{color:var(--muted)}
+mark{background:var(--mark);color:inherit}
+footer{color:var(--muted);font-size:13px;margin-top:40px}
+@media(max-width:1200px){.layout{grid-template-columns:280px minmax(0,1fr)}aside.toc{display:none}}
+@media(max-width:860px){.layout{grid-template-columns:1fr}nav.side{position:fixed;left:-320px;width:300px;transition:left .2s;z-index:50}nav.side.open{left:0}.topbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg2);z-index:40}main{padding:20px 18px 80px}body{font-size:16px}}
+</style>
+<script>window.SITE_BASE="";</script>
+</head><body><div id="progress"></div>
+<div class="topbar"><button class="theme" onclick="toggleNav()">☰ Chapters</button><b>The Future of AI</b><span style="flex:1"></span><button class="theme" onclick="toggleTheme()">◐</button></div>
+<div class="layout">
+<nav class="side"><a class="brand" href="index.html">The Future of AI</a><div class="sub">Comprehensive review · built 2026-09-09</div>
+<input id="q" placeholder="Search all chapters…" autocomplete="off"><ol id="results"></ol><ol id="chlist"><li><a href="00-front-matter-and-executive-summary.html" class="">Front Matter and Executive Summary<small>Chapter 0 · 3,598 words</small></a></li><li><a href="01-history-and-why-this-moment-is-different.html" class="">A Brief History of AI, and Why This Moment Is Different<small>Chapter 1 · 5,116 words</small></a></li><li><a href="02-state-of-the-art-2026.html" class="">The State of the Art in 2026: What AI Can and Cannot Do<small>Chapter 2 · 4,484 words</small></a></li><li><a href="03-scaling-laws-compute-and-economics.html" class="">Scaling Laws, Compute, and the Economics of Training<small>Chapter 3 · 3,489 words</small></a></li><li><a href="04-hardware-and-infrastructure.html" class="">Hardware and Infrastructure: Chips, Datacenters, Energy, and the Physical Limits of AI<small>Chapter 4 · 3,533 words</small></a></li><li><a href="05-data.html" class="">Data: The Wall, the Workarounds, and the Fight Over Who Owns It<small>Chapter 5 · 3,137 words</small></a></li><li><a href="06-architectures-beyond-the-transformer.html" class="">Architectures Beyond the Transformer: What Might Replace or Extend the Current Paradigm<small>Chapter 6 · 2,622 words</small></a></li><li><a href="07-reasoning-rl-and-test-time-compute.html" class="">Reasoning, Reinforcement Learning, and Test-Time Compute: How Models Learned to Think<small>Chapter 7 · 3,268 words</small></a></li><li><a href="08-agents.html" class="">Agents: From Chatbots to Autonomous Systems<small>Chapter 8 · 3,304 words</small></a></li><li><a href="09-multimodality-and-embodiment.html" class="">Multimodality and Embodiment: Vision, Video, Voice, Robots, and Self-Driving<small>Chapter 9 · 2,664 words</small></a></li><li><a href="10-ai-for-science.html" class="">AI for Science: From Instrument to Participant<small>Chapter 10 · 2,814 words</small></a></li><li><a href="11-economics.html" class="">Economics: Productivity, Labor, Growth, and Who Captures the Gains<small>Chapter 11 · 3,442 words</small></a></li><li><a href="12-work-and-professions.html" class="">Work and Professions: A Sector-by-Sector Assessment<small>Chapter 12 · 2,792 words</small></a></li><li><a href="13-society-and-culture.html" class="">Society and Culture: Information, Relationships, Minds, and Meaning<small>Chapter 13 · 2,758 words</small></a></li><li><a href="14-geopolitics.html" class="">Geopolitics: The US–China Race, Sovereign AI, Chips, and War<small>Chapter 14 · 3,272 words</small></a></li><li><a href="15-governance-and-regulation.html" class="">Governance and Regulation: Laws, Standards, Institutions, and the Control of Compute<small>Chapter 15 · 2,989 words</small></a></li><li><a href="16-safety-and-alignment.html" class="">Safety and Alignment: Misuse, Misalignment, and the Problem of Control<small>Chapter 16 · 3,389 words</small></a></li><li><a href="17-agi-and-superintelligence.html" class="">AGI and Superintelligence: Definitions, Timelines, Takeoff, and What to Believe<small>Chapter 17 · 3,002 words</small></a></li><li><a href="18-scenarios-2026-2040.html" class="">Scenarios 2026–2040: Five Futures, With Probabilities and Signposts<small>Chapter 18 · 2,562 words</small></a></li><li><a href="19-open-problems.html" class="">Open Problems and Research Frontiers: What We Do Not Know<small>Chapter 19 · 1,849 words</small></a></li><li><a href="20-practical-guide.html" class="active">A Practical Guide: What to Do, for Individuals, Organizations, and Governments<small>Chapter 20 · 2,200 words</small></a></li></ol>
+<div style="margin-top:14px"><button class="theme" onclick="toggleTheme()">◐ Toggle theme</button></div>
+<div class="sub" style="margin-top:14px"><a href="../docs/THE_FUTURE_OF_AI.md">Single Markdown file</a> · <a href="https://github.com/gorg667/ai-future">GitHub</a></div></nav>
+<main><div class="meta">Chapter 20 of 21 · 2,200 words · ~9 min read</div><h1 id="a-practical-guide-what-to-do-for-individuals-organizations-and-governments">A Practical Guide: What to Do, for Individuals, Organizations, and Governments<a class="headerlink" href="#a-practical-guide-what-to-do-for-individuals-organizations-and-governments" title="Permanent link">¶</a></h1>
+<h2 id="the-principle-robustness-across-scenarios">The principle: robustness across scenarios<a class="headerlink" href="#the-principle-robustness-across-scenarios" title="Permanent link">¶</a></h2>
+<p>The preceding chapters describe a future with wide variance. Advice that depends on one scenario coming true is a bet; advice that helps across most scenarios is a strategy. This chapter tries to give the latter. For each audience it distinguishes actions that are robust (good in nearly every scenario), actions that are hedges (cheap insurance against particular scenarios), and actions to avoid (bets that look attractive in one scenario and fail badly in others). Where the advice is contested, it says so.</p>
+<p>A meta-principle first. The single most important thing anyone can do is <strong>use the tools seriously</strong>. Every chapter of this document rests on capabilities that are available to anyone with an internet connection for a few dollars a month or free. Most people—including most executives and policymakers making decisions about AI—have a mental model of the technology formed by a chatbot they tried in 2023. That model is two to three years out of date, which in this field is the difference between a curiosity and a colleague. An hour a week with frontier models and agents, applied to one's actual work, is worth more than any report—including this one.</p>
+<h2 id="for-individuals">For individuals<a class="headerlink" href="#for-individuals" title="Permanent link">¶</a></h2>
+<h3 id="students-choosing-what-to-study">Students choosing what to study<a class="headerlink" href="#students-choosing-what-to-study" title="Permanent link">¶</a></h3>
+<p><strong>Robust.</strong> Learn to learn; the specific content of most curricula will be outdated, and the capacity to acquire new domains quickly is what remains valuable. Develop deep expertise in <em>something</em>—AI complements experts and substitutes for generalists doing routine work (Chapter 12); depth is where judgment lives. Study things that involve the physical world, other people, or high-stakes accountability (medicine, engineering that builds things, skilled trades, care, teaching, leadership), or things that build the capacity to direct and evaluate AI (mathematics, statistics, computer science with an emphasis on systems and judgment rather than syntax, writing as thinking, domain knowledge). Learn to use AI as a tutor, not a substitute: the evidence (Chapter 12) shows the same tool produces large gains or losses depending on how it is used.</p>
+<p><strong>Hedge.</strong> Acquire at least one skill that is physical or relational and hard to automate before 2035; it is insurance against the fast scenarios. Build a portfolio of demonstrated work rather than relying on credentials, whose signaling value is eroding.</p>
+<p><strong>Avoid.</strong> Training narrowly for entry-level cognitive roles that AI now performs—routine coding, paralegal work, junior analysis, content production, translation—without a plan for how to become senior. Assuming a degree is a job. Assuming the trades are permanently safe (they are safe <em>later</em>).</p>
+<p><strong>Contested.</strong> Whether to study computer science. The author's view: yes, if one learns how systems work and how to direct them, and no, if one learns to write code by hand as a trade. Demand for people who can build with AI is rising; demand for people who can only do what AI does is falling.</p>
+<h3 id="workers-in-exposed-occupations">Workers in exposed occupations<a class="headerlink" href="#workers-in-exposed-occupations" title="Permanent link">¶</a></h3>
+<p><strong>Robust.</strong> Become the person in your organization who uses AI best—the multiplier is real and visible (Chapter 11). Move toward the parts of your role that involve judgment, relationships, accountability, and context that AI lacks. Document and develop the tacit knowledge that makes you hard to replace. Build financial resilience: the transition may involve gaps.</p>
+<p><strong>Hedge.</strong> Develop a second competence—ideally physical, relational, or in a regulated domain. Maintain networks; most transitions happen through people.</p>
+<p><strong>Avoid.</strong> Waiting for clarity. The evidence of Chapter 11 is that adjustment is happening through hiring, not layoffs—which means the signal comes late for those already employed and the window for repositioning is now.</p>
+<h3 id="workers-in-less-exposed-occupations">Workers in less-exposed occupations<a class="headerlink" href="#workers-in-less-exposed-occupations" title="Permanent link">¶</a></h3>
+<p>Use AI to handle the paperwork and administration that surround the core work; the productivity gain is real and mostly accrues to you. Watch robotics (Chapter 9) if your work is physical; the 2030s will bring change. Do not assume immunity.</p>
+<h3 id="everyone">Everyone<a class="headerlink" href="#everyone" title="Permanent link">¶</a></h3>
+<p>Understand the failure modes: hallucination, sycophancy, injection, and the jagged frontier (Chapter 2). Verify before relying. Protect yourself against AI-enabled fraud (voice cloning is trivial; establish verification protocols with family and colleagues). Be deliberate about AI companionship, especially for children (Chapter 13). Preserve some unaided skills on purpose, as people did with arithmetic. Follow the signposts of Chapter 18; the future will announce itself in METR's numbers and the employment statistics before it arrives in daily life.</p>
+<h2 id="for-founders-and-builders">For founders and builders<a class="headerlink" href="#for-founders-and-builders" title="Permanent link">¶</a></h2>
+<p><strong>Robust.</strong> Build on the assumption that models get better, cheaper, and more agentic on the trend of the last three years—products that are valuable only because current models are limited will be obsolete on release. Build where the model is not the product: proprietary data, workflow integration, distribution, trust, and domain expertise are the moats (Chapter 5). Solve the reliability problem in a specific vertical rather than the capability problem in general—reliability is where the value is (Chapter 8). Design for agents as users, not only humans; the protocols (MCP, A2A, commerce protocols) are the new platform layer.</p>
+<p><strong>Hedge.</strong> Multi-model architectures; do not depend on one laboratory's pricing or policy. Prepare for a financial correction (Chapter 3): raise when possible, extend runway, and do not assume the 2025–26 capital environment persists.</p>
+<p><strong>Avoid.</strong> Thin wrappers; features the laboratories will ship themselves; anything premised on AI staying at its current level; ignoring security (agent deployments without least privilege will produce the incidents of Chapter 8, and liability will follow).</p>
+<p><strong>Contested.</strong> Whether to build for a fast-takeoff world. The author's view: build for the long boom, hedge for the plateau, and do not bet the company on superintelligence arriving on any schedule.</p>
+<h2 id="for-executives-and-organizations">For executives and organizations<a class="headerlink" href="#for-executives-and-organizations" title="Permanent link">¶</a></h2>
+<p><strong>Robust.</strong> Treat AI as a general-purpose technology requiring organizational redesign, not a tool to bolt on—the 95%-of-pilots-fail finding (Chapter 11) is about organizations, not models. Start with the tasks where verification is cheap and stakes are low; expand as reliability is demonstrated. Invest in data readiness, integration, and the people who will direct agents. Measure actual outcomes, not adoption metrics. Redesign the entry-level pipeline deliberately: if juniors are no longer needed for junior work, decide how you will develop the next generation of seniors, because no one else will (Chapter 12). Adopt security practices for agents from the start—least privilege, approval gates for irreversible actions, logging, sandboxing.</p>
+<p><strong>Hedge.</strong> Scenario-plan for both the plateau and the fast takeoff; the decisions that differ between them (headcount, capital, product) are the ones to make reversibly. Maintain human expertise in critical functions even where AI is cheaper; it is insurance against correlated failure and the basis for oversight.</p>
+<p><strong>Avoid.</strong> Layoffs justified by AI before the AI works (several firms reversed such decisions in 2024–26). Deploying agents with broad credentials. Assuming your industry is immune because it is regulated—regulation slows, it does not stop. Confusing vendor demos with production reliability.</p>
+<p><strong>For boards.</strong> AI is now a fiduciary matter: capability, risk, and workforce transition belong on the agenda with the same seriousness as cybersecurity became after 2015. Ask what would change about the business if the remote-worker standard of AGI were met in 2030, and whether the current strategy survives it.</p>
+<h2 id="for-researchers">For researchers<a class="headerlink" href="#for-researchers" title="Permanent link">¶</a></h2>
+<p><strong>In AI.</strong> The highest-leverage open problems (Chapter 19) are continual learning, the RL-generalization question, interpretability at scale, scalable oversight, and evaluation infrastructure. Safety and interpretability remain far less resourced than capability relative to their importance; the marginal researcher does more good there. Preserve chain-of-thought legibility. Publish evaluations honestly, including failures.</p>
+<p><strong>Outside AI.</strong> Every empirical field is being transformed by AI as instrument (Chapter 10); researchers who master the tools will outproduce those who do not, and the transition will be fast. The most valuable contributions from outside AI are domain expertise for building verifiers and environments, rigorous evaluation of AI's claimed effects (much of the current evidence is weak), and the social-science research on labor, cognition, and development that is desperately under-supplied relative to the questions (Chapter 19).</p>
+<p><strong>For funders.</strong> The ratio of capability spending to safety, interpretability, evaluation, and social-impact research is orders of magnitude out of proportion to the stakes. This is the clearest philanthropic and public-research gap of the decade.</p>
+<h2 id="for-policymakers">For policymakers<a class="headerlink" href="#for-policymakers" title="Permanent link">¶</a></h2>
+<h3 id="robust-across-scenarios">Robust across scenarios<a class="headerlink" href="#robust-across-scenarios" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p><strong>Build state capacity to understand the technology.</strong> Government evaluation institutes with pre-deployment access (the UK model), technical staff in regulators, and mandatory transparency from frontier developers (the California/New York model) are prerequisites for everything else and are cheap. A government that cannot evaluate frontier models cannot govern them.</p>
+</li>
+<li>
+<p><strong>Make frontier safety frameworks binding with independent verification.</strong> The laboratories have written the frameworks; require adherence, incident reporting, and third-party audit. This costs the labs little and creates the infrastructure for stronger action if needed.</p>
+</li>
+<li>
+<p><strong>Harden the physical layer against misuse.</strong> DNA synthesis screening, critical-infrastructure cybersecurity (the Glasswing model of defender-first access should be institutionalized), and hardware-enabled compute verification. These reduce catastrophic-misuse risk regardless of how capability develops.</p>
+</li>
+<li>
+<p><strong>Prepare the labor-transition infrastructure before the transition.</strong> Modernized unemployment insurance, portable benefits, wage insurance, and retraining are the consensus economist recommendations (Chapter 11); they are inadequate for the fast scenarios but necessary for all of them. Build the data systems (real-time employment tracking by AI exposure, as the Stanford indicators do) so that policy can respond to what is happening rather than to last year's statistics.</p>
+</li>
+<li>
+<p><strong>Solve the energy and permitting bottleneck.</strong> Whatever one thinks about AI, the grid needs to grow for electrification anyway; interconnection reform, transmission, and firm clean generation serve both. Make datacenters pay their full grid costs and be flexible loads.</p>
+</li>
+<li>
+<p><strong>Protect children and the vulnerable now.</strong> Companion-chatbot rules, age verification, engagement-optimization limits, and mental-health safeguards (Chapter 13) do not require resolving any debate about AGI and address harms occurring today.</p>
+</li>
+<li>
+<p><strong>Content provenance.</strong> Mandate or strongly incentivize C2PA-style provenance for public-facing generated content and for platforms; it is the only scalable answer to the evidentiary crisis.</p>
+</li>
+<li>
+<p><strong>Fund the public goods AI erodes.</strong> Independent journalism, open knowledge (Wikipedia and its kin), and public data are being consumed by the models that undermine their business models; treat them as infrastructure.</p>
+</li>
+</ol>
+<h3 id="hedges-for-the-fast-scenarios">Hedges for the fast scenarios<a class="headerlink" href="#hedges-for-the-fast-scenarios" title="Permanent link">¶</a></h3>
+<ol start="9">
+<li>
+<p><strong>Design broad-based distribution mechanisms before they are needed</strong>—sovereign or public wealth funds with stakes in AI firms, equal capital–labor taxation, and the administrative capacity for universal transfers. These are politically hard in calm times and badly designed in crises; do the design now, activate later.</p>
+</li>
+<li>
+<p><strong>Develop the international coordination infrastructure now</strong>: incident reporting, compute verification research, scientist-to-scientist channels with China, and agreed red lines (nuclear command and control is the one that exists; bio and critical infrastructure are the obvious next). Crisis-time coordination requires peacetime plumbing.</p>
+</li>
+<li>
+<p><strong>Create a decision point.</strong> Establish, in law, the conditions under which frontier development would be paused or nationalized and who decides—so that the decision, if it comes, is made by an accountable body under pre-agreed rules rather than by a CEO or in panic.</p>
+</li>
+</ol>
+<h3 id="avoid">Avoid<a class="headerlink" href="#avoid" title="Permanent link">¶</a></h3>
+<ul>
+<li>Regulating the technology of 2023 (the EU's original high-risk regime) rather than the technology of 2026–30 (frontier agents).</li>
+<li>Preempting state laws without replacing them with anything—the US risk in 2026.</li>
+<li>Treating AI safety and AI competitiveness as opposites; the countries that can verify what their models do will be the ones others trust to deploy them.</li>
+<li>Assuming the plateau. Policy that is only right if progress stalls is a bet against the trend.</li>
+<li>Assuming the fast takeoff. Policy that shuts down development in anticipation of catastrophe cedes the frontier to actors who will not.</li>
+</ul>
+<h3 id="on-the-central-tension">On the central tension<a class="headerlink" href="#on-the-central-tension" title="Permanent link">¶</a></h3>
+<p>Policymakers face a genuine dilemma that this document cannot resolve: the safety case says slow down and coordinate; the competition case says speed up and win; and both are right about something. The author's judgment is that the two are less opposed than the discourse suggests—capacity to evaluate, verify, and control frontier systems is a <em>competitive</em> advantage (it is what allows a country to deploy AI in defense, infrastructure, and government with confidence), and the measures listed as robust above are ones that the competitive framing should endorse. The genuine trade-off arises only at the frontier of frontier development—whether to build the next system before its predecessor is understood—and that is the decision for which item 11 exists.</p>
+<h2 id="for-everyone-a-closing-note-on-posture">For everyone: a closing note on posture<a class="headerlink" href="#for-everyone-a-closing-note-on-posture" title="Permanent link">¶</a></h2>
+<p>The two failure modes of thinking about AI are denial and fatalism. Denial says the technology is hype and nothing needs to change; the evidence of the first ten chapters refutes it. Fatalism says the technology is destiny and nothing can be done; the evidence of the last eight chapters refutes it—the variance between good and bad futures is dominated by human choices about design, deployment, distribution, and governance that are being made now and are still open. The appropriate posture is the one this document has tried to model: take the technology seriously, take the uncertainty seriously, watch the signposts, and act on what is robust.</p><div class="pager"><a href="19-open-problems.html"><span>← Previous</span>Open Problems and Research Frontiers: What We Do Not Know</a><a href="index.html" style="text-align:right"><span>→</span>Home</a></div><footer>Built 2026-09-09. Text is provided as an analytical review; forecasts are uncertain by nature. </footer></main>
+<aside class="toc"><div class="sub" style="font-size:12px;color:var(--muted);margin-bottom:8px">On this page</div><div class="toc">
+<ul>
+<li><a href="#the-principle-robustness-across-scenarios">The principle: robustness across scenarios</a></li>
+<li><a href="#for-individuals">For individuals</a><ul>
+<li><a href="#students-choosing-what-to-study">Students choosing what to study</a></li>
+<li><a href="#workers-in-exposed-occupations">Workers in exposed occupations</a></li>
+<li><a href="#workers-in-less-exposed-occupations">Workers in less-exposed occupations</a></li>
+<li><a href="#everyone">Everyone</a></li>
+</ul>
+</li>
+<li><a href="#for-founders-and-builders">For founders and builders</a></li>
+<li><a href="#for-executives-and-organizations">For executives and organizations</a></li>
+<li><a href="#for-researchers">For researchers</a></li>
+<li><a href="#for-policymakers">For policymakers</a><ul>
+<li><a href="#robust-across-scenarios">Robust across scenarios</a></li>
+<li><a href="#hedges-for-the-fast-scenarios">Hedges for the fast scenarios</a></li>
+<li><a href="#avoid">Avoid</a></li>
+<li><a href="#on-the-central-tension">On the central tension</a></li>
+</ul>
+</li>
+<li><a href="#for-everyone-a-closing-note-on-posture">For everyone: a closing note on posture</a></li>
+</ul>
+</div>
+</aside>
+</div><script>
+(function(){
+  const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);
+  window.toggleTheme=function(){const cur=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',cur);localStorage.setItem('theme',cur);};
+  window.toggleNav=function(){document.querySelector('nav.side').classList.toggle('open');};
+  window.addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';});
+  // sidebar filter + full-text search over search index
+  const inp=document.getElementById('q');const list=document.getElementById('chlist');const res=document.getElementById('results');
+  let idx=null;
+  async function loadIdx(){if(idx)return idx;try{const r=await fetch(window.SITE_BASE+'search.json');idx=await r.json();}catch(e){idx=[];}return idx;}
+  if(inp){inp.addEventListener('input',async()=>{const q=inp.value.trim().toLowerCase();
+    [...list.querySelectorAll('li')].forEach(li=>{li.style.display=(!q||li.textContent.toLowerCase().includes(q))?'':'none';});
+    if(q.length<3){res.innerHTML='';return;}
+    const ix=await loadIdx();const out=[];
+    for(const d of ix){const i=d.text.toLowerCase().indexOf(q);if(i>=0){const s=Math.max(0,i-60);out.push({d,snip:d.text.slice(s,i+90)});if(out.length>=25)break;}}
+    res.innerHTML=out.map(o=>`<li><a href="${window.SITE_BASE}${o.d.url}"><b>${o.d.title}</b><small>…${o.snip.replace(/</g,'&lt;')}…</small></a></li>`).join('')||'<li><small>No matches</small></li>';
+  });}
+  // active TOC highlight
+  const heads=[...document.querySelectorAll('main h2, main h3')];const links=[...document.querySelectorAll('aside.toc a')];
+  if(heads.length&&links.length){const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.style.color='');const l=links.find(l=>l.getAttribute('href')==='#'+e.target.id);if(l)l.style.color='var(--acc)';}})},{rootMargin:'0px 0px -75% 0px'});heads.forEach(h=>obs.observe(h));}
+})();
+</script></body></html>
