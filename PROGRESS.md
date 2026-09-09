@@ -39,7 +39,7 @@
 04 [x] Hardware & infrastructure: GPUs/TPUs/ASICs, energy, datacenters, memory bandwidth, networking, photonics, neuromorphic, quantum
 05 [x] Data: the data wall, synthetic data, licensing, curation, RL environments
 06 [x] Architectures beyond the transformer: SSMs, mixture-of-experts, diffusion LMs, world models, JEPA, neurosymbolic, continual learning
-07 [ ] Reasoning, test-time compute, RL, verifiers, and the path to reliable problem-solving
+07 [x] Reasoning, test-time compute, RL, verifiers, and the path to reliable problem-solving
 08 [ ] Agents: autonomy, tool use, computer use, multi-agent systems, agent economies, protocols (MCP, A2A)
 09 [ ] Multimodality & embodiment: vision, audio, video generation, robotics, humanoids, self-driving
 10 [ ] AI for science: AlphaFold-class breakthroughs, math, materials, drug discovery, AI scientists
@@ -70,3 +70,4 @@
 - Ch04 done. Next: Ch05 data.
 - Ch05 done. Next: Ch06 architectures beyond transformer.
 - Ch06 done (rewritten after interruption lost it). Next: Ch07 reasoning/RL/test-time compute. LESSON: commit immediately after each Write; if interrupted mid-write, check file exists.
+- Ch07 done. Next: Ch08 agents.
