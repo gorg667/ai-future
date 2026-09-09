@@ -87,3 +87,5 @@
 - Ch21 done. Next: 22 bibliography, 23 appendix.
 - Ch22 done. Next: 23 appendix (forecast table, key numbers, timeline), then final QA pass + README.
 - Ch23 done. ALL 24 CHAPTERS COMPLETE. Next: README.md, QA pass (check site renders, links), consider GitHub Pages deploy note.
+- README.md written. Site QA: 24 pages, 0 broken links, tables rendered, search.json 24 entries. HTTP serve OK.
+- STATUS: PROJECT COMPLETE (v1). Possible future work: enable GitHub Pages in repo settings (user action), deeper fact-check pass on [W]-marked items, add diagrams.
