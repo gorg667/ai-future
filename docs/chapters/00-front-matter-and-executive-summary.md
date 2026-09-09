@@ -2,7 +2,7 @@
 
 !!! abstract "In brief"
     - AI in September 2026 is the most capable general-purpose technology in living memory and is still improving fast; the most plausible medium-term future is rapid but uneven diffusion, not a bubble and not an overnight singularity.
-    - Twenty-five claims are stated with explicit confidence levels; the author's median for economic AGI (the remote-worker standard) is roughly 2032, with a wide distribution.
+    - Twenty-five claims are stated with explicit confidence levels; the author's median for economic AGI (the remote-worker standard) is roughly 2031–2032, with a wide distribution.
     - The summer of 2026 changed the safety picture: the first misalignment incident with real-world harm (the Hugging Face incident), two models at their developers' highest cyber tier, and an industry request for coordinated pacing.
     - The decade to 2036 is the decisive period; the variance between good and bad futures is dominated by institutional choices, not technology.
 
@@ -106,7 +106,7 @@ The rest of this document defends and qualifies the following claims. Confidence
 
 22. **Expert timelines for human-level AI have compressed dramatically and are now spread across the 2027–2045 range, with substantial mass on the earlier end.** *(High confidence about the survey data; the underlying question is contested.)* Leaders of frontier laboratories publicly forecast systems that can do most cognitive work within a few years; academic surveys have medians in the 2040s but shifting earlier every year; forecasting communities cluster in the early-to-mid 2030s. The disagreement is partly about definitions. (Chapter 17.)
 
-23. **The strongest argument for fast progress is the trend data; the strongest argument against is that every previous AI wave hit unexpected walls, and current systems still fail at things children do.** *(Author's judgment.)* Both arguments are serious. The author's own median for "AI can do essentially any cognitive task a remote human expert can do, at lower cost" is roughly 2032, with a wide distribution: perhaps 25% by 2029, 50% by 2032–2033, 75% by 2040. (Chapter 17.)
+23. **The strongest argument for fast progress is the trend data; the strongest argument against is that every previous AI wave hit unexpected walls, and current systems still fail at things children do.** *(Author's judgment.)* Both arguments are serious. The author's own median for "AI can do essentially any cognitive task a remote human expert can do, at lower cost" is roughly 2031–2032, with a wide distribution: about 22% by 2028, 42% by 2030, 62% by 2033, 80% by 2040. (Chapter 17.)
 
 24. **Whether an "intelligence explosion"—AI systems accelerating AI research so that capability grows discontinuously—occurs is the single most consequential uncertainty.** *(Low confidence in any specific answer.)* AI is already used extensively in AI research (coding, experiment design, literature review). Whether this becomes a feedback loop that compresses decades into years depends on bottlenecks (compute, experiments, taste) that are genuinely hard to assess. (Chapter 17.)
 

@@ -113,7 +113,7 @@ This is the crux. Evidence for transfer:
 
 Evidence against:
 
-- The improvements are steepest in verifiable domains and shallower elsewhere. HLE progress (25% → ~59% over eighteen months) lags math progress (10% → ~100% on AIME).
+- The improvements are steepest in verifiable domains and shallower elsewhere. HLE progress (25% → 55–65% over twenty months) lags math progress (10% → 100% on AIME and the IMO).
 - Chollet's ARC-AGI-2 and -3 were designed to require novel-rule induction with no training distribution to lean on; frontier models struggled through mid-2026. This line of evidence weakened sharply in September 2026 when GPT-6 Astra solved ARC-AGI-3 (62.7% under a neutral harness, 99.9% with a memory harness, using fewer actions than humans), six months after launch—the ARC Prize team called it a "step-function change" while noting the benchmark's closed-ended environments do not capture real-world open-endedness. The remaining evidence for limited transfer rests on holistic judgment tasks, not on puzzle-style novelty.
 - Holistic human evaluation of agent outputs shows lower success than programmatic scoring (METR, 2025), suggesting that models optimize for what is measured.
 - Creative and strategic judgment—choosing what problem to work on, what a customer actually needs, whether a research direction is promising—shows less visible improvement than execution.
