@@ -34,7 +34,7 @@
 ## Chapter plan (status: [ ] todo, [~] in progress, [x] done+pushed)
 00 [x] Front matter, how to read, executive summary
 01 [x] A brief history of AI & why this moment is different (from Dartmouth to transformers to agents)
-02 [ ] The state of the art in 2026: frontier models, capabilities, benchmarks, what's solved/unsolved
+02 [x] The state of the art in 2026: frontier models, capabilities, benchmarks, what's solved/unsolved
 03 [ ] Scaling laws, compute, and the physics/economics of training (FLOPs, data walls, algorithmic efficiency, inference-time compute)
 04 [ ] Hardware & infrastructure: GPUs/TPUs/ASICs, energy, datacenters, memory bandwidth, networking, photonics, neuromorphic, quantum
 05 [ ] Data: the data wall, synthetic data, licensing, curation, RL environments
@@ -65,3 +65,4 @@
 ## Log (append newest at bottom)
 - 2026-09-09: Repo empty. Created skeleton, PROGRESS.md, chapter plan.
 - 2026-09-09: Research notes saved (docs/RESEARCH_NOTES.md). Ch00, Ch01 done. Next: Ch02 state of the art. NOTE: if build.py fails with no module markdown run: python3 -m pip install markdown pymdown-extensions
+- Ch02 done. Next: Ch03 scaling laws & compute economics.

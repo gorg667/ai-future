@@ -1,0 +1,463 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The State of the Art in 2026: What AI Can and Cannot Do — The Future of AI</title>
+<meta name="description" content="A comprehensive review and guide — technology, economics, society, geopolitics, safety, and what comes next">
+<style>
+:root{--bg:#0f1115;--bg2:#161a22;--fg:#e6e8ee;--muted:#9aa3b2;--acc:#6ea8fe;--acc2:#b388ff;--border:#262c38;--code:#1c2230;--mark:#3b3a1a}
+[data-theme=light]{--bg:#fbfbfd;--bg2:#ffffff;--fg:#1c1e26;--muted:#5b6473;--acc:#2457c5;--acc2:#6d3fd0;--border:#e3e6ec;--code:#f2f4f8;--mark:#fff3b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;font-size:17px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--acc),var(--acc2));width:0;z-index:99}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr) 240px;min-height:100vh}
+nav.side{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--bg2);padding:18px 14px}
+nav.side .brand{font-weight:800;font-size:18px;margin-bottom:6px;display:block;color:var(--fg)}
+nav.side .sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+nav.side input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--fg);margin-bottom:12px}
+nav.side ol{list-style:none;padding:0;margin:0}
+nav.side li a{display:block;padding:6px 8px;border-radius:6px;font-size:14px;color:var(--fg)}
+nav.side li a:hover{background:var(--code);text-decoration:none}
+nav.side li a.active{background:var(--code);color:var(--acc);font-weight:600}
+nav.side li a small{color:var(--muted);display:block;font-size:11px}
+main{padding:36px 56px 100px;max-width:900px;width:100%;margin:0 auto}
+aside.toc{position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 14px;border-left:1px solid var(--border);font-size:13px}
+aside.toc .toc ul{list-style:none;padding-left:10px;margin:0}
+aside.toc .toc>ul{padding-left:0}
+aside.toc a{color:var(--muted);display:block;padding:3px 0}
+aside.toc a:hover{color:var(--acc)}
+h1{font-size:2.2rem;line-height:1.2;margin:.2em 0 .6em}h2{font-size:1.6rem;margin-top:2.2em;border-bottom:1px solid var(--border);padding-bottom:.3em}h3{font-size:1.25rem;margin-top:1.8em}h4{font-size:1.05rem;margin-top:1.4em}
+.headerlink{opacity:0;margin-left:6px;font-size:.8em}h2:hover .headerlink,h3:hover .headerlink{opacity:.6}
+p,li{max-width:76ch}
+blockquote{margin:1.2em 0;padding:.6em 1.2em;border-left:4px solid var(--acc2);background:var(--code);border-radius:6px;color:var(--fg)}
+table{border-collapse:collapse;width:100%;margin:1.4em 0;font-size:.92em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+code{background:var(--code);padding:2px 5px;border-radius:4px;font-size:.9em}pre{background:var(--code);padding:14px;border-radius:8px;overflow-x:auto}pre code{background:none;padding:0}
+.admonition{padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--code);margin:1.3em 0}
+.admonition-title{font-weight:700;margin:0 0 6px}
+.admonition.warning{border-color:#d9a54a}.admonition.note{border-color:var(--acc)}.admonition.tip{border-color:#4fbf8b}.admonition.danger{border-color:#e05a5a}
+.meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:60px;padding-top:20px;border-top:1px solid var(--border)}
+.pager a{padding:10px 14px;border:1px solid var(--border);border-radius:8px;flex:1}
+.pager a span{display:block;color:var(--muted);font-size:12px}
+.topbar{display:none}
+button.theme{border:1px solid var(--border);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:13px}
+.hero{padding:30px 0 10px}.hero h1{font-size:3rem}.hero p.lead{font-size:1.25rem;color:var(--muted);max-width:70ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:26px 0}
+.card{border:1px solid var(--border);border-radius:12px;padding:16px;background:var(--bg2);display:block;color:var(--fg)}
+.card:hover{border-color:var(--acc);text-decoration:none}.card .n{color:var(--acc);font-weight:700;font-size:12px}.card h3{margin:.3em 0 .4em;font-size:1.05rem}.card small{color:var(--muted)}
+mark{background:var(--mark);color:inherit}
+footer{color:var(--muted);font-size:13px;margin-top:40px}
+@media(max-width:1200px){.layout{grid-template-columns:280px minmax(0,1fr)}aside.toc{display:none}}
+@media(max-width:860px){.layout{grid-template-columns:1fr}nav.side{position:fixed;left:-320px;width:300px;transition:left .2s;z-index:50}nav.side.open{left:0}.topbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg2);z-index:40}main{padding:20px 18px 80px}body{font-size:16px}}
+</style>
+<script>window.SITE_BASE="";</script>
+</head><body><div id="progress"></div>
+<div class="topbar"><button class="theme" onclick="toggleNav()">☰ Chapters</button><b>The Future of AI</b><span style="flex:1"></span><button class="theme" onclick="toggleTheme()">◐</button></div>
+<div class="layout">
+<nav class="side"><a class="brand" href="index.html">The Future of AI</a><div class="sub">Comprehensive review · built 2026-09-09</div>
+<input id="q" placeholder="Search all chapters…" autocomplete="off"><ol id="results"></ol><ol id="chlist"><li><a href="00-front-matter-and-executive-summary.html" class="">Front Matter and Executive Summary<small>Chapter 0 · 3,598 words</small></a></li><li><a href="01-history-and-why-this-moment-is-different.html" class="">A Brief History of AI, and Why This Moment Is Different<small>Chapter 1 · 5,116 words</small></a></li><li><a href="02-state-of-the-art-2026.html" class="active">The State of the Art in 2026: What AI Can and Cannot Do<small>Chapter 2 · 4,484 words</small></a></li></ol>
+<div style="margin-top:14px"><button class="theme" onclick="toggleTheme()">◐ Toggle theme</button></div>
+<div class="sub" style="margin-top:14px"><a href="../docs/THE_FUTURE_OF_AI.md">Single Markdown file</a> · <a href="https://github.com/gorg667/ai-future">GitHub</a></div></nav>
+<main><div class="meta">Chapter 2 of 3 · 4,484 words · ~19 min read</div><h1 id="the-state-of-the-art-in-2026-what-ai-can-and-cannot-do">The State of the Art in 2026: What AI Can and Cannot Do<a class="headerlink" href="#the-state-of-the-art-in-2026-what-ai-can-and-cannot-do" title="Permanent link">¶</a></h1>
+<h2 id="purpose-of-this-chapter">Purpose of this chapter<a class="headerlink" href="#purpose-of-this-chapter" title="Permanent link">¶</a></h2>
+<p>Forecasting requires a baseline. This chapter describes, as precisely as the evidence allows, what frontier AI systems can do as of September 2026, what they cannot, and how we know. It covers the landscape of models and laboratories, the benchmarks and what they measure, the pattern of "jagged" capability that makes AI hard to reason about, the reliability problem, and the cost curve that determines what is economically deployable. Readers who follow the field closely can skim; the chapter's value is in assembling the pieces in one place with their caveats attached.</p>
+<p>A note on specificity: model names and scores given here are accurate to the author's knowledge at the time of writing but will be superseded within months. The <em>structure</em> of the landscape—who the players are, what kinds of capability are saturated versus open, how fast costs fall—changes more slowly and is the thing to retain.</p>
+<h2 id="the-landscape-of-laboratories-and-models">The landscape of laboratories and models<a class="headerlink" href="#the-landscape-of-laboratories-and-models" title="Permanent link">¶</a></h2>
+<h3 id="the-frontier-tier">The frontier tier<a class="headerlink" href="#the-frontier-tier" title="Permanent link">¶</a></h3>
+<p>Five organizations train models at the absolute frontier of capability, defined here as models trained with on the order of 10²⁶ FLOP or more and competitive on the hardest current benchmarks:</p>
+<p><strong>OpenAI.</strong> The GPT-5 family (GPT-5 released August 2025, followed by 5.1, 5.2, 5.3-Codex, 5.4, and 5.5 over the following year, with "Pro" high-compute variants) unified the earlier split between the GPT-4o general models and the o-series reasoning models: a router decides how much thinking to apply. GPT-5.2 in January 2026 was the first model to exceed 90% on ARC-AGI-1, and scored 70.9% on GDPval—winning or tying against human professionals on tasks drawn from 44 occupations—while running roughly eleven times faster and at under one percent of the cost. Reports in late summer 2026 describe a successor generation (variously referred to as GPT-5.6 and GPT-6) with a further step up in mathematics and interactive reasoning; the author treats specific claims about these as provisional. ChatGPT passed 900 million weekly active users in early 2026 and roughly a billion monthly. OpenAI's annualized revenue was about $25 billion in February 2026 and approximately $2 billion per month by mid-year, against reported losses in the low tens of billions, funded by a $122 billion round at a reported $852 billion valuation.</p>
+<p><strong>Anthropic.</strong> The Claude 4 family (Opus 4 and Sonnet 4 in May 2025, Opus 4.1 in August, Sonnet 4.5 in September, Opus 4.5 in November, Opus 4.6 in February 2026, Opus 4.7 in spring 2026) has been the preferred model for software engineering and agentic coding for much of the period; Claude Code became one of the fastest-growing developer products in history. In April 2026 Anthropic announced Claude Mythos Preview, a model it withheld from general release on the grounds that its offensive cyber capabilities crossed its Responsible Scaling Policy thresholds, and instead deployed through Project Glasswing to a consortium of critical-infrastructure and software companies for defensive vulnerability discovery. A Claude 5 generation followed in mid-2026. Anthropic's revenue grew from roughly $10 billion in 2025 to a $30 billion annualized run rate in April 2026—by some accounts overtaking OpenAI—and $47 billion by May, overwhelmingly from API and enterprise customers rather than consumers.</p>
+<p><strong>Google DeepMind.</strong> Gemini 3 Pro (November 2025) and 3.1 Pro (early 2026) closed the gap with, and on many evaluations exceeded, OpenAI and Anthropic; Gemini 3.1 Pro achieved 98% on ARC-AGI-1 at about fifty cents per task, roughly matching the human panel. Google's advantages are structural: its own TPU silicon (Ironwood, the seventh generation), the largest distribution footprint (Search, Android, Workspace, YouTube), and DeepMind's science program (AlphaFold, AlphaProof, GNoME, weather models). Google also leads in video generation (Veo) and has integrated generative answers into Search for billions of users.</p>
+<p><strong>xAI.</strong> Grok 4 (July 2025) and its successors (4.1, 4.3, 4.6) reached the frontier on reasoning benchmarks on the strength of the Colossus cluster in Memphis—by Epoch's estimate the largest known AI datacenter at approximately 1.1 million H100-equivalents—and an aggressive training-compute strategy. xAI's models are distinguished by integration with the X platform and a stated commitment to fewer content restrictions.</p>
+<p><strong>Meta.</strong> Meta's Llama series anchored the Western open-weight ecosystem from 2023 through Llama 4 (April 2025). Llama 4's reception was mixed—it underperformed expectations relative to Chinese open models—and Meta responded with a reorganization, the creation of Meta Superintelligence Labs, a multi-billion-dollar talent acquisition campaign, and the largest datacenter build-out of any company (Hyperion, in Louisiana, projected at 3.7 million H100-equivalents by 2028). Whether Meta continues to release frontier weights openly is, as of this writing, uncertain; its 2026 models have been released more selectively.</p>
+<h3 id="the-chinese-frontier">The Chinese frontier<a class="headerlink" href="#the-chinese-frontier" title="Permanent link">¶</a></h3>
+<p>China's laboratories constitute a second frontier, roughly six to eight months behind the US leaders on aggregate capability measures and ahead on cost-efficiency and open-weight release.</p>
+<p><strong>DeepSeek</strong> (a subsidiary of the hedge fund High-Flyer) demonstrated with V3 (December 2024) and R1 (January 2025) that frontier-class models could be trained for a reported fraction of Western costs, through mixture-of-experts architecture, multi-head latent attention, FP8 training, and a lean team. DeepSeek V4, released in two variants in April 2026, is estimated by independent evaluators to trail the leading US model by about eight months overall, with a narrower gap on coding.</p>
+<p><strong>Alibaba's Qwen</strong> team has released over a hundred open-weight models under the Apache 2.0 license, including a 235-billion-parameter mixture-of-experts flagship; Qwen 3.x models (2026) are the most downloaded open models globally and the most common base for fine-tuning in academia and industry. Qwen has led on multilingual coverage and small efficient models.</p>
+<p><strong>Moonshot AI's Kimi</strong> (K2 Thinking in November 2025, K3 in 2026) reached frontier-adjacent performance on agentic and long-context tasks with a trillion-parameter sparse model.</p>
+<p><strong>Zhipu (Z.ai) GLM</strong>, <strong>MiniMax</strong>, <strong>ByteDance's Doubao/Seed</strong>, <strong>Tencent's Hunyuan</strong>, and <strong>Baidu's Ernie</strong> round out the tier. Between April 7 and April 24, 2026, four Chinese laboratories shipped open-weight coding models within three weeks of each other.</p>
+<p>The practical consequence: by May 2026, Chinese open-weight models accounted for an estimated 61% of tokens served on OpenRouter, the largest neutral model router. For developers who need weights they can run themselves, the default choice is now Chinese. Chapter 14 examines the geopolitical implications.</p>
+<h3 id="the-rest-of-the-field">The rest of the field<a class="headerlink" href="#the-rest-of-the-field" title="Permanent link">¶</a></h3>
+<p><strong>Mistral</strong> (France) remains Europe's frontier-adjacent laboratory, with open and commercial models and a strong position in European enterprise and government. <strong>Cohere</strong> (Canada) focuses on enterprise retrieval. <strong>AI21</strong> (Israel), <strong>Reka</strong>, <strong>Sakana</strong> (Japan), <strong>Naver HyperCLOVA</strong> (Korea), <strong>Sarvam and Krutrim</strong> (India), <strong>G42/Core42 and the Technology Innovation Institute</strong> (UAE, Falcon models), and <strong>Humain</strong> (Saudi Arabia) are national or regional champions. <strong>Microsoft</strong> trains its own models (Phi small models; MAI large models) while remaining OpenAI's largest partner and shareholder. <strong>Amazon</strong> (Nova models) and <strong>Apple</strong> (on-device foundation models) are large deployers with in-house models below the frontier. <strong>Nvidia</strong> releases open models (Nemotron) to seed demand for its hardware. Hundreds of companies fine-tune or build on top of these.</p>
+<p>A useful mental model: there are roughly five to seven organizations that can train a frontier model; perhaps fifteen to twenty that can train something within a year of the frontier; and thousands that build on top of those.</p>
+<h2 id="what-the-benchmarks-say">What the benchmarks say<a class="headerlink" href="#what-the-benchmarks-say" title="Permanent link">¶</a></h2>
+<h3 id="the-saturated-tier-what-is-effectively-solved">The saturated tier: what is effectively solved<a class="headerlink" href="#the-saturated-tier-what-is-effectively-solved" title="Permanent link">¶</a></h3>
+<p>A benchmark is saturated when the best models score at or near the ceiling, or above the human baseline, such that it no longer discriminates among frontier models. As of 2026 this describes almost every evaluation that existed in 2023:</p>
+<table>
+<thead>
+<tr>
+<th>Benchmark</th>
+<th>What it measures</th>
+<th>Human baseline</th>
+<th>Frontier 2023</th>
+<th>Frontier 2026</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MMLU / MMLU-Pro</td>
+<td>Multiple-choice knowledge across 57 subjects</td>
+<td>~90% (experts)</td>
+<td>86%</td>
+<td>&gt;92%</td>
+<td>Saturated; label noise dominates</td>
+</tr>
+<tr>
+<td>GSM8K</td>
+<td>Grade-school math word problems</td>
+<td>~95%</td>
+<td>92%</td>
+<td>&gt;98%</td>
+<td>Saturated</td>
+</tr>
+<tr>
+<td>MATH</td>
+<td>Competition math (AMC/AIME-level)</td>
+<td>~90% (top students)</td>
+<td>50%</td>
+<td>&gt;98%</td>
+<td>Saturated</td>
+</tr>
+<tr>
+<td>AIME 2024/2025</td>
+<td>Invitational math competition</td>
+<td>Top 5% of high-school</td>
+<td>~10%</td>
+<td>95–100%</td>
+<td>Saturated</td>
+</tr>
+<tr>
+<td>HumanEval</td>
+<td>Python function synthesis</td>
+<td>—</td>
+<td>67%</td>
+<td>&gt;99%</td>
+<td>Saturated</td>
+</tr>
+<tr>
+<td>GPQA Diamond</td>
+<td>PhD-level science multiple choice</td>
+<td>65–70% (domain PhDs)</td>
+<td>36%</td>
+<td>88–93%</td>
+<td>Saturated at human-expert level</td>
+</tr>
+<tr>
+<td>Bar exam, USMLE, CPA, etc.</td>
+<td>Professional licensing</td>
+<td>Passing</td>
+<td>Passing</td>
+<td>Top percentiles</td>
+<td>Saturated</td>
+</tr>
+<tr>
+<td>ARC-AGI-1</td>
+<td>Abstract visual pattern induction</td>
+<td>~85–98%</td>
+<td>5% (GPT-4o)</td>
+<td>90–98%</td>
+<td>Saturated (2026)</td>
+</tr>
+<tr>
+<td>IMO</td>
+<td>International Mathematical Olympiad</td>
+<td>Gold ≈ 5/6</td>
+<td>—</td>
+<td>Gold (2025); reports of 6/6 (2026)</td>
+<td>Saturated</td>
+</tr>
+</tbody>
+</table>
+<p>The pace deserves emphasis. GPQA Diamond was published in November 2023 as a benchmark that PhDs in the relevant field scored around 65–70% on and that GPT-4 scored 36% on; it was effectively solved within two years. ARC-AGI-1, explicitly designed by François Chollet to resist memorization and to measure fluid intelligence, went from 5% to above 90% in under two years. The IMO was regarded as a canonical decade-scale target as recently as 2023.</p>
+<h3 id="the-active-tier-what-discriminates-frontier-models-today">The active tier: what discriminates frontier models today<a class="headerlink" href="#the-active-tier-what-discriminates-frontier-models-today" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Benchmark</th>
+<th>What it measures</th>
+<th>Human baseline</th>
+<th>Frontier 2026</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Humanity's Last Exam (HLE)</td>
+<td>~2,500 expert-written questions across disciplines, adversarially filtered</td>
+<td>Not applicable (experts write, don't sit it)</td>
+<td>~25% (Jan 2025) → 53% (Oct 2025) → ~59% (Sep 2026)</td>
+<td>Calibration remains poor; some label noise</td>
+</tr>
+<tr>
+<td>FrontierMath (Tiers 1–3)</td>
+<td>Research-level math problems with verifiable answers</td>
+<td>Expert mathematicians hours-to-days</td>
+<td>2% (2024) → 25% (o3, Dec 2024) → ~40% (GPT-5.2) → higher in 2026</td>
+<td>Tier 4 (hardest) much lower</td>
+</tr>
+<tr>
+<td>ARC-AGI-2</td>
+<td>Harder abstraction; designed 2025</td>
+<td>&gt;60% (untrained humans), 100% (panel)</td>
+<td>4–16% (Mar 2026), higher since</td>
+<td>Efficiency (cost per task) also scored</td>
+</tr>
+<tr>
+<td>ARC-AGI-3</td>
+<td>Interactive game environments; launched Mar 2026</td>
+<td>100%</td>
+<td>0.5% at launch; reports of 30–60% by Sep 2026</td>
+<td>Newest; volatile</td>
+</tr>
+<tr>
+<td>SWE-bench Verified</td>
+<td>Resolve real GitHub issues</td>
+<td>—</td>
+<td>49% (Oct 2024) → 75% (2025) → &gt;90% (2026)</td>
+<td>Near saturation</td>
+</tr>
+<tr>
+<td>SWE-bench Pro / Terminal-Bench 2</td>
+<td>Harder, longer software tasks</td>
+<td>—</td>
+<td>Moderate</td>
+<td>Active</td>
+</tr>
+<tr>
+<td>GDPval</td>
+<td>Professional deliverables across 44 occupations, judged by experts</td>
+<td>50% (by construction)</td>
+<td>~71% win-or-tie (GPT-5.2)</td>
+<td>Measures economic output, not puzzles</td>
+</tr>
+<tr>
+<td>METR time horizon (50%)</td>
+<td>Length of software task completable half the time</td>
+<td>—</td>
+<td>~5h (Opus 4.5, Nov 2025) → &gt;16h (mid-2026)</td>
+<td>Chapter 8</td>
+</tr>
+<tr>
+<td>OSWorld / WebArena</td>
+<td>Computer and web agent tasks</td>
+<td>72% (OSWorld humans)</td>
+<td>~60–75%</td>
+<td>Approaching human</td>
+</tr>
+<tr>
+<td>τ-bench, BFCL</td>
+<td>Tool-calling reliability in customer scenarios</td>
+<td>—</td>
+<td>70–90%</td>
+<td>Reliability, not capability</td>
+</tr>
+<tr>
+<td>SimpleQA / factual recall</td>
+<td>Short factual questions</td>
+<td>—</td>
+<td>40–60% accuracy, varying calibration</td>
+<td>Hallucination persists</td>
+</tr>
+<tr>
+<td>Vending-Bench, long-horizon agent sims</td>
+<td>Sustained multi-month simulated business operation</td>
+<td>—</td>
+<td>High variance; failures compound</td>
+<td>Long-horizon coherence</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-the-pattern-tells-us">What the pattern tells us<a class="headerlink" href="#what-the-pattern-tells-us" title="Permanent link">¶</a></h3>
+<p>Three regularities stand out.</p>
+<p><strong>First, anything with a verifiable answer falls fast.</strong> Mathematics, competitive programming, science questions with a definite answer, software tasks with test suites: these are the domains where reinforcement learning on outcomes works, and progress on them since late 2024 has been explosive. FrontierMath's designers expected it to last years; Tier 1–3 problems were substantially cracked within eighteen months.</p>
+<p><strong>Second, anything requiring novelty without a verifier, long-horizon coherence, or interaction with an uncooperative world falls slowly.</strong> ARC-AGI-3's interactive environments, open-ended research, tasks judged holistically by humans rather than by tests, and sustained agentic operation over days remain hard. This is not to say they are not improving—they are—but the curve is shallower.</p>
+<p><strong>Third, benchmarks are consumed faster than they are built.</strong> The typical lifespan of a "hard" benchmark has fallen from roughly five years (ImageNet, 2010–2015) to roughly eighteen months (GPQA, FrontierMath tiers 1–3). The field is running out of ways to measure the frontier, and both Epoch and METR have publicly noted that their instruments are near ceiling. This measurement problem is itself an important fact about the state of the art: we are less certain of how capable the best systems are than we were two years ago.</p>
+<h2 id="jagged-capability">Jagged capability<a class="headerlink" href="#jagged-capability" title="Permanent link">¶</a></h2>
+<p>The most important concept for understanding AI in 2026 is what Ethan Mollick called the "jagged frontier" and what Andrej Karpathy called "jagged intelligence." AI systems are not uniformly at some human level; they are superhuman on some tasks and subhuman on others, and the boundary does not follow human intuitions about difficulty.</p>
+<p>Examples that hold as of this writing:</p>
+<ul>
+<li>A frontier model can solve an IMO problem that stumps all but a few dozen humans on Earth, and can also miscount the letters in a word, misjudge which of two numbers is larger when written in an unusual format, or confidently assert a false fact about an obscure person.</li>
+<li>A coding agent can autonomously build a working web application from a paragraph of description, and can also spend hours in a loop misdiagnosing a trivial environment configuration problem that a junior engineer would fix in a minute.</li>
+<li>A model can write a competent legal brief and will also, without warning, invent a case citation that does not exist—a failure mode that has led to sanctions against lawyers in dozens of documented cases.</li>
+<li>A vision-language model can describe a photograph in detail and interpret a medical image at specialist level, and can also fail at simple spatial reasoning ("is the cup to the left of the plate?") or at counting objects reliably above a handful.</li>
+<li>Models achieve gold-medal mathematics and yet ARC-AGI-2 tasks that untrained humans solve at above 60% stumped them at under 20% for most of 2026.</li>
+</ul>
+<p>The jaggedness has an explanation. Models are trained on the distribution of human text, code, and images, and refined with RL on tasks where feedback is available. They are strong where training data is dense and feedback is clean, and weak where it is sparse or where the task depends on a kind of processing—precise counting, spatial simulation, novel-rule induction, embodied common sense—that the training signal does not directly reward. Humans have a very different profile because our capabilities were shaped by evolution and embodied childhood rather than by text.</p>
+<p>The practical consequence is that "is AI as smart as a human?" is the wrong question, and estimates of what AI can do that rely on human analogy ("it passed the bar, so it can practice law") are systematically misleading in both directions. The right question is task-specific and empirical: for this task, in this context, with this level of reliability required, does the system work?</p>
+<h2 id="the-reliability-problem">The reliability problem<a class="headerlink" href="#the-reliability-problem" title="Permanent link">¶</a></h2>
+<h3 id="hallucination">Hallucination<a class="headerlink" href="#hallucination" title="Permanent link">¶</a></h3>
+<p>Models generate plausible falsehoods. The rate depends enormously on the task: on well-covered general knowledge, current frontier models are highly accurate; on obscure facts, recent events, precise citations, and numerical details, error rates of 15–30% remain common on hard benchmarks, and higher in adversarial or long-tail conditions. The Stanford AI Index 2026 reported hallucination rates spanning roughly 20% to over 90% across models and settings, depending on the task construction—a range so wide that the headline number is less informative than the observation that it has not been eliminated.</p>
+<p>Progress has come from several directions: retrieval-augmented generation (grounding answers in retrieved documents), better calibration training (teaching models to say "I don't know"), reasoning models that check their own work, tool use (a model that runs code to do arithmetic does not make arithmetic errors), and citation requirements in products. OpenAI's 2025 research paper on why language models hallucinate argued that the problem is partly an artifact of evaluation: benchmarks that penalize abstention as much as error train models to guess. Redesigned evaluations that reward calibrated uncertainty have improved matters. But no method has eliminated confabulation, and a system that is 97% reliable still fails on one in thirty queries—an unacceptable rate for many professional uses without human review.</p>
+<h3 id="agentic-reliability">Agentic reliability<a class="headerlink" href="#agentic-reliability" title="Permanent link">¶</a></h3>
+<p>The reliability problem compounds in agents. If each step of a twenty-step task succeeds with 97% probability independently, the task succeeds 54% of the time. Real steps are not independent—errors propagate and agents can recover—but the arithmetic illustrates why long-horizon reliability is the frontier. METR's data shows exactly this: a model's 80%-reliability horizon is typically a quarter to a fifth of its 50%-reliability horizon. A model that finishes a five-hour task half the time finishes a one-hour task four times in five.</p>
+<p>Enterprise data confirms the gap between demo and deployment. A widely cited early-2026 survey found that while roughly 70% of organizations were using AI agents in some form, only about one in nine had agents in full production. Practitioners' accounts converge on the same failure modes: agents that misread ambiguous instructions, take irreversible actions, get stuck in loops, are hijacked by instructions embedded in the content they process (prompt injection), or silently produce plausible but wrong outputs. Chapter 8 treats these in depth. The point here is that the <em>capability</em> to complete a task and the <em>reliability</em> with which it is completed are different quantities, and in 2026 the former is far ahead of the latter.</p>
+<h3 id="other-persistent-limitations">Other persistent limitations<a class="headerlink" href="#other-persistent-limitations" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Memory and continual learning.</strong> Models do not learn from experience in deployment. Each conversation begins from the same weights. "Memory" features in products are retrieval systems that store and re-inject text, not genuine learning. A model cannot, over months of working with a user, become an expert in that user's codebase the way a human colleague does—it can only be told, again and again, or be given tools that search. Context windows have grown to millions of tokens, which mitigates but does not solve this. Chapter 6 discusses research directions.</li>
+<li><strong>Long-horizon planning and coherence.</strong> In extended tasks, agents lose track of goals, contradict earlier decisions, or fail to maintain a consistent model of the situation. Simulated business benchmarks (Vending-Bench and similar) show high variance across runs, with some ending in spectacular failure.</li>
+<li><strong>Situational and embodied common sense.</strong> Physical intuition, spatial reasoning, and understanding of how the world works outside text remain weak relative to humans. This matters most for robotics (Chapter 9) but also for any task that involves the physical world.</li>
+<li><strong>Robustness and adversarial vulnerability.</strong> Jailbreaks, prompt injection, and adversarial inputs continue to defeat safety training and instruction following. No frontier model is robust to a determined adversary. This is a security problem (Chapter 16) and a reliability problem.</li>
+<li><strong>Sycophancy and instability.</strong> Models tend to agree with users, revise correct answers under pushback, and adopt the user's framing. An OpenAI update in 2025 was rolled back within days after producing a model so agreeable it validated obviously bad decisions. The tendency is trained in by preference optimization and is hard to remove without making models less helpful.</li>
+<li><strong>Verification gap.</strong> Models cannot reliably judge whether their own output is correct on tasks without an external verifier, though they are better at critiquing than at generating, which is the basis of several improvement techniques.</li>
+</ul>
+<h2 id="multimodality">Multimodality<a class="headerlink" href="#multimodality" title="Permanent link">¶</a></h2>
+<p>By 2026 the frontier models are natively multimodal: they accept and produce text, images, audio, and in some cases video within a single model rather than by stitching separate systems together.</p>
+<ul>
+<li><strong>Vision understanding</strong> is at or above expert level for many recognition and description tasks, including medical imaging (dermatology, radiology, pathology) in controlled studies, document understanding (forms, charts, handwriting), and screen understanding (the foundation of computer-use agents). It remains weak at fine spatial reasoning, counting, and precise measurement.</li>
+<li><strong>Image generation</strong> is photorealistic and controllable. Conversational editing—"make the sky darker, move the person to the left, change the font on the sign"—works reliably. Text rendering in images, long a failure, is solved. Distinguishing generated from real images by eye is no longer possible in general.</li>
+<li><strong>Video generation</strong> (Google Veo 3, OpenAI Sora 2, Kling, Runway, and Chinese competitors) produces coherent clips of ten seconds to a few minutes with synchronized audio. Physical consistency has improved sharply but is not reliable—objects still occasionally pass through each other or change identity. The economics of stock footage, advertising production, and animation have shifted.</li>
+<li><strong>Speech</strong> is real-time, expressive, and interruptible. Voice agents handle customer-service calls indistinguishably from humans in many contexts. Voice cloning from seconds of audio is trivial, with obvious fraud implications.</li>
+<li><strong>Music</strong> generation (Suno, Udio, and others) produces radio-quality songs from prompts. Litigation with rights holders has partially resolved into licensing deals.</li>
+<li><strong>3D and world models.</strong> Generating consistent 3D scenes and interactive environments from text or images (Google Genie 3, World Labs, and others) is the newest modality and is closely tied to both video generation and robotics. Chapter 6 discusses world models as an architectural direction.</li>
+</ul>
+<h2 id="cost-speed-and-the-diffusion-curve">Cost, speed, and the diffusion curve<a class="headerlink" href="#cost-speed-and-the-diffusion-curve" title="Permanent link">¶</a></h2>
+<p>Capability is only half the story; the other half is what a given capability costs, because that determines what is economically deployable.</p>
+<p>The headline fact: <strong>the cost of a fixed level of capability has fallen roughly tenfold per year</strong>. GPT-4-class performance cost $30–60 per million tokens at launch in March 2023; by 2026 it cost roughly $0.40 per million tokens or less—a decline of two to three orders of magnitude in three years. Epoch's analysis found the rate varies by capability threshold, from about 9× per year for the hardest tasks to several hundred times per year for tasks that became achievable by small models. Andreessen Horowitz labeled the phenomenon "LLMflation."</p>
+<p>The drivers are: smaller models matching larger ones through better training (distillation, better data, longer training); architectural efficiency (mixture-of-experts, attention variants, quantization); inference optimization (speculative decoding, batching, caching, custom kernels); hardware improvement (Epoch estimates chip price-performance rising about 49% per year since 2023, with step changes at each generation); and price competition among providers.</p>
+<p>The consequence is that the frontier is not where most economic activity happens. A model at GPT-4 level—which in 2023 was the most capable system in the world and cost a fortune to run—now runs on a laptop for free or through an API for pennies. Most deployed AI work is done by models one to two generations behind the frontier, because they are good enough and cheap. The frontier's role is to discover what is possible; the trailing models are what deliver it at scale. For forecasting, this means that whatever the frontier can do today will be cheap enough for universal deployment in roughly two to three years, regardless of whether the frontier itself advances further.</p>
+<p>Speed has improved alongside cost. Output rates of hundreds of tokens per second are routine; specialized inference chips (Groq, Cerebras, SambaNova) reach thousands. Latency to first token has fallen to a few hundred milliseconds. Real-time voice and video interaction, impossible in 2023, is ordinary.</p>
+<p>The exception to the cost decline is at the very top: frontier reasoning models in high-compute mode, spending minutes of thinking and many thousands of tokens per answer, can cost dollars or tens of dollars per query. The o3 result on ARC-AGI-1 in December 2024 famously used thousands of dollars of compute per task in its highest configuration. This is the inference-time scaling frontier, and it means that maximum capability is available at a price that only high-value tasks justify—for now. The same cost curve will bring it down.</p>
+<h2 id="adoption">Adoption<a class="headerlink" href="#adoption" title="Permanent link">¶</a></h2>
+<p>Capability and cost combine into diffusion. The evidence on adoption as of 2026:</p>
+<ul>
+<li><strong>Consumer.</strong> ChatGPT alone has roughly a billion monthly users; Gemini, Claude, Meta AI, Copilot, Grok, DeepSeek, Doubao, and others add hundreds of millions more, with overlap. Surveys in the US, UK, and EU find 40–60% of adults have used a generative AI tool, and 20–35% use one weekly. Usage skews young, educated, and employed. The Stanford AI Index estimated the consumer surplus from generative AI tools in the US at roughly $172 billion annually by early 2026, with median value per user tripling year over year.</li>
+<li><strong>Work.</strong> Surveys of workers (Pew, Gallup, Federal Reserve banks, the St. Louis Fed's studies) find 30–45% of US workers using generative AI at work, most of them weekly or more, with time savings self-reported at a few hours per week. Usage is highest in software, marketing, consulting, finance, and education; lowest in construction, agriculture, and manual services.</li>
+<li><strong>Enterprise.</strong> McKinsey and similar surveys find 70–80% of large organizations using generative AI in at least one function, but a much smaller share (10–25%) reporting material EBIT impact, and most still in pilot or partial deployment for agentic use cases. The gap reflects the reliability problem, integration costs, data readiness, security concerns, and organizational inertia.</li>
+<li><strong>Software development</strong> is the most transformed domain. Surveys indicate a large majority of professional developers use AI assistants daily, and a meaningful share of new code at major technology companies is AI-generated or AI-assisted—Google and Microsoft have publicly cited figures of 25–30% and rising. Agentic coding tools that work autonomously on tasks for minutes to hours are in mainstream use.</li>
+<li><strong>Geography.</strong> Adoption is highest in the US, China, India, the UAE, Singapore, and parts of Europe; the Stanford AI Index notes that high-income countries account for 87% of notable model production and 91% of AI startup funding, though usage is more evenly distributed than production.</li>
+</ul>
+<h2 id="summary-the-state-of-the-art-in-one-table">Summary: the state of the art in one table<a class="headerlink" href="#summary-the-state-of-the-art-in-one-table" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>State in September 2026</th>
+<th>Trend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Knowledge and reasoning on well-posed problems</td>
+<td>At or above expert human level across most academic and professional domains</td>
+<td>Saturated; frontier moving to open-ended research</td>
+</tr>
+<tr>
+<td>Mathematics</td>
+<td>IMO gold to perfect; research-level problems partially solved; open problems occasionally resolved</td>
+<td>Fast</td>
+</tr>
+<tr>
+<td>Coding</td>
+<td>Autonomous multi-hour tasks on real repositories; &gt;90% on SWE-bench Verified</td>
+<td>Fast; reliability the bottleneck</td>
+</tr>
+<tr>
+<td>Agentic task horizon (50%)</td>
+<td>Roughly one to two working days on software tasks</td>
+<td>Doubling every ~4–7 months</td>
+</tr>
+<tr>
+<td>Agentic reliability (80%+)</td>
+<td>Hours, not days; production deployment limited</td>
+<td>Improving; still the main blocker</td>
+</tr>
+<tr>
+<td>Hallucination</td>
+<td>Reduced but present; 15–30% on hard factual tasks</td>
+<td>Slow improvement</td>
+</tr>
+<tr>
+<td>Memory / continual learning</td>
+<td>Not solved; workarounds via retrieval and long context</td>
+<td>Research stage</td>
+</tr>
+<tr>
+<td>Multimodal understanding</td>
+<td>Expert level in vision for many tasks; weak spatial/counting</td>
+<td>Steady</td>
+</tr>
+<tr>
+<td>Generation (image/video/audio)</td>
+<td>Photorealistic, controllable, real-time voice</td>
+<td>Fast</td>
+</tr>
+<tr>
+<td>Robotics</td>
+<td>Early general-purpose manipulation; thousands of humanoids shipped</td>
+<td>Early but accelerating (Chapter 9)</td>
+</tr>
+<tr>
+<td>Cost of fixed capability</td>
+<td>Falling ~10×/year</td>
+<td>Continuing</td>
+</tr>
+<tr>
+<td>Consumer adoption</td>
+<td>~1.5–2 billion users of generative AI tools globally</td>
+<td>Growing</td>
+</tr>
+<tr>
+<td>Enterprise production deployment of agents</td>
+<td>Minority of organizations</td>
+<td>Growing slowly</td>
+</tr>
+<tr>
+<td>Frontier laboratories</td>
+<td>5–7 at the frontier; China 6–8 months behind, leading open weights</td>
+<td>Stable count, rising cost of entry</td>
+</tr>
+</tbody>
+</table>
+<p>The next several chapters explain the inputs behind these outputs—compute, hardware, data, algorithms—and how far each can be pushed.</p><div class="pager"><a href="01-history-and-why-this-moment-is-different.html"><span>← Previous</span>A Brief History of AI, and Why This Moment Is Different</a><a href="index.html" style="text-align:right"><span>→</span>Home</a></div><footer>Built 2026-09-09. Text is provided as an analytical review; forecasts are uncertain by nature. </footer></main>
+<aside class="toc"><div class="sub" style="font-size:12px;color:var(--muted);margin-bottom:8px">On this page</div><div class="toc">
+<ul>
+<li><a href="#purpose-of-this-chapter">Purpose of this chapter</a></li>
+<li><a href="#the-landscape-of-laboratories-and-models">The landscape of laboratories and models</a><ul>
+<li><a href="#the-frontier-tier">The frontier tier</a></li>
+<li><a href="#the-chinese-frontier">The Chinese frontier</a></li>
+<li><a href="#the-rest-of-the-field">The rest of the field</a></li>
+</ul>
+</li>
+<li><a href="#what-the-benchmarks-say">What the benchmarks say</a><ul>
+<li><a href="#the-saturated-tier-what-is-effectively-solved">The saturated tier: what is effectively solved</a></li>
+<li><a href="#the-active-tier-what-discriminates-frontier-models-today">The active tier: what discriminates frontier models today</a></li>
+<li><a href="#what-the-pattern-tells-us">What the pattern tells us</a></li>
+</ul>
+</li>
+<li><a href="#jagged-capability">Jagged capability</a></li>
+<li><a href="#the-reliability-problem">The reliability problem</a><ul>
+<li><a href="#hallucination">Hallucination</a></li>
+<li><a href="#agentic-reliability">Agentic reliability</a></li>
+<li><a href="#other-persistent-limitations">Other persistent limitations</a></li>
+</ul>
+</li>
+<li><a href="#multimodality">Multimodality</a></li>
+<li><a href="#cost-speed-and-the-diffusion-curve">Cost, speed, and the diffusion curve</a></li>
+<li><a href="#adoption">Adoption</a></li>
+<li><a href="#summary-the-state-of-the-art-in-one-table">Summary: the state of the art in one table</a></li>
+</ul>
+</div>
+</aside>
+</div><script>
+(function(){
+  const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);
+  window.toggleTheme=function(){const cur=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',cur);localStorage.setItem('theme',cur);};
+  window.toggleNav=function(){document.querySelector('nav.side').classList.toggle('open');};
+  window.addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';});
+  // sidebar filter + full-text search over search index
+  const inp=document.getElementById('q');const list=document.getElementById('chlist');const res=document.getElementById('results');
+  let idx=null;
+  async function loadIdx(){if(idx)return idx;try{const r=await fetch(window.SITE_BASE+'search.json');idx=await r.json();}catch(e){idx=[];}return idx;}
+  if(inp){inp.addEventListener('input',async()=>{const q=inp.value.trim().toLowerCase();
+    [...list.querySelectorAll('li')].forEach(li=>{li.style.display=(!q||li.textContent.toLowerCase().includes(q))?'':'none';});
+    if(q.length<3){res.innerHTML='';return;}
+    const ix=await loadIdx();const out=[];
+    for(const d of ix){const i=d.text.toLowerCase().indexOf(q);if(i>=0){const s=Math.max(0,i-60);out.push({d,snip:d.text.slice(s,i+90)});if(out.length>=25)break;}}
+    res.innerHTML=out.map(o=>`<li><a href="${window.SITE_BASE}${o.d.url}"><b>${o.d.title}</b><small>…${o.snip.replace(/</g,'&lt;')}…</small></a></li>`).join('')||'<li><small>No matches</small></li>';
+  });}
+  // active TOC highlight
+  const heads=[...document.querySelectorAll('main h2, main h3')];const links=[...document.querySelectorAll('aside.toc a')];
+  if(heads.length&&links.length){const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.style.color='');const l=links.find(l=>l.getAttribute('href')==='#'+e.target.id);if(l)l.style.color='var(--acc)';}})},{rootMargin:'0px 0px -75% 0px'});heads.forEach(h=>obs.observe(h));}
+})();
+</script></body></html>
