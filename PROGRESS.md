@@ -132,12 +132,23 @@ Strengths: coherent voice, explicit uncertainty, forecast register, good cross-r
 - [x] Plan written to PROGRESS.md and pushed
 - [x] T1 Fact updates DONE (all chapters touched; see docs/RESEARCH_NOTES.md "Session-2 verification" for sources). Major additions: GPT-6 Astra, Fable/Mythos/Opus 5, HF incident + METR/Redwood, Anthropic/AISI incidents, Pacing the Frontier, FRONTIER Act, ARC-AGI-3 solved, IMO 2026, capex $750-900B, EU Omnibus dates. Appendix E (source disagreements) + F (changelog) added.
   LESSON: sandbox reset twice mid-task and wiped uncommitted edits AND git credentials. Commit after EVERY file edit; re-run setup_github_environment if push 401s; `pip install markdown pymdown-extensions` needed after reset.
-- [ ] T2 "In brief" takeaways box at top of every chapter (00–20)
-- [ ] T3 Figures: build.py generates SVG charts (matplotlib) into site/fig/ and docs/fig/; embed in Ch03, 08, 02, 17, 18, 03
-- [ ] T4 Site UX: favicon, keyboard nav, back-to-top, print CSS, OG meta, font-size toggle
-- [ ] T5 Appendix E: "Where sources disagree" + confidence legend; changelog
-- [ ] T6 EPUB/PDF export via pandoc; link from index
-- [ ] T7 Link checker in build.py; final QA; README update; push
+- [x] T2 "In brief" boxes on chapters 00–20 (tools/add_briefs.py, idempotent; rendered as abstract admonition; briefs also feed index cards)
+- [x] T3 Nine SVG figures (tools/make_figures.py → docs/fig/, copied to site/fig/ by build.py; placed via tools/add_figures.py): compute-trend, metr-horizon, inference-cost, benchmark-lifespans, capex-vs-revenue, agi-forecasts, scenarios, canaries, hf-incident. Embedded in Ch02, 03, 08, 11, 16, 17, 18.
+- [x] T4 Site UX: data-URI favicon, ←/→ keyboard nav, back-to-top, print CSS, font-size control, canonical + OpenGraph meta, sitemap.xml, index "start here" cards. PlaywrightConsoleCapture: 0 console errors.
+- [x] T5 Appendix E "Where sources disagree" + confidence legend; Appendix F changelog (v1/v2).
+- [x] T6 EPUB via pandoc → site/THE_FUTURE_OF_AI.epub (367 KB), linked from sidebar + index. (PDF skipped: no LaTeX engine; EPUB + print stylesheet cover the use case.)
+- [x] T7 Link checker in build.py (skips http/mailto/data:/$ template hrefs) → 0 problems. README rewritten for v2. Final consistency sweep done (exec-summary AGI median aligned with Ch17; HLE leftover in Ch07 fixed; grep for stale 30–60% ARC / 600–750 capex / 50%-by-2032 → only legitimate hits remain).
 
 ## Log (v2)
 - Plan written. Starting T1.
+- T1 done across all chapters; RESEARCH_NOTES "Session-2 verification" appended.
+- T2–T6 done; build_site rewritten; site regenerated.
+- Sandbox reset a THIRD time after the "card brief styling" commit: lost the ch00/ch07 consistency edits + pip packages. Redid them, committed, pushed.
+- README v2, PROGRESS updated. Final full build (with EPUB) + push = end of v2 pass.
+
+## How to continue (for a fresh instance)
+1. `cd /home/user/webapp && git status -sb` — should be clean and `main...origin/main`. If push 401s → run setup_github_environment.
+2. `pip install markdown pymdown-extensions matplotlib` (lost on every sandbox reset). pandoc is at /usr/bin/pandoc.
+3. Edit chapters in docs/chapters/; run `python3 tools/add_briefs.py` only if changing briefs (BRIEFS dict); `python3 tools/make_figures.py` if changing figure data; `python3 build.py` to regenerate everything; commit + push straight to main after EVERY edit.
+4. Any new fact revision → also add a line to Appendix F changelog (docs/chapters/23-appendix.md) and, if sources disagree, to Appendix E.
+5. Possible v3 ideas (not started): PDF via weasyprint/LaTeX if installed; per-chapter reading-time in sidebar; automated freshness check script that lists claims with dates older than N months; translate "In brief" boxes into a standalone one-page summary.
