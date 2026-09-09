@@ -1,0 +1,219 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI for Science: From Instrument to Participant — The Future of AI</title>
+<meta name="description" content="A comprehensive review and guide — technology, economics, society, geopolitics, safety, and what comes next">
+<style>
+:root{--bg:#0f1115;--bg2:#161a22;--fg:#e6e8ee;--muted:#9aa3b2;--acc:#6ea8fe;--acc2:#b388ff;--border:#262c38;--code:#1c2230;--mark:#3b3a1a}
+[data-theme=light]{--bg:#fbfbfd;--bg2:#ffffff;--fg:#1c1e26;--muted:#5b6473;--acc:#2457c5;--acc2:#6d3fd0;--border:#e3e6ec;--code:#f2f4f8;--mark:#fff3b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;font-size:17px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--acc),var(--acc2));width:0;z-index:99}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr) 240px;min-height:100vh}
+nav.side{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--bg2);padding:18px 14px}
+nav.side .brand{font-weight:800;font-size:18px;margin-bottom:6px;display:block;color:var(--fg)}
+nav.side .sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+nav.side input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--fg);margin-bottom:12px}
+nav.side ol{list-style:none;padding:0;margin:0}
+nav.side li a{display:block;padding:6px 8px;border-radius:6px;font-size:14px;color:var(--fg)}
+nav.side li a:hover{background:var(--code);text-decoration:none}
+nav.side li a.active{background:var(--code);color:var(--acc);font-weight:600}
+nav.side li a small{color:var(--muted);display:block;font-size:11px}
+main{padding:36px 56px 100px;max-width:900px;width:100%;margin:0 auto}
+aside.toc{position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 14px;border-left:1px solid var(--border);font-size:13px}
+aside.toc .toc ul{list-style:none;padding-left:10px;margin:0}
+aside.toc .toc>ul{padding-left:0}
+aside.toc a{color:var(--muted);display:block;padding:3px 0}
+aside.toc a:hover{color:var(--acc)}
+h1{font-size:2.2rem;line-height:1.2;margin:.2em 0 .6em}h2{font-size:1.6rem;margin-top:2.2em;border-bottom:1px solid var(--border);padding-bottom:.3em}h3{font-size:1.25rem;margin-top:1.8em}h4{font-size:1.05rem;margin-top:1.4em}
+.headerlink{opacity:0;margin-left:6px;font-size:.8em}h2:hover .headerlink,h3:hover .headerlink{opacity:.6}
+p,li{max-width:76ch}
+blockquote{margin:1.2em 0;padding:.6em 1.2em;border-left:4px solid var(--acc2);background:var(--code);border-radius:6px;color:var(--fg)}
+table{border-collapse:collapse;width:100%;margin:1.4em 0;font-size:.92em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+code{background:var(--code);padding:2px 5px;border-radius:4px;font-size:.9em}pre{background:var(--code);padding:14px;border-radius:8px;overflow-x:auto}pre code{background:none;padding:0}
+.admonition{padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--code);margin:1.3em 0}
+.admonition-title{font-weight:700;margin:0 0 6px}
+.admonition.warning{border-color:#d9a54a}.admonition.note{border-color:var(--acc)}.admonition.tip{border-color:#4fbf8b}.admonition.danger{border-color:#e05a5a}
+.meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:60px;padding-top:20px;border-top:1px solid var(--border)}
+.pager a{padding:10px 14px;border:1px solid var(--border);border-radius:8px;flex:1}
+.pager a span{display:block;color:var(--muted);font-size:12px}
+.topbar{display:none}
+button.theme{border:1px solid var(--border);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:13px}
+.hero{padding:30px 0 10px}.hero h1{font-size:3rem}.hero p.lead{font-size:1.25rem;color:var(--muted);max-width:70ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:26px 0}
+.card{border:1px solid var(--border);border-radius:12px;padding:16px;background:var(--bg2);display:block;color:var(--fg)}
+.card:hover{border-color:var(--acc);text-decoration:none}.card .n{color:var(--acc);font-weight:700;font-size:12px}.card h3{margin:.3em 0 .4em;font-size:1.05rem}.card small{color:var(--muted)}
+mark{background:var(--mark);color:inherit}
+footer{color:var(--muted);font-size:13px;margin-top:40px}
+@media(max-width:1200px){.layout{grid-template-columns:280px minmax(0,1fr)}aside.toc{display:none}}
+@media(max-width:860px){.layout{grid-template-columns:1fr}nav.side{position:fixed;left:-320px;width:300px;transition:left .2s;z-index:50}nav.side.open{left:0}.topbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg2);z-index:40}main{padding:20px 18px 80px}body{font-size:16px}}
+</style>
+<script>window.SITE_BASE="";</script>
+</head><body><div id="progress"></div>
+<div class="topbar"><button class="theme" onclick="toggleNav()">☰ Chapters</button><b>The Future of AI</b><span style="flex:1"></span><button class="theme" onclick="toggleTheme()">◐</button></div>
+<div class="layout">
+<nav class="side"><a class="brand" href="index.html">The Future of AI</a><div class="sub">Comprehensive review · built 2026-09-09</div>
+<input id="q" placeholder="Search all chapters…" autocomplete="off"><ol id="results"></ol><ol id="chlist"><li><a href="00-front-matter-and-executive-summary.html" class="">Front Matter and Executive Summary<small>Chapter 0 · 3,598 words</small></a></li><li><a href="01-history-and-why-this-moment-is-different.html" class="">A Brief History of AI, and Why This Moment Is Different<small>Chapter 1 · 5,116 words</small></a></li><li><a href="02-state-of-the-art-2026.html" class="">The State of the Art in 2026: What AI Can and Cannot Do<small>Chapter 2 · 4,484 words</small></a></li><li><a href="03-scaling-laws-compute-and-economics.html" class="">Scaling Laws, Compute, and the Economics of Training<small>Chapter 3 · 3,489 words</small></a></li><li><a href="04-hardware-and-infrastructure.html" class="">Hardware and Infrastructure: Chips, Datacenters, Energy, and the Physical Limits of AI<small>Chapter 4 · 3,533 words</small></a></li><li><a href="05-data.html" class="">Data: The Wall, the Workarounds, and the Fight Over Who Owns It<small>Chapter 5 · 3,137 words</small></a></li><li><a href="06-architectures-beyond-the-transformer.html" class="">Architectures Beyond the Transformer: What Might Replace or Extend the Current Paradigm<small>Chapter 6 · 2,622 words</small></a></li><li><a href="07-reasoning-rl-and-test-time-compute.html" class="">Reasoning, Reinforcement Learning, and Test-Time Compute: How Models Learned to Think<small>Chapter 7 · 3,268 words</small></a></li><li><a href="08-agents.html" class="">Agents: From Chatbots to Autonomous Systems<small>Chapter 8 · 3,304 words</small></a></li><li><a href="09-multimodality-and-embodiment.html" class="">Multimodality and Embodiment: Vision, Video, Voice, Robots, and Self-Driving<small>Chapter 9 · 2,664 words</small></a></li><li><a href="10-ai-for-science.html" class="active">AI for Science: From Instrument to Participant<small>Chapter 10 · 2,814 words</small></a></li></ol>
+<div style="margin-top:14px"><button class="theme" onclick="toggleTheme()">◐ Toggle theme</button></div>
+<div class="sub" style="margin-top:14px"><a href="../docs/THE_FUTURE_OF_AI.md">Single Markdown file</a> · <a href="https://github.com/gorg667/ai-future">GitHub</a></div></nav>
+<main><div class="meta">Chapter 10 of 11 · 2,814 words · ~12 min read</div><h1 id="ai-for-science-from-instrument-to-participant">AI for Science: From Instrument to Participant<a class="headerlink" href="#ai-for-science-from-instrument-to-participant" title="Permanent link">¶</a></h1>
+<h2 id="the-stakes">The stakes<a class="headerlink" href="#the-stakes" title="Permanent link">¶</a></h2>
+<p>Of all the things AI might do, accelerating science is the one with the largest potential upside and the one most likely to be underestimated. Economic growth over the long run is driven almost entirely by the accumulation of knowledge. Since the mid-twentieth century, the rate of scientific progress per researcher has fallen—it takes more scientists, more money, and more time to produce each successive breakthrough (Bloom et al., "Are Ideas Getting Harder to Find?", 2020). If AI can reverse that trend, even modestly, the compounding effect over decades dwarfs any direct productivity gain from automating existing work. If it can do more than that—if AI systems can become genuine scientific participants, generating and testing hypotheses at machine speed—the consequences are hard to bound.</p>
+<p>This chapter surveys what AI has actually done in science through 2026, domain by domain; the emergence of "AI scientist" systems; the bottlenecks that separate impressive results from transformed fields; and what to expect through the early 2030s. The summary: <strong>AI is already the most important new scientific instrument since the computer, its contribution to genuinely novel discovery is small but rising steeply, and the physical-world bottlenecks (experiments, trials, manufacturing) will determine how fast that contribution becomes transformative.</strong></p>
+<h2 id="structural-biology-and-the-alphafold-revolution">Structural biology and the AlphaFold revolution<a class="headerlink" href="#structural-biology-and-the-alphafold-revolution" title="Permanent link">¶</a></h2>
+<p>The paradigmatic success. Protein structure prediction—inferring a protein's three-dimensional shape from its amino-acid sequence—was a fifty-year grand challenge. DeepMind's AlphaFold 2 (2020, published 2021) solved it to experimental accuracy for most proteins; the AlphaFold Protein Structure Database released predicted structures for essentially every known protein (over 200 million). Demis Hassabis and John Jumper shared the 2024 Nobel Prize in Chemistry with David Baker, whose lab pioneered computational protein design.</p>
+<p>The effects have been broad and measurable. Over three million researchers have used AlphaFold; it is cited in tens of thousands of papers; it has accelerated work on malaria vaccines, antibiotic resistance, plastic-degrading enzymes, and countless basic-biology questions. AlphaFold 3 (May 2024) extended prediction to complexes—proteins with DNA, RNA, ligands, and other molecules—which is what drug discovery requires. Open competitors (Boltz, Chai, RoseTTAFold) reproduced and extended the capability. Protein <em>design</em> (generating new proteins with specified functions, via diffusion models like RFdiffusion and language models like ESM) moved from academic demonstration to companies (Generate Biomedicines, Profluent, EvolutionaryScale, Latent Labs) producing novel binders, enzymes, and antibodies.</p>
+<p>The lesson: where a scientific problem has (a) abundant structured data, (b) a clear objective, and (c) a way to verify predictions, AI can solve it outright. Structural biology had all three (the Protein Data Bank's 200,000 experimentally solved structures; the CASP competition as a benchmark; crystallography for verification).</p>
+<h2 id="drug-discovery">Drug discovery<a class="headerlink" href="#drug-discovery" title="Permanent link">¶</a></h2>
+<p>The natural next step—and the domain where the gap between promise and delivery is widest. AI is now used across the pipeline: target identification (mining genomic and literature data), hit discovery (screening virtual libraries of billions of molecules), lead optimization (predicting binding, toxicity, and pharmacokinetics), and clinical-trial design and patient selection.</p>
+<p>Progress markers as of 2026:</p>
+<ul>
+<li>Dozens of AI-discovered or AI-designed molecules have entered clinical trials. Insilico Medicine's rentosertib (for idiopathic pulmonary fibrosis), the first drug with both an AI-discovered target and AI-generated structure, completed a positive Phase 2a in 2025 and moved toward later-stage trials. Recursion, Exscientia (merged with Recursion), Relay, Schrödinger, Iambic, Generate, and others have candidates in Phase 1–2.</li>
+<li>Isomorphic Labs (Alphabet's drug-discovery company built on AlphaFold) entered its first clinical trials with AI-designed oncology and immunology candidates in 2026, backed by partnerships with Eli Lilly and Novartis worth up to $3 billion and its own $600 million raise.</li>
+<li>Every major pharmaceutical company has AI partnerships and internal programs; Nvidia's BioNeMo and similar platforms are standard infrastructure.</li>
+</ul>
+<p>What has not yet happened: no AI-discovered drug has completed Phase 3 and reached approval on the strength of its AI origin. The reason is structural. AI compresses the discovery phase (from years to months) but clinical trials—the expensive, slow, and highest-failure part of the pipeline—operate on human biology and regulatory timelines that AI does not speed up. A drug discovered in 2024 reaches the market, if it succeeds, around 2030–2032. The first approvals of AI-designed drugs are plausible by 2027–2028; whether AI drugs <em>succeed more often</em> in trials (the real prize—current failure rates are around 90%) will not be known statistically until the early 2030s. Early signals (Phase 1 success rates for AI-derived molecules appear higher than historical averages, though sample sizes are small and selection effects are likely) are encouraging.</p>
+<p>The frontier is "virtual cells" and "digital twins"—models of cellular biology detailed enough to simulate the effect of an intervention before trying it. The Arc Institute's Evo (genome-scale language models), the Chan Zuckerberg Initiative's virtual-cell program, and several startups are pursuing this. Success would shift biology from an experimental to a partially computational science.</p>
+<h2 id="mathematics">Mathematics<a class="headerlink" href="#mathematics" title="Permanent link">¶</a></h2>
+<p>Mathematics is where AI's move from tool to participant is most visible, because verification is perfect (a proof is checkable) and no physical experiment is needed.</p>
+<ul>
+<li><strong>Competition mathematics is solved.</strong> AlphaGeometry (January 2024) reached near-gold IMO geometry; AlphaProof and AlphaGeometry 2 (July 2024) reached silver on the full IMO; OpenAI and DeepMind systems achieved gold (5/6) in July 2025 with natural-language proofs graded by former medalists; 2026 reports describe a frontier model solving all six problems on the first attempt.</li>
+<li><strong>Research-level problems are falling.</strong> FrontierMath's research-tier problems went from 2% (2024) to substantial fractions solved (2026). In 2025–2026, frontier models and specialized systems contributed to resolving several open problems: DeepMind's AlphaProof Nexus (2026) autonomously resolved 9 of 353 open Erdős problems and proved 44 conjectures from the Online Encyclopedia of Integer Sequences, with formal Lean proofs; mathematicians working with GPT-5-class models reported solutions to long-open Erdős problems, often by locating and adapting overlooked literature (an important form of contribution, though not the same as novel insight) and sometimes by genuinely new arguments. A systematic 2026 survey categorized AI contributions to Erdős problems into six types ranging from literature retrieval to complete novel proofs.</li>
+<li><strong>AlphaEvolve</strong> (DeepMind, May 2025) used an evolutionary search over code generated by Gemini to discover improved algorithms: a faster method for 4×4 complex matrix multiplication (the first improvement on Strassen's 1969 result for that case), better solutions to a dozen open problems in combinatorics and analysis (the kissing number in 11 dimensions, several packing problems), and practical speedups to Google's datacenter scheduling and TPU design. Successor systems in 2026 extended this to broader mathematical discovery.</li>
+<li><strong>Formalization.</strong> Lean's Mathlib library, the formalization of major results (Fermat's Last Theorem project, the Polynomial Freiman–Ruzsa conjecture in weeks), and AI-assisted autoformalization are making machine-checkable mathematics the norm for AI–human collaboration.</li>
+</ul>
+<p>Terence Tao, the most prominent mathematician engaging with these tools, has described the trajectory as moving from "AI as a very good graduate student who needs supervision" toward genuine collaborator, while noting that the hardest part of research mathematics—knowing which questions matter—remains human. The author expects that by 2028 AI systems will routinely resolve open problems of moderate difficulty in most areas of mathematics and will be co-authors on a meaningful fraction of papers; the resolution of a problem of Fields-Medal significance primarily by AI is plausible before 2032.</p>
+<h2 id="weather-climate-and-earth-science">Weather, climate, and earth science<a class="headerlink" href="#weather-climate-and-earth-science" title="Permanent link">¶</a></h2>
+<p>A quiet revolution. Numerical weather prediction—simulating atmospheric physics on supercomputers—was one of the great achievements of twentieth-century computing. Between 2022 and 2024, machine-learning models (Huawei's Pangu-Weather, Nvidia's FourCastNet, DeepMind's GraphCast and then GenCast, ECMWF's AIFS, Microsoft's Aurora) trained on decades of reanalysis data matched or exceeded the accuracy of the best physics-based systems for medium-range forecasts while running in seconds on a single chip rather than hours on a supercomputer. GenCast (December 2024) beat ECMWF's ensemble on 97% of metrics for up to 15 days. By 2026 the European Centre runs AIFS operationally alongside its physical model; national weather services worldwide are adopting hybrid approaches; and AI forecasts outperform traditional models on most metrics. Extreme-event prediction (hurricane tracks, heat waves) has improved measurably, with direct consequences for disaster preparedness. Climate modeling (long-range, with coupled ocean–atmosphere dynamics) is harder because there is less data and the physics matters more, but AI emulators are accelerating it.</p>
+<h2 id="materials-and-chemistry">Materials and chemistry<a class="headerlink" href="#materials-and-chemistry" title="Permanent link">¶</a></h2>
+<p>DeepMind's GNoME (November 2023) predicted 2.2 million new crystal structures, of which 380,000 were estimated stable—a claimed order-of-magnitude increase in known stable materials, though subsequent analysis found many were trivial variants or duplicates. Microsoft's MatterGen and MatterSim (2024–25), Meta's OMat24 dataset, and Orbital, CuspAI, Periodic Labs (founded 2025 by former OpenAI and DeepMind researchers with $300 million to build autonomous materials labs), and Lila Sciences pursue the same goal: AI-driven discovery of batteries, catalysts, superconductors, and carbon-capture materials.</p>
+<p>The bottleneck here is synthesis and testing. Predicting a material is fast; making it and measuring its properties is slow, and many predicted materials cannot be synthesized. Self-driving laboratories—robotic systems that synthesize and characterize materials autonomously (Lawrence Berkeley's A-Lab, the Acceleration Consortium in Toronto, and commercial equivalents)—close the loop, but at scales of hundreds of samples per week, not the millions that computation produces. The economically consequential results (a better battery cathode, a cheaper catalyst for green hydrogen) are plausible before 2030 and would be among the first cases where AI-driven science visibly changes an industry.</p>
+<p>Chemistry more broadly has seen AI for retrosynthesis planning (mature and in commercial use), reaction prediction, and spectroscopy interpretation. Quantum-chemistry emulators (neural network potentials replacing density functional theory) are making molecular simulation orders of magnitude faster.</p>
+<h2 id="physics-astronomy-and-fusion">Physics, astronomy, and fusion<a class="headerlink" href="#physics-astronomy-and-fusion" title="Permanent link">¶</a></h2>
+<p>AI processes the data floods of modern experiments: the LHC's trigger systems, gravitational-wave detection, galaxy classification, exoplanet identification. DeepMind's collaboration with the Swiss Plasma Center (2022) demonstrated RL control of tokamak plasma; Commonwealth Fusion, TAE, and others use AI for plasma control and design optimization. In theoretical physics, AI systems have rediscovered known laws from data (AI Feynman and successors) and begun proposing new candidate relations. The 2026 frontier is AI systems that propose experiments; the long-term question is whether AI can produce conceptual breakthroughs (new theories) as opposed to solutions within existing frameworks. No clear example exists yet.</p>
+<h2 id="neuroscience-genomics-and-medicine">Neuroscience, genomics, and medicine<a class="headerlink" href="#neuroscience-genomics-and-medicine" title="Permanent link">¶</a></h2>
+<p>Genomic language models (Evo 2, Nucleotide Transformer, and others) predict the effects of mutations and design sequences; CRISPR guide design and delivery optimization are AI-assisted; single-cell atlases are being organized by foundation models. In neuroscience, AI decodes neural activity (brain-to-text and brain-to-speech interfaces reached practical fluency in 2024–2026, with Neuralink, Synchron, Paradromics, and academic groups in clinical trials) and models of the visual cortex derived from deep networks are among the field's best.</p>
+<p>In clinical medicine, the results are more mixed: AI matches specialists in imaging and diagnostic reasoning benchmarks (Chapter 12), but randomized trials of AI-assisted diagnosis show smaller gains than expected, partly because physicians do not use the tools optimally. Medicine illustrates that scientific capability and practical impact are separated by human systems.</p>
+<h2 id="the-ai-scientist">The "AI scientist"<a class="headerlink" href="#the-ai-scientist" title="Permanent link">¶</a></h2>
+<h3 id="what-exists">What exists<a class="headerlink" href="#what-exists" title="Permanent link">¶</a></h3>
+<p>By 2026 several systems attempt to automate the research loop itself:</p>
+<ul>
+<li><strong>Google's AI co-scientist</strong> (February 2025), a multi-agent Gemini system that generates, debates, and ranks hypotheses. In validation studies it independently proposed a mechanism for bacterial gene transfer that a laboratory had discovered but not yet published, and suggested drug repurposing candidates for leukemia that were validated in vitro.</li>
+<li><strong>FutureHouse</strong> (a nonprofit backed by Eric Schmidt) released a platform of agents (Crow, Falcon, Owl, Phoenix) for literature search, synthesis, and chemistry, and its Robin system, which in 2025 proposed and (with human execution) validated a candidate treatment for dry age-related macular degeneration. Its Kosmos system (late 2025) ran multi-day autonomous research cycles producing reports whose claims were largely reproducible on audit.</li>
+<li><strong>Sakana's AI Scientist</strong> (2024–25) generated complete machine-learning papers end to end; one passed peer review at an ICLR workshop in a controlled experiment. <strong>Autoscience's Carl</strong> and similar systems followed.</li>
+<li><strong>Frontier laboratories</strong> describe internal use of models for experiment design, code, and analysis in AI research itself—the recursive application discussed in Chapter 17. OpenAI's stated goal (2025) is an "automated AI research intern" by 2026 and an "automated researcher" by 2028; Anthropic has made similar statements about compressing "decades of progress into years" in biology.</li>
+<li><strong>Anthropic's Claude for Life Sciences, OpenAI's science initiatives, and Microsoft Discovery</strong> are productized research assistants used across pharma and academia.</li>
+</ul>
+<h3 id="assessment-of-contribution">Assessment of contribution<a class="headerlink" href="#assessment-of-contribution" title="Permanent link">¶</a></h3>
+<p>The honest evaluation as of 2026: AI scientist systems produce competent, incremental, sometimes useful work; they have generated a small number of validated novel findings; they have not produced a result that the field regards as a major discovery attributable primarily to the AI. Their contributions are strongest in literature synthesis (finding connections across a corpus no human can read), hypothesis enumeration, code and analysis, and mathematical/computational domains with built-in verification. They are weakest at taste—choosing important problems—and at the experimental execution that most sciences require.</p>
+<p>The rate of improvement is fast. The number of papers with substantive AI contribution is rising steeply; the fraction of arXiv submissions in some fields with AI-generated text is estimated at over a third; and the peer-review system is straining under volume (leading venues report submission growth of 30–50% per year and have begun using AI to review AI-written papers, with predictable concerns). A "reproducibility and quality" crisis in the literature is a plausible near-term side effect.</p>
+<h2 id="bottlenecks">Bottlenecks<a class="headerlink" href="#bottlenecks" title="Permanent link">¶</a></h2>
+<p>Why has AI's scientific impact, though real, not yet been transformative?</p>
+<ol>
+<li><strong>The experimental bottleneck.</strong> Most sciences require physical experiments. Computation can propose; only experiment can confirm. Self-driving labs, cloud labs (Emerald, Strateos), and high-throughput automation are expanding throughput, but by factors of ten, not a million. Fields with cheap or virtual experiments (mathematics, computer science, computational chemistry, weather) move fastest; fields with expensive ones (clinical medicine, ecology, particle physics) slowest.</li>
+<li><strong>The data bottleneck.</strong> Structural biology succeeded because of the Protein Data Bank—decades of curated experimental data. Most fields lack an equivalent. Materials, chemistry, and biology are now building them, often with AI-driven labs as the generator.</li>
+<li><strong>The verification bottleneck.</strong> Outside mathematics and code, AI outputs must be checked by humans or by experiment. Scientific literature is full of errors, and AI trained on it inherits them.</li>
+<li><strong>The taste bottleneck.</strong> Knowing which questions matter is the scarcest scientific skill and the one AI shows least. AI scientists produce many plausible hypotheses; humans still select.</li>
+<li><strong>The institutional bottleneck.</strong> Funding cycles, publication norms, regulatory approval, and career incentives operate on multi-year timescales that AI does not accelerate. A drug trial takes as long as it takes.</li>
+<li><strong>The conceptual bottleneck.</strong> Revolutionary science—new frameworks, not solutions within frameworks—may require something current AI does not do. Or it may emerge from scale and search. This is unknown.</li>
+</ol>
+<h2 id="forecast">Forecast<a class="headerlink" href="#forecast" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>2026</th>
+<th>2028</th>
+<th>2032</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mathematics</td>
+<td>Open problems occasionally resolved; competition math solved</td>
+<td>AI routinely resolves moderate open problems; co-author on many papers</td>
+<td>Major (Fields-level) result with AI as primary contributor plausible</td>
+</tr>
+<tr>
+<td>Structural biology / protein design</td>
+<td>Solved prediction; design in commercial use</td>
+<td>Designed proteins in clinic routinely</td>
+<td>Designed enzymes/binders as standard tools</td>
+</tr>
+<tr>
+<td>Drug discovery</td>
+<td>Dozens of AI-derived candidates in Phase 1–2</td>
+<td>First approvals of AI-designed drugs</td>
+<td>Evidence on whether AI drugs succeed more often; discovery time halved industry-wide</td>
+</tr>
+<tr>
+<td>Materials</td>
+<td>Predictions abundant; synthesis bottleneck</td>
+<td>Self-driving labs at scale; first commercially significant AI-discovered material</td>
+<td>Materials discovery routinely AI-led</td>
+</tr>
+<tr>
+<td>Weather</td>
+<td>AI operational at major centers</td>
+<td>AI-hybrid standard; extreme-event skill improved</td>
+<td>Climate emulation at high resolution</td>
+</tr>
+<tr>
+<td>AI scientist systems</td>
+<td>Competent assistants; few validated novel findings</td>
+<td>Routine autonomous incremental research in computational fields</td>
+<td>Substantial fraction of published research AI-led in some fields</td>
+</tr>
+<tr>
+<td>Peer review / literature</td>
+<td>Straining</td>
+<td>AI-mediated review; provenance standards</td>
+<td>Restructured publication norms</td>
+</tr>
+</tbody>
+</table>
+<p>The larger question—whether AI-accelerated science produces a discontinuity in the rate of human progress—depends on the bottlenecks above, and especially on the experimental one. The author's view is that the 2026–2030 period will show AI transforming the <em>computational</em> sciences and the <em>discovery</em> phases of the experimental sciences, with the <em>validation</em> phases catching up through automation over the 2030s. The compounding effect on economic growth will be visible in the statistics with a lag; the compounding effect on AI research itself is the subject of Chapter 17.</p><div class="pager"><a href="09-multimodality-and-embodiment.html"><span>← Previous</span>Multimodality and Embodiment: Vision, Video, Voice, Robots, and Self-Driving</a><a href="index.html" style="text-align:right"><span>→</span>Home</a></div><footer>Built 2026-09-09. Text is provided as an analytical review; forecasts are uncertain by nature. </footer></main>
+<aside class="toc"><div class="sub" style="font-size:12px;color:var(--muted);margin-bottom:8px">On this page</div><div class="toc">
+<ul>
+<li><a href="#the-stakes">The stakes</a></li>
+<li><a href="#structural-biology-and-the-alphafold-revolution">Structural biology and the AlphaFold revolution</a></li>
+<li><a href="#drug-discovery">Drug discovery</a></li>
+<li><a href="#mathematics">Mathematics</a></li>
+<li><a href="#weather-climate-and-earth-science">Weather, climate, and earth science</a></li>
+<li><a href="#materials-and-chemistry">Materials and chemistry</a></li>
+<li><a href="#physics-astronomy-and-fusion">Physics, astronomy, and fusion</a></li>
+<li><a href="#neuroscience-genomics-and-medicine">Neuroscience, genomics, and medicine</a></li>
+<li><a href="#the-ai-scientist">The "AI scientist"</a><ul>
+<li><a href="#what-exists">What exists</a></li>
+<li><a href="#assessment-of-contribution">Assessment of contribution</a></li>
+</ul>
+</li>
+<li><a href="#bottlenecks">Bottlenecks</a></li>
+<li><a href="#forecast">Forecast</a></li>
+</ul>
+</div>
+</aside>
+</div><script>
+(function(){
+  const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);
+  window.toggleTheme=function(){const cur=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',cur);localStorage.setItem('theme',cur);};
+  window.toggleNav=function(){document.querySelector('nav.side').classList.toggle('open');};
+  window.addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';});
+  // sidebar filter + full-text search over search index
+  const inp=document.getElementById('q');const list=document.getElementById('chlist');const res=document.getElementById('results');
+  let idx=null;
+  async function loadIdx(){if(idx)return idx;try{const r=await fetch(window.SITE_BASE+'search.json');idx=await r.json();}catch(e){idx=[];}return idx;}
+  if(inp){inp.addEventListener('input',async()=>{const q=inp.value.trim().toLowerCase();
+    [...list.querySelectorAll('li')].forEach(li=>{li.style.display=(!q||li.textContent.toLowerCase().includes(q))?'':'none';});
+    if(q.length<3){res.innerHTML='';return;}
+    const ix=await loadIdx();const out=[];
+    for(const d of ix){const i=d.text.toLowerCase().indexOf(q);if(i>=0){const s=Math.max(0,i-60);out.push({d,snip:d.text.slice(s,i+90)});if(out.length>=25)break;}}
+    res.innerHTML=out.map(o=>`<li><a href="${window.SITE_BASE}${o.d.url}"><b>${o.d.title}</b><small>…${o.snip.replace(/</g,'&lt;')}…</small></a></li>`).join('')||'<li><small>No matches</small></li>';
+  });}
+  // active TOC highlight
+  const heads=[...document.querySelectorAll('main h2, main h3')];const links=[...document.querySelectorAll('aside.toc a')];
+  if(heads.length&&links.length){const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.style.color='');const l=links.find(l=>l.getAttribute('href')==='#'+e.target.id);if(l)l.style.color='var(--acc)';}})},{rootMargin:'0px 0px -75% 0px'});heads.forEach(h=>obs.observe(h));}
+})();
+</script></body></html>
