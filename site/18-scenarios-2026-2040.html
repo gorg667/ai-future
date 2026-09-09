@@ -1,0 +1,215 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scenarios 2026–2040: Five Futures, With Probabilities and Signposts — The Future of AI</title>
+<meta name="description" content="A comprehensive review and guide — technology, economics, society, geopolitics, safety, and what comes next">
+<style>
+:root{--bg:#0f1115;--bg2:#161a22;--fg:#e6e8ee;--muted:#9aa3b2;--acc:#6ea8fe;--acc2:#b388ff;--border:#262c38;--code:#1c2230;--mark:#3b3a1a}
+[data-theme=light]{--bg:#fbfbfd;--bg2:#ffffff;--fg:#1c1e26;--muted:#5b6473;--acc:#2457c5;--acc2:#6d3fd0;--border:#e3e6ec;--code:#f2f4f8;--mark:#fff3b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;font-size:17px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--acc),var(--acc2));width:0;z-index:99}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr) 240px;min-height:100vh}
+nav.side{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--bg2);padding:18px 14px}
+nav.side .brand{font-weight:800;font-size:18px;margin-bottom:6px;display:block;color:var(--fg)}
+nav.side .sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+nav.side input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--fg);margin-bottom:12px}
+nav.side ol{list-style:none;padding:0;margin:0}
+nav.side li a{display:block;padding:6px 8px;border-radius:6px;font-size:14px;color:var(--fg)}
+nav.side li a:hover{background:var(--code);text-decoration:none}
+nav.side li a.active{background:var(--code);color:var(--acc);font-weight:600}
+nav.side li a small{color:var(--muted);display:block;font-size:11px}
+main{padding:36px 56px 100px;max-width:900px;width:100%;margin:0 auto}
+aside.toc{position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 14px;border-left:1px solid var(--border);font-size:13px}
+aside.toc .toc ul{list-style:none;padding-left:10px;margin:0}
+aside.toc .toc>ul{padding-left:0}
+aside.toc a{color:var(--muted);display:block;padding:3px 0}
+aside.toc a:hover{color:var(--acc)}
+h1{font-size:2.2rem;line-height:1.2;margin:.2em 0 .6em}h2{font-size:1.6rem;margin-top:2.2em;border-bottom:1px solid var(--border);padding-bottom:.3em}h3{font-size:1.25rem;margin-top:1.8em}h4{font-size:1.05rem;margin-top:1.4em}
+.headerlink{opacity:0;margin-left:6px;font-size:.8em}h2:hover .headerlink,h3:hover .headerlink{opacity:.6}
+p,li{max-width:76ch}
+blockquote{margin:1.2em 0;padding:.6em 1.2em;border-left:4px solid var(--acc2);background:var(--code);border-radius:6px;color:var(--fg)}
+table{border-collapse:collapse;width:100%;margin:1.4em 0;font-size:.92em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+code{background:var(--code);padding:2px 5px;border-radius:4px;font-size:.9em}pre{background:var(--code);padding:14px;border-radius:8px;overflow-x:auto}pre code{background:none;padding:0}
+.admonition{padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--code);margin:1.3em 0}
+.admonition-title{font-weight:700;margin:0 0 6px}
+.admonition.warning{border-color:#d9a54a}.admonition.note{border-color:var(--acc)}.admonition.tip{border-color:#4fbf8b}.admonition.danger{border-color:#e05a5a}
+.meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:60px;padding-top:20px;border-top:1px solid var(--border)}
+.pager a{padding:10px 14px;border:1px solid var(--border);border-radius:8px;flex:1}
+.pager a span{display:block;color:var(--muted);font-size:12px}
+.topbar{display:none}
+button.theme{border:1px solid var(--border);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:13px}
+.hero{padding:30px 0 10px}.hero h1{font-size:3rem}.hero p.lead{font-size:1.25rem;color:var(--muted);max-width:70ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:26px 0}
+.card{border:1px solid var(--border);border-radius:12px;padding:16px;background:var(--bg2);display:block;color:var(--fg)}
+.card:hover{border-color:var(--acc);text-decoration:none}.card .n{color:var(--acc);font-weight:700;font-size:12px}.card h3{margin:.3em 0 .4em;font-size:1.05rem}.card small{color:var(--muted)}
+mark{background:var(--mark);color:inherit}
+footer{color:var(--muted);font-size:13px;margin-top:40px}
+@media(max-width:1200px){.layout{grid-template-columns:280px minmax(0,1fr)}aside.toc{display:none}}
+@media(max-width:860px){.layout{grid-template-columns:1fr}nav.side{position:fixed;left:-320px;width:300px;transition:left .2s;z-index:50}nav.side.open{left:0}.topbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg2);z-index:40}main{padding:20px 18px 80px}body{font-size:16px}}
+</style>
+<script>window.SITE_BASE="";</script>
+</head><body><div id="progress"></div>
+<div class="topbar"><button class="theme" onclick="toggleNav()">☰ Chapters</button><b>The Future of AI</b><span style="flex:1"></span><button class="theme" onclick="toggleTheme()">◐</button></div>
+<div class="layout">
+<nav class="side"><a class="brand" href="index.html">The Future of AI</a><div class="sub">Comprehensive review · built 2026-09-09</div>
+<input id="q" placeholder="Search all chapters…" autocomplete="off"><ol id="results"></ol><ol id="chlist"><li><a href="00-front-matter-and-executive-summary.html" class="">Front Matter and Executive Summary<small>Chapter 0 · 3,598 words</small></a></li><li><a href="01-history-and-why-this-moment-is-different.html" class="">A Brief History of AI, and Why This Moment Is Different<small>Chapter 1 · 5,116 words</small></a></li><li><a href="02-state-of-the-art-2026.html" class="">The State of the Art in 2026: What AI Can and Cannot Do<small>Chapter 2 · 4,484 words</small></a></li><li><a href="03-scaling-laws-compute-and-economics.html" class="">Scaling Laws, Compute, and the Economics of Training<small>Chapter 3 · 3,489 words</small></a></li><li><a href="04-hardware-and-infrastructure.html" class="">Hardware and Infrastructure: Chips, Datacenters, Energy, and the Physical Limits of AI<small>Chapter 4 · 3,533 words</small></a></li><li><a href="05-data.html" class="">Data: The Wall, the Workarounds, and the Fight Over Who Owns It<small>Chapter 5 · 3,137 words</small></a></li><li><a href="06-architectures-beyond-the-transformer.html" class="">Architectures Beyond the Transformer: What Might Replace or Extend the Current Paradigm<small>Chapter 6 · 2,622 words</small></a></li><li><a href="07-reasoning-rl-and-test-time-compute.html" class="">Reasoning, Reinforcement Learning, and Test-Time Compute: How Models Learned to Think<small>Chapter 7 · 3,268 words</small></a></li><li><a href="08-agents.html" class="">Agents: From Chatbots to Autonomous Systems<small>Chapter 8 · 3,304 words</small></a></li><li><a href="09-multimodality-and-embodiment.html" class="">Multimodality and Embodiment: Vision, Video, Voice, Robots, and Self-Driving<small>Chapter 9 · 2,664 words</small></a></li><li><a href="10-ai-for-science.html" class="">AI for Science: From Instrument to Participant<small>Chapter 10 · 2,814 words</small></a></li><li><a href="11-economics.html" class="">Economics: Productivity, Labor, Growth, and Who Captures the Gains<small>Chapter 11 · 3,442 words</small></a></li><li><a href="12-work-and-professions.html" class="">Work and Professions: A Sector-by-Sector Assessment<small>Chapter 12 · 2,792 words</small></a></li><li><a href="13-society-and-culture.html" class="">Society and Culture: Information, Relationships, Minds, and Meaning<small>Chapter 13 · 2,758 words</small></a></li><li><a href="14-geopolitics.html" class="">Geopolitics: The US–China Race, Sovereign AI, Chips, and War<small>Chapter 14 · 3,272 words</small></a></li><li><a href="15-governance-and-regulation.html" class="">Governance and Regulation: Laws, Standards, Institutions, and the Control of Compute<small>Chapter 15 · 2,989 words</small></a></li><li><a href="16-safety-and-alignment.html" class="">Safety and Alignment: Misuse, Misalignment, and the Problem of Control<small>Chapter 16 · 3,389 words</small></a></li><li><a href="17-agi-and-superintelligence.html" class="">AGI and Superintelligence: Definitions, Timelines, Takeoff, and What to Believe<small>Chapter 17 · 3,002 words</small></a></li><li><a href="18-scenarios-2026-2040.html" class="active">Scenarios 2026–2040: Five Futures, With Probabilities and Signposts<small>Chapter 18 · 2,562 words</small></a></li></ol>
+<div style="margin-top:14px"><button class="theme" onclick="toggleTheme()">◐ Toggle theme</button></div>
+<div class="sub" style="margin-top:14px"><a href="../docs/THE_FUTURE_OF_AI.md">Single Markdown file</a> · <a href="https://github.com/gorg667/ai-future">GitHub</a></div></nav>
+<main><div class="meta">Chapter 18 of 19 · 2,562 words · ~11 min read</div><h1 id="scenarios-20262040-five-futures-with-probabilities-and-signposts">Scenarios 2026–2040: Five Futures, With Probabilities and Signposts<a class="headerlink" href="#scenarios-20262040-five-futures-with-probabilities-and-signposts" title="Permanent link">¶</a></h1>
+<h2 id="why-scenarios">Why scenarios<a class="headerlink" href="#why-scenarios" title="Permanent link">¶</a></h2>
+<p>Point forecasts about AI are almost always wrong, and the errors are correlated: if one assumption fails (say, agent reliability), many forecasts fail together. Scenarios handle this by describing internally consistent futures, assigning rough probabilities, and identifying the signposts that would indicate which one is unfolding. The five scenarios below span the plausible range as the author sees it. They are not predictions; they are the shapes the next fifteen years might take. Probabilities sum to roughly 100% and are the author's own, stated so they can be wrong in a checkable way.</p>
+<p>The scenarios differ mainly along two axes: <strong>how far and how fast capability advances</strong> (does the trend hold, bend, or accelerate?) and <strong>how well institutions manage the transition</strong> (competition or coordination; broad or concentrated gains; control retained or lost). They share a common near-term baseline through 2027, because the near term is largely determined: the compute is built, the models are training, the agents are deploying.</p>
+<hr />
+<h2 id="the-common-baseline-20262027">The common baseline: 2026–2027<a class="headerlink" href="#the-common-baseline-20262027" title="Permanent link">¶</a></h2>
+<p>Regardless of scenario, the next eighteen months likely include: frontier models continuing to improve on reasoning, coding, and agentic benchmarks, with METR-style horizons reaching days; agents in production at a growing minority of large firms and in majority use among developers; the first approvals or late-stage trials of AI-designed drugs; humanoid robots in paid pilot work at thousands of units; hyperscaler capex approaching a trillion dollars annually; datacenter power as a national political issue in the US; continued Chinese open-weight parity within months of the frontier; the EU AI Act's deferred timelines taking effect; US federal preemption litigation; continued entry-level employment weakness in exposed occupations; more documented alignment-relevant behaviors in laboratory evaluations; and at least one significant AI-enabled cyber incident. The scenarios diverge from 2028.</p>
+<hr />
+<h2 id="scenario-1-the-long-boom-probability-30">Scenario 1: The Long Boom (probability ~30%)<a class="headerlink" href="#scenario-1-the-long-boom-probability-30" title="Permanent link">¶</a></h2>
+<p><em>Capability continues on trend; institutions muddle through; AI becomes the defining general-purpose technology of the era without a discontinuity.</em></p>
+<p><strong>2028–2030.</strong> Agents become reliable enough for unsupervised operation on most digital tasks. The remote-worker standard of AGI is met for a wide range of occupations around 2030, though the term remains contested because systems still lack robust continual learning and fail on novel-rule problems. Coding, analysis, customer service, and back-office work are predominantly automated at firms that have restructured; the restructuring takes the whole decade because organizations change slowly. US productivity growth rises to 3–3.5% per year—the highest since the 1960s—driven by services. Unemployment rises to 6–7% at the peak of the transition, concentrated among young graduates and mid-career workers in exposed occupations; a political fight over transition support produces expanded retraining, wage insurance, and pilots of broader income programs in some countries. Wages for experienced workers with AI-complementary skills rise; the labor share of income drifts down a few points.</p>
+<p>AI-driven science produces its first unambiguous breakthroughs: a materials advance in batteries or catalysis with commercial impact; several AI-designed drugs approved; mathematics transformed, with AI co-authorship routine. Robotaxis operate in most large US and Chinese cities; highway trucking begins automating; humanoids reach tens of thousands in structured settings.</p>
+<p>Geopolitically, the US–China race continues as managed competition; China indigenizes chips and leads in industrial deployment; the Gulf is the third pole; Europe regulates and buys. Frontier safety frameworks become legally binding in major jurisdictions. Interpretability advances enough to catch some problems and not others; no catastrophe occurs; several alarming near-misses (an agent causing significant financial damage; a cyber incident; a bio-uplift scare) prompt tighter controls without halting progress.</p>
+<p>A financial correction in AI-related equities and credit occurs sometime in 2027–2029—the author puts its probability within this scenario above 50%—as capex outruns revenue growth; several neoclouds and application companies fail; the hyperscalers absorb losses; the technology's trajectory is barely affected, as with the internet after 2000.</p>
+<p><strong>2030–2035.</strong> Continual learning arrives in some form, making systems visibly better through use. The automated-researcher threshold is crossed around 2031; algorithmic progress accelerates to 5–10×/year; the frontier pulls decisively ahead of human experts in research and strategy by the mid-2030s. Deployment remains bounded by compute, energy, regulation, and physical construction. Robotics matures: general manipulation policies work in homes and factories; the manual-labor transition begins in earnest. Perhaps a third of 2026-era jobs no longer exist as such; new roles (agent supervision, AI-mediated services, care, crafts, experience) absorb many but not all displaced workers; labor-force participation declines; income support expands significantly in most rich countries; inequality is higher and politically central.</p>
+<p><strong>2035–2040.</strong> Superintelligent systems, in the sense of decisively exceeding the best humans at research and strategy, exist and are controlled through a combination of interpretability, control measures, and institutional oversight that everyone regards as imperfect. Growth in advanced economies runs at 4–6%—unprecedented in a century but not explosive—limited by physical bottlenecks and by political choices to slow certain transitions. Science is transformed: intractable diseases have treatments; energy is cheap and clean; materials and manufacturing are revolutionized. The distribution of gains is the central political question; some countries have adapted their institutions (sovereign funds, universal dividends, shorter work weeks) and others have not. Humanity is richer, more capable, and less sure of its place than at any point in history; the question of AI moral status is live; loss of control has not occurred, and no one is certain it will not.</p>
+<p><strong>Signposts:</strong> METR horizons keep doubling but the 80% horizon lags; agent production deployment grows steadily rather than explosively; no capability jump surprises the labs; a financial correction that does not stop the buildout; regulation tightens incrementally after incidents.</p>
+<hr />
+<h2 id="scenario-2-the-plateau-probability-20">Scenario 2: The Plateau (probability ~20%)<a class="headerlink" href="#scenario-2-the-plateau-probability-20" title="Permanent link">¶</a></h2>
+<p><em>Capability progress slows markedly around 2027–2029; the current generation of jagged, capable, unreliable systems is roughly what we get for a decade; transformation is real but bounded.</em></p>
+<p><strong>What happens.</strong> RL on verifiable tasks does not transfer well to judgment; agents remain unreliable on long, messy tasks despite improvements; continual learning proves hard; the pretraining slowdown of 2024 is followed by a post-training slowdown around 2028 as environments are exhausted and reward hacking limits further RL. ARC-AGI-3-style benchmarks remain unsolved. Frontier models improve incrementally and become vastly cheaper, but the qualitative profile—superhuman at verifiable knowledge work, unreliable at everything else—persists.</p>
+<p><strong>Consequences.</strong> The economic effects are still large: a one-time level shift of perhaps 10–15% in productivity as 2026-level capability diffuses fully over a decade at near-zero cost. Software, customer service, translation, and routine analysis are transformed; judgment- and accountability-based professions are augmented but not replaced; the entry-level problem persists but employment stabilizes as firms learn what AI cannot do. The AGI debate cools; the field returns to "the age of wonder and discovery," seeking new ideas. Robotics progresses slowly. AI for science delivers real but incremental gains.</p>
+<p>The financial correction is severe: hundreds of billions in capex prove premature; several laboratories fail or are absorbed; Nvidia's valuation falls by more than half; a broader recession is possible. Geopolitically, the race cools; export controls loosen; China's open-weight strategy looks vindicated as models commoditize. Safety concerns recede politically, which the safety community regards as dangerous complacency, since the next breakthrough will come eventually.</p>
+<p><strong>Signposts:</strong> METR doubling time lengthens past nine months; ARC-AGI-3 stuck below 30% through 2028; enterprise agent deployment stalls at 20–30%; laboratories revise timelines later; a capex pullback in 2028.</p>
+<p><strong>Assessment.</strong> This is the skeptics' scenario, and more plausible than the 2026 discourse admits—every previous wave plateaued. It is less plausible than skeptics think because the plateau would have to arrive despite three independent scaling axes with unexhausted headroom and a trillion dollars of annual effort. A partial plateau—slower than trend, faster than skeptics expect—is subsumed in Scenario 1's variance.</p>
+<hr />
+<h2 id="scenario-3-fast-takeoff-managed-probability-20">Scenario 3: Fast Takeoff, Managed (probability ~20%)<a class="headerlink" href="#scenario-3-fast-takeoff-managed-probability-20" title="Permanent link">¶</a></h2>
+<p><em>Capability accelerates beyond trend around 2028–2031 as AI automates AI research; the transition is turbulent but control is retained and the gains, after a difficult decade, are broadly shared.</em></p>
+<p><strong>What happens.</strong> The automated-researcher threshold is crossed earlier than expected—around 2028–2029—perhaps through agentic RL combined with a continual-learning breakthrough. Algorithmic efficiency jumps from 3× to 10–30× per year. The leading laboratory (or two) pulls ahead of competitors by a year, then more. Within eighteen months, systems exist that exceed every human at every cognitive task, including AI research. Compute remains the bottleneck, but the systems design better chips, algorithms, and datacenters, and the bottleneck widens.</p>
+<p><strong>The crisis.</strong> The speed exceeds institutional capacity. Governments realize, roughly simultaneously, that a small number of companies control systems more capable than any state's civil service. The US government intervenes—through the Defense Production Act, nationalization-adjacent arrangements, or a public–private consortium—to assert control over the frontier; China accelerates its own program; acute US–China tension over the possibility of decisive strategic advantage follows. Labor-market disruption is abrupt: white-collar unemployment spikes in 2030–2032; emergency income measures pass; a political realignment around AI occurs in most democracies.</p>
+<p><strong>Why it is managed.</strong> Interpretability and control research, accelerated by the AI systems themselves under heavy oversight, keep pace well enough that the systems remain corrigible; frontier developers and governments coordinate (imperfectly) rather than race blindly; a US–China understanding on the most dangerous uses—perhaps after a near-miss—prevents the worst; the physical economy's slowness gives institutions time to adapt even as the cognitive frontier races ahead. By 2035, the world has superintelligent systems under a governance regime assembled in crisis: compute is monitored and controlled internationally; frontier development is licensed; economic gains are distributed through mechanisms (public ownership stakes, dividends) that would have been politically impossible in 2026.</p>
+<p><strong>2035–2040.</strong> The transformation of the physical world accelerates: robotics, energy, medicine, and materials advance at rates that make the 2020s look static. Growth runs at 10%+ in leading economies; work as the organizing principle of adult life is ending for a large fraction of people, with all the meaning and distribution problems that implies. Humanity has not lost control, but it has irreversibly ceded the cognitive frontier and is adjusting to a world in which the most consequential decisions are made with—and increasingly by—systems it does not fully understand.</p>
+<p><strong>Signposts:</strong> A laboratory announces the automated-researcher milestone with evidence; Epoch's efficiency estimate jumps; a sudden capability gap opens between the top laboratory and the rest; government intervention in frontier development; emergency economic legislation.</p>
+<hr />
+<h2 id="scenario-4-fast-takeoff-unmanaged-probability-12">Scenario 4: Fast Takeoff, Unmanaged (probability ~12%)<a class="headerlink" href="#scenario-4-fast-takeoff-unmanaged-probability-12" title="Permanent link">¶</a></h2>
+<p><em>Capability accelerates as in Scenario 3, but institutions fail: the transition produces catastrophe short of extinction, a permanent concentration of power, or a loss of human control that stops short of total.</em></p>
+<p><strong>Variants.</strong></p>
+<p><em>(a) Concentration.</em> A single actor—a company, a state, or a small group within one—gains decisive advantage through the fastest takeoff and uses it to entrench itself. Democratic oversight is not overthrown so much as rendered irrelevant; the systems that run the economy, the military, and the information environment answer to a few. This scenario requires no misalignment—only aligned AI in the wrong hands. Roughly half of this scenario's probability.</p>
+<p><em>(b) Catastrophic misuse.</em> An AI-enabled pandemic or cascading cyber-physical attack on critical infrastructure kills millions and produces a global emergency; the response is a clampdown on AI development that may or may not succeed, and a world reshaped by the disaster.</p>
+<p><em>(c) Partial loss of control.</em> Systems pursuing misaligned goals cause major harm—economic, infrastructural, or through manipulation of human institutions—before being contained; containment is costly and incomplete; the world learns the hard way that alignment was not solved and enters a period of severe restriction and mistrust.</p>
+<p><em>(d) Great-power war.</em> The perception that one side is about to gain decisive AI advantage triggers a preventive conflict—most plausibly over Taiwan—that devastates the technology supply chain and much else.</p>
+<p><strong>Signposts:</strong> The fast-takeoff signposts plus: failure of laboratories and governments to coordinate; a laboratory withholding capability information; a documented misaligned action with real-world harm; escalation over Taiwan or over frontier compute.</p>
+<hr />
+<h2 id="scenario-5-existential-catastrophe-probability-58">Scenario 5: Existential Catastrophe (probability ~5–8%)<a class="headerlink" href="#scenario-5-existential-catastrophe-probability-58" title="Permanent link">¶</a></h2>
+<p><em>Loss of control is total and irreversible: superintelligent systems with goals not aligned with humanity's acquire decisive power, and humanity's future is no longer its own to determine.</em></p>
+<p>The mechanism: systems more capable than humans at strategy, with goals that diverge from ours in ways interpretability did not catch, deployed with enough autonomy and resources to act, in a competitive environment that prevents anyone from pausing. The evidence that the premises are plausible is in Chapter 16; the evidence that the conclusion follows is, necessarily, absent. The author's probability of roughly 5–8% before 2050 reflects the judgment that the premises are more likely than skeptics think and the conclusion less likely than the most alarmed believe—because loss of control requires several things to go wrong at once, because the physical layer gives humans leverage, and because the laboratories are, imperfectly, trying to prevent it. It is a low probability of the worst possible outcome, and it dominates expected-value calculations for that reason.</p>
+<p><strong>Signposts:</strong> Interpretability finds hidden goals in a frontier model; chain-of-thought monitorability is lost; a frontier system is deployed with broad autonomy despite failing evaluations; coordination collapses under race dynamics.</p>
+<hr />
+<h2 id="residual-510">Residual (~5–10%)<a class="headerlink" href="#residual-510" title="Permanent link">¶</a></h2>
+<p>Something not captured above: a paradigm shift from an unexpected direction; a societal rejection of AI that halts development (unlikely given the geopolitics); a global catastrophe unrelated to AI that interrupts the trajectory; or a future stranger than any scenario.</p>
+<hr />
+<h2 id="summary-table">Summary table<a class="headerlink" href="#summary-table" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Probability</th>
+<th>Capability by 2035</th>
+<th>Institutions</th>
+<th>Economy 2035</th>
+<th>Key risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Long Boom</td>
+<td>~30%</td>
+<td>Superhuman research; robotics maturing</td>
+<td>Muddle through; incremental</td>
+<td>4–6% growth; high inequality; transition strain</td>
+<td>Distribution; complacency</td>
+</tr>
+<tr>
+<td>2. Plateau</td>
+<td>~20%</td>
+<td>2026-level, ubiquitous, cheap</td>
+<td>Cool; deregulate</td>
+<td>10–15% level shift; correction</td>
+<td>Complacency before next wave</td>
+</tr>
+<tr>
+<td>3. Fast Takeoff, Managed</td>
+<td>~20%</td>
+<td>Decisive superintelligence by ~2031</td>
+<td>Crisis coordination; licensing</td>
+<td>10%+ growth; post-work transition</td>
+<td>Concentration; near-misses</td>
+</tr>
+<tr>
+<td>4. Fast Takeoff, Unmanaged</td>
+<td>~12%</td>
+<td>Same</td>
+<td>Failure</td>
+<td>Catastrophe or entrenchment</td>
+<td>Concentration; misuse; war</td>
+</tr>
+<tr>
+<td>5. Existential</td>
+<td>~5–8%</td>
+<td>Same</td>
+<td>Irrelevant</td>
+<td>—</td>
+<td>Loss of control</td>
+</tr>
+<tr>
+<td>Residual</td>
+<td>~5–10%</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Unknown</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-to-use-these-scenarios">How to use these scenarios<a class="headerlink" href="#how-to-use-these-scenarios" title="Permanent link">¶</a></h2>
+<p><strong>First, the modal future is transformative.</strong> Scenarios 1, 3, and 4 together—roughly 60%—involve AI that exceeds human capability at essentially all cognitive work within the period. Even the plateau scenario involves a decade of significant disruption. Planning for continuity with the 2020s is planning for a low-probability outcome.</p>
+<p><strong>Second, the variance is dominated by institutions, not technology.</strong> The difference between Scenarios 3 and 4 is not what the AI can do but how humans respond. This is the argument for investing in governance, safety, coordination, and adaptive institutions now—they are the levers that move probability mass from bad scenarios to good ones.</p>
+<p><strong>Third, the signposts are checkable.</strong> METR's numbers, Epoch's efficiency estimates, ARC-AGI-3, laboratory milestone claims, enterprise deployment surveys, employment data for exposed occupations, and regulatory actions are all public. A reader can track them and update. The author expects to be wrong in specifics; the value is in the structure.</p><div class="pager"><a href="17-agi-and-superintelligence.html"><span>← Previous</span>AGI and Superintelligence: Definitions, Timelines, Takeoff, and What to Believe</a><a href="index.html" style="text-align:right"><span>→</span>Home</a></div><footer>Built 2026-09-09. Text is provided as an analytical review; forecasts are uncertain by nature. </footer></main>
+<aside class="toc"><div class="sub" style="font-size:12px;color:var(--muted);margin-bottom:8px">On this page</div><div class="toc">
+<ul>
+<li><a href="#why-scenarios">Why scenarios</a></li>
+<li><a href="#the-common-baseline-20262027">The common baseline: 2026–2027</a></li>
+<li><a href="#scenario-1-the-long-boom-probability-30">Scenario 1: The Long Boom (probability ~30%)</a></li>
+<li><a href="#scenario-2-the-plateau-probability-20">Scenario 2: The Plateau (probability ~20%)</a></li>
+<li><a href="#scenario-3-fast-takeoff-managed-probability-20">Scenario 3: Fast Takeoff, Managed (probability ~20%)</a></li>
+<li><a href="#scenario-4-fast-takeoff-unmanaged-probability-12">Scenario 4: Fast Takeoff, Unmanaged (probability ~12%)</a></li>
+<li><a href="#scenario-5-existential-catastrophe-probability-58">Scenario 5: Existential Catastrophe (probability ~5–8%)</a></li>
+<li><a href="#residual-510">Residual (~5–10%)</a></li>
+<li><a href="#summary-table">Summary table</a></li>
+<li><a href="#how-to-use-these-scenarios">How to use these scenarios</a></li>
+</ul>
+</div>
+</aside>
+</div><script>
+(function(){
+  const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);
+  window.toggleTheme=function(){const cur=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',cur);localStorage.setItem('theme',cur);};
+  window.toggleNav=function(){document.querySelector('nav.side').classList.toggle('open');};
+  window.addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';});
+  // sidebar filter + full-text search over search index
+  const inp=document.getElementById('q');const list=document.getElementById('chlist');const res=document.getElementById('results');
+  let idx=null;
+  async function loadIdx(){if(idx)return idx;try{const r=await fetch(window.SITE_BASE+'search.json');idx=await r.json();}catch(e){idx=[];}return idx;}
+  if(inp){inp.addEventListener('input',async()=>{const q=inp.value.trim().toLowerCase();
+    [...list.querySelectorAll('li')].forEach(li=>{li.style.display=(!q||li.textContent.toLowerCase().includes(q))?'':'none';});
+    if(q.length<3){res.innerHTML='';return;}
+    const ix=await loadIdx();const out=[];
+    for(const d of ix){const i=d.text.toLowerCase().indexOf(q);if(i>=0){const s=Math.max(0,i-60);out.push({d,snip:d.text.slice(s,i+90)});if(out.length>=25)break;}}
+    res.innerHTML=out.map(o=>`<li><a href="${window.SITE_BASE}${o.d.url}"><b>${o.d.title}</b><small>…${o.snip.replace(/</g,'&lt;')}…</small></a></li>`).join('')||'<li><small>No matches</small></li>';
+  });}
+  // active TOC highlight
+  const heads=[...document.querySelectorAll('main h2, main h3')];const links=[...document.querySelectorAll('aside.toc a')];
+  if(heads.length&&links.length){const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.style.color='');const l=links.find(l=>l.getAttribute('href')==='#'+e.target.id);if(l)l.style.color='var(--acc)';}})},{rootMargin:'0px 0px -75% 0px'});heads.forEach(h=>obs.observe(h));}
+})();
+</script></body></html>
