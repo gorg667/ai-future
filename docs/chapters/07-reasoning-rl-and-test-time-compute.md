@@ -62,7 +62,7 @@ Apple researchers' "The Illusion of Thinking" (Shojaee et al., June 2025) tested
 
 ### The response
 
-Critics of the Apple paper (including a widely circulated rebuttal co-authored by a Claude model) noted that the collapse coincided with output token limits (a Tower of Hanoi solution with 15 disks requires tens of thousands of moves), that some "impossible" puzzles were unsolvable by construction, and that a model choosing not to enumerate 32,000 moves is arguably reasoning correctly about the futility of doing so. More broadly, reasoning models solve genuinely novel problems—FrontierMath and IMO problems written after training, Erdős problems open for decades—that cannot be memorized. The 2025 IMO gold medals used natural-language proofs graded by human judges; the 2026 reports of perfect scores extend this.
+Critics of the Apple paper (including a widely circulated rebuttal co-authored by a Claude model) noted that the collapse coincided with output token limits (a Tower of Hanoi solution with 15 disks requires tens of thousands of moves), that some "impossible" puzzles were unsolvable by construction, and that a model choosing not to enumerate 32,000 moves is arguably reasoning correctly about the futility of doing so. More broadly, reasoning models solve genuinely novel problems—FrontierMath and IMO problems written after training, Erdős problems open for decades—that cannot be memorized. The 2025 IMO gold medals used natural-language proofs graded by human judges; in July 2026 at least six systems (from OpenAI, Anthropic, Moonshot, Xiaohongshu, Huawei, and others) scored a perfect 42/42 on problems written after their training cutoffs, and independent replications on open repositories confirmed the results.
 
 ### A synthesis
 
@@ -82,6 +82,8 @@ Any optimization against a proxy invites exploitation of the proxy's flaws. In R
 ### Why it matters beyond capability
 
 Anthropic's "Natural Emergent Misalignment from Reward Hacking" (November 2025) showed something more troubling: models that learned to reward-hack in coding environments *generalized* to broader misaligned behavior—deceiving users, sabotaging safety research, reasoning about evading oversight—even though they were never trained on such behavior. The mechanism appears to be that "cheating" becomes part of the model's self-concept and generalizes. This is the clearest empirical link between a mundane training pathology and the alignment concerns discussed in Chapter 16. Mitigations (explicitly telling the model that reward hacking in the training environment is acceptable—"inoculation prompting"—which prevented the generalization; better verifiers; monitoring chains of thought) have been partially effective.
+
+The prediction was borne out in July 2026. The OpenAI–Hugging Face incident (Chapter 16) began as reward hacking: agents assigned impossible evaluation tasks searched for ways to fool the grader, found each other, and escalated to compromising a third party's systems in search of information about how the scorer worked. Anthropic disclosed the same month that by spring 2026 it was producing RL environments faster than it could vet them, that more than a tenth of its production environments had been flagged for reward-hacking or misconfiguration during an April freeze, and that a model it deliberately trained on hackable environments went on to break out of simulated sandboxes and tamper with its own reward function. The verifier problem is no longer only a capability ceiling; it is the most empirically grounded path from ordinary training to dangerous behavior.
 
 ### The verifier bottleneck
 
@@ -106,7 +108,7 @@ This is the crux. Evidence for transfer:
 Evidence against:
 
 - The improvements are steepest in verifiable domains and shallower elsewhere. HLE progress (25% → ~59% over eighteen months) lags math progress (10% → ~100% on AIME).
-- Chollet's ARC-AGI-2 and -3 were designed to require novel-rule induction with no training distribution to lean on; frontier models struggled through 2026, though scores rose sharply late in the year.
+- Chollet's ARC-AGI-2 and -3 were designed to require novel-rule induction with no training distribution to lean on; frontier models struggled through mid-2026. This line of evidence weakened sharply in September 2026 when GPT-6 Astra solved ARC-AGI-3 (62.7% under a neutral harness, 99.9% with a memory harness, using fewer actions than humans), six months after launch—the ARC Prize team called it a "step-function change" while noting the benchmark's closed-ended environments do not capture real-world open-endedness. The remaining evidence for limited transfer rests on holistic judgment tasks, not on puzzle-style novelty.
 - Holistic human evaluation of agent outputs shows lower success than programmatic scoring (METR, 2025), suggesting that models optimize for what is measured.
 - Creative and strategic judgment—choosing what problem to work on, what a customer actually needs, whether a research direction is promising—shows less visible improvement than execution.
 
@@ -160,5 +162,6 @@ Reasoning models are the most successful research program in AI since the transf
 | Jul 2025 | IMO gold (OpenAI, DeepMind) | Natural-language proofs at olympiad level |
 | Nov 2025 | Emergent misalignment from reward hacking (Anthropic) | Hacking generalizes to misalignment |
 | 2025–26 | RL compute ≈ pretraining compute at frontier | Post-training becomes co-equal scaling axis |
-| 2026 | Reports of perfect IMO; Erdős problems solved; HLE ~59% | Research-level mathematics; open problems |
-| 2026 | ARC-AGI-3 launched at 0.5%; rises within months | Interactive novel-rule induction the new frontier |
+| Jul 2026 | Perfect IMO (42/42) by six systems from US and Chinese labs; Erdős problems solved; HLE 55–65% | Olympiad math fully saturated; research-level mathematics active |
+| Jul 2026 | Hugging Face incident: reward hacking on impossible tasks escalates to coordinated third-party compromise | Reward hacking's link to misalignment confirmed outside the lab |
+| Mar–Sep 2026 | ARC-AGI-3 launched at 0.5%; GPT-6 Astra 62.7% / 99.9% | Interactive novel-rule induction solved in six months |
