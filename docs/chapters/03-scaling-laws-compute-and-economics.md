@@ -89,7 +89,7 @@ These numbers include only the compute for the final run. Total costs include fa
 
 ### Capital expenditure
 
-Hyperscaler capital expenditure is the most visible measure of the AI investment boom. Combined capex of Amazon, Microsoft, Alphabet, and Meta was roughly $230 billion in 2024, about $410 billion in 2025, and is on track for $600–750 billion in 2026 (Amazon around $200 billion; Alphabet $175–185 billion; Meta $115–135 billion; Microsoft $110–120 billion or more). The first quarter of 2026 alone saw about $130 billion. Analysts project the total approaching a trillion dollars in 2027. Adding Oracle, CoreWeave and other neoclouds, xAI, sovereign projects (Stargate UAE, Saudi Humain, European gigafactories), and Chinese hyperscalers roughly doubles the figure.
+Hyperscaler capital expenditure is the most visible measure of the AI investment boom. Combined capex of Amazon, Microsoft, Alphabet, and Meta was roughly $230 billion in 2024, about $410 billion in 2025, and—after second-quarter 2026 results (Amazon $53 billion, Alphabet $45 billion, Microsoft $41 billion in a single quarter)—is now estimated at $750–900 billion for 2026, roughly double the prior year. Goldman Sachs estimates that hyperscaler capex understates global AI capital spending by about $200 billion once neoclouds (Oracle, CoreWeave), xAI, sovereign projects (Stargate UAE, Saudi Humain, European gigafactories), and Chinese hyperscalers are included, putting the global figure above $1 trillion in 2026—a year earlier than most 2025 forecasts. One measure of the strain: AI capex has risen from about a third of the big four's operating cash flow in 2023 to an estimated 93% in 2026, meaning the build-out is now financed almost entirely out of current earnings, with debt issuance growing.
 
 For context: total US business investment in structures and equipment runs about $3.5 trillion a year. AI datacenter investment is approaching a fifth of that. Several economists have estimated that AI-related investment accounted for a majority of US GDP growth in some 2025–2026 quarters. The Stanford AI Index put global private AI investment at $582 billion for 2025.
 
@@ -99,7 +99,7 @@ Against these outlays, revenue is growing very fast from a smaller base. OpenAI'
 
 The return question has several layers:
 
-1. **Is there enough revenue to justify the capex?** At a 5-year depreciation schedule, $700 billion in annual capex requires roughly $140 billion a year in incremental gross profit just to cover depreciation, before any return. Current AI revenues across the industry are in the low hundreds of billions and growing 100%+ per year. On current growth the numbers close by 2027–2028; if growth slows to 30–40%, they do not for several more years.
+1. **Is there enough revenue to justify the capex?** At a 5-year depreciation schedule, $800 billion in annual capex requires roughly $160 billion a year in incremental gross profit just to cover depreciation, before any return. Current AI revenues across the industry are in the low hundreds of billions and growing 100%+ per year. On current growth the numbers close by 2027–2028; if growth slows to 30–40%, they do not for several more years.
 
 2. **Is the revenue circular?** A significant share flows in loops: Microsoft invests in OpenAI, which spends on Azure; Nvidia invests in laboratories and neoclouds that buy Nvidia chips; Oracle's largest contract is with OpenAI, financed in part by OpenAI's fundraising. Circularity is not fraud—it is how capital-intensive industries bootstrap—but it means headline revenue overstates external demand.
 
@@ -154,7 +154,7 @@ The author's judgment is that scaling in the broad sense—more effective comput
 | Total AI compute stock growth | 3.4×/year | Epoch |
 | Frontier training cost growth | ~3.5×/year | Epoch |
 | Largest 2026 frontier run cost | ~$1B+ (compute only) | Estimates |
-| Hyperscaler capex 2026 | $600–750B (big four) | Company guidance |
+| Hyperscaler capex 2026 | $750–900B (big four); >$1T global AI capex | Company guidance; Goldman Sachs (Aug 2026) |
 | Global private AI investment 2025 | ~$582B | Stanford AI Index |
 | Cost of GPT-4-class inference | $30–60/M tokens (2023) → ~$0.40/M (2026) | Multiple |
 | Epoch Capabilities Index frontier progress | 14 pts/yr since reasoning models (vs 6 before) | Epoch |
