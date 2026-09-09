@@ -89,3 +89,54 @@
 - Ch23 done. ALL 24 CHAPTERS COMPLETE. Next: README.md, QA pass (check site renders, links), consider GitHub Pages deploy note.
 - README.md written. Site QA: 24 pages, 0 broken links, tables rendered, search.json 24 entries. HTTP serve OK.
 - STATUS: PROJECT COMPLETE (v1). Possible future work: enable GitHub Pages in repo settings (user action), deeper fact-check pass on [W]-marked items, add diagrams.
+
+---
+
+# V2 IMPROVEMENT PASS (session 2, 2026-09-09) — READ THIS AFTER COMPACTION
+
+## User instruction (session 2)
+"Fully review everything you made and do the best possible improvements you see fit. Change/add/remove/research
+whatever. No time limit." Push straight to main constantly; no branches/PRs. Document reasoning here.
+
+## Full-review findings (all 24 chapters read end to end)
+Strengths: coherent voice, explicit uncertainty, forecast register, good cross-referencing. Weaknesses found:
+1. **Stale/inconsistent numbers vs. live web (Sept 2026)**:
+   - HLE: doc says ~59% (Fable 5.1). Web (Sep 8 2026): benchlm/llm-stats say Claude Fable 5.1 = 65%; pricepertoken says
+     Fable 5 55.5%. Sources disagree → state "roughly 55–65% depending on leaderboard/config" and name the models.
+   - ARC-AGI-3: doc says "30–60% by Sep 2026". arcprize.org/blog/astra (Sep 3 2026): GPT-6 Astra SOTA; benchlm: Astra 62.7%,
+     Opus 5 30.2% (Jul 24 2026), GPT-5.6 Sol 7.8%. Launch scores: Opus 4.6 (Max) 0.50%, Gemini 3.1 Pro 0.37%, GPT-5.4 0.26%.
+     ARC-AGI-3 technical report = arXiv 2603.24621 (Apr 22 2026). → update Ch02/07/17/23 with named models + dates.
+   - METR: ai2027-tracker (May 2026): best model ~16–20h 50% horizon, 3–4h 80% horizon, CI 5–66h. Consistent with doc.
+   - EU AI Act Omnibus: provisional political agreement **7 May 2026**; Council final green light **29 June 2026**
+     (doc said "mid-2026"/"~Aug 2026"). Annex III → 2 Dec 2027; Annex I → 2 Aug 2028; **watermarking/transparency
+     (Art. 50) → 2 Dec 2026** (was Feb 2027 in proposal). Also bans "nudification apps". → fix Ch15, RESEARCH_NOTES, Ch23 timeline.
+   - Ch02 landscape mentions "Claude 5 generation" vaguely; web shows Claude Opus 5, Claude Fable 5/5.1, "Claude Mythos 5",
+     GPT-6 Astra, GPT-5.6 Sol all exist by Sep 2026. Name them in Ch02 with medium-confidence flag.
+2. **Ch01 Part III header says "(2020–2024)" but Part IV starts late 2024** — fine. But Ch01 timeline table lacks 2021 AlphaFold
+   context detail; OK. Minor.
+3. **Ch03 repeats Ch02 cost curve**; acceptable but trim redundancy? Decided: keep (chapters must stand alone).
+4. **Ch11 table**: "Federal Reserve surveys" row fine. Missing: any 2026 macro productivity data point → add note.
+5. **Ch16 missing**: nothing on "AI welfare/model welfare" beyond Ch13 — fine. Missing explicit section on **evaluation
+   awareness undermining safety cases**; covered briefly. OK.
+6. **Missing content (gaps to fill)**: (a) no diagrams/figures at all — add SVG charts generated in build.py (matplotlib
+   available) for: compute trend, METR horizon, cost decline, scenario probabilities, AGI forecast spread, capex vs revenue;
+   (b) no "How to read the numbers / confidence legend" box; (c) no per-chapter "Key takeaways" summary boxes —
+   add 3–5 bullet "In brief" admonition at top of each chapter (big readability win); (d) no PDF/EPUB export — pandoc is
+   available → add `site/THE_FUTURE_OF_AI.epub` and PDF if feasible; (e) no favicon (404 in console) → add inline SVG favicon;
+   (f) no "changelog / version" page; (g) no cross-chapter "Where numbers disagree" section — add to Appendix.
+7. **Site UX**: sidebar TOC search works; missing: keyboard nav (←/→ between chapters), "back to top", print stylesheet,
+   font-size control, reading-time on index OK. Add `<link rel=canonical>`, OpenGraph meta, sitemap. Add figures with captions.
+8. **Build**: works. Add `--check` mode that verifies internal links + anchors.
+
+## V2 task list (status)
+- [x] Plan written to PROGRESS.md and pushed
+- [ ] T1 Fact updates: HLE, ARC-AGI-3, EU Omnibus dates, model names (Ch02, 07, 15, 17, 23, RESEARCH_NOTES)
+- [ ] T2 "In brief" takeaways box at top of every chapter (00–20)
+- [ ] T3 Figures: build.py generates SVG charts (matplotlib) into site/fig/ and docs/fig/; embed in Ch03, 08, 02, 17, 18, 03
+- [ ] T4 Site UX: favicon, keyboard nav, back-to-top, print CSS, OG meta, font-size toggle
+- [ ] T5 Appendix E: "Where sources disagree" + confidence legend; changelog
+- [ ] T6 EPUB/PDF export via pandoc; link from index
+- [ ] T7 Link checker in build.py; final QA; README update; push
+
+## Log (v2)
+- Plan written. Starting T1.
