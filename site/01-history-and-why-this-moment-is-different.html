@@ -1,0 +1,349 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Brief History of AI, and Why This Moment Is Different — The Future of AI</title>
+<meta name="description" content="A comprehensive review and guide — technology, economics, society, geopolitics, safety, and what comes next">
+<style>
+:root{--bg:#0f1115;--bg2:#161a22;--fg:#e6e8ee;--muted:#9aa3b2;--acc:#6ea8fe;--acc2:#b388ff;--border:#262c38;--code:#1c2230;--mark:#3b3a1a}
+[data-theme=light]{--bg:#fbfbfd;--bg2:#ffffff;--fg:#1c1e26;--muted:#5b6473;--acc:#2457c5;--acc2:#6d3fd0;--border:#e3e6ec;--code:#f2f4f8;--mark:#fff3b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;font-size:17px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--acc),var(--acc2));width:0;z-index:99}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr) 240px;min-height:100vh}
+nav.side{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--bg2);padding:18px 14px}
+nav.side .brand{font-weight:800;font-size:18px;margin-bottom:6px;display:block;color:var(--fg)}
+nav.side .sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+nav.side input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--fg);margin-bottom:12px}
+nav.side ol{list-style:none;padding:0;margin:0}
+nav.side li a{display:block;padding:6px 8px;border-radius:6px;font-size:14px;color:var(--fg)}
+nav.side li a:hover{background:var(--code);text-decoration:none}
+nav.side li a.active{background:var(--code);color:var(--acc);font-weight:600}
+nav.side li a small{color:var(--muted);display:block;font-size:11px}
+main{padding:36px 56px 100px;max-width:900px;width:100%;margin:0 auto}
+aside.toc{position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 14px;border-left:1px solid var(--border);font-size:13px}
+aside.toc .toc ul{list-style:none;padding-left:10px;margin:0}
+aside.toc .toc>ul{padding-left:0}
+aside.toc a{color:var(--muted);display:block;padding:3px 0}
+aside.toc a:hover{color:var(--acc)}
+h1{font-size:2.2rem;line-height:1.2;margin:.2em 0 .6em}h2{font-size:1.6rem;margin-top:2.2em;border-bottom:1px solid var(--border);padding-bottom:.3em}h3{font-size:1.25rem;margin-top:1.8em}h4{font-size:1.05rem;margin-top:1.4em}
+.headerlink{opacity:0;margin-left:6px;font-size:.8em}h2:hover .headerlink,h3:hover .headerlink{opacity:.6}
+p,li{max-width:76ch}
+blockquote{margin:1.2em 0;padding:.6em 1.2em;border-left:4px solid var(--acc2);background:var(--code);border-radius:6px;color:var(--fg)}
+table{border-collapse:collapse;width:100%;margin:1.4em 0;font-size:.92em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+code{background:var(--code);padding:2px 5px;border-radius:4px;font-size:.9em}pre{background:var(--code);padding:14px;border-radius:8px;overflow-x:auto}pre code{background:none;padding:0}
+.admonition{padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--code);margin:1.3em 0}
+.admonition-title{font-weight:700;margin:0 0 6px}
+.admonition.warning{border-color:#d9a54a}.admonition.note{border-color:var(--acc)}.admonition.tip{border-color:#4fbf8b}.admonition.danger{border-color:#e05a5a}
+.meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:60px;padding-top:20px;border-top:1px solid var(--border)}
+.pager a{padding:10px 14px;border:1px solid var(--border);border-radius:8px;flex:1}
+.pager a span{display:block;color:var(--muted);font-size:12px}
+.topbar{display:none}
+button.theme{border:1px solid var(--border);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:13px}
+.hero{padding:30px 0 10px}.hero h1{font-size:3rem}.hero p.lead{font-size:1.25rem;color:var(--muted);max-width:70ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:26px 0}
+.card{border:1px solid var(--border);border-radius:12px;padding:16px;background:var(--bg2);display:block;color:var(--fg)}
+.card:hover{border-color:var(--acc);text-decoration:none}.card .n{color:var(--acc);font-weight:700;font-size:12px}.card h3{margin:.3em 0 .4em;font-size:1.05rem}.card small{color:var(--muted)}
+mark{background:var(--mark);color:inherit}
+footer{color:var(--muted);font-size:13px;margin-top:40px}
+@media(max-width:1200px){.layout{grid-template-columns:280px minmax(0,1fr)}aside.toc{display:none}}
+@media(max-width:860px){.layout{grid-template-columns:1fr}nav.side{position:fixed;left:-320px;width:300px;transition:left .2s;z-index:50}nav.side.open{left:0}.topbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg2);z-index:40}main{padding:20px 18px 80px}body{font-size:16px}}
+</style>
+<script>window.SITE_BASE="";</script>
+</head><body><div id="progress"></div>
+<div class="topbar"><button class="theme" onclick="toggleNav()">☰ Chapters</button><b>The Future of AI</b><span style="flex:1"></span><button class="theme" onclick="toggleTheme()">◐</button></div>
+<div class="layout">
+<nav class="side"><a class="brand" href="index.html">The Future of AI</a><div class="sub">Comprehensive review · built 2026-09-09</div>
+<input id="q" placeholder="Search all chapters…" autocomplete="off"><ol id="results"></ol><ol id="chlist"><li><a href="00-front-matter-and-executive-summary.html" class="">Front Matter and Executive Summary<small>Chapter 0 · 3,598 words</small></a></li><li><a href="01-history-and-why-this-moment-is-different.html" class="active">A Brief History of AI, and Why This Moment Is Different<small>Chapter 1 · 5,116 words</small></a></li></ol>
+<div style="margin-top:14px"><button class="theme" onclick="toggleTheme()">◐ Toggle theme</button></div>
+<div class="sub" style="margin-top:14px"><a href="../docs/THE_FUTURE_OF_AI.md">Single Markdown file</a> · <a href="https://github.com/gorg667/ai-future">GitHub</a></div></nav>
+<main><div class="meta">Chapter 1 of 2 · 5,116 words · ~22 min read</div><h1 id="a-brief-history-of-ai-and-why-this-moment-is-different">A Brief History of AI, and Why This Moment Is Different<a class="headerlink" href="#a-brief-history-of-ai-and-why-this-moment-is-different" title="Permanent link">¶</a></h1>
+<h2 id="why-history-matters-for-forecasting">Why history matters for forecasting<a class="headerlink" href="#why-history-matters-for-forecasting" title="Permanent link">¶</a></h2>
+<p>Every serious forecast about AI's future is implicitly a claim about which historical pattern is repeating. The skeptic says: we have been here before—in 1958, in 1970, in 1985—and each time the enthusiasm outran the technology and a "winter" followed. The optimist says: this time the inputs are different in kind, not degree, and the trend lines have held for over a decade through multiple predicted walls. Both are making historical arguments. To evaluate them one has to know the history reasonably well, and specifically to know <em>why</em> the previous waves failed, so that one can ask whether those causes still apply.</p>
+<p>This chapter therefore does two things. It gives a compressed but accurate account of seventy years of AI research, organized around the ideas that mattered rather than around personalities. And it then asks directly: what is structurally different about the period since roughly 2012, and especially since 2019, that justifies treating this wave differently from its predecessors—or does not?</p>
+<h2 id="part-i-the-long-prehistory-19432011">Part I: The long prehistory (1943–2011)<a class="headerlink" href="#part-i-the-long-prehistory-19432011" title="Permanent link">¶</a></h2>
+<h3 id="foundations-computation-neurons-and-the-turing-question">Foundations: computation, neurons, and the Turing question<a class="headerlink" href="#foundations-computation-neurons-and-the-turing-question" title="Permanent link">¶</a></h3>
+<p>The intellectual roots of AI are older than the field. Alan Turing's 1936 paper on computable numbers defined the abstract machine that all modern computers instantiate, and his 1950 paper "Computing Machinery and Intelligence" posed the question that still frames the field—can a machine be said to think?—and proposed the imitation game as an operational substitute for it. In the same paper, Turing anticipated almost every modern objection (the mathematical objection from Gödel, the argument from consciousness, the argument from disabilities, Lady Lovelace's objection that machines cannot originate anything) and, strikingly, proposed that the path to machine intelligence would run through <em>learning</em>: "Instead of trying to produce a programme to simulate the adult mind, why not rather try to produce one which simulates the child's?"</p>
+<p>In parallel, Warren McCulloch and Walter Pitts (1943) showed that networks of simplified binary neurons could compute any logical function, and Donald Hebb (1949) proposed that learning in the brain worked through the strengthening of connections between co-active neurons—"cells that fire together wire together." Frank Rosenblatt's perceptron (1958) turned these ideas into a physical machine that learned to classify simple patterns. The perceptron's learning rule was provably convergent for linearly separable problems, and Rosenblatt's public claims for it were expansive. The <em>New York Times</em> reported that the Navy expected it to "walk, talk, see, write, reproduce itself and be conscious of its existence."</p>
+<h3 id="the-symbolic-program-and-its-first-successes">The symbolic program and its first successes<a class="headerlink" href="#the-symbolic-program-and-its-first-successes" title="Permanent link">¶</a></h3>
+<p>The field acquired its name at the 1956 Dartmouth Summer Research Project, organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. The proposal's founding conjecture was that "every aspect of learning or any other feature of intelligence can in principle be so precisely described that a machine can be made to simulate it." The dominant approach that emerged—later called "symbolic AI" or "Good Old-Fashioned AI" (GOFAI)—treated intelligence as the manipulation of symbols according to rules. Allen Newell and Herbert Simon's Logic Theorist (1956) proved theorems from <em>Principia Mathematica</em>; their General Problem Solver (1957) applied means-ends analysis to puzzles. Simon predicted in 1957 that within ten years a computer would be chess champion and would discover and prove an important new mathematical theorem.</p>
+<p>The symbolic program produced real results: McCarthy's LISP (1958), the first natural-language dialogue systems (ELIZA, 1966; SHRDLU, 1970), and, most consequentially, the expert systems of the 1970s and 1980s—DENDRAL for chemical analysis, MYCIN for diagnosing blood infections, XCON for configuring computer orders at Digital Equipment Corporation. MYCIN's diagnostic accuracy in evaluations matched or exceeded that of Stanford faculty. Expert systems became an industry: by the late 1980s, most large corporations had an "AI group," and Japan's Fifth Generation Computer Systems project committed the equivalent of hundreds of millions of dollars to a symbolic-logic-based national effort.</p>
+<h3 id="the-first-winter-and-the-perceptron-controversy">The first winter and the perceptron controversy<a class="headerlink" href="#the-first-winter-and-the-perceptron-controversy" title="Permanent link">¶</a></h3>
+<p>The first AI winter is conventionally dated to the early-to-mid 1970s. Its proximate causes were the 1973 Lighthill Report in the UK, which concluded that AI had failed to achieve its "grandiose objectives" and led to the withdrawal of most British funding, and the shift of US DARPA funding toward mission-oriented work after the 1969 Mansfield Amendment. Its deeper cause was that the field had underestimated two things: <strong>combinatorial explosion</strong> (search spaces grew exponentially and heuristics did not scale), and the <strong>commonsense knowledge problem</strong> (the amount of implicit background knowledge required for even simple language understanding or planning was vast and resisted hand-coding).</p>
+<p>The connectionist alternative was also set back. Minsky and Papert's <em>Perceptrons</em> (1969) proved that single-layer perceptrons could not compute XOR or other non-linearly-separable functions. This was mathematically correct and, in principle, well known to be circumventable by adding hidden layers—but there was no known practical method for training multi-layer networks. Funding for neural networks collapsed for a decade. The episode is often told as a story of one book killing a field; it is more accurate to say that the field lacked the algorithm (backpropagation), the compute, and the data to make multi-layer networks work, and that the book articulated a real limitation.</p>
+<h3 id="the-second-winter">The second winter<a class="headerlink" href="#the-second-winter" title="Permanent link">¶</a></h3>
+<p>The expert-systems boom collapsed between 1987 and 1993. Expert systems turned out to be <strong>brittle</strong>—they failed outside the narrow domain of their rules, and they could not learn—and <strong>expensive to maintain</strong>, since every new rule had to be hand-written and checked for interactions with existing ones. The specialized LISP-machine hardware market collapsed when general-purpose workstations became faster. The Fifth Generation project ended without reaching its goals. The term "AI" became a liability; researchers relabeled their work as "machine learning," "informatics," "knowledge-based systems," or "computational intelligence."</p>
+<p>The second winter is the one skeptics most often invoke. Its lesson is precise: systems that depend on humans encoding knowledge do not scale, because the world contains far more knowledge than humans can articulate. This is exactly the limitation that learning-based methods were designed to escape.</p>
+<h3 id="machine-learning-grows-up-in-the-shadows-19862011">Machine learning grows up in the shadows (1986–2011)<a class="headerlink" href="#machine-learning-grows-up-in-the-shadows-19862011" title="Permanent link">¶</a></h3>
+<p>While AI as a brand was in disgrace, the technical foundations of the current era were laid.</p>
+<p><strong>Backpropagation</strong> was popularized by Rumelhart, Hinton, and Williams in 1986 (it had been derived independently several times, including by Linnainmaa in 1970 and Werbos in 1974). It solved the problem <em>Perceptrons</em> had identified: multi-layer networks could now be trained. Yann LeCun's convolutional networks read handwritten digits for the US Postal Service and checks for banks in the 1990s. Sepp Hochreiter and Jürgen Schmidhuber's Long Short-Term Memory (1997) made recurrent networks trainable on long sequences.</p>
+<p><strong>Statistical methods</strong> took over natural language processing and machine translation, driven by IBM's Candide project in the early 1990s and the insight that, given enough parallel text, a model could learn translation probabilities without linguistic rules. Frederick Jelinek's remark—"Every time I fire a linguist, the performance of the speech recognizer goes up"—captured the shift. Support vector machines, boosting, random forests, and graphical models dominated academic machine learning through the 2000s; neural networks were regarded as an unfashionable niche.</p>
+<p><strong>Reinforcement learning</strong> was formalized by Richard Sutton and Andrew Barto; temporal-difference learning (Sutton, 1988) and Q-learning (Watkins, 1989) provided algorithms for learning from reward. Gerald Tesauro's TD-Gammon (1992) reached world-class backgammon by self-play. IBM's Deep Blue defeated Garry Kasparov in 1997 using brute-force search with hand-crafted evaluation, not learning—an achievement that, tellingly, did little to advance the general field, because its methods did not transfer.</p>
+<p><strong>The data and compute substrate</strong> changed. The web created corpora of a size never before available. Fei-Fei Li's ImageNet (2009) provided 14 million labeled images across 20,000 categories, and the annual ImageNet challenge (from 2010) provided a common benchmark. Graphics processing units, built for video games, turned out to be well-suited to the matrix multiplications that dominate neural-network training; Nvidia released CUDA in 2007, making them programmable.</p>
+<p>Three researchers—Geoffrey Hinton, Yoshua Bengio, and Yann LeCun—kept the deep-learning program alive through this period with modest funding, largely from the Canadian Institute for Advanced Research. Their 2018 Turing Award recognized this persistence.</p>
+<h2 id="part-ii-the-deep-learning-revolution-20122019">Part II: The deep learning revolution (2012–2019)<a class="headerlink" href="#part-ii-the-deep-learning-revolution-20122019" title="Permanent link">¶</a></h2>
+<h3 id="alexnet-and-the-imagenet-moment">AlexNet and the ImageNet moment<a class="headerlink" href="#alexnet-and-the-imagenet-moment" title="Permanent link">¶</a></h3>
+<p>In 2012, Alex Krizhevsky, Ilya Sutskever, and Hinton entered a deep convolutional network trained on two consumer GPUs into the ImageNet challenge. It achieved a top-5 error of 15.3%, against 26.2% for the runner-up. This ten-point gap was unprecedented; previous years had seen gains of a point or two. Within two years every serious entry was a deep network; by 2015, Microsoft's ResNet surpassed the estimated human error rate of about 5%.</p>
+<p>The significance of AlexNet was not the architecture, which was a scaled-up version of LeCun's networks from the 1990s. It was the demonstration that the <em>same</em> idea, given roughly a thousand times more compute and data than had been available before, went from a curiosity to the state of the art. This pattern—old ideas working when scaled—would recur throughout the following decade and is central to understanding why this wave differs from earlier ones.</p>
+<h3 id="diffusion-across-domains">Diffusion across domains<a class="headerlink" href="#diffusion-across-domains" title="Permanent link">¶</a></h3>
+<p>Deep learning spread rapidly. Speech recognition error rates fell by half between 2012 and 2016; Microsoft reported human parity on the Switchboard benchmark in 2016. Neural machine translation replaced statistical methods at Google in 2016, closing much of the gap to human translators in a single deployment. Generative adversarial networks (Goodfellow et al., 2014) produced the first convincing synthetic images. Word embeddings (Mikolov's word2vec, 2013) showed that meaning could be represented geometrically, with the famous <em>king − man + woman ≈ queen</em>.</p>
+<p>DeepMind, founded in 2010 and acquired by Google in 2014, combined deep learning with reinforcement learning. Its Deep Q-Network (2013–2015) learned to play dozens of Atari games from pixels, using a single architecture. AlphaGo defeated Lee Sedol in March 2016, a decade earlier than most experts had predicted; Go's branching factor had made it the canonical example of a game that brute-force search could not solve. AlphaGo Zero (2017) then surpassed AlphaGo learning entirely from self-play, with no human game data, and AlphaZero generalized the method to chess and shogi. The lesson was that learning plus search, given compute, could exceed the accumulated human knowledge of a domain in days.</p>
+<h3 id="the-transformer">The transformer<a class="headerlink" href="#the-transformer" title="Permanent link">¶</a></h3>
+<p>The decisive architectural event was the paper "Attention Is All You Need" (Vaswani et al., Google, June 2017). It replaced the recurrence of LSTMs with self-attention, a mechanism that lets every position in a sequence attend directly to every other position. The transformer was designed for machine translation, and its authors did not anticipate its consequences. Three properties turned out to matter enormously:</p>
+<ol>
+<li><strong>Parallelism.</strong> Unlike recurrent networks, which process tokens sequentially, transformers process entire sequences at once. Training could therefore use the full parallelism of GPU clusters, which made scaling to unprecedented sizes practical.</li>
+<li><strong>Scalability.</strong> The transformer's performance improved smoothly and predictably as parameters, data, and compute increased, with no obvious saturation. This was not true, or not as cleanly true, of earlier architectures.</li>
+<li><strong>Generality.</strong> The same architecture worked for text, images (Vision Transformer, 2020), audio, protein sequences, code, and multimodal combinations. A single architectural family could be a universal learner over sequences.</li>
+</ol>
+<h3 id="pretraining-and-the-birth-of-the-language-model-era">Pretraining and the birth of the language model era<a class="headerlink" href="#pretraining-and-the-birth-of-the-language-model-era" title="Permanent link">¶</a></h3>
+<p>Two 2018 papers established the pretraining paradigm. OpenAI's GPT (Radford et al., June 2018) trained a transformer decoder to predict the next token on a large text corpus, then fine-tuned it for downstream tasks; it showed that unsupervised pretraining transferred broadly. Google's BERT (Devlin et al., October 2018) used a bidirectional encoder with masked-language-modeling and set new records across the GLUE suite of language understanding tasks.</p>
+<p>GPT-2 (February 2019, 1.5 billion parameters) produced coherent multi-paragraph text and was initially withheld by OpenAI on misuse grounds—the first instance of a "too dangerous to release" argument for a language model, and one that looks quaint in retrospect but set a precedent. GPT-2 also displayed a property that would become central: <em>zero-shot</em> task performance. Without training on translation, summarization, or question answering, it could do all three when prompted appropriately, simply because those tasks appeared implicitly in its training text.</p>
+<h3 id="scaling-laws">Scaling laws<a class="headerlink" href="#scaling-laws" title="Permanent link">¶</a></h3>
+<p>The theoretical justification for what happened next came from Kaplan et al. (OpenAI, January 2020), "Scaling Laws for Neural Language Models." Across seven orders of magnitude of compute, the loss of a language model fell as a clean power law in parameters, dataset size, and compute, with no sign of a plateau. The paper's implication was that further gains could be <em>purchased</em>—predictably, with money—rather than discovered. This converted AI research from a search for the right ideas into, in significant part, an engineering and capital-allocation problem. Hoffmann et al. (DeepMind, 2022, the "Chinchilla" paper) refined the recipe, showing that most models had been undertrained on data relative to their parameter count, and that compute-optimal training required roughly twenty tokens per parameter.</p>
+<p>Richard Sutton's short 2019 essay "The Bitter Lesson" articulated the philosophy: over seventy years, general methods that leverage computation have always eventually beaten methods that leverage human knowledge, and researchers have always resisted this because it is unflattering. The lesson has been contested (the transformer and RL algorithms are themselves human-designed priors), but as a first-order description of the field's history it has held.</p>
+<h2 id="part-iii-the-generative-era-20202024">Part III: The generative era (2020–2024)<a class="headerlink" href="#part-iii-the-generative-era-20202024" title="Permanent link">¶</a></h2>
+<h3 id="gpt-3-and-in-context-learning">GPT-3 and in-context learning<a class="headerlink" href="#gpt-3-and-in-context-learning" title="Permanent link">¶</a></h3>
+<p>GPT-3 (Brown et al., May 2020, 175 billion parameters, roughly 3×10²³ FLOP of training compute) was a hundred-fold scale-up from GPT-2. Its paper's title, "Language Models are Few-Shot Learners," named the discovery: given a few examples in the prompt, the model could perform new tasks it had never been trained on—arithmetic, novel word usage, code generation, translation of invented languages. This <em>in-context learning</em> was an emergent capability, not designed in; it was one of the first signs that scale produced qualitatively new behavior, not just lower loss. GPT-3 also produced text good enough to be published unedited, which prompted the first widespread public debate about AI-generated content.</p>
+<h3 id="alignment-as-a-product-feature-rlhf">Alignment as a product feature: RLHF<a class="headerlink" href="#alignment-as-a-product-feature-rlhf" title="Permanent link">¶</a></h3>
+<p>Raw language models are not assistants. They continue text, so asked a question they may produce another question, a list of similar questions, or a plausible-sounding falsehood. The technique that turned them into usable products was <strong>reinforcement learning from human feedback</strong> (RLHF), developed by Christiano et al. (2017) for robotics and applied to language models in OpenAI's InstructGPT (Ouyang et al., March 2022). Human raters compared model outputs; a reward model learned to predict their preferences; the language model was then optimized against the reward model. InstructGPT at 1.3 billion parameters was preferred by raters over the 175-billion-parameter GPT-3. Anthropic's Constitutional AI (Bai et al., December 2022) partially replaced human raters with a model critiquing itself against written principles.</p>
+<p>RLHF was a <em>safety</em> technique that turned out to be the key <em>commercial</em> technique. This is a recurring pattern worth noting: making a model helpful, honest, and harmless is what makes it a product.</p>
+<h3 id="chatgpt-and-the-diffusion-shock">ChatGPT and the diffusion shock<a class="headerlink" href="#chatgpt-and-the-diffusion-shock" title="Permanent link">¶</a></h3>
+<p>ChatGPT was released on November 30, 2022, as a "research preview" of a GPT-3.5 model fine-tuned for dialogue. It reached one million users in five days and an estimated hundred million in two months, the fastest adoption of any consumer product to that date. The underlying model was not dramatically better than what had been available through the API for months; the difference was the interface. Conversation is the universal user interface, and ChatGPT showed that a general-purpose assistant was something ordinary people wanted.</p>
+<p>The aftermath was a mobilization. Microsoft invested a further $10 billion in OpenAI and integrated GPT-4 into Bing and Office. Google declared a "code red," merged its Brain and DeepMind units, and released Bard, later Gemini. Meta released the weights of LLaMA (February 2023), initially to researchers and then, after a leak and a decision to embrace it, openly—seeding an open-weights ecosystem. Venture capital poured into the sector; Anthropic, Mistral, Inflection, Character.ai, Cohere, and dozens of others raised rounds in the hundreds of millions or billions.</p>
+<h3 id="gpt-4-and-the-multimodal-multi-domain-frontier">GPT-4 and the multimodal, multi-domain frontier<a class="headerlink" href="#gpt-4-and-the-multimodal-multi-domain-frontier" title="Permanent link">¶</a></h3>
+<p>GPT-4 (March 2023; training compute estimated by Epoch at roughly 2×10²⁵ FLOP) passed the bar exam in the 90th percentile, scored a 5 on most AP exams, and accepted image inputs. Microsoft researchers published "Sparks of Artificial General Intelligence" (Bubeck et al., 2023), documenting capabilities—drawing a unicorn in TikZ, writing proofs, reasoning about theory of mind—that seemed to exceed pattern-matching. The paper was criticized for its title and for lacking controlled methodology, but its examples were reproducible and the debate about what GPT-4 "understood" became the central intellectual argument of the year.</p>
+<p>Over 2023–2024, Anthropic's Claude 3 family (March 2024) and Google's Gemini 1.5 (February 2024, with a million-token context window) matched or exceeded GPT-4. Meta's Llama 3 (April 2024) brought open weights to within striking distance of the frontier. Mistral in Europe and a growing group of Chinese laboratories—Alibaba's Qwen, DeepSeek, Zhipu, 01.AI, Moonshot—showed that the recipe was reproducible by any well-funded team.</p>
+<h3 id="image-audio-and-video-generation">Image, audio, and video generation<a class="headerlink" href="#image-audio-and-video-generation" title="Permanent link">¶</a></h3>
+<p>Parallel to language, <strong>diffusion models</strong> (Sohl-Dickstein et al., 2015; Ho et al., 2020; Rombach et al.'s latent diffusion, 2022) replaced GANs as the dominant approach to image generation. DALL·E 2 (April 2022), Midjourney, and Stable Diffusion (August 2022, open weights) made photorealistic and stylized image generation from text a mass consumer activity within months. OpenAI's Sora (announced February 2024) and its competitors—Runway, Kling, Veo—extended the approach to video. Speech synthesis (ElevenLabs, OpenAI's voice mode) reached the point where cloned voices were indistinguishable from originals in short clips. The economics of creative content, the meaning of photographic evidence, and the labor market for illustrators, voice actors, and stock photographers all shifted within two years.</p>
+<h3 id="the-first-cracks-in-pure-pretraining-scaling">The first cracks in pure pretraining scaling<a class="headerlink" href="#the-first-cracks-in-pure-pretraining-scaling" title="Permanent link">¶</a></h3>
+<p>By late 2024, reports circulated that the largest pretraining runs at several laboratories had delivered smaller gains than expected. The reasons were debated—data quality, evaluation saturation, the difficulty of engineering runs at 10²⁶ FLOP—but the industry consensus shifted. "Scaling is over" headlines appeared. What actually happened is more interesting and is the subject of Chapter 3: the frontier moved from scaling pretraining alone to scaling <em>post-training</em> and <em>inference-time</em> compute.</p>
+<h2 id="part-iv-the-reasoning-and-agent-era-late-20242026">Part IV: The reasoning and agent era (late 2024–2026)<a class="headerlink" href="#part-iv-the-reasoning-and-agent-era-late-20242026" title="Permanent link">¶</a></h2>
+<h3 id="reasoning-models">Reasoning models<a class="headerlink" href="#reasoning-models" title="Permanent link">¶</a></h3>
+<p>OpenAI's o1-preview (September 12, 2024) was the first widely available model trained via reinforcement learning to produce long internal chains of thought before answering. Its performance on mathematics competitions, competitive programming, and PhD-level science questions jumped discontinuously relative to GPT-4o: on the AIME mathematics competition, from about 12% to 74% (and 83% with majority voting). The mechanism was described as learning to reason via RL on problems with verifiable answers, and its capability scaled with the amount of "thinking" compute at inference time—a second scaling law.</p>
+<p>The full o1 (December 2024) and o3 (announced December 2024, released April 2025) extended the trend: o3 scored 87.5% on ARC-AGI-1 in high-compute mode—a benchmark designed to resist memorization, on which GPT-4o had scored 5%—and 25% on FrontierMath, a set of research-level problems on which prior models scored 2%. DeepSeek-R1 (January 2025), released with open weights and a detailed paper, reproduced the reasoning-model recipe at a fraction of the reported cost, triggering a one-day fall of roughly $600 billion in Nvidia's market capitalization and a permanent shift in the perception of China's competitiveness. Google's Gemini 2.5, Anthropic's Claude 3.7 Sonnet with extended thinking, xAI's Grok 3, and Alibaba's QwQ and Qwen 3 all followed within months. By mid-2025, every frontier laboratory shipped reasoning models, and the Epoch Capabilities Index shows the frontier advancing at roughly 14 points per year since their introduction, versus 6 points per year before.</p>
+<h3 id="agents">Agents<a class="headerlink" href="#agents" title="Permanent link">¶</a></h3>
+<p>The second half of 2024 and all of 2025 saw the emergence of AI systems that <em>act</em>: they call tools, browse the web, operate computers, write and execute code over many steps, and pursue goals over hours. Anthropic's "computer use" (October 2024) let a model operate a desktop through screenshots and mouse/keyboard actions. OpenAI's Operator and Deep Research (early 2025), Anthropic's Claude Code (2025), OpenAI's Codex, Google's Jules and Gemini agents, and dozens of startup products (Cursor, Devin, Manus, and others) turned agentic operation from demo into product. METR's measurements, discussed at length in Chapter 8, showed the length of software tasks that agents could complete with 50% reliability rising from minutes (GPT-4, 2023) to hours (2025) to beyond the sixteen-hour ceiling of METR's own task suite by mid-2026, with a doubling time that shortened from seven months to roughly four.</p>
+<h3 id="the-current-frontier">The current frontier<a class="headerlink" href="#the-current-frontier" title="Permanent link">¶</a></h3>
+<p>By September 2026, the frontier includes OpenAI's GPT-5 series (GPT-5 in August 2025; iterated through 5.1, 5.2, 5.3-Codex, 5.4, 5.5 during 2025–2026), Anthropic's Claude 4 series (Opus 4.5 through 4.7 and the restricted-release Claude Mythos Preview) and its successors, Google's Gemini 3 and 3.1 Pro, xAI's Grok 4.x, and a Chinese open-weight frontier led by DeepSeek V4, Alibaba's Qwen 3.x, Moonshot's Kimi K2/K3, and Zhipu's GLM. Frontier models score at or near ceiling on most benchmarks that existed in 2023—the MMLU, GSM8K, HumanEval, and bar-exam era—and the field has moved to harder evaluations: Humanity's Last Exam, FrontierMath, SWE-bench Verified (where the best models exceed 90%), ARC-AGI-2 and -3, GDPval (tasks judged by professionals), and METR's time-horizon suite. Chapter 2 treats these in detail.</p>
+<p>Two 2026 events illustrate the state of play. In April 2026, Anthropic announced Claude Mythos Preview—a model it declined to release generally because of its cyber-offensive capability, and instead deployed through "Project Glasswing" to a consortium of infrastructure companies (Amazon Web Services, Apple, Broadcom, Cisco, CrowdStrike, Google, Cloudflare and others) to find vulnerabilities in critical software before attackers could. Reports described thousands of vulnerabilities discovered, and engineers with no security training obtaining working remote-code-execution exploits by asking. In summer 2026, reports circulated that a frontier model had solved all six problems of the 2026 International Mathematical Olympiad on a first attempt with no human steering, a year after two laboratories first achieved gold-medal performance. Neither event would have been credible as a forecast in 2023.</p>
+<h2 id="part-v-why-this-moment-is-different">Part V: Why this moment is different<a class="headerlink" href="#part-v-why-this-moment-is-different" title="Permanent link">¶</a></h2>
+<p>The skeptic's historical argument is that AI has repeatedly overpromised. This is true. The question is whether the causes of the previous failures apply now. Consider each.</p>
+<h3 id="the-previous-walls-and-whether-they-still-stand">The previous walls, and whether they still stand<a class="headerlink" href="#the-previous-walls-and-whether-they-still-stand" title="Permanent link">¶</a></h3>
+<p><strong>The knowledge-encoding bottleneck</strong> that killed expert systems does not apply. Modern systems learn from data; no human writes the rules. The commonsense knowledge that symbolic AI could never hand-code is absorbed, imperfectly but at enormous breadth, from text and images. This is the single most important structural difference.</p>
+<p><strong>Combinatorial explosion</strong> still exists in principle but is managed by learned heuristics rather than hand-crafted ones. AlphaGo's policy network prunes the Go tree by learned intuition; a reasoning model's chain of thought is a learned search. Whether learned search generalizes to open-ended real-world planning is an open question (Chapter 7), but the specific mechanism that limited GOFAI is not the limit now.</p>
+<p><strong>Compute</strong> was the binding constraint on connectionist AI in every earlier period. Rosenblatt's perceptron ran on a machine with a few hundred adjustable weights; the 1986 backpropagation demonstrations used networks of a few hundred units; even the 2012 AlexNet used two consumer GPUs. The compute available to a frontier training run has increased by roughly 10¹⁰ since AlexNet—from ~10¹⁷ FLOP to ~10²⁶–10²⁷—and, critically, the increase has been <em>sustained</em> at 4–5× per year for over a decade, backed by capital expenditure now approaching a trillion dollars a year across the industry. No previous AI wave had anything resembling this resource base or this sustained growth rate. Compute may become a constraint again (Chapter 4), but it will be an economic and physical constraint at scales previously unimaginable, not a "we ran out of ideas" constraint.</p>
+<p><strong>Data</strong> was unavailable at scale before the web. Now it is, and the question has flipped from "is there enough data?" to "have we used it all?" (Chapter 5).</p>
+<p><strong>Evaluation and generality.</strong> Earlier AI successes—Deep Blue, MYCIN, DENDRAL—were narrow, and their methods did not transfer. Current systems are general: a single model writes code, proves theorems, diagnoses from images, translates, and negotiates. Progress in one domain transfers to others because the underlying representation is shared. This is a qualitative difference and is the reason the current wave is discussed in terms of "general intelligence" while previous waves were not.</p>
+<h3 id="what-is-genuinely-the-same">What is genuinely the same<a class="headerlink" href="#what-is-genuinely-the-same" title="Permanent link">¶</a></h3>
+<p>Some patterns from earlier eras do recur, and honesty requires naming them.</p>
+<p><strong>Hype outruns deployment.</strong> Rosenblatt's perceptron claims, Simon's ten-year predictions, the Fifth Generation project's goals—all were sincere and wrong about timing. The 2023–2026 period has its equivalents: confident predictions of AGI by 2025 or 2026 that did not materialize under any strict definition; corporate claims of transformation that outrun measurable productivity effects; agent products demoed at 95% success and deployed at 60%.</p>
+<p><strong>Benchmarks get gamed and saturated.</strong> Turing Test claims, chess, ImageNet, and now MMLU and GSM8K—each was regarded as a meaningful milestone until it was passed, at which point the goalposts moved. This is partly appropriate (the benchmarks were proxies, and passing a proxy does not mean the underlying capability is achieved) and partly a sign that the field does not know how to measure what it cares about.</p>
+<p><strong>The last 10% is hard.</strong> Self-driving cars were "two years away" from 2015 to 2022; they are now deployed in a dozen cities but not universally, a decade behind the confident forecasts. Reliability at the level needed for unsupervised high-stakes deployment has, in every prior case, taken far longer than reaching impressive demo performance. Agents may follow the same pattern.</p>
+<p><strong>Financial cycles operate independently of technical progress.</strong> The railway mania of the 1840s, the telecom bubble of 1999, and the expert-systems bust of 1987 all coincided with real technologies. Investment overshoot does not imply the technology is fake; it implies that expectations, financing structures, and timelines were misaligned. The current AI capital cycle—hundreds of billions of dollars in annual capital expenditure against revenues that, while growing very fast, are an order of magnitude smaller—has this character. A correction would not falsify the technology, and the absence of a correction would not validate every claim.</p>
+<h3 id="the-authors-assessment">The author's assessment<a class="headerlink" href="#the-authors-assessment" title="Permanent link">¶</a></h3>
+<p>Weighing these, the case that "this time is different" is strong on the technical structure and weak on the timing. The mechanisms that ended earlier AI waves—hand-coded knowledge, inadequate compute, narrow methods—are absent. The mechanism that persists—systematic over-optimism about how fast impressive capability becomes reliable, deployed, and economically transformative—is present. The most defensible reading of history is therefore: <em>the current wave will not end in a winter of the 1970s or 1990s kind, because the technology works and continues to improve; but it will feature repeated cycles of disappointment relative to the most aggressive forecasts, and the transformation of the economy will take longer than the transformation of the benchmarks.</em></p>
+<p>That conclusion is not a compromise between optimists and skeptics. It is a specific claim: capability progress is real and fast; diffusion and reliability are the bottleneck; and the gap between the two is where most of the drama of the next decade will play out.</p>
+<h2 id="a-timeline-of-milestones">A timeline of milestones<a class="headerlink" href="#a-timeline-of-milestones" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Milestone</th>
+<th>Why it mattered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1943</td>
+<td>McCulloch–Pitts neuron</td>
+<td>Showed neural networks could compute logic</td>
+</tr>
+<tr>
+<td>1950</td>
+<td>Turing, "Computing Machinery and Intelligence"</td>
+<td>Framed the question; predicted learning as the path</td>
+</tr>
+<tr>
+<td>1956</td>
+<td>Dartmouth workshop</td>
+<td>Named the field; set the symbolic agenda</td>
+</tr>
+<tr>
+<td>1958</td>
+<td>Rosenblatt's perceptron</td>
+<td>First learning machine; first hype cycle</td>
+</tr>
+<tr>
+<td>1969</td>
+<td>Minsky &amp; Papert, <em>Perceptrons</em></td>
+<td>Identified single-layer limits; connectionism defunded</td>
+</tr>
+<tr>
+<td>1973</td>
+<td>Lighthill Report</td>
+<td>First AI winter</td>
+</tr>
+<tr>
+<td>1980s</td>
+<td>Expert systems boom (MYCIN, XCON)</td>
+<td>Commercial AI; then brittleness and collapse</td>
+</tr>
+<tr>
+<td>1986</td>
+<td>Backpropagation popularized</td>
+<td>Multi-layer networks trainable</td>
+</tr>
+<tr>
+<td>1997</td>
+<td>Deep Blue beats Kasparov; LSTM published</td>
+<td>Search triumph; recurrent nets become practical</td>
+</tr>
+<tr>
+<td>2006–2009</td>
+<td>Deep belief nets; CUDA; ImageNet</td>
+<td>Substrate for deep learning assembled</td>
+</tr>
+<tr>
+<td>2012</td>
+<td>AlexNet</td>
+<td>Deep learning revolution begins</td>
+</tr>
+<tr>
+<td>2014</td>
+<td>GANs; Google acquires DeepMind</td>
+<td>Generative models; industrial RL research</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>AlphaGo defeats Lee Sedol</td>
+<td>Learning + search beats human intuition in Go</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>Transformer</td>
+<td>The architecture of the current era</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>GPT-1, BERT</td>
+<td>Pretraining paradigm</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>GPT-2; "The Bitter Lesson"</td>
+<td>Zero-shot generality; scaling philosophy</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>GPT-3; scaling laws paper</td>
+<td>Few-shot learning; capability becomes purchasable</td>
+</tr>
+<tr>
+<td>2021</td>
+<td>AlphaFold 2 solves protein folding</td>
+<td>AI as scientific instrument</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>InstructGPT/RLHF; Stable Diffusion; ChatGPT</td>
+<td>Alignment as product; open image generation; mass adoption</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>GPT-4; Llama; Claude; Gemini</td>
+<td>Multi-lab frontier; open weights; multimodality</td>
+</tr>
+<tr>
+<td>2024</td>
+<td>o1 reasoning models; computer use; Sora</td>
+<td>Inference-time scaling; agents; video</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>DeepSeek-R1; o3; Claude 4; GPT-5; IMO gold; agents in production</td>
+<td>China at frontier; reasoning saturates benchmarks; agents work</td>
+</tr>
+<tr>
+<td>2026</td>
+<td>Mythos Preview/Glasswing; frontier open-weight parity within months; METR horizon &gt;16h; IMO perfect score reports</td>
+<td>Cyber capability thresholds crossed; agent horizons at multi-day; math at research level</td>
+</tr>
+</tbody>
+</table>
+<h2 id="further-reading-for-this-chapter">Further reading for this chapter<a class="headerlink" href="#further-reading-for-this-chapter" title="Permanent link">¶</a></h2>
+<ul>
+<li>Nils Nilsson, <em>The Quest for Artificial Intelligence</em> (2010) — the standard scholarly history through the 2000s.</li>
+<li>Cade Metz, <em>Genius Makers</em> (2021) — the deep-learning revolution as narrative.</li>
+<li>Richard Sutton, "The Bitter Lesson" (2019).</li>
+<li>Kaplan et al., "Scaling Laws for Neural Language Models" (2020); Hoffmann et al., "Training Compute-Optimal Large Language Models" (2022).</li>
+<li>Epoch AI, "Trends in AI" (continuously updated) — the quantitative record of compute, data, and cost.</li>
+<li>Stanford HAI, <em>AI Index Report</em> (annual) — the broadest annual survey of the field.</li>
+</ul><div class="pager"><a href="00-front-matter-and-executive-summary.html"><span>← Previous</span>Front Matter and Executive Summary</a><a href="index.html" style="text-align:right"><span>→</span>Home</a></div><footer>Built 2026-09-09. Text is provided as an analytical review; forecasts are uncertain by nature. </footer></main>
+<aside class="toc"><div class="sub" style="font-size:12px;color:var(--muted);margin-bottom:8px">On this page</div><div class="toc">
+<ul>
+<li><a href="#why-history-matters-for-forecasting">Why history matters for forecasting</a></li>
+<li><a href="#part-i-the-long-prehistory-19432011">Part I: The long prehistory (1943–2011)</a><ul>
+<li><a href="#foundations-computation-neurons-and-the-turing-question">Foundations: computation, neurons, and the Turing question</a></li>
+<li><a href="#the-symbolic-program-and-its-first-successes">The symbolic program and its first successes</a></li>
+<li><a href="#the-first-winter-and-the-perceptron-controversy">The first winter and the perceptron controversy</a></li>
+<li><a href="#the-second-winter">The second winter</a></li>
+<li><a href="#machine-learning-grows-up-in-the-shadows-19862011">Machine learning grows up in the shadows (1986–2011)</a></li>
+</ul>
+</li>
+<li><a href="#part-ii-the-deep-learning-revolution-20122019">Part II: The deep learning revolution (2012–2019)</a><ul>
+<li><a href="#alexnet-and-the-imagenet-moment">AlexNet and the ImageNet moment</a></li>
+<li><a href="#diffusion-across-domains">Diffusion across domains</a></li>
+<li><a href="#the-transformer">The transformer</a></li>
+<li><a href="#pretraining-and-the-birth-of-the-language-model-era">Pretraining and the birth of the language model era</a></li>
+<li><a href="#scaling-laws">Scaling laws</a></li>
+</ul>
+</li>
+<li><a href="#part-iii-the-generative-era-20202024">Part III: The generative era (2020–2024)</a><ul>
+<li><a href="#gpt-3-and-in-context-learning">GPT-3 and in-context learning</a></li>
+<li><a href="#alignment-as-a-product-feature-rlhf">Alignment as a product feature: RLHF</a></li>
+<li><a href="#chatgpt-and-the-diffusion-shock">ChatGPT and the diffusion shock</a></li>
+<li><a href="#gpt-4-and-the-multimodal-multi-domain-frontier">GPT-4 and the multimodal, multi-domain frontier</a></li>
+<li><a href="#image-audio-and-video-generation">Image, audio, and video generation</a></li>
+<li><a href="#the-first-cracks-in-pure-pretraining-scaling">The first cracks in pure pretraining scaling</a></li>
+</ul>
+</li>
+<li><a href="#part-iv-the-reasoning-and-agent-era-late-20242026">Part IV: The reasoning and agent era (late 2024–2026)</a><ul>
+<li><a href="#reasoning-models">Reasoning models</a></li>
+<li><a href="#agents">Agents</a></li>
+<li><a href="#the-current-frontier">The current frontier</a></li>
+</ul>
+</li>
+<li><a href="#part-v-why-this-moment-is-different">Part V: Why this moment is different</a><ul>
+<li><a href="#the-previous-walls-and-whether-they-still-stand">The previous walls, and whether they still stand</a></li>
+<li><a href="#what-is-genuinely-the-same">What is genuinely the same</a></li>
+<li><a href="#the-authors-assessment">The author's assessment</a></li>
+</ul>
+</li>
+<li><a href="#a-timeline-of-milestones">A timeline of milestones</a></li>
+<li><a href="#further-reading-for-this-chapter">Further reading for this chapter</a></li>
+</ul>
+</div>
+</aside>
+</div><script>
+(function(){
+  const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);
+  window.toggleTheme=function(){const cur=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',cur);localStorage.setItem('theme',cur);};
+  window.toggleNav=function(){document.querySelector('nav.side').classList.toggle('open');};
+  window.addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';});
+  // sidebar filter + full-text search over search index
+  const inp=document.getElementById('q');const list=document.getElementById('chlist');const res=document.getElementById('results');
+  let idx=null;
+  async function loadIdx(){if(idx)return idx;try{const r=await fetch(window.SITE_BASE+'search.json');idx=await r.json();}catch(e){idx=[];}return idx;}
+  if(inp){inp.addEventListener('input',async()=>{const q=inp.value.trim().toLowerCase();
+    [...list.querySelectorAll('li')].forEach(li=>{li.style.display=(!q||li.textContent.toLowerCase().includes(q))?'':'none';});
+    if(q.length<3){res.innerHTML='';return;}
+    const ix=await loadIdx();const out=[];
+    for(const d of ix){const i=d.text.toLowerCase().indexOf(q);if(i>=0){const s=Math.max(0,i-60);out.push({d,snip:d.text.slice(s,i+90)});if(out.length>=25)break;}}
+    res.innerHTML=out.map(o=>`<li><a href="${window.SITE_BASE}${o.d.url}"><b>${o.d.title}</b><small>…${o.snip.replace(/</g,'&lt;')}…</small></a></li>`).join('')||'<li><small>No matches</small></li>';
+  });}
+  // active TOC highlight
+  const heads=[...document.querySelectorAll('main h2, main h3')];const links=[...document.querySelectorAll('aside.toc a')];
+  if(heads.length&&links.length){const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.style.color='');const l=links.find(l=>l.getAttribute('href')==='#'+e.target.id);if(l)l.style.color='var(--acc)';}})},{rootMargin:'0px 0px -75% 0px'});heads.forEach(h=>obs.observe(h));}
+})();
+</script></body></html>

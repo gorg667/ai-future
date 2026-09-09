@@ -32,8 +32,8 @@
   where unsure of 2025–2026 specifics, phrase carefully and flag uncertainty rather than fabricate.
 
 ## Chapter plan (status: [ ] todo, [~] in progress, [x] done+pushed)
-00 [ ] Front matter, how to read, executive summary
-01 [ ] A brief history of AI & why this moment is different (from Dartmouth to transformers to agents)
+00 [x] Front matter, how to read, executive summary
+01 [x] A brief history of AI & why this moment is different (from Dartmouth to transformers to agents)
 02 [ ] The state of the art in 2026: frontier models, capabilities, benchmarks, what's solved/unsolved
 03 [ ] Scaling laws, compute, and the physics/economics of training (FLOPs, data walls, algorithmic efficiency, inference-time compute)
 04 [ ] Hardware & infrastructure: GPUs/TPUs/ASICs, energy, datacenters, memory bandwidth, networking, photonics, neuromorphic, quantum
@@ -64,3 +64,4 @@
 
 ## Log (append newest at bottom)
 - 2026-09-09: Repo empty. Created skeleton, PROGRESS.md, chapter plan.
+- 2026-09-09: Research notes saved (docs/RESEARCH_NOTES.md). Ch00, Ch01 done. Next: Ch02 state of the art. NOTE: if build.py fails with no module markdown run: python3 -m pip install markdown pymdown-extensions
