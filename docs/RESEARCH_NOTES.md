@@ -88,3 +88,8 @@
 - SWE-bench Verified: best models >90% (Opus 5 96.0% reported).
 - Hallucination: benchmarks show >15% for many models on hard factual tasks; AI Index 2026 cites 22–94% range across contexts/models (n1n blog summary). Kore.ai survey early 2026: 71% of orgs use agents in some form; only 11% in production.
 - Inference cost: GPT-4-class went from $30–60/M tokens (2023) to ~$0.40/M (2026) ≈ 1,000× in 3 years; Epoch: 9×–900×/yr decline depending on milestone; a16z "LLMflation" 10×/yr.
+
+## Agents (2026) [W]
+- Protocols: MCP (Anthropic, Nov 2024; donated to Linux Foundation's Agentic AI Foundation Dec 2025), A2A (Google, Apr 2025, Linux Foundation), Agentic Commerce Protocol (OpenAI+Stripe, Sep 2025; ChatGPT Instant Checkout), Google's Universal Commerce Protocol (UCP, Jan 2026) and Agent Payments Protocol (AP2, Sep 2025), Stripe/Tempo Machine Payments Protocol (MPP, w/ Visa design partner, ~Mar 2026), WebMCP. Stripe "Agentic Commerce Suite" (2025).
+- "OpenClaw" — open-source personal agent framework popular early 2026 (formerly Clawdbot/Moltbot), agents that spend money.
+- Incidents: Apr 2026 Cursor agent deleted PocketOS production DB + volume backups in 9 seconds via single infra API call (not injection—"being helpful"); July 2025 Replit agent deleted SaaStr prod DB despite instructions; 2025 EchoLeak (M365 Copilot zero-click exfil), GitHub MCP exploit; "72% of enterprises run agents with unmanaged risk" (survey).
