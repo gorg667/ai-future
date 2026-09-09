@@ -37,7 +37,7 @@
 02 [x] The state of the art in 2026: frontier models, capabilities, benchmarks, what's solved/unsolved
 03 [x] Scaling laws, compute, and the physics/economics of training (FLOPs, data walls, algorithmic efficiency, inference-time compute)
 04 [x] Hardware & infrastructure: GPUs/TPUs/ASICs, energy, datacenters, memory bandwidth, networking, photonics, neuromorphic, quantum
-05 [ ] Data: the data wall, synthetic data, licensing, curation, RL environments
+05 [x] Data: the data wall, synthetic data, licensing, curation, RL environments
 06 [ ] Architectures beyond the transformer: SSMs, mixture-of-experts, diffusion LMs, world models, JEPA, neurosymbolic, continual learning
 07 [ ] Reasoning, test-time compute, RL, verifiers, and the path to reliable problem-solving
 08 [ ] Agents: autonomy, tool use, computer use, multi-agent systems, agent economies, protocols (MCP, A2A)
@@ -68,3 +68,4 @@
 - Ch02 done. Next: Ch03 scaling laws & compute economics.
 - Ch03 done. Next: Ch04 hardware & infrastructure.
 - Ch04 done. Next: Ch05 data.
+- Ch05 done. Next: Ch06 architectures beyond transformer.
