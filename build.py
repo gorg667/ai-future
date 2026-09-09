@@ -215,34 +215,71 @@ def page(chapters, title, body_html, toc_html="", active=None, prev=None, nxt=No
 </div><button id="totop" title="Back to top" aria-label="Back to top">↑</button><script>{JS}</script></body></html>"""
 
 
+def first_paragraph(text):
+    """Description for meta tags: first non-heading, non-admonition paragraph."""
+    for para in re.split(r"\n\s*\n", text):
+        t = para.strip()
+        if not t or t.startswith("#") or t.startswith("!!!") or t.startswith("    ") or t.startswith("|") or t.startswith("<"):
+            continue
+        t = re.sub(r"[*_`\[\]]", "", t)
+        return (t[:280] + "…") if len(t) > 280 else t
+    return SUBTITLE
+
+
 def build_site(chapters):
+    # figures
+    site_fig = os.path.join(SITE, "fig")
+    os.makedirs(site_fig, exist_ok=True)
+    if os.path.isdir(FIG_DIR):
+        for f in os.listdir(FIG_DIR):
+            shutil.copy2(os.path.join(FIG_DIR, f), os.path.join(site_fig, f))
     search = []
+    briefs = {}
     for i, c in enumerate(chapters):
+        text = c["text"].replace("](../fig/", "](fig/")
         md = markdown.Markdown(extensions=MD_EXT, extension_configs=MD_CFG)
-        body = md.convert(c["text"])
+        body = md.convert(text)
         toc = md.toc if hasattr(md, "toc") else ""
         prev = chapters[i - 1] if i > 0 else None
         nxt = chapters[i + 1] if i + 1 < len(chapters) else None
         meta = f'<div class="meta">Chapter {int(c["num"])} of {len(chapters)} · {c["words"]:,} words · ~{max(1, c["words"] // 230)} min read</div>'
         with open(os.path.join(SITE, c["html_name"]), "w", encoding="utf-8") as fh:
-            fh.write(page(chapters, c["title"], body, f'<div class="sub" style="font-size:12px;color:var(--muted);margin-bottom:8px">On this page</div>{toc}', c["num"], prev, nxt, "", meta))
+            fh.write(page(chapters, c["title"], body, f'<div class="sub" style="font-size:12px;color:var(--muted);margin-bottom:8px">On this page</div>{toc}',
+                          c["num"], prev, nxt, "", meta, slug=c["html_name"], desc=first_paragraph(c["text"])))
         plain = re.sub(r"<[^>]+>", " ", body)
         plain = html.unescape(re.sub(r"\s+", " ", plain))
         search.append({"title": c["title"], "url": c["html_name"], "text": plain})
+        m = re.search(r'!!! abstract "In brief"\n((?:    - .+\n)+)', c["text"])
+        if m:
+            briefs[c["num"]] = [ln.strip()[2:] for ln in m.group(1).splitlines()]
     with open(os.path.join(SITE, "search.json"), "w", encoding="utf-8") as fh:
         json.dump(search, fh)
     # index
     total = sum(c["words"] for c in chapters)
     cards = "".join(
-        f'<a class="card" href="{c["html_name"]}"><div class="n">CHAPTER {int(c["num"])}</div><h3>{html.escape(c["title"])}</h3><small>{c["words"]:,} words · ~{max(1, c["words"] // 230)} min</small></a>'
+        f'<a class="card" href="{c["html_name"]}"><div class="n">CHAPTER {int(c["num"])}</div><h3>{html.escape(c["title"])}</h3>'
+        + (f'<p class="brief">{html.escape(briefs[c["num"]][0])}</p>' if c["num"] in briefs else "")
+        + f'<small>{c["words"]:,} words · ~{max(1, c["words"] // 230)} min</small></a>'
         for c in chapters)
     hero = f"""<div class="hero"><h1>{TITLE}</h1><p class="lead">{html.escape(SUBTITLE)}.</p>
-<p class="meta">{len(chapters)} chapters · {total:,} words · roughly {total // 230 // 60}h {total // 230 % 60}m of reading · built {BUILD_DATE}</p>
-<p>This is a long-form, structured review of where artificial intelligence stands, where it is heading, and what that means for technology, economies, institutions, and individuals. It is written to be read linearly or consulted chapter by chapter. Each chapter states what is known, what is contested, and what to watch for. Forecasts are given with explicit uncertainty.</p>
-<p><a href="../docs/THE_FUTURE_OF_AI.md">Download / read the single Markdown document →</a></p></div>
+<p class="meta">Version {VERSION} · {len(chapters)} chapters · {total:,} words · roughly {total // 230 // 60}h {total // 230 % 60}m of reading · built {BUILD_DATE}</p>
+<p>This is a long-form, structured review of where artificial intelligence stands in September 2026, where it is heading, and what that means for technology, economies, institutions, and individuals. It is written to be read linearly or consulted chapter by chapter. Each chapter opens with an <em>In brief</em> summary and states what is known, what is contested, and what to watch for. Forecasts are given as probabilities so they can be checked; every quantitative forecast is collected in the register in Chapter 23.</p>
+<div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))">
+<a class="card" href="00-front-matter-and-executive-summary.html#executive-summary"><div class="n">START HERE</div><h3>Executive summary</h3><small>25 claims with confidence levels · 15 min</small></a>
+<a class="card" href="18-scenarios-2026-2040.html"><div class="n">IF YOU HAVE 30 MINUTES</div><h3>Five scenarios to 2040</h3><small>With probabilities and signposts</small></a>
+<a class="card" href="23-appendix.html#a-forecast-register"><div class="n">CHECK THE FORECASTS</div><h3>Forecast register</h3><small>Every prediction, resolvable</small></a>
+<a class="card" href="../docs/THE_FUTURE_OF_AI.md"><div class="n">DOWNLOAD</div><h3>Single Markdown file</h3><small>Also: <a href="THE_FUTURE_OF_AI.epub">EPUB</a></small></a>
+</div>
+<figure markdown><img src="fig/scenarios.svg" alt="Five scenarios for 2026–2040"><figcaption>The author's probability weights across five scenarios for 2026–2040 (Chapter 18).</figcaption></figure>
+</div>
 <h2>Chapters</h2><div class="cards">{cards}</div>"""
     with open(os.path.join(SITE, "index.html"), "w", encoding="utf-8") as fh:
-        fh.write(page(chapters, "Home", hero, "", None, None, None, ""))
+        fh.write(page(chapters, "Home", hero, "", None, None, None, "", slug="index.html"))
+    # sitemap
+    urls = [SITE_URL + "index.html"] + [SITE_URL + c["html_name"] for c in chapters]
+    with open(os.path.join(SITE, "sitemap.xml"), "w", encoding="utf-8") as fh:
+        fh.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+                 + "".join(f"  <url><loc>{u}</loc><lastmod>{BUILD_DATE}</lastmod></url>\n" for u in urls) + "</urlset>\n")
     # root redirect for GitHub Pages
     with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as fh:
         fh.write('<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=site/index.html"><a href="site/index.html">Open the review</a>')
@@ -250,8 +287,58 @@ def build_site(chapters):
         fh.write("")
 
 
+def check_links(chapters):
+    """Verify intra-site links and figure references resolve."""
+    problems = 0
+    html_names = {c["html_name"] for c in chapters}
+    for c in chapters:
+        for m in re.finditer(r"\]\((\.\./fig/[^)]+)\)", c["text"]):
+            f = os.path.join(CH_DIR, m.group(1))
+            if not os.path.exists(f):
+                print("MISSING FIGURE", c["html_name"], m.group(1)); problems += 1
+    for name in os.listdir(SITE):
+        if not name.endswith(".html"):
+            continue
+        s = open(os.path.join(SITE, name), encoding="utf-8").read()
+        for m in re.finditer(r'href="([^"#]+)(#[^"]*)?"', s):
+            href = m.group(1)
+            if href.startswith(("http", "mailto", "data:")):
+                continue
+            target = os.path.normpath(os.path.join(SITE, href))
+            if not os.path.exists(target):
+                print("BROKEN LINK", name, href); problems += 1
+        ids = set(re.findall(r'id="([^"]+)"', s))
+        for m in re.finditer(r'href="#([^"]+)"', s):
+            if m.group(1) not in ids:
+                print("BROKEN ANCHOR", name, m.group(1)); problems += 1
+    print(f"link check: {problems} problems")
+    return problems
+
+
+def build_epub():
+    """Optional: pandoc -> EPUB of the assembled document, into site/. Silently skipped if pandoc is absent."""
+    if not shutil.which("pandoc"):
+        print("pandoc not found; skipping EPUB"); return
+    src = os.path.join(ROOT, "docs", "THE_FUTURE_OF_AI.md")
+    out = os.path.join(SITE, "THE_FUTURE_OF_AI.epub")
+    meta = os.path.join(ROOT, "docs", "epub-metadata.yaml")
+    with open(meta, "w", encoding="utf-8") as fh:
+        fh.write(f"---\ntitle: \"{TITLE}\"\nsubtitle: \"{SUBTITLE}\"\nauthor: \"An AI-assisted review, v{VERSION}\"\ndate: \"{BUILD_DATE}\"\nlang: en\nrights: CC BY 4.0\n---\n")
+    rc = os.system(f'cd "{os.path.dirname(src)}" && pandoc "{src}" "{meta}" -o "{out}" --toc --toc-depth=2 -f markdown+pipe_tables --resource-path=. 2>/tmp/pandoc.err')
+    if rc == 0 and os.path.exists(out):
+        print(f"EPUB -> {out} ({os.path.getsize(out)//1024} KB)")
+    else:
+        print("EPUB build failed:", open("/tmp/pandoc.err").read()[:500])
+    try: os.remove(meta)
+    except OSError: pass
+
+
 if __name__ == "__main__":
     chs = read_chapters()
     p = build_markdown(chs)
     build_site(chs)
     print(f"Built {len(chs)} chapters, {sum(c['words'] for c in chs):,} words -> {p} and site/")
+    if "--no-epub" not in sys.argv:
+        build_epub()
+    if "--check" in sys.argv or True:
+        check_links(chs)
