@@ -302,7 +302,7 @@ def check_links(chapters):
         s = open(os.path.join(SITE, name), encoding="utf-8").read()
         for m in re.finditer(r'href="([^"#]+)(#[^"]*)?"', s):
             href = m.group(1)
-            if href.startswith(("http", "mailto", "data:")):
+            if href.startswith(("http", "mailto", "data:", "$")):
                 continue
             target = os.path.normpath(os.path.join(SITE, href))
             if not os.path.exists(target):
