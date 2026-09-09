@@ -84,6 +84,12 @@ Complementary and complicating evidence: Danish administrative data (Humlum and 
 
 The interpretation most consistent with all of this: AI has not yet caused mass unemployment; it has changed the *composition* of hiring, reducing demand for entry-level cognitive labor in exposed occupations while raising the premium on experience and judgment. The mechanism is that firms use AI to do what they used to hire juniors to do. This is benign in the short run for incumbents and harmful for those trying to enter—and it raises a longer-run problem: if the entry-level rungs are removed, where do the next generation of experienced workers come from?
 
+
+<figure markdown>
+![Figure 11.1 — Stylized illustration of the Brynjolfsson–Chandar–Chen "Canaries" finding: employment of 22–25-year-olds in the most AI-exposed occupations fell about 19% relative to trend by June 2026, while experienced workers in the same occupations and young workers in less-exposed occupations did not. Curves are schematic; see the paper and the Stanford AI Economic Indicators for the underlying ADP series.](../fig/canaries.svg)
+<figcaption>Figure 11.1 — Stylized illustration of the Brynjolfsson–Chandar–Chen "Canaries" finding: employment of 22–25-year-olds in the most AI-exposed occupations fell about 19% relative to trend by June 2026, while experienced workers in the same occupations and young workers in less-exposed occupations did not. Curves are schematic; see the paper and the Stanford AI Economic Indicators for the underlying ADP series.</figcaption>
+</figure>
+
 ### Exposure and the automation–augmentation distinction
 
 Eloundou et al. (OpenAI, 2023) estimated that about 80% of US workers have at least 10% of their tasks exposed to LLMs and 19% have at least half exposed, with exposure rising with wage and education—the reverse of previous automation waves. Goldman Sachs estimated 300 million full-time-equivalent jobs globally exposed. The IMF's 40%/60% figures are similar.

@@ -51,6 +51,12 @@ Epoch AI, which maintains the most careful public database, finds:
 
 For scale: 10²⁶ FLOP is roughly the number of grains of sand on Earth, multiplied by a hundred thousand. Executed on a hundred thousand H100 GPUs at realistic utilization, a 10²⁶ FLOP run takes on the order of three months. A 10²⁹ FLOP run would require a cluster of several million next-generation accelerators—the scale that Meta's Hyperion and OpenAI/Microsoft's Stargate campuses are designed for—and several gigawatts of power.
 
+
+<figure markdown>
+![Figure 3.1 — Training compute of landmark models (Epoch AI estimates; 2025–26 points are estimates) against the ~5×/year frontier trend. The shaded band marks the ~10²⁹ FLOP scale Epoch judged feasible by 2030.](../fig/compute-trend.svg)
+<figcaption>Figure 3.1 — Training compute of landmark models (Epoch AI estimates; 2025–26 points are estimates) against the ~5×/year frontier trend. The shaded band marks the ~10²⁹ FLOP scale Epoch judged feasible by 2030.</figcaption>
+</figure>
+
 ### Algorithms
 
 Algorithmic progress is the multiplier on compute. Epoch's estimate is that the compute needed to reach a fixed level of language-model performance has fallen by about **3× per year** since 2012—"algorithmic efficiency" gains that compound with hardware gains. Ho et al. (2024) found a halving time for the compute needed to reach a given performance of roughly eight months. Other estimates range from 2× to 4× per year depending on task and period.
@@ -98,6 +104,12 @@ These numbers include only the compute for the final run. Total costs include fa
 Hyperscaler capital expenditure is the most visible measure of the AI investment boom. Combined capex of Amazon, Microsoft, Alphabet, and Meta was roughly $230 billion in 2024, about $410 billion in 2025, and—after second-quarter 2026 results (Amazon $53 billion, Alphabet $45 billion, Microsoft $41 billion in a single quarter)—is now estimated at $750–900 billion for 2026, roughly double the prior year. Goldman Sachs estimates that hyperscaler capex understates global AI capital spending by about $200 billion once neoclouds (Oracle, CoreWeave), xAI, sovereign projects (Stargate UAE, Saudi Humain, European gigafactories), and Chinese hyperscalers are included, putting the global figure above $1 trillion in 2026—a year earlier than most 2025 forecasts. One measure of the strain: AI capex has risen from about a third of the big four's operating cash flow in 2023 to an estimated 93% in 2026, meaning the build-out is now financed almost entirely out of current earnings, with debt issuance growing.
 
 For context: total US business investment in structures and equipment runs about $3.5 trillion a year. AI datacenter investment is approaching a fifth of that. Several economists have estimated that AI-related investment accounted for a majority of US GDP growth in some 2025–2026 quarters. The Stanford AI Index put global private AI investment at $582 billion for 2025.
+
+
+<figure markdown>
+![Figure 3.2 — Big-four hyperscaler capital expenditure versus the combined revenue of the two largest frontier laboratories (approximate). The 2026 capex figure is the midpoint of post-Q2 estimates; the revenue figure is a mid-year run rate.](../fig/capex-vs-revenue.svg)
+<figcaption>Figure 3.2 — Big-four hyperscaler capital expenditure versus the combined revenue of the two largest frontier laboratories (approximate). The 2026 capex figure is the midpoint of post-Q2 estimates; the revenue figure is a mid-year run rate.</figcaption>
+</figure>
 
 ### Revenue and the return question
 

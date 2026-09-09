@@ -41,6 +41,12 @@ METR's caveats are important and are quoted here because they are routinely omit
 
 Extrapolating the trend (with all those caveats) gives a 50% horizon of roughly a working week by 2027 and a month or more by 2028–2029. Whether the trend continues, bends, or accelerates is a central forecasting question; METR itself has noted that the recent data are consistent with either a faster exponential or the early part of a superexponential.
 
+
+<figure markdown>
+![Figure 8.1 — METR's 50%-success time horizon for frontier agents on its software task suite. Points are METR's Time Horizon 1.1 estimates; the triangle marks the spring-2026 frontier, which exceeded the suite's reliable range. Dashed lines show the long-run 7-month and recent 4-month doubling fits.](../fig/metr-horizon.svg)
+<figcaption>Figure 8.1 — METR's 50%-success time horizon for frontier agents on its software task suite. Points are METR's Time Horizon 1.1 estimates; the triangle marks the spring-2026 frontier, which exceeded the suite's reliable range. Dashed lines show the long-run 7-month and recent 4-month doubling fits.</figcaption>
+</figure>
+
 ### Other measures
 
 - **SWE-bench Verified** (resolving real GitHub issues): 49% (October 2024) → mid-70s (2025) → over 90% (2026). Near saturation; harder successors (SWE-bench Pro, SWE-Lancer with real freelance payouts, Terminal-Bench) are active.

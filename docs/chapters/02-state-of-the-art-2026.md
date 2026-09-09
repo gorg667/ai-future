@@ -146,6 +146,12 @@ By 2026 the frontier models are natively multimodal: they accept and produce tex
 - **Music** generation (Suno, Udio, and others) produces radio-quality songs from prompts. Litigation with rights holders has partially resolved into licensing deals.
 - **3D and world models.** Generating consistent 3D scenes and interactive environments from text or images (Google Genie 3, World Labs, and others) is the newest modality and is closely tied to both video generation and robotics. Chapter 6 discusses world models as an architectural direction.
 
+
+<figure markdown>
+![Figure 2.1 — Benchmarks are consumed faster than they are built. Bars run from a benchmark's publication to the point where frontier models reached or exceeded the human reference level. ARC-AGI-3 lasted six months; Humanity's Last Exam remains open at 55–65%.](../fig/benchmark-lifespans.svg)
+<figcaption>Figure 2.1 — Benchmarks are consumed faster than they are built. Bars run from a benchmark's publication to the point where frontier models reached or exceeded the human reference level. ARC-AGI-3 lasted six months; Humanity's Last Exam remains open at 55–65%.</figcaption>
+</figure>
+
 ## Cost, speed, and the diffusion curve
 
 Capability is only half the story; the other half is what a given capability costs, because that determines what is economically deployable.
@@ -159,6 +165,12 @@ The consequence is that the frontier is not where most economic activity happens
 Speed has improved alongside cost. Output rates of hundreds of tokens per second are routine; specialized inference chips (Groq, Cerebras, SambaNova) reach thousands. Latency to first token has fallen to a few hundred milliseconds. Real-time voice and video interaction, impossible in 2023, is ordinary.
 
 The exception to the cost decline is at the very top: frontier reasoning models in high-compute mode, spending minutes of thinking and many thousands of tokens per answer, can cost dollars or tens of dollars per query. The o3 result on ARC-AGI-1 in December 2024 famously used thousands of dollars of compute per task in its highest configuration. This is the inference-time scaling frontier, and it means that maximum capability is available at a price that only high-value tasks justify—for now. The same cost curve will bring it down.
+
+
+<figure markdown>
+![Figure 2.2 — The price of GPT-4-class capability fell by roughly two orders of magnitude in three years (approximate blended input/output prices for models matching GPT-4's March 2023 quality). Sources: provider price lists; Epoch AI; a16z.](../fig/inference-cost.svg)
+<figcaption>Figure 2.2 — The price of GPT-4-class capability fell by roughly two orders of magnitude in three years (approximate blended input/output prices for models matching GPT-4's March 2023 quality). Sources: provider price lists; Epoch AI; a16z.</figcaption>
+</figure>
 
 ## Adoption
 

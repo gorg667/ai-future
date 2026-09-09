@@ -84,6 +84,12 @@ Public statements from 2025–26 cluster around "AI that can do most cognitive w
 
 The spread is enormous—2027 to 2047 for medians—and it has compressed every year since 2020. The direction of revision among researchers and forecasters has been consistently earlier; the direction among the most aggressive forecasters in 2025–26 was later. The two are converging on the early-to-mid 2030s.
 
+
+<figure markdown>
+![Figure 17.1 — Approximate central ranges for the 50% arrival date of AGI (remote-worker or stronger definition) across forecaster groups, with stated medians where they exist. Definitions differ across rows, which accounts for part of the spread.](../fig/agi-forecasts.svg)
+<figcaption>Figure 17.1 — Approximate central ranges for the 50% arrival date of AGI (remote-worker or stronger definition) across forecaster groups, with stated medians where they exist. Definitions differ across rows, which accounts for part of the spread.</figcaption>
+</figure>
+
 ## Takeoff: the more important question
 
 Whether AGI arrives in 2029 or 2035 matters less than what happens in the years after. "Takeoff" refers to the speed at which systems progress from roughly human-level to vastly superhuman, and the debate is between **fast takeoff** (months to a few years, driven by AI automating AI research—an "intelligence explosion") and **slow takeoff** (a decade or more, as capability diffuses gradually and is limited by compute, experiments, and institutions).
