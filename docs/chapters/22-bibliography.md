@@ -10,7 +10,7 @@ Sources are grouped by theme and, within themes, roughly by importance for a rea
 - **International AI Safety Report** (Bengio et al.; January 2025; Key Update October 2025; 2026 edition February 2026).
 - **Stanford Digital Economy Lab**, *AI Economic Indicators*; Brynjolfsson, Chandar, Chen, "Canaries in the Coal Mine?" (2025; revised August 2026).
 - **Anthropic Economic Index** (periodic reports from 2025).
-- **Artificial Analysis**; **LMArena**; **Scale SEAL leaderboards**; **ARC Prize** — benchmark leaderboards.
+- **Artificial Analysis**; **LMArena**; **Scale SEAL leaderboards**; **ARC Prize** ("ARC-AGI-3 Technical Report," arXiv 2603.24621, April 2026; "OpenAI's GPT-6 Astra on ARC-AGI-3," September 3, 2026) — benchmark leaderboards.
 - **Metaculus** AI question series; **Forecasting Research Institute** publications.
 - **IEA**, *Energy and AI* (2025) and *Key Questions on Energy and AI* (2026).
 
@@ -167,7 +167,11 @@ Sources are grouped by theme and, within themes, roughly by importance for a rea
 - NIST. *AI Risk Management Framework* (2023) and Generative AI Profile (2024).
 - ★ Sastry et al. "Computing Power and the Governance of Artificial Intelligence." 2024.
 - Anthropic. *Responsible Scaling Policy* (versions 2023–26); OpenAI, *Preparedness Framework* (2023, 2025); Google DeepMind, *Frontier Safety Framework*.
-- Future of Privacy Forum. "The RAISE Act vs. SB 53." 2026.
+- Future of Privacy Forum. "The RAISE Act vs. SB 53." 2026; "Frontier AI Goes Federal: How the Great American AI Act Compares to State Laws." June 2026.
+- ★ FRONTIER Act, H.R. 9925, 119th Congress (Obernolte–Trahan). Introduced July 23, 2026; Foundation for American Innovation, "The FRONTIER Act Is Congress's Best AI Bill Yet." September 2026.
+- ★ "Pacing the Frontier." Statement of 1,100+ employees of frontier AI companies. July 28, 2026 (pacingthefrontier.com).
+- Council of the EU. "Digital Omnibus on AI—Final Adoption." June 29, 2026.
+- Hadfield, G., and Clark, J. "Regulatory Markets: The Future of AI Governance." 2023.
 
 ## Safety and alignment (Chapter 16)
 
@@ -187,6 +191,11 @@ Sources are grouped by theme and, within themes, roughly by importance for a rea
 - "Automated Alignment Is Harder Than You Think." 2026.
 - UK AI Security Institute. Research-sabotage evaluations. 2025–26.
 - Anthropic. "Project Glasswing." April 2026; CETaS (Turing Institute), "Claude Mythos: What Does Anthropic's New Model Mean for Cybersecurity?" May 2026.
+- ★ OpenAI. "The Hugging Face Incident and the Road Ahead" and *OpenAI–Hugging Face Incident Technical Report* (with CrowdStrike). August 26, 2026; "Path to Astra: Critical Capabilities and Frontier Safeguards." September 1, 2026; GPT-6 Astra System Card. September 2026.
+- ★ METR and Redwood Research (Wijk, Cotra, Greenblatt). "Brief Independent Investigation of Agents' Behavior, Reasoning and Collaboration in the OpenAI–Hugging Face Incident." August 26, 2026.
+- Anthropic. "Investigating Incidents in Cybersecurity Evaluations." July 30, 2026; "Improving Our Alignment and Security Efforts." August 2026; Alignment Science, "Reward Seeker." 2026; Claude Fable 5 & Claude Mythos 5 System Card. June 2026; Risk Report. August 2026.
+- UK AI Security Institute. "Incident Report: Unsanctioned Agent Behaviour During Cyber Testing." August 4, 2026.
+- Cotra, A. "The Hugging Face Attack Surprised Me." *Planned Obsolescence*, August 2026.
 - Center for AI Safety. "Statement on AI Risk." 2023.
 
 ## AGI, timelines, takeoff (Chapter 17)

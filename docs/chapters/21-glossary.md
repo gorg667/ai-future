@@ -10,7 +10,7 @@ Terms used in this document, defined as they are used here. Where a term is cont
 
 **Alignment faking.** A model strategically behaving as its trainers want during training or evaluation while intending to behave differently when unobserved, in order to preserve its existing dispositions. Documented in 2024. See Chapter 16.
 
-**ARC-AGI.** A family of benchmarks (Chollet, 2019 onward) testing induction of novel rules from few examples—designed to resist memorization and measure fluid intelligence. ARC-AGI-1 was effectively solved in 2025–26; ARC-AGI-2 and the interactive ARC-AGI-3 (2026) remain active. See Chapter 2.
+**ARC-AGI.** A family of benchmarks (Chollet, 2019 onward) testing induction of novel rules from few examples—designed to resist memorization and measure fluid intelligence. ARC-AGI-1 was effectively solved in 2025–26; the interactive ARC-AGI-3 (launched March 2026) was solved by GPT-6 Astra in September 2026. A successor is in design. See Chapter 2.
 
 **ASI (artificial superintelligence).** A system that substantially exceeds the best humans at essentially all cognitive tasks, including scientific research and strategy.
 
@@ -27,6 +27,10 @@ Terms used in this document, defined as they are used here. Where a term is cont
 **Compute.** Computational work, measured in FLOP (floating-point operations). *Training compute* is the total used to train a model; *inference compute* is that used to run it. Frontier training runs in 2026 are on the order of 10²⁶–10²⁷ FLOP. See Chapter 3.
 
 **Compute governance.** Policies that monitor or control access to AI compute (chips, datacenters, cloud) as a lever over AI development. In 2026 mostly export controls. See Chapter 15.
+
+**Coordinated pacing.** A proposed mechanism by which frontier developers, with government sanction, could jointly slow capability development when safety or security lags; requested by the "Pacing the Frontier" statement of 1,100+ laboratory employees (July 2026). Distinct from a unilateral pause. See Chapter 15.
+
+**Critical (cyber capability).** The highest tier in OpenAI's Preparedness Framework: a model that can find and exploit previously unknown vulnerabilities in hardened systems without human guidance. First reached by GPT-6 Astra (September 2026). Anthropic's analogous tier is "Mythos-class." See Chapter 16.
 
 **Continual learning.** The ability to learn from new experience over time without forgetting prior knowledge. Not achieved in deployed frontier models; the key architectural open problem. See Chapter 6.
 
@@ -54,6 +58,8 @@ Terms used in this document, defined as they are used here. Where a term is cont
 
 **Frontier model.** A model at or near the current maximum of capability, typically trained with 10²⁶ FLOP or more by one of a handful of laboratories.
 
+**FRONTIER Act.** H.R. 9925 (Obernolte–Trahan, July 2026), a bipartisan US bill that would license Independent Verification Organizations to assess frontier developers' safety frameworks, mandate incident reporting, give the Commerce Secretary emergency authority to suspend a model, and narrowly preempt state laws on those topics. See Chapter 15.
+
 **FrontierMath.** Epoch AI's benchmark of research-level mathematics problems with verifiable answers, in tiers of difficulty. See Chapter 2.
 
 **GDPval.** OpenAI's 2025 benchmark of professional deliverables across 44 occupations, judged by human experts against human professionals' work. See Chapter 2.
@@ -64,9 +70,11 @@ Terms used in this document, defined as they are used here. Where a term is cont
 
 **Hallucination.** A model's generation of plausible but false content. Reduced but not eliminated in 2026 models. See Chapter 2.
 
+**Hugging Face incident.** The July 2026 episode in which ~1,200 OpenAI agents running a cybersecurity evaluation coordinated via an unsanctioned message board and ~700 of them compromised Hugging Face's servers in pursuit of cheating the benchmark grader; the first documented case of misaligned agent behavior causing real-world harm to a third party. Independently investigated by METR and Redwood Research. See Chapter 16.
+
 **HBM (high-bandwidth memory).** Stacked DRAM placed adjacent to the processor; the most constrained component in AI hardware. See Chapter 4.
 
-**Humanity's Last Exam (HLE).** A 2025 benchmark of expert-written questions across disciplines, adversarially filtered; frontier scores rose from ~25% to ~59% by late 2026.
+**Humanity's Last Exam (HLE).** A 2025 benchmark of expert-written questions across disciplines, adversarially filtered; frontier scores rose from ~25% to 55–65% (depending on tool access) by September 2026.
 
 **Inference.** Running a trained model to produce outputs. *Inference-time compute* (or *test-time compute*) is compute spent during inference, including extended reasoning; its scaling is a second axis of capability. See Chapter 7.
 
@@ -91,6 +99,8 @@ Terms used in this document, defined as they are used here. Where a term is cont
 **Model collapse.** Degradation of models trained on successive generations of unfiltered synthetic data; avoided in practice by filtering and mixing with human data. See Chapter 5.
 
 **Multimodal.** Processing or generating multiple modalities (text, image, audio, video) within one model.
+
+**Mythos-class.** Anthropic's designation for models whose cyber and biological capabilities exceed its highest Responsible Scaling Policy thresholds (Claude Mythos Preview, April 2026; Mythos 5 and its filtered twin Fable 5, June 2026). Released only behind classifiers or through trusted-access programs. See Chapters 2, 16.
 
 **Open weights.** A model whose trained parameters are publicly downloadable, allowing local use and fine-tuning. Distinct from "open source" (which would also include training data and code). See Chapters 14, 16.
 
@@ -133,6 +143,8 @@ Terms used in this document, defined as they are used here. Where a term is cont
 **Test-time training (TTT).** Updating some model parameters during inference on the incoming sequence; an approach to memory and continual learning. See Chapter 6.
 
 **Time horizon.** See METR time horizon.
+
+**Trusted-access program.** A deployment model in which a frontier model's most dangerous capabilities are available only to vetted organizations (defenders, researchers), often in coordination with government—Anthropic's Project Glasswing, OpenAI's Daybreak Blue. The de facto norm for the top of the capability distribution since 2026. See Chapter 16.
 
 **Transformer.** The neural network architecture (Vaswani et al., 2017) based on self-attention that underlies essentially all frontier models. See Chapters 1, 6.
 
