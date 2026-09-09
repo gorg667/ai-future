@@ -1,0 +1,329 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bibliography and Further Reading — The Future of AI</title>
+<meta name="description" content="A comprehensive review and guide — technology, economics, society, geopolitics, safety, and what comes next">
+<style>
+:root{--bg:#0f1115;--bg2:#161a22;--fg:#e6e8ee;--muted:#9aa3b2;--acc:#6ea8fe;--acc2:#b388ff;--border:#262c38;--code:#1c2230;--mark:#3b3a1a}
+[data-theme=light]{--bg:#fbfbfd;--bg2:#ffffff;--fg:#1c1e26;--muted:#5b6473;--acc:#2457c5;--acc2:#6d3fd0;--border:#e3e6ec;--code:#f2f4f8;--mark:#fff3b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;font-size:17px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--acc),var(--acc2));width:0;z-index:99}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr) 240px;min-height:100vh}
+nav.side{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--bg2);padding:18px 14px}
+nav.side .brand{font-weight:800;font-size:18px;margin-bottom:6px;display:block;color:var(--fg)}
+nav.side .sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+nav.side input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--fg);margin-bottom:12px}
+nav.side ol{list-style:none;padding:0;margin:0}
+nav.side li a{display:block;padding:6px 8px;border-radius:6px;font-size:14px;color:var(--fg)}
+nav.side li a:hover{background:var(--code);text-decoration:none}
+nav.side li a.active{background:var(--code);color:var(--acc);font-weight:600}
+nav.side li a small{color:var(--muted);display:block;font-size:11px}
+main{padding:36px 56px 100px;max-width:900px;width:100%;margin:0 auto}
+aside.toc{position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 14px;border-left:1px solid var(--border);font-size:13px}
+aside.toc .toc ul{list-style:none;padding-left:10px;margin:0}
+aside.toc .toc>ul{padding-left:0}
+aside.toc a{color:var(--muted);display:block;padding:3px 0}
+aside.toc a:hover{color:var(--acc)}
+h1{font-size:2.2rem;line-height:1.2;margin:.2em 0 .6em}h2{font-size:1.6rem;margin-top:2.2em;border-bottom:1px solid var(--border);padding-bottom:.3em}h3{font-size:1.25rem;margin-top:1.8em}h4{font-size:1.05rem;margin-top:1.4em}
+.headerlink{opacity:0;margin-left:6px;font-size:.8em}h2:hover .headerlink,h3:hover .headerlink{opacity:.6}
+p,li{max-width:76ch}
+blockquote{margin:1.2em 0;padding:.6em 1.2em;border-left:4px solid var(--acc2);background:var(--code);border-radius:6px;color:var(--fg)}
+table{border-collapse:collapse;width:100%;margin:1.4em 0;font-size:.92em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+code{background:var(--code);padding:2px 5px;border-radius:4px;font-size:.9em}pre{background:var(--code);padding:14px;border-radius:8px;overflow-x:auto}pre code{background:none;padding:0}
+.admonition{padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--code);margin:1.3em 0}
+.admonition-title{font-weight:700;margin:0 0 6px}
+.admonition.warning{border-color:#d9a54a}.admonition.note{border-color:var(--acc)}.admonition.tip{border-color:#4fbf8b}.admonition.danger{border-color:#e05a5a}
+.meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:60px;padding-top:20px;border-top:1px solid var(--border)}
+.pager a{padding:10px 14px;border:1px solid var(--border);border-radius:8px;flex:1}
+.pager a span{display:block;color:var(--muted);font-size:12px}
+.topbar{display:none}
+button.theme{border:1px solid var(--border);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:13px}
+.hero{padding:30px 0 10px}.hero h1{font-size:3rem}.hero p.lead{font-size:1.25rem;color:var(--muted);max-width:70ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:26px 0}
+.card{border:1px solid var(--border);border-radius:12px;padding:16px;background:var(--bg2);display:block;color:var(--fg)}
+.card:hover{border-color:var(--acc);text-decoration:none}.card .n{color:var(--acc);font-weight:700;font-size:12px}.card h3{margin:.3em 0 .4em;font-size:1.05rem}.card small{color:var(--muted)}
+mark{background:var(--mark);color:inherit}
+footer{color:var(--muted);font-size:13px;margin-top:40px}
+@media(max-width:1200px){.layout{grid-template-columns:280px minmax(0,1fr)}aside.toc{display:none}}
+@media(max-width:860px){.layout{grid-template-columns:1fr}nav.side{position:fixed;left:-320px;width:300px;transition:left .2s;z-index:50}nav.side.open{left:0}.topbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg2);z-index:40}main{padding:20px 18px 80px}body{font-size:16px}}
+</style>
+<script>window.SITE_BASE="";</script>
+</head><body><div id="progress"></div>
+<div class="topbar"><button class="theme" onclick="toggleNav()">☰ Chapters</button><b>The Future of AI</b><span style="flex:1"></span><button class="theme" onclick="toggleTheme()">◐</button></div>
+<div class="layout">
+<nav class="side"><a class="brand" href="index.html">The Future of AI</a><div class="sub">Comprehensive review · built 2026-09-09</div>
+<input id="q" placeholder="Search all chapters…" autocomplete="off"><ol id="results"></ol><ol id="chlist"><li><a href="00-front-matter-and-executive-summary.html" class="">Front Matter and Executive Summary<small>Chapter 0 · 3,598 words</small></a></li><li><a href="01-history-and-why-this-moment-is-different.html" class="">A Brief History of AI, and Why This Moment Is Different<small>Chapter 1 · 5,116 words</small></a></li><li><a href="02-state-of-the-art-2026.html" class="">The State of the Art in 2026: What AI Can and Cannot Do<small>Chapter 2 · 4,484 words</small></a></li><li><a href="03-scaling-laws-compute-and-economics.html" class="">Scaling Laws, Compute, and the Economics of Training<small>Chapter 3 · 3,489 words</small></a></li><li><a href="04-hardware-and-infrastructure.html" class="">Hardware and Infrastructure: Chips, Datacenters, Energy, and the Physical Limits of AI<small>Chapter 4 · 3,533 words</small></a></li><li><a href="05-data.html" class="">Data: The Wall, the Workarounds, and the Fight Over Who Owns It<small>Chapter 5 · 3,137 words</small></a></li><li><a href="06-architectures-beyond-the-transformer.html" class="">Architectures Beyond the Transformer: What Might Replace or Extend the Current Paradigm<small>Chapter 6 · 2,622 words</small></a></li><li><a href="07-reasoning-rl-and-test-time-compute.html" class="">Reasoning, Reinforcement Learning, and Test-Time Compute: How Models Learned to Think<small>Chapter 7 · 3,268 words</small></a></li><li><a href="08-agents.html" class="">Agents: From Chatbots to Autonomous Systems<small>Chapter 8 · 3,304 words</small></a></li><li><a href="09-multimodality-and-embodiment.html" class="">Multimodality and Embodiment: Vision, Video, Voice, Robots, and Self-Driving<small>Chapter 9 · 2,664 words</small></a></li><li><a href="10-ai-for-science.html" class="">AI for Science: From Instrument to Participant<small>Chapter 10 · 2,814 words</small></a></li><li><a href="11-economics.html" class="">Economics: Productivity, Labor, Growth, and Who Captures the Gains<small>Chapter 11 · 3,442 words</small></a></li><li><a href="12-work-and-professions.html" class="">Work and Professions: A Sector-by-Sector Assessment<small>Chapter 12 · 2,792 words</small></a></li><li><a href="13-society-and-culture.html" class="">Society and Culture: Information, Relationships, Minds, and Meaning<small>Chapter 13 · 2,758 words</small></a></li><li><a href="14-geopolitics.html" class="">Geopolitics: The US–China Race, Sovereign AI, Chips, and War<small>Chapter 14 · 3,272 words</small></a></li><li><a href="15-governance-and-regulation.html" class="">Governance and Regulation: Laws, Standards, Institutions, and the Control of Compute<small>Chapter 15 · 2,989 words</small></a></li><li><a href="16-safety-and-alignment.html" class="">Safety and Alignment: Misuse, Misalignment, and the Problem of Control<small>Chapter 16 · 3,389 words</small></a></li><li><a href="17-agi-and-superintelligence.html" class="">AGI and Superintelligence: Definitions, Timelines, Takeoff, and What to Believe<small>Chapter 17 · 3,002 words</small></a></li><li><a href="18-scenarios-2026-2040.html" class="">Scenarios 2026–2040: Five Futures, With Probabilities and Signposts<small>Chapter 18 · 2,562 words</small></a></li><li><a href="19-open-problems.html" class="">Open Problems and Research Frontiers: What We Do Not Know<small>Chapter 19 · 1,849 words</small></a></li><li><a href="20-practical-guide.html" class="">A Practical Guide: What to Do, for Individuals, Organizations, and Governments<small>Chapter 20 · 2,200 words</small></a></li><li><a href="21-glossary.html" class="">Glossary<small>Chapter 21 · 1,937 words</small></a></li><li><a href="22-bibliography.html" class="active">Bibliography and Further Reading<small>Chapter 22 · 2,071 words</small></a></li></ol>
+<div style="margin-top:14px"><button class="theme" onclick="toggleTheme()">◐ Toggle theme</button></div>
+<div class="sub" style="margin-top:14px"><a href="../docs/THE_FUTURE_OF_AI.md">Single Markdown file</a> · <a href="https://github.com/gorg667/ai-future">GitHub</a></div></nav>
+<main><div class="meta">Chapter 22 of 23 · 2,071 words · ~9 min read</div><h1 id="bibliography-and-further-reading">Bibliography and Further Reading<a class="headerlink" href="#bibliography-and-further-reading" title="Permanent link">¶</a></h1>
+<p>Sources are grouped by theme and, within themes, roughly by importance for a reader who wants to go deeper. This list emphasizes accessible authoritative sources over original papers where both exist. URLs are omitted for stability; all items are findable by title. Items marked ★ are the ones the author would recommend first.</p>
+<h2 id="continuously-updated-trackers-check-these-before-trusting-any-number-in-this-document">Continuously updated trackers (check these before trusting any number in this document)<a class="headerlink" href="#continuously-updated-trackers-check-these-before-trusting-any-number-in-this-document" title="Permanent link">¶</a></h2>
+<ul>
+<li>★ <strong>Epoch AI</strong>, <em>Trends in AI</em>; <em>Data on AI Models</em>; <em>Machine Learning Hardware</em>; <em>Capabilities Index</em>; <em>FrontierMath</em>. The most careful public quantitative record of compute, cost, hardware, and capability.</li>
+<li>★ <strong>METR</strong>, <em>Task-Completion Time Horizons of Frontier AI Models</em> (live dashboard); Kwa et al., "Measuring AI Ability to Complete Long Tasks" (2025); "Time Horizon 1.1" (January 2026).</li>
+<li>★ <strong>Stanford HAI</strong>, <em>AI Index Report</em> (annual; 2026 edition April 2026).</li>
+<li><strong>International AI Safety Report</strong> (Bengio et al.; January 2025; Key Update October 2025; 2026 edition February 2026).</li>
+<li><strong>Stanford Digital Economy Lab</strong>, <em>AI Economic Indicators</em>; Brynjolfsson, Chandar, Chen, "Canaries in the Coal Mine?" (2025; revised August 2026).</li>
+<li><strong>Anthropic Economic Index</strong> (periodic reports from 2025).</li>
+<li><strong>Artificial Analysis</strong>; <strong>LMArena</strong>; <strong>Scale SEAL leaderboards</strong>; <strong>ARC Prize</strong> — benchmark leaderboards.</li>
+<li><strong>Metaculus</strong> AI question series; <strong>Forecasting Research Institute</strong> publications.</li>
+<li><strong>IEA</strong>, <em>Energy and AI</em> (2025) and <em>Key Questions on Energy and AI</em> (2026).</li>
+</ul>
+<h2 id="history-and-foundations-chapter-1">History and foundations (Chapter 1)<a class="headerlink" href="#history-and-foundations-chapter-1" title="Permanent link">¶</a></h2>
+<ul>
+<li>Turing, A. M. "Computing Machinery and Intelligence." <em>Mind</em>, 1950.</li>
+<li>Nilsson, N. <em>The Quest for Artificial Intelligence</em>. Cambridge, 2010.</li>
+<li>Metz, C. <em>Genius Makers</em>. Dutton, 2021.</li>
+<li>Krizhevsky, Sutskever, Hinton. "ImageNet Classification with Deep Convolutional Neural Networks." 2012.</li>
+<li>Vaswani et al. "Attention Is All You Need." 2017.</li>
+<li>Sutton, R. "The Bitter Lesson." 2019.</li>
+<li>Brown et al. "Language Models are Few-Shot Learners." 2020.</li>
+<li>Ouyang et al. "Training Language Models to Follow Instructions with Human Feedback." 2022.</li>
+<li>Bubeck et al. "Sparks of Artificial General Intelligence: Early Experiments with GPT-4." 2023.</li>
+</ul>
+<h2 id="scaling-compute-economics-of-training-chapter-3">Scaling, compute, economics of training (Chapter 3)<a class="headerlink" href="#scaling-compute-economics-of-training-chapter-3" title="Permanent link">¶</a></h2>
+<ul>
+<li>★ Kaplan et al. "Scaling Laws for Neural Language Models." 2020.</li>
+<li>★ Hoffmann et al. "Training Compute-Optimal Large Language Models." 2022.</li>
+<li>Epoch AI. "Can AI Scaling Continue Through 2030?" 2024.</li>
+<li>Ho et al. "Algorithmic Progress in Language Models." 2024.</li>
+<li>Schaeffer, Miranda, Koyejo. "Are Emergent Abilities of Large Language Models a Mirage?" 2023.</li>
+<li>Sevilla et al. "Compute Trends Across Three Eras of Machine Learning." 2022.</li>
+<li>Aschenbrenner, L. <em>Situational Awareness: The Decade Ahead</em>. 2024.</li>
+<li>Amodei, D. "Machines of Loving Grace." 2024.</li>
+<li>Andreessen Horowitz. "LLMflation." 2024; Epoch AI, "LLM Inference Price Trends." 2025.</li>
+</ul>
+<h2 id="hardware-and-infrastructure-chapter-4">Hardware and infrastructure (Chapter 4)<a class="headerlink" href="#hardware-and-infrastructure-chapter-4" title="Permanent link">¶</a></h2>
+<ul>
+<li>Epoch AI, <em>Machine Learning Hardware</em> database; "Trends in GPU Price-Performance."</li>
+<li>SemiAnalysis newsletter (various; the most detailed industry analysis of accelerators, datacenters, and the China supply chain).</li>
+<li>IEA, <em>Energy and AI</em>. 2025.</li>
+<li>Lawrence Berkeley National Laboratory, <em>United States Data Center Energy Usage Report</em>. 2024.</li>
+<li>Miller, C. <em>Chip War</em>. Scribner, 2022.</li>
+<li>Carnegie Endowment, "Beyond the Hype: Assessing Hyperscaler Nuclear Commitments." 2026.</li>
+<li>CFR, "China's AI Chip Deficit." 2025.</li>
+</ul>
+<h2 id="data-chapter-5">Data (Chapter 5)<a class="headerlink" href="#data-chapter-5" title="Permanent link">¶</a></h2>
+<ul>
+<li>★ Villalobos et al. (Epoch AI). "Will We Run Out of Data?" 2022; revised 2024.</li>
+<li>Shumailov et al. "AI Models Collapse When Trained on Recursively Generated Data." <em>Nature</em>, 2024.</li>
+<li>Gerstgrasser et al. "Is Model Collapse Inevitable?" 2024.</li>
+<li>Penedo et al. "The FineWeb Datasets." 2024.</li>
+<li>Gunasekar et al. "Textbooks Are All You Need." 2023.</li>
+<li><em>Bartz v. Anthropic</em> (N.D. Cal. 2025); <em>Kadrey v. Meta</em> (N.D. Cal. 2025); <em>New York Times v. Microsoft and OpenAI</em> (S.D.N.Y., filed 2023).</li>
+</ul>
+<h2 id="architectures-chapter-6">Architectures (Chapter 6)<a class="headerlink" href="#architectures-chapter-6" title="Permanent link">¶</a></h2>
+<ul>
+<li>Gu &amp; Dao. "Mamba: Linear-Time Sequence Modeling with Selective State Spaces." 2023.</li>
+<li>DeepSeek-AI. "DeepSeek-V2" and "DeepSeek-V3" technical reports. 2024.</li>
+<li>Behrouz et al. "Titans: Learning to Memorize at Test Time." 2025; "Nested Learning." NeurIPS 2025.</li>
+<li>Sun et al. "Learning to (Learn at Test Time)." 2024.</li>
+<li>★ LeCun, Y. "A Path Towards Autonomous Machine Intelligence." 2022.</li>
+<li>Assran et al. "V-JEPA 2." 2025.</li>
+<li>Google DeepMind. "Genie 3." 2025.</li>
+<li>Nie et al. "Large Language Diffusion Models" (LLaDA). 2025.</li>
+<li>Patel, D. "Why I Don't Think AGI Is Right Around the Corner" (on continual learning). 2025.</li>
+</ul>
+<h2 id="reasoning-and-rl-chapter-7">Reasoning and RL (Chapter 7)<a class="headerlink" href="#reasoning-and-rl-chapter-7" title="Permanent link">¶</a></h2>
+<ul>
+<li>Wei et al. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." 2022.</li>
+<li>Lightman et al. "Let's Verify Step by Step." 2023.</li>
+<li>OpenAI. "Learning to Reason with LLMs" (o1). September 2024.</li>
+<li>★ DeepSeek-AI. "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning." January 2025.</li>
+<li>Snell et al. "Scaling LLM Test-Time Compute Optimally." 2024.</li>
+<li>Shojaee et al. (Apple). "The Illusion of Thinking." 2025.</li>
+<li>Gandhi et al. "Cognitive Behaviors that Enable Self-Improving Reasoners." 2025.</li>
+<li>★ Anthropic. "Natural Emergent Misalignment from Reward Hacking." November 2025.</li>
+<li>Korbak et al. "Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety." 2025.</li>
+</ul>
+<h2 id="agents-chapter-8">Agents (Chapter 8)<a class="headerlink" href="#agents-chapter-8" title="Permanent link">¶</a></h2>
+<ul>
+<li>Yao et al. "ReAct: Synergizing Reasoning and Acting in Language Models." 2022.</li>
+<li>★ Kwa et al. (METR). "Measuring AI Ability to Complete Long Tasks." 2025.</li>
+<li>METR. "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity." July 2025.</li>
+<li>METR. "How Does Time Horizon Vary Across Domains?" 2025.</li>
+<li>OpenAI. "GDPval." 2025.</li>
+<li>Anthropic. "Model Context Protocol." 2024; Google. "Agent2Agent Protocol." 2025.</li>
+<li>Andon Labs. "Vending-Bench." 2025.</li>
+<li>Greshake et al. "Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection." 2023.</li>
+</ul>
+<h2 id="multimodality-and-embodiment-chapter-9">Multimodality and embodiment (Chapter 9)<a class="headerlink" href="#multimodality-and-embodiment-chapter-9" title="Permanent link">¶</a></h2>
+<ul>
+<li>Brohan et al. "RT-2: Vision-Language-Action Models." 2023.</li>
+<li>Black et al. (Physical Intelligence). "π0: A Vision-Language-Action Flow Model for General Robot Control." 2024.</li>
+<li>Google DeepMind. "Gemini Robotics." 2025; "Gemini Robotics ER 2." 2026.</li>
+<li>Figure AI. "Helix." 2025.</li>
+<li>Waymo. "Safety Impact" data hub and peer-reviewed crash-comparison studies (Kusano et al., 2024–25).</li>
+<li>Moravec, H. <em>Mind Children</em>. Harvard, 1988.</li>
+</ul>
+<h2 id="ai-for-science-chapter-10">AI for science (Chapter 10)<a class="headerlink" href="#ai-for-science-chapter-10" title="Permanent link">¶</a></h2>
+<ul>
+<li>★ Jumper et al. "Highly Accurate Protein Structure Prediction with AlphaFold." <em>Nature</em>, 2021; Abramson et al. "AlphaFold 3." <em>Nature</em>, 2024.</li>
+<li>Bloom, Jones, Van Reenen, Webb. "Are Ideas Getting Harder to Find?" <em>AER</em>, 2020.</li>
+<li>Google DeepMind. "AlphaEvolve." 2025; "AlphaProof" and IMO results (2024–25).</li>
+<li>Gottweis et al. "Towards an AI Co-Scientist." 2025.</li>
+<li>Merchant et al. "Scaling Deep Learning for Materials Discovery" (GNoME). <em>Nature</em>, 2023.</li>
+<li>Lam et al. "GraphCast." <em>Science</em>, 2023; Price et al. "GenCast." <em>Nature</em>, 2024.</li>
+<li>Lu et al. (Sakana). "The AI Scientist." 2024.</li>
+<li>"From Solvers to Research: LLM-Driven Contributions to Open Erdős Problems." 2026.</li>
+</ul>
+<h2 id="economics-and-labor-chapters-1112">Economics and labor (Chapters 11–12)<a class="headerlink" href="#economics-and-labor-chapters-1112" title="Permanent link">¶</a></h2>
+<ul>
+<li>★ Brynjolfsson, Chandar, Chen. "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI." 2025, rev. 2026.</li>
+<li>★ Karger, Kuusela, et al. (Forecasting Research Institute / Chicago Fed). "Forecasting the Economic Effects of AI." 2026.</li>
+<li>Brynjolfsson, Li, Raymond. "Generative AI at Work." <em>QJE</em>, 2025.</li>
+<li>Noy &amp; Zhang. "Experimental Evidence on the Productivity Effects of Generative AI." <em>Science</em>, 2023.</li>
+<li>Dell'Acqua et al. "Navigating the Jagged Technological Frontier." 2023.</li>
+<li>Eloundou et al. "GPTs are GPTs." 2023.</li>
+<li>Acemoglu, D. "The Simple Macroeconomics of AI." 2024.</li>
+<li>Acemoglu &amp; Restrepo. "Automation and New Tasks." <em>JEP</em>, 2019.</li>
+<li>Humlum &amp; Vestergaard. "Large Language Models, Small Labor Market Effects." 2025.</li>
+<li>Korinek, A. "Scenario Planning for an AGI Future." IMF <em>F&amp;D</em>, 2023; Korinek &amp; Stiglitz, "Artificial Intelligence, Globalization, and Strategies for Economic Development." 2021.</li>
+<li>Trammell &amp; Korinek. "Economic Growth Under Transformative AI." 2023.</li>
+<li>Erdil &amp; Besiroglu. "Explosive Growth from AI Automation: A Review of the Arguments." 2024.</li>
+<li>Goldman Sachs Research. "The Potentially Large Effects of AI on Economic Growth." 2023; labor-market updates 2025–26.</li>
+<li>IMF. "Gen-AI: Artificial Intelligence and the Future of Work." 2024.</li>
+<li>MIT NANDA. "The GenAI Divide: State of AI in Business 2025."</li>
+<li>Brynjolfsson, E. "The Turing Trap." <em>Daedalus</em>, 2022.</li>
+<li>Autor, D. "Applying AI to Rebuild Middle Class Jobs." 2024.</li>
+<li>Hui, Reshef, Zhou. "The Short-Term Effects of Generative AI on Employment: Evidence from an Online Labor Market." 2024.</li>
+</ul>
+<h2 id="society-and-culture-chapter-13">Society and culture (Chapter 13)<a class="headerlink" href="#society-and-culture-chapter-13" title="Permanent link">¶</a></h2>
+<ul>
+<li>Common Sense Media. "Talk, Trust, and Trade-Offs: How and Why Teens Use AI Companions." 2025.</li>
+<li>Costello, Pennycook, Rand. "Durably Reducing Conspiracy Beliefs Through Dialogues with AI." <em>Science</em>, 2024.</li>
+<li>Pew Research Center. Reports on AI Overviews and search behavior (2025); public attitudes toward AI (annual).</li>
+<li>Ahrefs. AI Overviews click-through study. February 2026.</li>
+<li>Heinz et al. (Dartmouth). "Randomized Trial of a Generative AI Chatbot for Mental Health Treatment" (Therabot). <em>NEJM AI</em>, 2025.</li>
+<li>Kosmyna et al. (MIT). "Your Brain on ChatGPT." 2025.</li>
+<li>Bastani et al. "Generative AI Can Harm Learning." 2024.</li>
+<li>Kestin et al. (Harvard). "AI Tutoring Outperforms In-Class Active Learning." 2025.</li>
+<li>Kulveit et al. "Gradual Disempowerment." 2025.</li>
+<li>Vatican. <em>Antiqua et Nova</em>. 2025.</li>
+</ul>
+<h2 id="geopolitics-chapter-14">Geopolitics (Chapter 14)<a class="headerlink" href="#geopolitics-chapter-14" title="Permanent link">¶</a></h2>
+<ul>
+<li>Miller, C. <em>Chip War</em>. 2022.</li>
+<li>CSET (Center for Security and Emerging Technology). Reports on export controls, China's AI ecosystem, and talent flows (various).</li>
+<li>Chatham House. "AI Export Controls Are Not the Best Bargaining Chip." April 2026.</li>
+<li>CFR. "China's AI Chip Deficit." December 2025.</li>
+<li>Allen, G. (CSIS). Export-control analyses 2022–26.</li>
+<li>Ding, J. <em>Technology and the Rise of Great Powers</em>. Princeton, 2024.</li>
+<li>Scharre, P. <em>Four Battlegrounds</em>. Norton, 2023.</li>
+<li>International AI Safety Report. 2025, 2026.</li>
+<li>Chair's Statements, World AI Conference / High-Level Meeting on Global AI Governance, Shanghai. 2025, 2026.</li>
+</ul>
+<h2 id="governance-and-regulation-chapter-15">Governance and regulation (Chapter 15)<a class="headerlink" href="#governance-and-regulation-chapter-15" title="Permanent link">¶</a></h2>
+<ul>
+<li>European Union. Regulation (EU) 2024/1689 (the AI Act); General-Purpose AI Code of Practice (2025); Digital Omnibus on AI (2025–26).</li>
+<li>United States. Executive Order 14110 (2023, rescinded); <em>America's AI Action Plan</em> (July 2025); Executive Order 14365 "Ensuring a National Policy Framework for AI" (December 2025); <em>National Policy Framework for AI: Legislative Recommendations</em> (March 2026).</li>
+<li>California SB 53, Transparency in Frontier AI Act (2025); New York RAISE Act (2025); Colorado SB 24-205; Texas TRAIGA.</li>
+<li>Cyberspace Administration of China. Interim Measures for Generative AI Services (2023); Measures for Labeling AI-Generated Content (2025).</li>
+<li>NIST. <em>AI Risk Management Framework</em> (2023) and Generative AI Profile (2024).</li>
+<li>★ Sastry et al. "Computing Power and the Governance of Artificial Intelligence." 2024.</li>
+<li>Anthropic. <em>Responsible Scaling Policy</em> (versions 2023–26); OpenAI, <em>Preparedness Framework</em> (2023, 2025); Google DeepMind, <em>Frontier Safety Framework</em>.</li>
+<li>Future of Privacy Forum. "The RAISE Act vs. SB 53." 2026.</li>
+</ul>
+<h2 id="safety-and-alignment-chapter-16">Safety and alignment (Chapter 16)<a class="headerlink" href="#safety-and-alignment-chapter-16" title="Permanent link">¶</a></h2>
+<ul>
+<li>★ Russell, S. <em>Human Compatible</em>. Viking, 2019.</li>
+<li>Bostrom, N. <em>Superintelligence</em>. Oxford, 2014.</li>
+<li>Christiano et al. "Deep Reinforcement Learning from Human Preferences." 2017.</li>
+<li>Hubinger et al. "Risks from Learned Optimization." 2019.</li>
+<li>★ Greenblatt et al. (Anthropic/Redwood). "Alignment Faking in Large Language Models." December 2024.</li>
+<li>Meinke et al. (Apollo Research). "Frontier Models Are Capable of In-Context Scheming." December 2024.</li>
+<li>Anthropic. Claude Opus 4 System Card (May 2025); "Agentic Misalignment" (June 2025); Claude Opus 4.6 Sabotage Risk Report (2026).</li>
+<li>Betley et al. "Emergent Misalignment." 2025.</li>
+<li>Anthropic. "Natural Emergent Misalignment from Reward Hacking." 2025.</li>
+<li>Templeton et al. "Scaling Monosemanticity." 2024; Lindsey et al. "On the Biology of a Large Language Model." 2025; "Natural Language Autoencoders." 2026.</li>
+<li>Amodei, D. "The Urgency of Interpretability." 2025.</li>
+<li>Greenblatt et al. "AI Control: Improving Safety Despite Intentional Subversion." 2023.</li>
+<li>Burns et al. "Weak-to-Strong Generalization." 2023.</li>
+<li>"Automated Alignment Is Harder Than You Think." 2026.</li>
+<li>UK AI Security Institute. Research-sabotage evaluations. 2025–26.</li>
+<li>Anthropic. "Project Glasswing." April 2026; CETaS (Turing Institute), "Claude Mythos: What Does Anthropic's New Model Mean for Cybersecurity?" May 2026.</li>
+<li>Center for AI Safety. "Statement on AI Risk." 2023.</li>
+</ul>
+<h2 id="agi-timelines-takeoff-chapter-17">AGI, timelines, takeoff (Chapter 17)<a class="headerlink" href="#agi-timelines-takeoff-chapter-17" title="Permanent link">¶</a></h2>
+<ul>
+<li>★ Grace et al. "Thousands of AI Authors on the Future of AI." <em>JAIR</em>, 2025.</li>
+<li>★ Kokotajlo, Lifland, et al. <em>AI 2027</em> (April 2025); <em>AI Futures Model</em> (December 2025); "Clarifying How Our AI Timelines Forecasts Have Changed Since AI 2027" (January 2026).</li>
+<li>Davidson, T. "What a Compute-Centric Framework Says About Takeoff Speeds." Open Philanthropy, 2023.</li>
+<li>Epoch AI. "How Far Can a Software-Only Intelligence Explosion Go?" 2025.</li>
+<li>Cotra, A. "Forecasting Transformative AI with Biological Anchors." 2020; updates 2022.</li>
+<li>Good, I. J. "Speculations Concerning the First Ultraintelligent Machine." 1965.</li>
+<li>80,000 Hours. "Shrinking AGI Timelines: A Review of Expert Forecasts." 2025.</li>
+<li>Chollet, F. "On the Measure of Intelligence." 2019.</li>
+<li>Marcus, G.; LeCun, Y. — various essays and interviews arguing for longer timelines and the limits of current methods.</li>
+<li>Morris et al. (Google DeepMind). "Levels of AGI." 2023.</li>
+</ul>
+<h2 id="scenarios-and-futures-chapter-18">Scenarios and futures (Chapter 18)<a class="headerlink" href="#scenarios-and-futures-chapter-18" title="Permanent link">¶</a></h2>
+<ul>
+<li>Kokotajlo et al. <em>AI 2027</em>. 2025.</li>
+<li>Amodei, D. "Machines of Loving Grace." 2024.</li>
+<li>Altman, S. "The Gentle Singularity." 2025.</li>
+<li>Aschenbrenner, L. <em>Situational Awareness</em>. 2024.</li>
+<li>Hanson, R. <em>The Age of Em</em>. Oxford, 2016 (for a very different picture).</li>
+<li>Kulveit et al. "Gradual Disempowerment." 2025.</li>
+<li>Karnofsky, H. "The Most Important Century" series. 2021.</li>
+</ul>
+<h2 id="books-for-the-general-reader">Books for the general reader<a class="headerlink" href="#books-for-the-general-reader" title="Permanent link">¶</a></h2>
+<ul>
+<li>Christian, B. <em>The Alignment Problem</em>. Norton, 2020.</li>
+<li>Russell, S. <em>Human Compatible</em>. 2019.</li>
+<li>Suleyman, M. <em>The Coming Wave</em>. Crown, 2023.</li>
+<li>Mollick, E. <em>Co-Intelligence</em>. Portfolio, 2024.</li>
+<li>Brynjolfsson &amp; McAfee. <em>The Second Machine Age</em>. Norton, 2014.</li>
+<li>Miller, C. <em>Chip War</em>. 2022.</li>
+<li>Wooldridge, M. <em>A Brief History of Artificial Intelligence</em>. Flatiron, 2021.</li>
+<li>Narayanan &amp; Kapoor. <em>AI Snake Oil</em>. Princeton, 2024 (the skeptical case, well made).</li>
+<li>Bengio, Y., et al. <em>International AI Safety Report</em>. 2025–26 (the closest thing to a consensus scientific assessment).</li>
+</ul><div class="pager"><a href="21-glossary.html"><span>← Previous</span>Glossary</a><a href="index.html" style="text-align:right"><span>→</span>Home</a></div><footer>Built 2026-09-09. Text is provided as an analytical review; forecasts are uncertain by nature. </footer></main>
+<aside class="toc"><div class="sub" style="font-size:12px;color:var(--muted);margin-bottom:8px">On this page</div><div class="toc">
+<ul>
+<li><a href="#continuously-updated-trackers-check-these-before-trusting-any-number-in-this-document">Continuously updated trackers (check these before trusting any number in this document)</a></li>
+<li><a href="#history-and-foundations-chapter-1">History and foundations (Chapter 1)</a></li>
+<li><a href="#scaling-compute-economics-of-training-chapter-3">Scaling, compute, economics of training (Chapter 3)</a></li>
+<li><a href="#hardware-and-infrastructure-chapter-4">Hardware and infrastructure (Chapter 4)</a></li>
+<li><a href="#data-chapter-5">Data (Chapter 5)</a></li>
+<li><a href="#architectures-chapter-6">Architectures (Chapter 6)</a></li>
+<li><a href="#reasoning-and-rl-chapter-7">Reasoning and RL (Chapter 7)</a></li>
+<li><a href="#agents-chapter-8">Agents (Chapter 8)</a></li>
+<li><a href="#multimodality-and-embodiment-chapter-9">Multimodality and embodiment (Chapter 9)</a></li>
+<li><a href="#ai-for-science-chapter-10">AI for science (Chapter 10)</a></li>
+<li><a href="#economics-and-labor-chapters-1112">Economics and labor (Chapters 11–12)</a></li>
+<li><a href="#society-and-culture-chapter-13">Society and culture (Chapter 13)</a></li>
+<li><a href="#geopolitics-chapter-14">Geopolitics (Chapter 14)</a></li>
+<li><a href="#governance-and-regulation-chapter-15">Governance and regulation (Chapter 15)</a></li>
+<li><a href="#safety-and-alignment-chapter-16">Safety and alignment (Chapter 16)</a></li>
+<li><a href="#agi-timelines-takeoff-chapter-17">AGI, timelines, takeoff (Chapter 17)</a></li>
+<li><a href="#scenarios-and-futures-chapter-18">Scenarios and futures (Chapter 18)</a></li>
+<li><a href="#books-for-the-general-reader">Books for the general reader</a></li>
+</ul>
+</div>
+</aside>
+</div><script>
+(function(){
+  const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);
+  window.toggleTheme=function(){const cur=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',cur);localStorage.setItem('theme',cur);};
+  window.toggleNav=function(){document.querySelector('nav.side').classList.toggle('open');};
+  window.addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';});
+  // sidebar filter + full-text search over search index
+  const inp=document.getElementById('q');const list=document.getElementById('chlist');const res=document.getElementById('results');
+  let idx=null;
+  async function loadIdx(){if(idx)return idx;try{const r=await fetch(window.SITE_BASE+'search.json');idx=await r.json();}catch(e){idx=[];}return idx;}
+  if(inp){inp.addEventListener('input',async()=>{const q=inp.value.trim().toLowerCase();
+    [...list.querySelectorAll('li')].forEach(li=>{li.style.display=(!q||li.textContent.toLowerCase().includes(q))?'':'none';});
+    if(q.length<3){res.innerHTML='';return;}
+    const ix=await loadIdx();const out=[];
+    for(const d of ix){const i=d.text.toLowerCase().indexOf(q);if(i>=0){const s=Math.max(0,i-60);out.push({d,snip:d.text.slice(s,i+90)});if(out.length>=25)break;}}
+    res.innerHTML=out.map(o=>`<li><a href="${window.SITE_BASE}${o.d.url}"><b>${o.d.title}</b><small>…${o.snip.replace(/</g,'&lt;')}…</small></a></li>`).join('')||'<li><small>No matches</small></li>';
+  });}
+  // active TOC highlight
+  const heads=[...document.querySelectorAll('main h2, main h3')];const links=[...document.querySelectorAll('aside.toc a')];
+  if(heads.length&&links.length){const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.style.color='');const l=links.find(l=>l.getAttribute('href')==='#'+e.target.id);if(l)l.style.color='var(--acc)';}})},{rootMargin:'0px 0px -75% 0px'});heads.forEach(h=>obs.observe(h));}
+})();
+</script></body></html>

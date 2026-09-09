@@ -54,7 +54,7 @@
 19 [x] Open problems & research frontiers (what we don't know)
 20 [x] Practical guide: for individuals, students, workers, founders, executives, policymakers, researchers
 21 [x] Glossary
-22 [ ] Bibliography / further reading
+22 [x] Bibliography / further reading
 23 [ ] Appendix: forecasting table, key numbers, timeline of milestones
 
 ## Workflow per chapter
@@ -85,3 +85,4 @@
 - Ch19 done. Next: Ch20 practical guide.
 - Ch20 done. Next: Ch21 glossary, 22 bibliography, 23 appendix.
 - Ch21 done. Next: 22 bibliography, 23 appendix.
+- Ch22 done. Next: 23 appendix (forecast table, key numbers, timeline), then final QA pass + README.
