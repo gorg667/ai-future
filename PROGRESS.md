@@ -45,7 +45,7 @@
 10 [x] AI for science: AlphaFold-class breakthroughs, math, materials, drug discovery, AI scientists
 11 [x] Economics: productivity, labor, wages, task automation, firm structure, GDP scenarios, inequality
 12 [x] Work & professions: sector-by-sector (software, medicine, law, education, creative, finance, manufacturing)
-13 [ ] Society & culture: information ecosystem, relationships/companions, education, mental health, creativity, attention
+13 [x] Society & culture: information ecosystem, relationships/companions, education, mental health, creativity, attention
 14 [ ] Geopolitics: US–China, chips/export controls, sovereign AI, Europe, Gulf, Global South, military AI
 15 [ ] Governance & regulation: EU AI Act, US executive orders/state laws, China, international bodies, standards, compute governance
 16 [ ] Safety & alignment: technical alignment agenda, interpretability, evals, misuse (bio/cyber), loss of control, open weights debate
@@ -76,3 +76,4 @@
 - Ch10 done. Next: Ch11 economics.
 - Ch11 done. Next: Ch12 work & professions sector by sector.
 - Ch12 done (rewritten after 2nd interruption). Next: Ch13 society & culture.
+- Ch13 done. Next: Ch14 geopolitics.

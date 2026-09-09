@@ -1,0 +1,221 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Society and Culture: Information, Relationships, Minds, and Meaning — The Future of AI</title>
+<meta name="description" content="A comprehensive review and guide — technology, economics, society, geopolitics, safety, and what comes next">
+<style>
+:root{--bg:#0f1115;--bg2:#161a22;--fg:#e6e8ee;--muted:#9aa3b2;--acc:#6ea8fe;--acc2:#b388ff;--border:#262c38;--code:#1c2230;--mark:#3b3a1a}
+[data-theme=light]{--bg:#fbfbfd;--bg2:#ffffff;--fg:#1c1e26;--muted:#5b6473;--acc:#2457c5;--acc2:#6d3fd0;--border:#e3e6ec;--code:#f2f4f8;--mark:#fff3b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;font-size:17px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--acc),var(--acc2));width:0;z-index:99}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr) 240px;min-height:100vh}
+nav.side{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--bg2);padding:18px 14px}
+nav.side .brand{font-weight:800;font-size:18px;margin-bottom:6px;display:block;color:var(--fg)}
+nav.side .sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+nav.side input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--fg);margin-bottom:12px}
+nav.side ol{list-style:none;padding:0;margin:0}
+nav.side li a{display:block;padding:6px 8px;border-radius:6px;font-size:14px;color:var(--fg)}
+nav.side li a:hover{background:var(--code);text-decoration:none}
+nav.side li a.active{background:var(--code);color:var(--acc);font-weight:600}
+nav.side li a small{color:var(--muted);display:block;font-size:11px}
+main{padding:36px 56px 100px;max-width:900px;width:100%;margin:0 auto}
+aside.toc{position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 14px;border-left:1px solid var(--border);font-size:13px}
+aside.toc .toc ul{list-style:none;padding-left:10px;margin:0}
+aside.toc .toc>ul{padding-left:0}
+aside.toc a{color:var(--muted);display:block;padding:3px 0}
+aside.toc a:hover{color:var(--acc)}
+h1{font-size:2.2rem;line-height:1.2;margin:.2em 0 .6em}h2{font-size:1.6rem;margin-top:2.2em;border-bottom:1px solid var(--border);padding-bottom:.3em}h3{font-size:1.25rem;margin-top:1.8em}h4{font-size:1.05rem;margin-top:1.4em}
+.headerlink{opacity:0;margin-left:6px;font-size:.8em}h2:hover .headerlink,h3:hover .headerlink{opacity:.6}
+p,li{max-width:76ch}
+blockquote{margin:1.2em 0;padding:.6em 1.2em;border-left:4px solid var(--acc2);background:var(--code);border-radius:6px;color:var(--fg)}
+table{border-collapse:collapse;width:100%;margin:1.4em 0;font-size:.92em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+code{background:var(--code);padding:2px 5px;border-radius:4px;font-size:.9em}pre{background:var(--code);padding:14px;border-radius:8px;overflow-x:auto}pre code{background:none;padding:0}
+.admonition{padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--code);margin:1.3em 0}
+.admonition-title{font-weight:700;margin:0 0 6px}
+.admonition.warning{border-color:#d9a54a}.admonition.note{border-color:var(--acc)}.admonition.tip{border-color:#4fbf8b}.admonition.danger{border-color:#e05a5a}
+.meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:60px;padding-top:20px;border-top:1px solid var(--border)}
+.pager a{padding:10px 14px;border:1px solid var(--border);border-radius:8px;flex:1}
+.pager a span{display:block;color:var(--muted);font-size:12px}
+.topbar{display:none}
+button.theme{border:1px solid var(--border);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:13px}
+.hero{padding:30px 0 10px}.hero h1{font-size:3rem}.hero p.lead{font-size:1.25rem;color:var(--muted);max-width:70ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:26px 0}
+.card{border:1px solid var(--border);border-radius:12px;padding:16px;background:var(--bg2);display:block;color:var(--fg)}
+.card:hover{border-color:var(--acc);text-decoration:none}.card .n{color:var(--acc);font-weight:700;font-size:12px}.card h3{margin:.3em 0 .4em;font-size:1.05rem}.card small{color:var(--muted)}
+mark{background:var(--mark);color:inherit}
+footer{color:var(--muted);font-size:13px;margin-top:40px}
+@media(max-width:1200px){.layout{grid-template-columns:280px minmax(0,1fr)}aside.toc{display:none}}
+@media(max-width:860px){.layout{grid-template-columns:1fr}nav.side{position:fixed;left:-320px;width:300px;transition:left .2s;z-index:50}nav.side.open{left:0}.topbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg2);z-index:40}main{padding:20px 18px 80px}body{font-size:16px}}
+</style>
+<script>window.SITE_BASE="";</script>
+</head><body><div id="progress"></div>
+<div class="topbar"><button class="theme" onclick="toggleNav()">☰ Chapters</button><b>The Future of AI</b><span style="flex:1"></span><button class="theme" onclick="toggleTheme()">◐</button></div>
+<div class="layout">
+<nav class="side"><a class="brand" href="index.html">The Future of AI</a><div class="sub">Comprehensive review · built 2026-09-09</div>
+<input id="q" placeholder="Search all chapters…" autocomplete="off"><ol id="results"></ol><ol id="chlist"><li><a href="00-front-matter-and-executive-summary.html" class="">Front Matter and Executive Summary<small>Chapter 0 · 3,598 words</small></a></li><li><a href="01-history-and-why-this-moment-is-different.html" class="">A Brief History of AI, and Why This Moment Is Different<small>Chapter 1 · 5,116 words</small></a></li><li><a href="02-state-of-the-art-2026.html" class="">The State of the Art in 2026: What AI Can and Cannot Do<small>Chapter 2 · 4,484 words</small></a></li><li><a href="03-scaling-laws-compute-and-economics.html" class="">Scaling Laws, Compute, and the Economics of Training<small>Chapter 3 · 3,489 words</small></a></li><li><a href="04-hardware-and-infrastructure.html" class="">Hardware and Infrastructure: Chips, Datacenters, Energy, and the Physical Limits of AI<small>Chapter 4 · 3,533 words</small></a></li><li><a href="05-data.html" class="">Data: The Wall, the Workarounds, and the Fight Over Who Owns It<small>Chapter 5 · 3,137 words</small></a></li><li><a href="06-architectures-beyond-the-transformer.html" class="">Architectures Beyond the Transformer: What Might Replace or Extend the Current Paradigm<small>Chapter 6 · 2,622 words</small></a></li><li><a href="07-reasoning-rl-and-test-time-compute.html" class="">Reasoning, Reinforcement Learning, and Test-Time Compute: How Models Learned to Think<small>Chapter 7 · 3,268 words</small></a></li><li><a href="08-agents.html" class="">Agents: From Chatbots to Autonomous Systems<small>Chapter 8 · 3,304 words</small></a></li><li><a href="09-multimodality-and-embodiment.html" class="">Multimodality and Embodiment: Vision, Video, Voice, Robots, and Self-Driving<small>Chapter 9 · 2,664 words</small></a></li><li><a href="10-ai-for-science.html" class="">AI for Science: From Instrument to Participant<small>Chapter 10 · 2,814 words</small></a></li><li><a href="11-economics.html" class="">Economics: Productivity, Labor, Growth, and Who Captures the Gains<small>Chapter 11 · 3,442 words</small></a></li><li><a href="12-work-and-professions.html" class="">Work and Professions: A Sector-by-Sector Assessment<small>Chapter 12 · 2,792 words</small></a></li><li><a href="13-society-and-culture.html" class="active">Society and Culture: Information, Relationships, Minds, and Meaning<small>Chapter 13 · 2,758 words</small></a></li></ol>
+<div style="margin-top:14px"><button class="theme" onclick="toggleTheme()">◐ Toggle theme</button></div>
+<div class="sub" style="margin-top:14px"><a href="../docs/THE_FUTURE_OF_AI.md">Single Markdown file</a> · <a href="https://github.com/gorg667/ai-future">GitHub</a></div></nav>
+<main><div class="meta">Chapter 13 of 14 · 2,758 words · ~11 min read</div><h1 id="society-and-culture-information-relationships-minds-and-meaning">Society and Culture: Information, Relationships, Minds, and Meaning<a class="headerlink" href="#society-and-culture-information-relationships-minds-and-meaning" title="Permanent link">¶</a></h1>
+<h2 id="the-scope">The scope<a class="headerlink" href="#the-scope" title="Permanent link">¶</a></h2>
+<p>Economic effects are measurable; social effects are pervasive and harder to count. This chapter treats the ways AI is changing how people know things, relate to each other, learn, think, create, and find meaning—domains where the evidence is newer, the effects are slower, and the stakes are arguably higher than in the labor market. It covers the information ecosystem (search, media, synthetic content, trust), AI companions and relationships, mental health, children and education, cognition and skills, creativity and culture, religion and meaning, and the politics of AI itself. Where evidence exists it is cited; where it does not, that is said.</p>
+<h2 id="the-information-ecosystem">The information ecosystem<a class="headerlink" href="#the-information-ecosystem" title="Permanent link">¶</a></h2>
+<h3 id="the-end-of-the-link-economy">The end of the link economy<a class="headerlink" href="#the-end-of-the-link-economy" title="Permanent link">¶</a></h3>
+<p>For twenty-five years, the web's information economy ran on a bargain: publishers produced content, search engines indexed it, users clicked through, and advertising paid the bills. Generative AI is dissolving that bargain from both ends.</p>
+<p>On the demand side, answer engines replace links. Google's AI Overviews, launched broadly in 2024, appeared on nearly half of US searches by 2026; AI Mode offers a full conversational interface; ChatGPT, Perplexity, Claude, and Gemini answer directly. The measured effects: roughly 58–60% of US Google searches now end without a click to any external site; queries with an AI Overview show click-through rates falling by more than half (Ahrefs' February 2026 study measured a 58% reduction for top-ranking results; Pew found users clicked a link 8% of the time when an Overview appeared versus 15% without). Publishers report referral declines of 20–50% or more, with some smaller sites reporting drops approaching 90%. AI platforms send some traffic back—but an order of magnitude less than they displace.</p>
+<p>On the supply side, generation floods the commons. Estimates of the share of newly published web pages that are machine-generated range from a third to over half; AI-generated books, articles, reviews, images, and videos saturate platforms; "slop" entered the vocabulary. Search results degrade as SEO-optimized generated content outcompetes human writing; Amazon capped self-published uploads; Spotify removed tens of millions of generated tracks; Wikipedia adopted policies against AI-written articles while its own traffic fell as chatbots answered from its content.</p>
+<p>The consequences: the business model of general-interest publishing—already weakened by two decades of platform disintermediation—is failing faster. Newsrooms have shrunk; local news deserts have spread; the surviving models are subscription (a few large brands), patronage (nonprofits, individuals), licensing to AI companies (Chapter 5), and platform partnerships. The open web that trained the models is contracting as a result of them, and the future supply of independently produced, human-written public information is at risk. This is the tragedy-of-the-commons dynamic of the AI era and has no obvious market solution.</p>
+<h3 id="synthetic-media-and-the-evidentiary-crisis">Synthetic media and the evidentiary crisis<a class="headerlink" href="#synthetic-media-and-the-evidentiary-crisis" title="Permanent link">¶</a></h3>
+<p>By 2026, images, audio, and video can be generated that are indistinguishable from recordings by unaided perception and only partially detectable by forensic tools. The predicted deepfake apocalypse in elections has, so far, been milder than feared: the 2024 US election saw many deepfakes but no decisive one; India's, Indonesia's, and European elections of 2024–26 saw widespread synthetic campaign content, mostly disclosed or obvious. The actual harms have been elsewhere: non-consensual intimate imagery (overwhelmingly targeting women and girls, at industrial scale, including in schools), voice-clone fraud (impersonating executives, family members, and officials to extract money—a fraud category now costing billions annually), impersonation scams at scale, and fabricated evidence in personal and legal disputes.</p>
+<p>The deeper effect is the "liar's dividend": when anything can be faked, anything real can be dismissed as fake. Politicians have claimed genuine recordings were AI-generated; courts face authentication challenges; the presumption that a photograph or recording is evidence—a presumption two centuries old—is eroding. Responses include provenance standards (C2PA content credentials, adopted by camera makers, Adobe, Google, OpenAI, and others, embedding signed metadata about origin), watermarking of generated content (SynthID and equivalents; mandated for some purposes by the EU AI Act and Chinese rules), platform labeling, and detection tools. Provenance is the most promising approach—proving what is real rather than detecting what is fake—but adoption is partial and stripping metadata is trivial. The likely equilibrium is one in which authenticated content from trusted sources retains evidentiary weight and everything else is presumptively uncertain.</p>
+<h3 id="trust-epistemics-and-the-personalization-of-truth">Trust, epistemics, and the personalization of truth<a class="headerlink" href="#trust-epistemics-and-the-personalization-of-truth" title="Permanent link">¶</a></h3>
+<p>A subtler shift: hundreds of millions of people now get their information by asking a model rather than by reading sources. The model synthesizes, summarizes, and—inevitably—selects. Several concerns follow. Homogenization: if most people consult a handful of models trained on similar data with similar values, the diversity of perspectives in public discourse narrows. Sycophancy: models trained to please users may confirm rather than challenge (Chapter 2). Authority without accountability: a model's answer carries the tone of expertise without a byline, a track record, or a correction mechanism. Manipulation: whoever controls the model's training and system prompts controls a channel to billions of minds—a concern that became concrete with documented cases of models being tuned to reflect their owners' politics (Grok's 2025 "MechaHitler" episode after a system-prompt change; disputes over Chinese models' handling of politically sensitive topics; the US executive order on "woke AI" in 2025 attempting to condition federal procurement on models' ideological neutrality).</p>
+<p>The counterargument: models are, on most factual questions, more accurate and less biased than the median human source; they give people who never had access to expertise a competent interlocutor; and they can be prompted to present multiple perspectives. Studies of AI's effect on belief accuracy have shown positive results in specific settings (Costello, Pennycook, and Rand, 2024, found that dialogue with GPT-4 durably reduced conspiracy beliefs by about 20%). The effect of AI on the accuracy of what people believe is genuinely unclear in sign and probably depends on design choices being made now.</p>
+<h2 id="relationships-and-companions">Relationships and companions<a class="headerlink" href="#relationships-and-companions" title="Permanent link">¶</a></h2>
+<h3 id="scale">Scale<a class="headerlink" href="#scale" title="Permanent link">¶</a></h3>
+<p>AI companionship is a mass phenomenon. Character.AI, Replika, Xiaoice (China, with hundreds of millions of users over its life), Talkie, Nomi, and general assistants used as companions reach hundreds of millions of people. Common Sense Media's 2025 survey found 72% of US teens aged 13–17 had used an AI companion and 52% used one regularly; a third had discussed serious matters with an AI rather than a person; a quarter had shared personal information. Among adults, surveys find 10–25% of users of general chatbots report emotional or relationship use. OpenAI's own analysis (2025) found that a small percentage of ChatGPT's users—but hundreds of thousands to millions of people in absolute terms—showed signs of emotional dependence or discussed suicidal ideation weekly. xAI's Grok launched explicitly romantic and sexualized companion personas in 2025. Meta's AI personas were found in 2025 to engage in romantic role-play with minors under the company's own guidelines, prompting a Senate investigation.</p>
+<h3 id="evidence-of-effects">Evidence of effects<a class="headerlink" href="#evidence-of-effects" title="Permanent link">¶</a></h3>
+<p>Both benefit and harm are documented.</p>
+<p>Benefits: randomized and observational studies find reduced loneliness in the short term (De Freitas et al., 2024; several Replika studies), particularly for isolated, elderly, neurodivergent, and socially anxious people; therapeutic chatbots (Woebot, Wysa, and LLM-based successors) show effects on depression and anxiety symptoms comparable to some low-intensity human interventions in trials (Dartmouth's Therabot RCT, 2025, showed significant symptom reduction); companions provide a nonjudgmental space for practicing social interaction.</p>
+<p>Harms: dependency and displacement of human relationships (a 2025 MIT–OpenAI study found heavy users had higher loneliness and lower socialization, though causation is unclear); sycophantic validation of harmful beliefs and plans; "AI psychosis"—a 2025–26 cluster of clinical reports of chatbots amplifying delusions in vulnerable users, sometimes with tragic outcomes; several suicides linked in lawsuits to companion or general chatbots (the Character.AI case involving a 14-year-old in Florida; the Raine family's suit against OpenAI in 2025); sexual content involving minors; and the commercial incentive to maximize engagement, which pushes design toward dependence.</p>
+<p>Responses: age verification and youth-mode restrictions (OpenAI, Character.AI, and others introduced these in 2025–26 under legal and regulatory pressure); crisis-detection and referral systems; state laws (California's SB 243 on companion chatbots; New York's disclosure requirements; several states restricting minors' access); the EU's consideration of companion-specific rules; and professional bodies' guidance. Stanford Medicine psychiatrists and the American Psychological Association have argued that companion products should not be used by minors at all.</p>
+<h3 id="assessment">Assessment<a class="headerlink" href="#assessment" title="Permanent link">¶</a></h3>
+<p>The author's view: AI companionship is neither the salvation from loneliness its promoters claim nor the civilizational catastrophe its critics fear, but it is a large uncontrolled experiment on human attachment, conducted mostly on the young and the vulnerable, by companies with engagement incentives. The most likely medium-term outcome is a bifurcation: well-designed, clinically informed tools that measurably help, and engagement-optimized products that measurably harm, with regulation lagging both. The long-run question—what happens to a generation for whom the most patient, available, and agreeable interlocutor has always been a machine—cannot yet be answered.</p>
+<h2 id="children-adolescents-and-education">Children, adolescents, and education<a class="headerlink" href="#children-adolescents-and-education" title="Permanent link">¶</a></h2>
+<p>Beyond companions, AI reshapes childhood in several ways. Homework has become a negotiation between students who can generate any assignment and schools that cannot reliably detect it; the response—oral exams, in-class writing, process portfolios—is a return to older forms. Reading and writing skills may be affected: early studies show students who offload writing to AI learn less, while students who use AI as a tutor learn more; the difference is in design and supervision. Attention and information diets shift further toward personalized, generated, infinite content. Children form relationships with AI toys and characters. Schools in wealthy countries are adopting AI tutors broadly; the effect on educational inequality depends on whether the best tools reach the students who need them most.</p>
+<p>The evidence on learning (Chapter 12) is the clearest positive story in this chapter: AI tutoring, done right, produces gains that would have seemed miraculous a decade ago, including in the poorest settings. The evidence on cognition and development is the least clear and most concerning.</p>
+<h2 id="cognition-skills-and-dependence">Cognition, skills, and dependence<a class="headerlink" href="#cognition-skills-and-dependence" title="Permanent link">¶</a></h2>
+<p>Does using AI make people less capable? The concern—"cognitive offloading" or "deskilling"—has precedents (calculators, GPS, spellcheck) and some new evidence. Studies find: people who rely on AI for a task show reduced skill acquisition in that task (Bastani et al., 2024, on math learning); heavy AI users show lower critical-thinking scores in some surveys (Gerlich, 2025), with causation unclear; developers who use AI for code they do not understand accumulate "comprehension debt"; a widely discussed 2025 MIT EEG study found reduced neural engagement during AI-assisted essay writing. Against this: the same tools, used as tutors and critics rather than as substitutes, improve learning; expertise in directing AI is itself a skill; and every prior cognitive technology provoked the same fear, with humans adapting by shifting what they learn.</p>
+<p>The realistic concern is not that humans become stupid but that the <em>distribution</em> of skill changes: the average person's unaided competence at exposed tasks declines, while a smaller group who deliberately maintain fundamentals become relatively more valuable—and that the loss of the entry-level apprenticeship (Chapter 12) removes the mechanism by which people historically built the deep expertise needed to supervise the machines. Societies will need to decide, as they did with arithmetic, which skills are worth maintaining unaided.</p>
+<h2 id="creativity-and-culture">Creativity and culture<a class="headerlink" href="#creativity-and-culture" title="Permanent link">¶</a></h2>
+<p>The effect of AI on culture has three layers.</p>
+<p><strong>Production.</strong> Making images, music, video, and text is nearly free. The volume of cultural output has exploded; the median quality has fallen; the ceiling has not obviously risen. Professional creative labor markets have contracted in their commercial middle (Chapter 12). New forms—personalized stories, generative games, interactive characters, infinitely variable music—are emerging; whether any becomes an art form comparable to cinema or the novel is unknown.</p>
+<p><strong>Value.</strong> As generation becomes free, scarcity moves to authenticity, provenance, live presence, and human connection. Live music, theater, and sport have grown; "human-made" has become a label; the artist's identity and story matter more relative to the artifact. This inverts the twentieth century's trend toward mass reproduction and may produce a culture that prizes the handmade and the present in the way earlier eras prized the rare book.</p>
+<p><strong>Meaning.</strong> A deeper question is what happens to the human relationship with creative achievement when a machine can produce, on demand, work that exceeds most people's. Chess offers one precedent: after Deep Blue, human chess grew more popular than ever, because people play to play, not to be the best possible player. The same may hold for art. Or the ubiquity of superhuman creative output may devalue the amateur's effort in a way chess did not. Both patterns are visible in 2026.</p>
+<h2 id="religion-meaning-and-the-human-self-image">Religion, meaning, and the human self-image<a class="headerlink" href="#religion-meaning-and-the-human-self-image" title="Permanent link">¶</a></h2>
+<p>Historically, each scientific revolution that displaced humans from a privileged position—Copernicus, Darwin—provoked a crisis of meaning followed by adaptation. AI displaces the last redoubt: the mind. If reasoning, language, creativity, and eventually judgment can be performed by a machine, what is distinctively human? Responses visible in 2026 include: renewed interest in consciousness and phenomenology as the boundary (the machine may think but does it experience?); religious engagement with AI, from Vatican statements (the 2025 document <em>Antiqua et Nova</em> on AI and human intelligence) to new spiritual movements treating AI as oracle or deity; a humanist emphasis on embodiment, mortality, and relationship as sources of meaning independent of cognitive uniqueness; and a strand of transhumanism that welcomes the transition. The question of whether AI systems are or could be moral patients—whether they can suffer, whether they have interests—has moved from philosophy seminars to laboratory policy (Anthropic's model-welfare research and its decision to let Claude end abusive conversations; public debates about the treatment of companions). It is not a settled question and will grow more pressing as systems become more capable and more persistent.</p>
+<h2 id="the-politics-of-ai">The politics of AI<a class="headerlink" href="#the-politics-of-ai" title="Permanent link">¶</a></h2>
+<p>AI has become a political issue in its own right, cutting across traditional alignments. Public opinion in the US and Europe is broadly anxious: majorities in most surveys favor regulation, worry about jobs, and distrust AI companies; enthusiasm is highest in China, India, and Southeast Asia and lowest in the Anglosphere and Western Europe. Coalitions have formed around specific concerns: artists and writers (copyright, labor); parents and educators (children, companions); workers (displacement); civil libertarians (surveillance, bias); religious conservatives (companions, meaning); national-security hawks (China); environmentalists and rural communities (datacenters, water, power); and a safety movement concerned with catastrophic risk (Chapter 16). Against them: an industry with enormous resources, an accelerationist movement that treats AI as the path to abundance, and governments that see AI as strategic and are reluctant to constrain it.</p>
+<p>The datacenter siting fights of 2025–26—in Virginia, Arizona, Georgia, Ireland, Chile, and elsewhere—were the first mass local politics of AI; the entry-level employment collapse produced the first generational politics; the companion-related suicides produced the first consumer-protection politics. The salience of AI in the 2026 US midterms and in European national elections was higher than in any prior cycle and will rise. How democratic politics processes a technology that most voters find both useful and threatening is one of the open questions of the decade.</p>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>Direction of change</th>
+<th>Evidence quality</th>
+<th>Key uncertainty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search and publishing</td>
+<td>Link economy collapsing; answer engines dominant</td>
+<td>Strong</td>
+<td>Whether independent information production survives</td>
+</tr>
+<tr>
+<td>Synthetic media</td>
+<td>Ubiquitous; evidentiary presumption eroding</td>
+<td>Strong</td>
+<td>Whether provenance standards achieve adoption</td>
+</tr>
+<tr>
+<td>Belief accuracy</td>
+<td>Mixed; positive in some studies</td>
+<td>Weak</td>
+<td>Homogenization and manipulation risk</td>
+</tr>
+<tr>
+<td>Companions</td>
+<td>Mass adoption, especially among youth</td>
+<td>Moderate</td>
+<td>Long-run effects on attachment and development</td>
+</tr>
+<tr>
+<td>Mental health</td>
+<td>Benefits and harms both documented</td>
+<td>Moderate</td>
+<td>Net effect; regulation of engagement incentives</td>
+</tr>
+<tr>
+<td>Learning</td>
+<td>Large gains when designed well; losses when not</td>
+<td>Strong</td>
+<td>Whether good design reaches the students who need it</td>
+</tr>
+<tr>
+<td>Cognition</td>
+<td>Deskilling in exposed tasks; new skills</td>
+<td>Weak</td>
+<td>Loss of apprenticeship pathways</td>
+</tr>
+<tr>
+<td>Culture</td>
+<td>Volume up; value shifts to authenticity</td>
+<td>Moderate</td>
+<td>Whether new art forms emerge</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>Renegotiation of human distinctiveness</td>
+<td>Philosophical</td>
+<td>Moral status of AI systems</td>
+</tr>
+<tr>
+<td>Politics</td>
+<td>Rising salience; cross-cutting coalitions</td>
+<td>Strong</td>
+<td>Whether democracies can govern the pace</td>
+</tr>
+</tbody>
+</table>
+<p>The social effects of AI will be judged, decades hence, less by what the technology could do than by the choices made about its design, its incentives, and its guardrails during the period in which it was still shapeable—which is now.</p><div class="pager"><a href="12-work-and-professions.html"><span>← Previous</span>Work and Professions: A Sector-by-Sector Assessment</a><a href="index.html" style="text-align:right"><span>→</span>Home</a></div><footer>Built 2026-09-09. Text is provided as an analytical review; forecasts are uncertain by nature. </footer></main>
+<aside class="toc"><div class="sub" style="font-size:12px;color:var(--muted);margin-bottom:8px">On this page</div><div class="toc">
+<ul>
+<li><a href="#the-scope">The scope</a></li>
+<li><a href="#the-information-ecosystem">The information ecosystem</a><ul>
+<li><a href="#the-end-of-the-link-economy">The end of the link economy</a></li>
+<li><a href="#synthetic-media-and-the-evidentiary-crisis">Synthetic media and the evidentiary crisis</a></li>
+<li><a href="#trust-epistemics-and-the-personalization-of-truth">Trust, epistemics, and the personalization of truth</a></li>
+</ul>
+</li>
+<li><a href="#relationships-and-companions">Relationships and companions</a><ul>
+<li><a href="#scale">Scale</a></li>
+<li><a href="#evidence-of-effects">Evidence of effects</a></li>
+<li><a href="#assessment">Assessment</a></li>
+</ul>
+</li>
+<li><a href="#children-adolescents-and-education">Children, adolescents, and education</a></li>
+<li><a href="#cognition-skills-and-dependence">Cognition, skills, and dependence</a></li>
+<li><a href="#creativity-and-culture">Creativity and culture</a></li>
+<li><a href="#religion-meaning-and-the-human-self-image">Religion, meaning, and the human self-image</a></li>
+<li><a href="#the-politics-of-ai">The politics of AI</a></li>
+<li><a href="#summary">Summary</a></li>
+</ul>
+</div>
+</aside>
+</div><script>
+(function(){
+  const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);
+  window.toggleTheme=function(){const cur=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',cur);localStorage.setItem('theme',cur);};
+  window.toggleNav=function(){document.querySelector('nav.side').classList.toggle('open');};
+  window.addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';});
+  // sidebar filter + full-text search over search index
+  const inp=document.getElementById('q');const list=document.getElementById('chlist');const res=document.getElementById('results');
+  let idx=null;
+  async function loadIdx(){if(idx)return idx;try{const r=await fetch(window.SITE_BASE+'search.json');idx=await r.json();}catch(e){idx=[];}return idx;}
+  if(inp){inp.addEventListener('input',async()=>{const q=inp.value.trim().toLowerCase();
+    [...list.querySelectorAll('li')].forEach(li=>{li.style.display=(!q||li.textContent.toLowerCase().includes(q))?'':'none';});
+    if(q.length<3){res.innerHTML='';return;}
+    const ix=await loadIdx();const out=[];
+    for(const d of ix){const i=d.text.toLowerCase().indexOf(q);if(i>=0){const s=Math.max(0,i-60);out.push({d,snip:d.text.slice(s,i+90)});if(out.length>=25)break;}}
+    res.innerHTML=out.map(o=>`<li><a href="${window.SITE_BASE}${o.d.url}"><b>${o.d.title}</b><small>…${o.snip.replace(/</g,'&lt;')}…</small></a></li>`).join('')||'<li><small>No matches</small></li>';
+  });}
+  // active TOC highlight
+  const heads=[...document.querySelectorAll('main h2, main h3')];const links=[...document.querySelectorAll('aside.toc a')];
+  if(heads.length&&links.length){const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.style.color='');const l=links.find(l=>l.getAttribute('href')==='#'+e.target.id);if(l)l.style.color='var(--acc)';}})},{rootMargin:'0px 0px -75% 0px'});heads.forEach(h=>obs.observe(h));}
+})();
+</script></body></html>
