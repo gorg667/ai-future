@@ -51,7 +51,7 @@
 16 [x] Safety & alignment: technical alignment agenda, interpretability, evals, misuse (bio/cyber), loss of control, open weights debate
 17 [x] AGI & superintelligence: definitions, timelines (expert surveys, forecasts), takeoff scenarios, intelligence explosion arguments
 18 [x] Scenarios 2026–2040: several detailed scenario narratives with probabilities & signposts
-19 [ ] Open problems & research frontiers (what we don't know)
+19 [x] Open problems & research frontiers (what we don't know)
 20 [ ] Practical guide: for individuals, students, workers, founders, executives, policymakers, researchers
 21 [ ] Glossary
 22 [ ] Bibliography / further reading
@@ -82,3 +82,4 @@
 - Ch16 done. Next: Ch17 AGI & superintelligence.
 - Ch17 done. Next: Ch18 scenarios 2026–2040.
 - Ch18 done (rewritten after 3rd interruption). Next: Ch19 open problems, then 20 practical guide, 21 glossary, 22 bibliography, 23 appendix.
+- Ch19 done. Next: Ch20 practical guide.

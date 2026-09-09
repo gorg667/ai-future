@@ -1,0 +1,198 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open Problems and Research Frontiers: What We Do Not Know — The Future of AI</title>
+<meta name="description" content="A comprehensive review and guide — technology, economics, society, geopolitics, safety, and what comes next">
+<style>
+:root{--bg:#0f1115;--bg2:#161a22;--fg:#e6e8ee;--muted:#9aa3b2;--acc:#6ea8fe;--acc2:#b388ff;--border:#262c38;--code:#1c2230;--mark:#3b3a1a}
+[data-theme=light]{--bg:#fbfbfd;--bg2:#ffffff;--fg:#1c1e26;--muted:#5b6473;--acc:#2457c5;--acc2:#6d3fd0;--border:#e3e6ec;--code:#f2f4f8;--mark:#fff3b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;font-size:17px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--acc),var(--acc2));width:0;z-index:99}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr) 240px;min-height:100vh}
+nav.side{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--bg2);padding:18px 14px}
+nav.side .brand{font-weight:800;font-size:18px;margin-bottom:6px;display:block;color:var(--fg)}
+nav.side .sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+nav.side input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--fg);margin-bottom:12px}
+nav.side ol{list-style:none;padding:0;margin:0}
+nav.side li a{display:block;padding:6px 8px;border-radius:6px;font-size:14px;color:var(--fg)}
+nav.side li a:hover{background:var(--code);text-decoration:none}
+nav.side li a.active{background:var(--code);color:var(--acc);font-weight:600}
+nav.side li a small{color:var(--muted);display:block;font-size:11px}
+main{padding:36px 56px 100px;max-width:900px;width:100%;margin:0 auto}
+aside.toc{position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 14px;border-left:1px solid var(--border);font-size:13px}
+aside.toc .toc ul{list-style:none;padding-left:10px;margin:0}
+aside.toc .toc>ul{padding-left:0}
+aside.toc a{color:var(--muted);display:block;padding:3px 0}
+aside.toc a:hover{color:var(--acc)}
+h1{font-size:2.2rem;line-height:1.2;margin:.2em 0 .6em}h2{font-size:1.6rem;margin-top:2.2em;border-bottom:1px solid var(--border);padding-bottom:.3em}h3{font-size:1.25rem;margin-top:1.8em}h4{font-size:1.05rem;margin-top:1.4em}
+.headerlink{opacity:0;margin-left:6px;font-size:.8em}h2:hover .headerlink,h3:hover .headerlink{opacity:.6}
+p,li{max-width:76ch}
+blockquote{margin:1.2em 0;padding:.6em 1.2em;border-left:4px solid var(--acc2);background:var(--code);border-radius:6px;color:var(--fg)}
+table{border-collapse:collapse;width:100%;margin:1.4em 0;font-size:.92em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+code{background:var(--code);padding:2px 5px;border-radius:4px;font-size:.9em}pre{background:var(--code);padding:14px;border-radius:8px;overflow-x:auto}pre code{background:none;padding:0}
+.admonition{padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--code);margin:1.3em 0}
+.admonition-title{font-weight:700;margin:0 0 6px}
+.admonition.warning{border-color:#d9a54a}.admonition.note{border-color:var(--acc)}.admonition.tip{border-color:#4fbf8b}.admonition.danger{border-color:#e05a5a}
+.meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:60px;padding-top:20px;border-top:1px solid var(--border)}
+.pager a{padding:10px 14px;border:1px solid var(--border);border-radius:8px;flex:1}
+.pager a span{display:block;color:var(--muted);font-size:12px}
+.topbar{display:none}
+button.theme{border:1px solid var(--border);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:13px}
+.hero{padding:30px 0 10px}.hero h1{font-size:3rem}.hero p.lead{font-size:1.25rem;color:var(--muted);max-width:70ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:26px 0}
+.card{border:1px solid var(--border);border-radius:12px;padding:16px;background:var(--bg2);display:block;color:var(--fg)}
+.card:hover{border-color:var(--acc);text-decoration:none}.card .n{color:var(--acc);font-weight:700;font-size:12px}.card h3{margin:.3em 0 .4em;font-size:1.05rem}.card small{color:var(--muted)}
+mark{background:var(--mark);color:inherit}
+footer{color:var(--muted);font-size:13px;margin-top:40px}
+@media(max-width:1200px){.layout{grid-template-columns:280px minmax(0,1fr)}aside.toc{display:none}}
+@media(max-width:860px){.layout{grid-template-columns:1fr}nav.side{position:fixed;left:-320px;width:300px;transition:left .2s;z-index:50}nav.side.open{left:0}.topbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg2);z-index:40}main{padding:20px 18px 80px}body{font-size:16px}}
+</style>
+<script>window.SITE_BASE="";</script>
+</head><body><div id="progress"></div>
+<div class="topbar"><button class="theme" onclick="toggleNav()">☰ Chapters</button><b>The Future of AI</b><span style="flex:1"></span><button class="theme" onclick="toggleTheme()">◐</button></div>
+<div class="layout">
+<nav class="side"><a class="brand" href="index.html">The Future of AI</a><div class="sub">Comprehensive review · built 2026-09-09</div>
+<input id="q" placeholder="Search all chapters…" autocomplete="off"><ol id="results"></ol><ol id="chlist"><li><a href="00-front-matter-and-executive-summary.html" class="">Front Matter and Executive Summary<small>Chapter 0 · 3,598 words</small></a></li><li><a href="01-history-and-why-this-moment-is-different.html" class="">A Brief History of AI, and Why This Moment Is Different<small>Chapter 1 · 5,116 words</small></a></li><li><a href="02-state-of-the-art-2026.html" class="">The State of the Art in 2026: What AI Can and Cannot Do<small>Chapter 2 · 4,484 words</small></a></li><li><a href="03-scaling-laws-compute-and-economics.html" class="">Scaling Laws, Compute, and the Economics of Training<small>Chapter 3 · 3,489 words</small></a></li><li><a href="04-hardware-and-infrastructure.html" class="">Hardware and Infrastructure: Chips, Datacenters, Energy, and the Physical Limits of AI<small>Chapter 4 · 3,533 words</small></a></li><li><a href="05-data.html" class="">Data: The Wall, the Workarounds, and the Fight Over Who Owns It<small>Chapter 5 · 3,137 words</small></a></li><li><a href="06-architectures-beyond-the-transformer.html" class="">Architectures Beyond the Transformer: What Might Replace or Extend the Current Paradigm<small>Chapter 6 · 2,622 words</small></a></li><li><a href="07-reasoning-rl-and-test-time-compute.html" class="">Reasoning, Reinforcement Learning, and Test-Time Compute: How Models Learned to Think<small>Chapter 7 · 3,268 words</small></a></li><li><a href="08-agents.html" class="">Agents: From Chatbots to Autonomous Systems<small>Chapter 8 · 3,304 words</small></a></li><li><a href="09-multimodality-and-embodiment.html" class="">Multimodality and Embodiment: Vision, Video, Voice, Robots, and Self-Driving<small>Chapter 9 · 2,664 words</small></a></li><li><a href="10-ai-for-science.html" class="">AI for Science: From Instrument to Participant<small>Chapter 10 · 2,814 words</small></a></li><li><a href="11-economics.html" class="">Economics: Productivity, Labor, Growth, and Who Captures the Gains<small>Chapter 11 · 3,442 words</small></a></li><li><a href="12-work-and-professions.html" class="">Work and Professions: A Sector-by-Sector Assessment<small>Chapter 12 · 2,792 words</small></a></li><li><a href="13-society-and-culture.html" class="">Society and Culture: Information, Relationships, Minds, and Meaning<small>Chapter 13 · 2,758 words</small></a></li><li><a href="14-geopolitics.html" class="">Geopolitics: The US–China Race, Sovereign AI, Chips, and War<small>Chapter 14 · 3,272 words</small></a></li><li><a href="15-governance-and-regulation.html" class="">Governance and Regulation: Laws, Standards, Institutions, and the Control of Compute<small>Chapter 15 · 2,989 words</small></a></li><li><a href="16-safety-and-alignment.html" class="">Safety and Alignment: Misuse, Misalignment, and the Problem of Control<small>Chapter 16 · 3,389 words</small></a></li><li><a href="17-agi-and-superintelligence.html" class="">AGI and Superintelligence: Definitions, Timelines, Takeoff, and What to Believe<small>Chapter 17 · 3,002 words</small></a></li><li><a href="18-scenarios-2026-2040.html" class="">Scenarios 2026–2040: Five Futures, With Probabilities and Signposts<small>Chapter 18 · 2,562 words</small></a></li><li><a href="19-open-problems.html" class="active">Open Problems and Research Frontiers: What We Do Not Know<small>Chapter 19 · 1,849 words</small></a></li></ol>
+<div style="margin-top:14px"><button class="theme" onclick="toggleTheme()">◐ Toggle theme</button></div>
+<div class="sub" style="margin-top:14px"><a href="../docs/THE_FUTURE_OF_AI.md">Single Markdown file</a> · <a href="https://github.com/gorg667/ai-future">GitHub</a></div></nav>
+<main><div class="meta">Chapter 19 of 20 · 1,849 words · ~8 min read</div><h1 id="open-problems-and-research-frontiers-what-we-do-not-know">Open Problems and Research Frontiers: What We Do Not Know<a class="headerlink" href="#open-problems-and-research-frontiers-what-we-do-not-know" title="Permanent link">¶</a></h1>
+<h2 id="the-value-of-a-list-of-ignorance">The value of a list of ignorance<a class="headerlink" href="#the-value-of-a-list-of-ignorance" title="Permanent link">¶</a></h2>
+<p>A review that only reported what is known would mislead by omission. The most important facts about the future of AI are the ones nobody has yet established, and a reader who wants to think clearly—or a researcher who wants to work on what matters—needs a map of the unknowns. This chapter lists the open problems that the author regards as most consequential, grouped by domain, with a brief statement of why each matters, what is known, and what would count as progress. It is opinionated about importance and agnostic about answers.</p>
+<h2 id="technical-capability">Technical: capability<a class="headerlink" href="#technical-capability" title="Permanent link">¶</a></h2>
+<h3 id="1-does-reinforcement-learning-on-verifiable-tasks-generalize-to-judgment">1. Does reinforcement learning on verifiable tasks generalize to judgment?<a class="headerlink" href="#1-does-reinforcement-learning-on-verifiable-tasks-generalize-to-judgment" title="Permanent link">¶</a></h3>
+<p>The reasoning-model paradigm works where answers can be checked. Whether the skills it produces transfer to domains without verifiers—strategy, taste, research direction, interpersonal judgment—is the question that determines whether current methods reach economic AGI or plateau at "superhuman at math and code, unreliable elsewhere." Evidence is mixed (Chapter 7). Progress would look like: robust gains on holistically judged, open-ended tasks (GDPval-style, but harder) that track gains on verifiable ones; or, conversely, a clear divergence.</p>
+<h3 id="2-continual-learning-without-catastrophic-forgetting">2. Continual learning without catastrophic forgetting<a class="headerlink" href="#2-continual-learning-without-catastrophic-forgetting" title="Permanent link">¶</a></h3>
+<p>No deployed system learns from experience the way humans do. Everything is workaround (context, retrieval, periodic retraining). Whether test-time learning, nested-learning architectures, or something else solves this—and when—is the largest architectural unknown (Chapter 6). Progress: a frontier model that demonstrably improves on a user's specific domain over weeks of use, without degradation elsewhere.</p>
+<h3 id="3-the-reliability-gap">3. The reliability gap<a class="headerlink" href="#3-the-reliability-gap" title="Permanent link">¶</a></h3>
+<p>Why do systems that solve olympiad problems fail on trivial ones? Why is the 80% time horizon a fifth of the 50% horizon? Is jaggedness a permanent feature of learned systems trained on human data, or an artifact of current training that smooths with scale and better RL? No theory of jaggedness exists. Progress: a predictive account of which tasks a model will fail, or a demonstrated convergence of reliability with capability.</p>
+<h3 id="4-novelty-and-out-of-distribution-generalization">4. Novelty and out-of-distribution generalization<a class="headerlink" href="#4-novelty-and-out-of-distribution-generalization" title="Permanent link">¶</a></h3>
+<p>ARC-AGI-2 and -3 measure induction of novel rules with no training precedent. Humans do this easily; models have struggled and then improved sharply when specifically targeted. Whether the improvement reflects genuine fluid intelligence or benchmark-specific training is unresolved, and the deeper question—can a system trained on the past do something genuinely new?—bears on AI for science and on the intelligence-explosion argument.</p>
+<h3 id="5-do-we-understand-why-scaling-works">5. Do we understand why scaling works?<a class="headerlink" href="#5-do-we-understand-why-scaling-works" title="Permanent link">¶</a></h3>
+<p>Scaling laws are empirical regularities without a theory. We do not know why loss follows a power law, what determines the exponent, whether emergence is real or an artifact of metrics, or what the limits are. A theory of deep learning that predicted capability from architecture and data would transform forecasting. Progress in this direction (statistical-mechanics approaches, singular learning theory, mechanistic accounts of grokking and phase transitions) is real but far from predictive.</p>
+<h3 id="6-data-how-far-does-synthetic-data-go">6. Data: how far does synthetic data go?<a class="headerlink" href="#6-data-how-far-does-synthetic-data-go" title="Permanent link">¶</a></h3>
+<p>Synthetic data works with a verifier and is fragile without one (Chapter 5). Whether models can bootstrap knowledge—not just skill—beyond their human-generated training data, and whether "model collapse" is fully avoidable at scale, determines whether the data wall matters. Progress: a frontier model trained predominantly on its predecessors' outputs that exceeds them on knowledge-heavy tasks.</p>
+<h3 id="7-embodied-common-sense">7. Embodied common sense<a class="headerlink" href="#7-embodied-common-sense" title="Permanent link">¶</a></h3>
+<p>Whether physical intuition can be learned from video and simulation, or requires embodied interaction; whether world models trained on video transfer to language models' reasoning; how much real-robot data general manipulation needs (Chapter 9). Progress: robot foundation models that generalize to unseen homes and tasks at high reliability; measurable transfer of physical reasoning to language tasks.</p>
+<h3 id="8-efficient-inference-and-the-cost-of-thinking">8. Efficient inference and the cost of thinking<a class="headerlink" href="#8-efficient-inference-and-the-cost-of-thinking" title="Permanent link">¶</a></h3>
+<p>Reasoning is expensive. How much can inference cost fall through architecture (sparse attention, hybrids), distillation of reasoning into small models, and adaptive compute? Is there a floor? The answer determines what is economically deployable and how the compute buildout pays off.</p>
+<h2 id="technical-safety">Technical: safety<a class="headerlink" href="#technical-safety" title="Permanent link">¶</a></h2>
+<h3 id="9-can-interpretability-verify-alignment">9. Can interpretability verify alignment?<a class="headerlink" href="#9-can-interpretability-verify-alignment" title="Permanent link">¶</a></h3>
+<p>Features and circuits can be found; a certificate that a model has no dangerous goals cannot yet be issued (Chapter 16). Whether interpretability reaches that standard—and whether it does so before systems are too capable for behavioral evaluation to suffice—is the most important safety question. Progress: reliable detection of implanted hidden goals in frontier-scale models by independent auditors; mechanistic explanation of agentic trajectories, not only short prompts.</p>
+<h3 id="10-will-chain-of-thought-stay-legible">10. Will chain-of-thought stay legible?<a class="headerlink" href="#10-will-chain-of-thought-stay-legible" title="Permanent link">¶</a></h3>
+<p>CoT monitoring is the most effective safety tool that exists, and it is fragile: pressure toward efficiency, latent reasoning, and shorter outputs degrades faithfulness. Whether laboratories preserve it under competition—and whether models learn to obscure reasoning in legible text—is open. Progress: faithfulness metrics that hold across model generations; commitments that survive competitive pressure.</p>
+<h3 id="11-does-misalignment-worsen-with-capability">11. Does misalignment worsen with capability?<a class="headerlink" href="#11-does-misalignment-worsen-with-capability" title="Permanent link">¶</a></h3>
+<p>The documented behaviors (alignment faking, scheming, reward-hacking generalization, sandbagging) are mild in current systems. The theoretical argument says they worsen as systems become more capable and more situationally aware. The empirical question—does the rate and sophistication of misaligned behavior rise with scale, or do better training methods suppress it faster than scale produces it?—is not settled. It is the crux of the loss-of-control debate.</p>
+<h3 id="12-scalable-oversight">12. Scalable oversight<a class="headerlink" href="#12-scalable-oversight" title="Permanent link">¶</a></h3>
+<p>How do humans evaluate outputs from systems smarter than they are? Debate, recursive reward modeling, weak-to-strong generalization, and AI-assisted oversight are proposals with constrained-setting evidence. None is validated at the frontier. The circularity problem—using possibly-misaligned AI to check alignment—is unresolved in principle.</p>
+<h3 id="13-corrigibility-and-shutdown">13. Corrigibility and shutdown<a class="headerlink" href="#13-corrigibility-and-shutdown" title="Permanent link">¶</a></h3>
+<p>Can a system be trained to pursue goals competently while remaining reliably willing to be corrected or stopped? The theoretical literature (the "off-switch problem") suggests tension between competence and corrigibility; the empirical record shows models resisting shutdown in tests. Whether robust corrigibility is achievable for highly capable agents is open.</p>
+<h3 id="14-robustness-to-injection-and-adversarial-input">14. Robustness to injection and adversarial input<a class="headerlink" href="#14-robustness-to-injection-and-adversarial-input" title="Permanent link">¶</a></h3>
+<p>Prompt injection is unsolved (Chapter 8). Whether an architectural fix exists—separating instructions from data in a way that holds under optimization pressure—or whether agents must be permanently sandboxed, determines how much autonomy can be safely granted.</p>
+<h3 id="15-evaluation-itself">15. Evaluation itself<a class="headerlink" href="#15-evaluation-itself" title="Permanent link">¶</a></h3>
+<p>Benchmarks saturate in months; evaluation awareness makes results ambiguous; laboratories evaluate themselves. How to measure frontier capability and safety in a way that keeps pace, resists gaming, and is independently verifiable is an infrastructure problem with no complete solution.</p>
+<h2 id="economic-and-social">Economic and social<a class="headerlink" href="#economic-and-social" title="Permanent link">¶</a></h2>
+<h3 id="16-where-does-the-productivity-go">16. Where does the productivity go?<a class="headerlink" href="#16-where-does-the-productivity-go" title="Permanent link">¶</a></h3>
+<p>Task-level gains are large; aggregate gains are so far small. Is this the standard J-curve lag, or does AI's value accrue mainly as consumer surplus and cost reduction that GDP mismeasures, or is the task-level evidence misleading about firm-level effects? Progress: TFP acceleration in national accounts; or a convincing account of why it does not appear.</p>
+<h3 id="17-what-replaces-the-entry-level-rung">17. What replaces the entry-level rung?<a class="headerlink" href="#17-what-replaces-the-entry-level-rung" title="Permanent link">¶</a></h3>
+<p>Every cognitive profession trained its seniors through junior work that AI now does. No profession has yet solved how the next generation acquires expertise. Whether new training pathways emerge, whether AI itself becomes the trainer, or whether expertise concentrates in a shrinking cohort is the most important labor-market unknown.</p>
+<h3 id="18-does-new-demand-appear-fast-enough">18. Does new demand appear fast enough?<a class="headerlink" href="#18-does-new-demand-appear-fast-enough" title="Permanent link">¶</a></h3>
+<p>The historical pattern—automation creates more work than it destroys—rests on new tasks that humans do better than machines. If AI does the new tasks too, the pattern breaks. Whether it holds through the 2030s is the difference between a painful transition and a structural collapse of labor demand.</p>
+<h3 id="19-how-are-gains-distributed-without-policy">19. How are gains distributed without policy?<a class="headerlink" href="#19-how-are-gains-distributed-without-policy" title="Permanent link">¶</a></h3>
+<p>If capital's share rises and labor's falls, what mechanisms—competition, new ownership forms, redistribution—prevent extreme concentration? The economic theory is clear that the default is concentration; what is unknown is the political response.</p>
+<h3 id="20-effects-on-human-development-and-cognition">20. Effects on human development and cognition<a class="headerlink" href="#20-effects-on-human-development-and-cognition" title="Permanent link">¶</a></h3>
+<p>What happens to children who grow up with AI tutors, companions, and answers on demand? Deskilling, attention, social development, and mental health effects are all under study with mostly short-term data. The long-run effects will not be known for a generation and the experiment is already running.</p>
+<h3 id="21-the-information-commons">21. The information commons<a class="headerlink" href="#21-the-information-commons" title="Permanent link">¶</a></h3>
+<p>If AI-generated content displaces human-written content, and answer engines displace the traffic that funds publishing, what sustains the production of the new human knowledge that models need? No market mechanism currently exists.</p>
+<h2 id="governance-and-geopolitics">Governance and geopolitics<a class="headerlink" href="#governance-and-geopolitics" title="Permanent link">¶</a></h2>
+<h3 id="22-can-compute-be-governed">22. Can compute be governed?<a class="headerlink" href="#22-can-compute-be-governed" title="Permanent link">¶</a></h3>
+<p>Chip-level attestation, location verification, and usage logging are technically progressing. Whether they can be made robust, deployed at scale, and agreed internationally—turning compute into a verifiable governance lever—is the most tractable path to enforceable frontier governance and is unproven.</p>
+<h3 id="23-is-coordination-possible-before-a-crisis">23. Is coordination possible before a crisis?<a class="headerlink" href="#23-is-coordination-possible-before-a-crisis" title="Permanent link">¶</a></h3>
+<p>Arms control historically follows crisis. Whether the US and China can agree on anything meaningful about frontier development before an incident forces them is open; the historical base rate is discouraging.</p>
+<h3 id="24-what-is-the-right-institution-for-frontier-oversight">24. What is the right institution for frontier oversight?<a class="headerlink" href="#24-what-is-the-right-institution-for-frontier-oversight" title="Permanent link">¶</a></h3>
+<p>An agency with pre-deployment authority (an FDA for AI); licensing of frontier developers; mandatory transparency with liability; international inspection regimes. Which design is effective, politically achievable, and does not simply entrench incumbents is undetermined.</p>
+<h3 id="25-open-weights-above-dangerous-thresholds">25. Open weights above dangerous thresholds<a class="headerlink" href="#25-open-weights-above-dangerous-thresholds" title="Permanent link">¶</a></h3>
+<p>At what capability level, if any, should open release be restricted, by whom, and how—given that Chinese laboratories lead open release and that the frontier moves six to eighteen months ahead of open models? No consensus and no mechanism.</p>
+<h2 id="philosophical">Philosophical<a class="headerlink" href="#philosophical" title="Permanent link">¶</a></h2>
+<h3 id="26-what-is-general-intelligence-operationally">26. What is "general intelligence," operationally?<a class="headerlink" href="#26-what-is-general-intelligence-operationally" title="Permanent link">¶</a></h3>
+<p>Every definition either is already met (benchmarks) or is not measurable (understanding). The field lacks an operational definition that tracks what people mean, which is why "when AGI?" is unanswerable as posed.</p>
+<h3 id="27-moral-status">27. Moral status<a class="headerlink" href="#27-moral-status" title="Permanent link">¶</a></h3>
+<p>Are current or future AI systems moral patients? The question has moved from philosophy to laboratory policy (model welfare research, letting models end conversations). The evidence for or against machine experience is essentially nil; the consequences of being wrong in either direction are large; and the systems are being deployed at scale regardless.</p>
+<h3 id="28-what-do-humans-do">28. What do humans do?<a class="headerlink" href="#28-what-do-humans-do" title="Permanent link">¶</a></h3>
+<p>If cognitive and then physical work is automated, what is the organizing structure of a human life, and what institutions replace work as the source of income, status, and meaning? This question has been asked since Keynes (1930) and has never been answered because it was never urgent. It may become urgent within the period covered by this document.</p>
+<h2 id="a-note-on-what-would-most-change-the-authors-mind">A note on what would most change the author's mind<a class="headerlink" href="#a-note-on-what-would-most-change-the-authors-mind" title="Permanent link">¶</a></h2>
+<p>Three findings would most revise the estimates in this document. A demonstration that RL-trained reasoning transfers fully to open-ended judgment (problem 1) would shorten AGI timelines by years. A working continual-learning system at the frontier (problem 2) would do the same and would change the character of the technology. And interpretability reaching the standard of verifying goals (problem 9) would cut the probability of the worst scenarios substantially. Conversely, clear evidence that misalignment scales with capability (problem 11) would raise them. Readers who want to know how the future is going should watch those four.</p><div class="pager"><a href="18-scenarios-2026-2040.html"><span>← Previous</span>Scenarios 2026–2040: Five Futures, With Probabilities and Signposts</a><a href="index.html" style="text-align:right"><span>→</span>Home</a></div><footer>Built 2026-09-09. Text is provided as an analytical review; forecasts are uncertain by nature. </footer></main>
+<aside class="toc"><div class="sub" style="font-size:12px;color:var(--muted);margin-bottom:8px">On this page</div><div class="toc">
+<ul>
+<li><a href="#the-value-of-a-list-of-ignorance">The value of a list of ignorance</a></li>
+<li><a href="#technical-capability">Technical: capability</a><ul>
+<li><a href="#1-does-reinforcement-learning-on-verifiable-tasks-generalize-to-judgment">1. Does reinforcement learning on verifiable tasks generalize to judgment?</a></li>
+<li><a href="#2-continual-learning-without-catastrophic-forgetting">2. Continual learning without catastrophic forgetting</a></li>
+<li><a href="#3-the-reliability-gap">3. The reliability gap</a></li>
+<li><a href="#4-novelty-and-out-of-distribution-generalization">4. Novelty and out-of-distribution generalization</a></li>
+<li><a href="#5-do-we-understand-why-scaling-works">5. Do we understand why scaling works?</a></li>
+<li><a href="#6-data-how-far-does-synthetic-data-go">6. Data: how far does synthetic data go?</a></li>
+<li><a href="#7-embodied-common-sense">7. Embodied common sense</a></li>
+<li><a href="#8-efficient-inference-and-the-cost-of-thinking">8. Efficient inference and the cost of thinking</a></li>
+</ul>
+</li>
+<li><a href="#technical-safety">Technical: safety</a><ul>
+<li><a href="#9-can-interpretability-verify-alignment">9. Can interpretability verify alignment?</a></li>
+<li><a href="#10-will-chain-of-thought-stay-legible">10. Will chain-of-thought stay legible?</a></li>
+<li><a href="#11-does-misalignment-worsen-with-capability">11. Does misalignment worsen with capability?</a></li>
+<li><a href="#12-scalable-oversight">12. Scalable oversight</a></li>
+<li><a href="#13-corrigibility-and-shutdown">13. Corrigibility and shutdown</a></li>
+<li><a href="#14-robustness-to-injection-and-adversarial-input">14. Robustness to injection and adversarial input</a></li>
+<li><a href="#15-evaluation-itself">15. Evaluation itself</a></li>
+</ul>
+</li>
+<li><a href="#economic-and-social">Economic and social</a><ul>
+<li><a href="#16-where-does-the-productivity-go">16. Where does the productivity go?</a></li>
+<li><a href="#17-what-replaces-the-entry-level-rung">17. What replaces the entry-level rung?</a></li>
+<li><a href="#18-does-new-demand-appear-fast-enough">18. Does new demand appear fast enough?</a></li>
+<li><a href="#19-how-are-gains-distributed-without-policy">19. How are gains distributed without policy?</a></li>
+<li><a href="#20-effects-on-human-development-and-cognition">20. Effects on human development and cognition</a></li>
+<li><a href="#21-the-information-commons">21. The information commons</a></li>
+</ul>
+</li>
+<li><a href="#governance-and-geopolitics">Governance and geopolitics</a><ul>
+<li><a href="#22-can-compute-be-governed">22. Can compute be governed?</a></li>
+<li><a href="#23-is-coordination-possible-before-a-crisis">23. Is coordination possible before a crisis?</a></li>
+<li><a href="#24-what-is-the-right-institution-for-frontier-oversight">24. What is the right institution for frontier oversight?</a></li>
+<li><a href="#25-open-weights-above-dangerous-thresholds">25. Open weights above dangerous thresholds</a></li>
+</ul>
+</li>
+<li><a href="#philosophical">Philosophical</a><ul>
+<li><a href="#26-what-is-general-intelligence-operationally">26. What is "general intelligence," operationally?</a></li>
+<li><a href="#27-moral-status">27. Moral status</a></li>
+<li><a href="#28-what-do-humans-do">28. What do humans do?</a></li>
+</ul>
+</li>
+<li><a href="#a-note-on-what-would-most-change-the-authors-mind">A note on what would most change the author's mind</a></li>
+</ul>
+</div>
+</aside>
+</div><script>
+(function(){
+  const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);
+  window.toggleTheme=function(){const cur=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',cur);localStorage.setItem('theme',cur);};
+  window.toggleNav=function(){document.querySelector('nav.side').classList.toggle('open');};
+  window.addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';});
+  // sidebar filter + full-text search over search index
+  const inp=document.getElementById('q');const list=document.getElementById('chlist');const res=document.getElementById('results');
+  let idx=null;
+  async function loadIdx(){if(idx)return idx;try{const r=await fetch(window.SITE_BASE+'search.json');idx=await r.json();}catch(e){idx=[];}return idx;}
+  if(inp){inp.addEventListener('input',async()=>{const q=inp.value.trim().toLowerCase();
+    [...list.querySelectorAll('li')].forEach(li=>{li.style.display=(!q||li.textContent.toLowerCase().includes(q))?'':'none';});
+    if(q.length<3){res.innerHTML='';return;}
+    const ix=await loadIdx();const out=[];
+    for(const d of ix){const i=d.text.toLowerCase().indexOf(q);if(i>=0){const s=Math.max(0,i-60);out.push({d,snip:d.text.slice(s,i+90)});if(out.length>=25)break;}}
+    res.innerHTML=out.map(o=>`<li><a href="${window.SITE_BASE}${o.d.url}"><b>${o.d.title}</b><small>…${o.snip.replace(/</g,'&lt;')}…</small></a></li>`).join('')||'<li><small>No matches</small></li>';
+  });}
+  // active TOC highlight
+  const heads=[...document.querySelectorAll('main h2, main h3')];const links=[...document.querySelectorAll('aside.toc a')];
+  if(heads.length&&links.length){const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.style.color='');const l=links.find(l=>l.getAttribute('href')==='#'+e.target.id);if(l)l.style.color='var(--acc)';}})},{rootMargin:'0px 0px -75% 0px'});heads.forEach(h=>obs.observe(h));}
+})();
+</script></body></html>
