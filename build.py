@@ -10,17 +10,24 @@ Build script for "The Future of AI" review.
 Usage: python3 build.py
 Requires: pip install markdown pymdown-extensions
 """
-import os, re, json, html, glob, datetime
+import os, re, json, html, glob, datetime, shutil, sys
 import markdown
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CH_DIR = os.path.join(ROOT, "docs", "chapters")
+FIG_DIR = os.path.join(ROOT, "docs", "fig")
 SITE = os.path.join(ROOT, "site")
 os.makedirs(SITE, exist_ok=True)
 
 TITLE = "The Future of AI"
 SUBTITLE = "A comprehensive review and guide — technology, economics, society, geopolitics, safety, and what comes next"
 BUILD_DATE = datetime.date(2026, 9, 9).isoformat()
+VERSION = "2.0"
+REPO_URL = "https://github.com/gorg667/ai-future"
+SITE_URL = "https://gorg667.github.io/ai-future/site/"
+FAVICON = ("data:image/svg+xml," + "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E"
+           "%3Crect width='64' height='64' rx='14' fill='%230f1115'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%236ea8fe' stroke-width='5'/%3E"
+           "%3Ccircle cx='32' cy='32' r='5' fill='%23b388ff'/%3E%3C/svg%3E")
 
 MD_EXT = [
     "extra", "toc", "tables", "sane_lists", "admonition", "attr_list", "md_in_html",
@@ -53,16 +60,22 @@ def strip_title(text):
     return re.sub(r"^#\s+.+\n", "", text, count=1)
 
 
+def md_for_assembled(text):
+    """Chapter files reference figures as ../fig/X (relative to docs/chapters/). The assembled file lives in docs/."""
+    return text.replace("](../fig/", "](fig/")
+
+
 def build_markdown(chapters):
-    out = [f"# {TITLE}\n", f"### {SUBTITLE}\n", f"*Version built {BUILD_DATE}. "
-           f"Total length: {sum(c['words'] for c in chapters):,} words across {len(chapters)} chapters.*\n",
+    out = [f"# {TITLE}\n", f"### {SUBTITLE}\n", f"*Version {VERSION}, built {BUILD_DATE}. "
+           f"Total length: {sum(c['words'] for c in chapters):,} words across {len(chapters)} chapters. "
+           f"Source and updates: {REPO_URL}*\n",
            "\n---\n", "## Table of contents\n"]
     for c in chapters:
         anchor = re.sub(r"[^a-z0-9]+", "-", c["title"].lower()).strip("-")
         out.append(f"- [{c['title']}](#{anchor}) *({c['words']:,} words)*")
     out.append("\n---\n")
     for c in chapters:
-        out.append(c["text"].rstrip() + "\n\n---\n")
+        out.append(md_for_assembled(c["text"]).rstrip() + "\n\n---\n")
     path = os.path.join(ROOT, "docs", "THE_FUTURE_OF_AI.md")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write("\n".join(out))
