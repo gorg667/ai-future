@@ -1,0 +1,359 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Economics: Productivity, Labor, Growth, and Who Captures the Gains — The Future of AI</title>
+<meta name="description" content="A comprehensive review and guide — technology, economics, society, geopolitics, safety, and what comes next">
+<style>
+:root{--bg:#0f1115;--bg2:#161a22;--fg:#e6e8ee;--muted:#9aa3b2;--acc:#6ea8fe;--acc2:#b388ff;--border:#262c38;--code:#1c2230;--mark:#3b3a1a}
+[data-theme=light]{--bg:#fbfbfd;--bg2:#ffffff;--fg:#1c1e26;--muted:#5b6473;--acc:#2457c5;--acc2:#6d3fd0;--border:#e3e6ec;--code:#f2f4f8;--mark:#fff3b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;font-size:17px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--acc),var(--acc2));width:0;z-index:99}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr) 240px;min-height:100vh}
+nav.side{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--bg2);padding:18px 14px}
+nav.side .brand{font-weight:800;font-size:18px;margin-bottom:6px;display:block;color:var(--fg)}
+nav.side .sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+nav.side input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--fg);margin-bottom:12px}
+nav.side ol{list-style:none;padding:0;margin:0}
+nav.side li a{display:block;padding:6px 8px;border-radius:6px;font-size:14px;color:var(--fg)}
+nav.side li a:hover{background:var(--code);text-decoration:none}
+nav.side li a.active{background:var(--code);color:var(--acc);font-weight:600}
+nav.side li a small{color:var(--muted);display:block;font-size:11px}
+main{padding:36px 56px 100px;max-width:900px;width:100%;margin:0 auto}
+aside.toc{position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 14px;border-left:1px solid var(--border);font-size:13px}
+aside.toc .toc ul{list-style:none;padding-left:10px;margin:0}
+aside.toc .toc>ul{padding-left:0}
+aside.toc a{color:var(--muted);display:block;padding:3px 0}
+aside.toc a:hover{color:var(--acc)}
+h1{font-size:2.2rem;line-height:1.2;margin:.2em 0 .6em}h2{font-size:1.6rem;margin-top:2.2em;border-bottom:1px solid var(--border);padding-bottom:.3em}h3{font-size:1.25rem;margin-top:1.8em}h4{font-size:1.05rem;margin-top:1.4em}
+.headerlink{opacity:0;margin-left:6px;font-size:.8em}h2:hover .headerlink,h3:hover .headerlink{opacity:.6}
+p,li{max-width:76ch}
+blockquote{margin:1.2em 0;padding:.6em 1.2em;border-left:4px solid var(--acc2);background:var(--code);border-radius:6px;color:var(--fg)}
+table{border-collapse:collapse;width:100%;margin:1.4em 0;font-size:.92em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+code{background:var(--code);padding:2px 5px;border-radius:4px;font-size:.9em}pre{background:var(--code);padding:14px;border-radius:8px;overflow-x:auto}pre code{background:none;padding:0}
+.admonition{padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--code);margin:1.3em 0}
+.admonition-title{font-weight:700;margin:0 0 6px}
+.admonition.warning{border-color:#d9a54a}.admonition.note{border-color:var(--acc)}.admonition.tip{border-color:#4fbf8b}.admonition.danger{border-color:#e05a5a}
+.meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:60px;padding-top:20px;border-top:1px solid var(--border)}
+.pager a{padding:10px 14px;border:1px solid var(--border);border-radius:8px;flex:1}
+.pager a span{display:block;color:var(--muted);font-size:12px}
+.topbar{display:none}
+button.theme{border:1px solid var(--border);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:13px}
+.hero{padding:30px 0 10px}.hero h1{font-size:3rem}.hero p.lead{font-size:1.25rem;color:var(--muted);max-width:70ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:26px 0}
+.card{border:1px solid var(--border);border-radius:12px;padding:16px;background:var(--bg2);display:block;color:var(--fg)}
+.card:hover{border-color:var(--acc);text-decoration:none}.card .n{color:var(--acc);font-weight:700;font-size:12px}.card h3{margin:.3em 0 .4em;font-size:1.05rem}.card small{color:var(--muted)}
+mark{background:var(--mark);color:inherit}
+footer{color:var(--muted);font-size:13px;margin-top:40px}
+@media(max-width:1200px){.layout{grid-template-columns:280px minmax(0,1fr)}aside.toc{display:none}}
+@media(max-width:860px){.layout{grid-template-columns:1fr}nav.side{position:fixed;left:-320px;width:300px;transition:left .2s;z-index:50}nav.side.open{left:0}.topbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg2);z-index:40}main{padding:20px 18px 80px}body{font-size:16px}}
+</style>
+<script>window.SITE_BASE="";</script>
+</head><body><div id="progress"></div>
+<div class="topbar"><button class="theme" onclick="toggleNav()">☰ Chapters</button><b>The Future of AI</b><span style="flex:1"></span><button class="theme" onclick="toggleTheme()">◐</button></div>
+<div class="layout">
+<nav class="side"><a class="brand" href="index.html">The Future of AI</a><div class="sub">Comprehensive review · built 2026-09-09</div>
+<input id="q" placeholder="Search all chapters…" autocomplete="off"><ol id="results"></ol><ol id="chlist"><li><a href="00-front-matter-and-executive-summary.html" class="">Front Matter and Executive Summary<small>Chapter 0 · 3,598 words</small></a></li><li><a href="01-history-and-why-this-moment-is-different.html" class="">A Brief History of AI, and Why This Moment Is Different<small>Chapter 1 · 5,116 words</small></a></li><li><a href="02-state-of-the-art-2026.html" class="">The State of the Art in 2026: What AI Can and Cannot Do<small>Chapter 2 · 4,484 words</small></a></li><li><a href="03-scaling-laws-compute-and-economics.html" class="">Scaling Laws, Compute, and the Economics of Training<small>Chapter 3 · 3,489 words</small></a></li><li><a href="04-hardware-and-infrastructure.html" class="">Hardware and Infrastructure: Chips, Datacenters, Energy, and the Physical Limits of AI<small>Chapter 4 · 3,533 words</small></a></li><li><a href="05-data.html" class="">Data: The Wall, the Workarounds, and the Fight Over Who Owns It<small>Chapter 5 · 3,137 words</small></a></li><li><a href="06-architectures-beyond-the-transformer.html" class="">Architectures Beyond the Transformer: What Might Replace or Extend the Current Paradigm<small>Chapter 6 · 2,622 words</small></a></li><li><a href="07-reasoning-rl-and-test-time-compute.html" class="">Reasoning, Reinforcement Learning, and Test-Time Compute: How Models Learned to Think<small>Chapter 7 · 3,268 words</small></a></li><li><a href="08-agents.html" class="">Agents: From Chatbots to Autonomous Systems<small>Chapter 8 · 3,304 words</small></a></li><li><a href="09-multimodality-and-embodiment.html" class="">Multimodality and Embodiment: Vision, Video, Voice, Robots, and Self-Driving<small>Chapter 9 · 2,664 words</small></a></li><li><a href="10-ai-for-science.html" class="">AI for Science: From Instrument to Participant<small>Chapter 10 · 2,814 words</small></a></li><li><a href="11-economics.html" class="active">Economics: Productivity, Labor, Growth, and Who Captures the Gains<small>Chapter 11 · 3,442 words</small></a></li></ol>
+<div style="margin-top:14px"><button class="theme" onclick="toggleTheme()">◐ Toggle theme</button></div>
+<div class="sub" style="margin-top:14px"><a href="../docs/THE_FUTURE_OF_AI.md">Single Markdown file</a> · <a href="https://github.com/gorg667/ai-future">GitHub</a></div></nav>
+<main><div class="meta">Chapter 11 of 12 · 3,442 words · ~14 min read</div><h1 id="economics-productivity-labor-growth-and-who-captures-the-gains">Economics: Productivity, Labor, Growth, and Who Captures the Gains<a class="headerlink" href="#economics-productivity-labor-growth-and-who-captures-the-gains" title="Permanent link">¶</a></h1>
+<h2 id="the-questions">The questions<a class="headerlink" href="#the-questions" title="Permanent link">¶</a></h2>
+<p>The economics of AI reduce to four questions, in rising order of difficulty. Does AI make workers and firms more productive, and by how much? What happens to employment and wages as it does? Does it change the long-run growth rate of the economy, or only its level? And who captures the gains—capital or labor, incumbents or entrants, rich countries or poor ones, this generation or the next?</p>
+<p>The evidence as of 2026 is unusually rich at the micro level and unusually contested at the macro level. This chapter proceeds from what is best measured (task-level productivity) to what is most speculative (growth regimes under transformative AI), attempting to keep the two clearly separated. The overall conclusion: <strong>the productivity effects are real and large at the task level, modest so far at the aggregate level for the usual general-purpose-technology reasons, and heading toward a decade in which the central economic question shifts from "does it work?" to "who benefits?"</strong></p>
+<h2 id="task-level-productivity-what-the-experiments-show">Task-level productivity: what the experiments show<a class="headerlink" href="#task-level-productivity-what-the-experiments-show" title="Permanent link">¶</a></h2>
+<p>The randomized and quasi-experimental literature is now large. Representative results:</p>
+<table>
+<thead>
+<tr>
+<th>Study</th>
+<th>Setting</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brynjolfsson, Li, Raymond (2023; QJE 2025)</td>
+<td>5,000+ customer-support agents, gen-AI assistant</td>
+<td>+14% issues resolved per hour on average; +34% for least experienced; small for most experienced; improved customer sentiment, reduced attrition</td>
+</tr>
+<tr>
+<td>Noy &amp; Zhang (2023, <em>Science</em>)</td>
+<td>Professional writing tasks</td>
+<td>Time −40%; quality +18%; largest gains for weaker writers</td>
+</tr>
+<tr>
+<td>Peng et al. (2023)</td>
+<td>Developers with Copilot</td>
+<td>Task completion 56% faster</td>
+</tr>
+<tr>
+<td>Cui et al. (2024)</td>
+<td>4,800 developers at Microsoft, Accenture, Fortune 100</td>
+<td>+26% completed tasks; larger for junior developers</td>
+</tr>
+<tr>
+<td>Dell'Acqua et al. (2023, "Jagged Frontier")</td>
+<td>758 BCG consultants</td>
+<td>+40% quality on tasks inside the frontier; −19 pp correctness on a task outside it</td>
+</tr>
+<tr>
+<td>METR RCT (2025)</td>
+<td>16 experienced open-source developers, own repos</td>
+<td>−19% (slower) with early-2025 tools, while believing +20% faster</td>
+</tr>
+<tr>
+<td>Otis et al. (2024)</td>
+<td>Kenyan small businesses with AI advisor</td>
+<td>High performers +15% profit; low performers −8%</td>
+</tr>
+<tr>
+<td>Humlum &amp; Vestergaard (2025)</td>
+<td>25,000 Danish workers, 11 occupations</td>
+<td>Time savings ~2.8% of hours; no detectable earnings or hours effects</td>
+</tr>
+<tr>
+<td>Federal Reserve surveys (2025–26)</td>
+<td>US workers</td>
+<td>Users save ~5% of work hours; ~1–2 hours/week</td>
+</tr>
+</tbody>
+</table>
+<p>Several patterns emerge. Gains are large on well-defined tasks inside the model's competence and can be negative outside it. Gains are largest for less experienced workers, compressing the skill distribution within occupations (the "leveling" effect)—except in contexts where the task requires knowing when to distrust the model, where expertise matters more. Self-reported gains exceed measured gains. Effects on individual tasks (15–55%) exceed effects on jobs (a few percent of hours), because jobs bundle many tasks, most of which AI does not yet do, and because saved time is not automatically redeployed to valuable work.</p>
+<p>The 2025 METR result deserves emphasis because it cut against the narrative: experienced developers working on codebases they knew deeply were slowed by AI tools, spending time prompting, reviewing, and correcting. Later studies with 2026 agents found the effect reversed for most task types, but the finding stands as evidence that productivity effects depend heavily on context, tool maturity, and worker expertise—and that perception is a poor guide.</p>
+<h2 id="firm-and-aggregate-productivity-the-diffusion-lag">Firm and aggregate productivity: the diffusion lag<a class="headerlink" href="#firm-and-aggregate-productivity-the-diffusion-lag" title="Permanent link">¶</a></h2>
+<h3 id="what-firms-report">What firms report<a class="headerlink" href="#what-firms-report" title="Permanent link">¶</a></h3>
+<p>Surveys (McKinsey, BCG, Bain, the Census Bureau's Business Trends and Outlook Survey) show high adoption in name—70–80% of large firms use generative AI somewhere—and shallow adoption in substance. The Census Bureau's survey found the share of US firms using AI in production rising from about 4% in 2023 to roughly 10–15% by 2026, with much higher shares in information, professional services, and finance and low shares in construction, agriculture, and accommodation. MIT's NANDA report (August 2025) found that about 95% of enterprise generative-AI pilots produced no measurable profit-and-loss impact—a widely cited figure that reflects both the immaturity of deployments and the difficulty of measurement. Firms that report material EBIT impact (perhaps 10–25% of large firms) are concentrated in software, marketing, customer operations, and financial services.</p>
+<p>The reasons for the gap between task-level gains and firm-level results are the standard ones for general-purpose technologies (Brynjolfsson, Rock, and Syverson's "productivity J-curve"): complementary investments in data, process redesign, training, and organizational change take years; early adoption costs are expensed while benefits accrue later; and measured output understates gains in quality and variety. Electricity took forty years from Edison's first power station to visible productivity effects, because factories had to be redesigned around distributed motors rather than a central shaft. Computers produced Robert Solow's 1987 paradox ("you can see the computer age everywhere but in the productivity statistics") for a decade before the late-1990s acceleration.</p>
+<h3 id="what-the-aggregate-statistics-show">What the aggregate statistics show<a class="headerlink" href="#what-the-aggregate-statistics-show" title="Permanent link">¶</a></h3>
+<p>US labor productivity growth averaged about 2% a year in 2023–2025 after a weak decade, with some economists attributing a portion to AI and others to post-pandemic reallocation and investment. Total factor productivity growth has not yet shown a clear break. AI-related capital expenditure has been a major contributor to GDP growth through the investment channel (Chapter 3), but that is spending, not productivity. Goldman Sachs' April 2026 tracker put US worker AI adoption at about 20% and estimated that academic studies imply roughly a 23% average labor productivity boost for adopting tasks—consistent with meaningful but not yet macro-visible effects.</p>
+<h3 id="forecasts-of-the-productivity-effect">Forecasts of the productivity effect<a class="headerlink" href="#forecasts-of-the-productivity-effect" title="Permanent link">¶</a></h3>
+<p>The range of published estimates is wide and turns on assumptions about how many tasks are automatable, how fast adoption proceeds, and whether AI accelerates innovation itself:</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Acemoglu (2024)</td>
+<td>+0.07 pp/year TFP; ~0.5–1% GDP level over a decade ("nontrivial but modest")</td>
+</tr>
+<tr>
+<td>Wharton Budget Model (2025)</td>
+<td>+1.5% GDP level by 2035; +3.7% by 2075</td>
+</tr>
+<tr>
+<td>Goldman Sachs (2023–26)</td>
+<td>+1.5 pp/year US productivity growth over a decade at full adoption; +7% global GDP over 10 years</td>
+</tr>
+<tr>
+<td>OECD (Filippucci et al., 2025)</td>
+<td>+0.4–1.3 pp/year labor productivity over 10 years in high-exposure economies</td>
+</tr>
+<tr>
+<td>Aghion &amp; Bunel (2024)</td>
+<td>+0.5–1.3 pp/year TFP, transitory unless AI automates idea production</td>
+</tr>
+<tr>
+<td>McKinsey (2023)</td>
+<td>$2.6–4.4 trillion annual value from gen-AI; +0.1–0.6 pp/year productivity</td>
+</tr>
+<tr>
+<td>IMF (2024–26)</td>
+<td>40% of jobs affected globally, 60% in advanced economies; +0.1–0.8 pp productivity depending on scenario</td>
+</tr>
+<tr>
+<td>Anthropic Economic Index (2025–26)</td>
+<td>Current usage patterns imply +1–1.8 pp/year labor productivity growth over a decade if adoption spreads</td>
+</tr>
+<tr>
+<td>Karger et al. / FRI (2026) expert survey</td>
+<td>Unconditional GDP growth ~2.5%/year to 2050 (vs 2.0% baseline); 3.3–5.3%/year under rapid-AI scenario</td>
+</tr>
+<tr>
+<td>Erdil &amp; Besiroglu (Epoch, 2024)</td>
+<td>~50% probability of "explosive growth" (&gt;30%/year) by 2100 if AI can broadly substitute for labor</td>
+</tr>
+</tbody>
+</table>
+<p>The Forecasting Research Institute's 2026 survey (Karger, Tetlock, and colleagues; a Chicago Fed working paper) is the most careful attempt to structure this disagreement. It found that economists assign about 61% probability to "moderate or rapid" AI progress by 2030 yet forecast GDP growth only modestly above trend unconditionally—citing base rates, adoption lags, demographic headwinds, and infrastructure bottlenecks—while conditional on rapid progress they forecast 3.3–3.5% growth (AI-industry respondents: 5.3% by the 2040s). Strikingly, the survey found that disagreement is driven less by beliefs about how fast AI will advance than by beliefs about <em>what capable AI does to the economy</em>—a finding that suggests the economics, not the technology, is the crux.</p>
+<h3 id="the-authors-assessment">The author's assessment<a class="headerlink" href="#the-authors-assessment" title="Permanent link">¶</a></h3>
+<p>Task-level evidence and the diffusion literature support a productivity effect of roughly 0.5–1.5 percentage points per year added to US productivity growth through the early 2030s, back-loaded as agents mature and complementary investment matures—roughly the size of the late-1990s IT boom, and larger than Acemoglu's skeptical estimate because agents automate many more tasks than the 2023 chatbots his calculation assumed. Beyond 2032 the range widens enormously: if AI accelerates R&amp;D and if robotics matures, growth rates well above historical norms become possible; if agents plateau in reliability, the effect looks like a large one-time level shift.</p>
+<h2 id="labor-markets">Labor markets<a class="headerlink" href="#labor-markets" title="Permanent link">¶</a></h2>
+<h3 id="what-has-happened-so-far">What has happened so far<a class="headerlink" href="#what-has-happened-so-far" title="Permanent link">¶</a></h3>
+<p>The evidence through mid-2026 is best captured by the Stanford Digital Economy Lab's "Canaries in the Coal Mine" study (Brynjolfsson, Chandar, Chen; first published August 2025, revised August 2026 with ADP payroll data through June 2026):</p>
+<ol>
+<li>No evidence of widespread, economy-wide job displacement.</li>
+<li>Employment of young workers (ages 22–25) in the most AI-exposed occupations is 19% below where it would be had it kept pace with less-exposed peers—up from 13% in the 2025 version. Experienced workers in the same occupations show no comparable gap.</li>
+<li>The divergence has widened steadily.</li>
+<li>It operates through reduced hiring, not increased layoffs.</li>
+<li>Declines are concentrated where AI <em>substitutes</em> for tasks; where AI <em>complements</em> workers, employment is flat or rising, especially for experienced workers.</li>
+<li>Adjustment is through employment, not base pay.</li>
+</ol>
+<p>Complementary and complicating evidence: Danish administrative data (Humlum and Vestergaard, 2025) finds similar early-career declines but no link to firm-level AI adoption, raising the possibility of confounders (post-pandemic overhiring correction, interest rates, remote work). US sectoral data (Davis, 2026) confirm that employment in exposed sectors has lagged since late 2022 while wages have not fallen. The occupational mix overall remains stable (Gimbel et al., 2025). Job postings for software developers fell by roughly a third from the 2022 peak and did not recover; postings for customer service, copywriting, translation, and paralegal roles fell sharply; postings mentioning AI skills rose. Unemployment for recent college graduates in the US rose above the overall rate for the first time in decades and stayed there—a "new-grad recession" concentrated in computer science, business, and communications majors.</p>
+<p>The interpretation most consistent with all of this: AI has not yet caused mass unemployment; it has changed the <em>composition</em> of hiring, reducing demand for entry-level cognitive labor in exposed occupations while raising the premium on experience and judgment. The mechanism is that firms use AI to do what they used to hire juniors to do. This is benign in the short run for incumbents and harmful for those trying to enter—and it raises a longer-run problem: if the entry-level rungs are removed, where do the next generation of experienced workers come from?</p>
+<h3 id="exposure-and-the-automationaugmentation-distinction">Exposure and the automation–augmentation distinction<a class="headerlink" href="#exposure-and-the-automationaugmentation-distinction" title="Permanent link">¶</a></h3>
+<p>Eloundou et al. (OpenAI, 2023) estimated that about 80% of US workers have at least 10% of their tasks exposed to LLMs and 19% have at least half exposed, with exposure rising with wage and education—the reverse of previous automation waves. Goldman Sachs estimated 300 million full-time-equivalent jobs globally exposed. The IMF's 40%/60% figures are similar.</p>
+<p>Exposure is not displacement. Anthropic's Economic Index (from 2025) tracks how Claude is actually used: augmentation (collaborative use—iterating, learning, validating) has generally exceeded automation (delegating whole tasks), though the share fluctuates and automation rose sharply with agentic tools before augmentation regained the lead in early 2026. Usage is concentrated in software, writing, analysis, and education; it is accelerating higher-skilled tasks more than routine ones; and it is uneven across countries, with usage per capita highest in small wealthy economies (Israel, Singapore, Australia, New Zealand) and low in most of the Global South.</p>
+<h3 id="where-the-labor-market-goes-next">Where the labor market goes next<a class="headerlink" href="#where-the-labor-market-goes-next" title="Permanent link">¶</a></h3>
+<p>Three frameworks compete.</p>
+<p><strong>The standard economic view</strong> (Autor, Acemoglu–Restrepo task frameworks): automation displaces some tasks, raises productivity, creates new tasks, and the net employment effect is ambiguous in the short run and roughly neutral in the long run, with distributional consequences depending on which tasks are automated. History supports this: every previous automation wave created more jobs than it destroyed, over decades, with painful transitions. Goldman Sachs' estimate that unemployment rises about half a percentage point during the transition and that most displaced workers find new roles within a few years is in this tradition.</p>
+<p><strong>The "this time is different" view</strong> (Amodei's 2025 warning of 10–20% unemployment within five years; Korinek's models of a "post-AGI" economy where wages collapse without redistribution): AI differs from prior automation because it is general—it can do the <em>new</em> tasks too—so the historical pattern of new work absorbing displaced workers may not hold. If AI can do any cognitive task at lower cost than a human, the demand for human cognitive labor falls toward zero and wages follow. The FRI survey's rapid-scenario forecasts (labor force participation falling from 62% to 55% by 2050, roughly half attributable to AI) reflect a moderate version of this.</p>
+<p><strong>The complementarity view</strong> (Autor's more recent work; Brynjolfsson's "Turing Trap" argument): if AI is designed and deployed to augment rather than replace, it can raise the value of human judgment, expertise, and interpersonal skill, restoring middle-class work by letting more people do expert-level tasks. This is a choice, not an outcome—it depends on how firms deploy AI and how policy shapes incentives.</p>
+<p>The author's assessment: through 2030, the standard view mostly holds—the labor market adjusts via composition (fewer juniors in exposed occupations, more demand for experience and for AI-complementary skills), with aggregate unemployment effects of at most a few percentage points and concentrated in identifiable groups (new graduates in exposed fields; customer service; back-office; translation; some creative freelance markets). Beyond 2030, the outcome depends on agent reliability (Chapter 8) and robotics (Chapter 9); if both mature, the "different this time" view gains force, and the 2030s could see the demand for human labor in large swathes of the economy fall faster than new demand appears. The probability the author assigns to US unemployment exceeding 10% due primarily to AI by 2032 is roughly 15%; by 2040, roughly 30%—low enough not to be the base case, high enough to warrant preparation.</p>
+<h2 id="growth-regimes">Growth regimes<a class="headerlink" href="#growth-regimes" title="Permanent link">¶</a></h2>
+<h3 id="level-effects-versus-growth-effects">Level effects versus growth effects<a class="headerlink" href="#level-effects-versus-growth-effects" title="Permanent link">¶</a></h3>
+<p>Most estimates above are <em>level</em> effects: AI raises output by some percentage and then growth returns to trend. A <em>growth</em> effect—a permanent increase in the rate—requires AI to accelerate the production of ideas, since long-run growth is driven by innovation. This is where the AI-for-science evidence (Chapter 10) and the automation-of-AI-research question (Chapter 17) become economic questions.</p>
+<p>The theoretical literature (Aghion, Jones, and Jones, 2017; Trammell and Korinek, 2023; Davidson, 2023 for Open Philanthropy; Erdil and Besiroglu, 2024) shows that if AI can substitute for human researchers and if compute can be accumulated like capital, the standard semi-endogenous growth model produces accelerating—potentially hyperbolic—growth, bounded only by physical constraints and by tasks that resist automation (Baumol effects). Erdil and Besiroglu assign roughly 50% probability to "explosive growth" (over 30% per year) by 2100 conditional on broadly substitutive AI, while noting regulatory, physical, and alignment constraints.</p>
+<p>Most economists regard this as speculative. The FRI survey's median economist under the <em>rapid</em> scenario forecast 3.5% growth—high by recent standards, but not a regime change. The AI-industry respondents forecast 5.3%. Nobody's median was explosive. The historical base rate for regime changes in growth is one (the industrial revolution) in recorded history, which is a reason for skepticism and also a reason not to dismiss the possibility that a general-purpose intelligence technology is the second.</p>
+<h3 id="the-authors-view">The author's view<a class="headerlink" href="#the-authors-view" title="Permanent link">¶</a></h3>
+<p>The probability of a genuine growth-rate acceleration (sustained &gt;5% real growth in advanced economies) by 2040 is meaningful—perhaps 20–25%—and depends almost entirely on whether AI comes to do a large share of R&amp;D and whether physical bottlenecks (energy, materials, construction, regulation) can be relaxed. This is the single largest source of uncertainty in the economic outlook, and it is why the range of plausible 2040 worlds is so wide.</p>
+<h2 id="distribution">Distribution<a class="headerlink" href="#distribution" title="Permanent link">¶</a></h2>
+<h3 id="who-is-capturing-the-gains-so-far">Who is capturing the gains so far<a class="headerlink" href="#who-is-capturing-the-gains-so-far" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Capital and infrastructure owners.</strong> Nvidia, TSMC, the hyperscalers, and the memory makers have captured the largest measured gains—Nvidia's market capitalization rose from about $300 billion in 2022 to $4–5 trillion in 2026. This is the "picks and shovels" phase, and it has concentrated wealth among shareholders of a small number of firms.</li>
+<li><strong>Frontier laboratories.</strong> OpenAI, Anthropic, and their peers have revenue growing at triple-digit rates and valuations in the hundreds of billions, though most remain unprofitable.</li>
+<li><strong>Consumers.</strong> The Stanford AI Index estimated US consumer surplus from generative AI at $172 billion per year by early 2026—value not captured in GDP because most usage is free or cheap. This is a large and broadly distributed gain.</li>
+<li><strong>Skilled workers with complementary expertise.</strong> Senior engineers, experienced professionals who supervise AI, and workers in AI-adjacent roles have seen rising demand and wages.</li>
+<li><strong>Entry-level workers in exposed occupations</strong> have lost.</li>
+<li><strong>Content creators, freelancers, and some creative workers</strong> have seen markets contract (stock photography, translation, copywriting, voice work).</li>
+</ul>
+<h3 id="longer-run-distributional-forces">Longer-run distributional forces<a class="headerlink" href="#longer-run-distributional-forces" title="Permanent link">¶</a></h3>
+<p>The factor-share question is central. If AI substitutes for labor broadly, the labor share of income—already down from about 65% to about 58% in the US since 2000—falls further, and income concentrates among owners of capital and compute. The FRI survey's rapid-scenario median has the top 10% of households holding 80% of wealth by 2050 (from about 67% now). Korinek's models show wages collapsing under full automation absent redistribution. The countervailing forces are competition (which pushes AI's price toward its marginal cost and passes gains to consumers), new task creation, and policy.</p>
+<p>Geographic distribution matters too. High-income countries produce 87% of notable models and receive 91% of AI startup funding (Stanford AI Index 2026). Korinek and Stiglitz argue AI strengthens superstar dynamics and undercuts the export-led development path that lifted East Asia, because the low-cost labor that developing countries offered is exactly what AI substitutes for. Chapter 14 returns to this.</p>
+<h3 id="policy-responses-under-discussion">Policy responses under discussion<a class="headerlink" href="#policy-responses-under-discussion" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Targeted transition support</strong>: retraining, wage insurance, portable benefits, modernized unemployment insurance. Favored by most economists (72% support in the FRI survey); evidence from trade-adjustment programs suggests they help but are hard to scale.</li>
+<li><strong>Tax reform</strong>: taxing capital and labor income at equal rates; removing the current bias that lets firms deduct automation capital while taxing labor; taxing AI-specific rents. Technically straightforward; politically hard.</li>
+<li><strong>Broad redistribution</strong>: universal basic income (37% economist support; majority public support); sovereign wealth funds holding stakes in AI firms (proposed by Anthropic and others); "compute dividends." Debated as premature or as necessary preparation.</li>
+<li><strong>Ownership diversification</strong>: employee ownership, public stakes, broad-based equity. Less discussed; potentially important if the gains accrue mainly to capital.</li>
+<li><strong>Job guarantees and work-sharing</strong>: low economist support (14%); higher public support.</li>
+<li><strong>Education and skill policy</strong>: reorienting toward AI-complementary skills (judgment, interpersonal, physical, oversight) and away from tasks AI does.</li>
+</ul>
+<p>The author's view: the transition-support consensus is correct for the 2026–2030 period and inadequate if the rapid scenario materializes. The prudent course is to build the <em>institutional capacity</em> for broader measures—the data systems, the tax reforms, the ownership vehicles—before they are needed, because designing them in a crisis is how one gets bad policy. Chapter 20 elaborates.</p>
+<h2 id="summary-the-economic-outlook-in-one-table">Summary: the economic outlook in one table<a class="headerlink" href="#summary-the-economic-outlook-in-one-table" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>2026 evidence</th>
+<th>2030 outlook</th>
+<th>2035–2040 range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task-level productivity gain</td>
+<td>15–55% on suitable tasks</td>
+<td>Broadens as agents mature</td>
+<td>Most cognitive tasks</td>
+</tr>
+<tr>
+<td>Aggregate productivity effect</td>
+<td>Not yet visible in TFP</td>
+<td>+0.5–1.5 pp/year US productivity growth</td>
+<td>Level shift, or regime change if R&amp;D automates</td>
+</tr>
+<tr>
+<td>Unemployment effect</td>
+<td>None aggregate; −19% young workers in exposed jobs</td>
+<td>+0.5–2 pp transitional; composition shift</td>
+<td>Wide: 5% to 20%+ depending on scenario</td>
+</tr>
+<tr>
+<td>Wage effect</td>
+<td>Compression within occupations; premium on experience</td>
+<td>Continued compression; pressure on exposed roles</td>
+<td>Depends on factor shares and policy</td>
+</tr>
+<tr>
+<td>Labor share of income</td>
+<td>~58% (US)</td>
+<td>Slight decline</td>
+<td>45–58% depending on scenario</td>
+</tr>
+<tr>
+<td>Capital gains concentration</td>
+<td>Extreme (Nvidia, hyperscalers, labs)</td>
+<td>Broadens to application layer</td>
+<td>Depends on competition and policy</td>
+</tr>
+<tr>
+<td>Consumer surplus</td>
+<td>~$170B/year US</td>
+<td>Rising fast</td>
+<td>Very large</td>
+</tr>
+<tr>
+<td>Global distribution</td>
+<td>Concentrated in US, China</td>
+<td>Sovereign AI spreads deployment</td>
+<td>Development path for poor countries uncertain</td>
+</tr>
+<tr>
+<td>GDP growth</td>
+<td>~2–2.5% US</td>
+<td>2.5–3.5%</td>
+<td>2.5% to &gt;5%</td>
+</tr>
+</tbody>
+</table>
+<p>The economics, in short, are the arena where the technological story of the first ten chapters meets the social and political story of the next several. What the technology <em>can</em> do is increasingly clear; what it <em>will</em> do to livelihoods depends on choices that have not yet been made.</p><div class="pager"><a href="10-ai-for-science.html"><span>← Previous</span>AI for Science: From Instrument to Participant</a><a href="index.html" style="text-align:right"><span>→</span>Home</a></div><footer>Built 2026-09-09. Text is provided as an analytical review; forecasts are uncertain by nature. </footer></main>
+<aside class="toc"><div class="sub" style="font-size:12px;color:var(--muted);margin-bottom:8px">On this page</div><div class="toc">
+<ul>
+<li><a href="#the-questions">The questions</a></li>
+<li><a href="#task-level-productivity-what-the-experiments-show">Task-level productivity: what the experiments show</a></li>
+<li><a href="#firm-and-aggregate-productivity-the-diffusion-lag">Firm and aggregate productivity: the diffusion lag</a><ul>
+<li><a href="#what-firms-report">What firms report</a></li>
+<li><a href="#what-the-aggregate-statistics-show">What the aggregate statistics show</a></li>
+<li><a href="#forecasts-of-the-productivity-effect">Forecasts of the productivity effect</a></li>
+<li><a href="#the-authors-assessment">The author's assessment</a></li>
+</ul>
+</li>
+<li><a href="#labor-markets">Labor markets</a><ul>
+<li><a href="#what-has-happened-so-far">What has happened so far</a></li>
+<li><a href="#exposure-and-the-automationaugmentation-distinction">Exposure and the automation–augmentation distinction</a></li>
+<li><a href="#where-the-labor-market-goes-next">Where the labor market goes next</a></li>
+</ul>
+</li>
+<li><a href="#growth-regimes">Growth regimes</a><ul>
+<li><a href="#level-effects-versus-growth-effects">Level effects versus growth effects</a></li>
+<li><a href="#the-authors-view">The author's view</a></li>
+</ul>
+</li>
+<li><a href="#distribution">Distribution</a><ul>
+<li><a href="#who-is-capturing-the-gains-so-far">Who is capturing the gains so far</a></li>
+<li><a href="#longer-run-distributional-forces">Longer-run distributional forces</a></li>
+<li><a href="#policy-responses-under-discussion">Policy responses under discussion</a></li>
+</ul>
+</li>
+<li><a href="#summary-the-economic-outlook-in-one-table">Summary: the economic outlook in one table</a></li>
+</ul>
+</div>
+</aside>
+</div><script>
+(function(){
+  const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);
+  window.toggleTheme=function(){const cur=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',cur);localStorage.setItem('theme',cur);};
+  window.toggleNav=function(){document.querySelector('nav.side').classList.toggle('open');};
+  window.addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';});
+  // sidebar filter + full-text search over search index
+  const inp=document.getElementById('q');const list=document.getElementById('chlist');const res=document.getElementById('results');
+  let idx=null;
+  async function loadIdx(){if(idx)return idx;try{const r=await fetch(window.SITE_BASE+'search.json');idx=await r.json();}catch(e){idx=[];}return idx;}
+  if(inp){inp.addEventListener('input',async()=>{const q=inp.value.trim().toLowerCase();
+    [...list.querySelectorAll('li')].forEach(li=>{li.style.display=(!q||li.textContent.toLowerCase().includes(q))?'':'none';});
+    if(q.length<3){res.innerHTML='';return;}
+    const ix=await loadIdx();const out=[];
+    for(const d of ix){const i=d.text.toLowerCase().indexOf(q);if(i>=0){const s=Math.max(0,i-60);out.push({d,snip:d.text.slice(s,i+90)});if(out.length>=25)break;}}
+    res.innerHTML=out.map(o=>`<li><a href="${window.SITE_BASE}${o.d.url}"><b>${o.d.title}</b><small>…${o.snip.replace(/</g,'&lt;')}…</small></a></li>`).join('')||'<li><small>No matches</small></li>';
+  });}
+  // active TOC highlight
+  const heads=[...document.querySelectorAll('main h2, main h3')];const links=[...document.querySelectorAll('aside.toc a')];
+  if(heads.length&&links.length){const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.style.color='');const l=links.find(l=>l.getAttribute('href')==='#'+e.target.id);if(l)l.style.color='var(--acc)';}})},{rootMargin:'0px 0px -75% 0px'});heads.forEach(h=>obs.observe(h));}
+})();
+</script></body></html>
