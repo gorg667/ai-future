@@ -102,3 +102,10 @@
 - IMF: 40% of global jobs affected, 60% in advanced economies. Task-level productivity 15–55% (Brynjolfsson et al., Noy & Zhang, Peng et al.).
 - Anthropic Economic Index (Jan 2026 & mid-2026): augmentation again exceeds automation on Claude.ai; AI accelerates higher-skilled tasks more than routine; 57% of use tied to jobs; >1/3 expect job to change within a year, ~10% expect elimination. Stanford AI Economic Indicators June 2026 update.
 - MIT NANDA (Aug 2025) "GenAI Divide": 95% of enterprise gen-AI pilots show no measurable P&L impact.
+
+## AGI timelines detail [S]
+- AI Futures Project (Kokotajlo, Lifland) Jan 2026 clarification: Daniel's AGI (TED-AI) median: 2027 (2022–Jan 2025) → 2028 (Feb–Apr 2025) → EOY 2029 (Aug 2025) → ~2030 (Nov 2025) → Dec 2030 (Jan 2026). Eli's: 2060 (2021) → 2050 (2022) → 2038 (Jan 2024) → 2032 (Dec 2024) → 2031 (Apr 2025) → 2033 (Jul 2025, after METR downlift study) → 2035 (Nov 2025–Jan 2026). Reasons for lengthening: pretraining slowdown, METR RCT slowdown, model corrections. New "AI Futures Model" (Dec 2025) timelines+takeoff. Milestones: SC (superhuman coder), AC (automated coder), TED-AI (transformative/AGI), ASI.
+- Grace et al. "Thousands of AI Authors on the Future of AI" published JAIR vol 84 (Oct 2025); 2023 survey: 50% HLMI by 2047; 10% by 2027; full automation of labor 50% by 2116.
+- Metaculus 2026: weak AGI median ~2026–27; strong/general AGI ~2031–33; 25% by 2029.
+- Longitudinal Expert AI Panel (LEAP, Murphy et al. 2025, FRI) monthly panel.
+- International AI Safety Report 2026 (Feb 3 2026, Bengio chair): synthesizes; "First Key Update" Oct 2025.
