@@ -1,0 +1,240 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Geopolitics: The US–China Race, Sovereign AI, Chips, and War — The Future of AI</title>
+<meta name="description" content="A comprehensive review and guide — technology, economics, society, geopolitics, safety, and what comes next">
+<style>
+:root{--bg:#0f1115;--bg2:#161a22;--fg:#e6e8ee;--muted:#9aa3b2;--acc:#6ea8fe;--acc2:#b388ff;--border:#262c38;--code:#1c2230;--mark:#3b3a1a}
+[data-theme=light]{--bg:#fbfbfd;--bg2:#ffffff;--fg:#1c1e26;--muted:#5b6473;--acc:#2457c5;--acc2:#6d3fd0;--border:#e3e6ec;--code:#f2f4f8;--mark:#fff3b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;font-size:17px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--acc),var(--acc2));width:0;z-index:99}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr) 240px;min-height:100vh}
+nav.side{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--bg2);padding:18px 14px}
+nav.side .brand{font-weight:800;font-size:18px;margin-bottom:6px;display:block;color:var(--fg)}
+nav.side .sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+nav.side input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--fg);margin-bottom:12px}
+nav.side ol{list-style:none;padding:0;margin:0}
+nav.side li a{display:block;padding:6px 8px;border-radius:6px;font-size:14px;color:var(--fg)}
+nav.side li a:hover{background:var(--code);text-decoration:none}
+nav.side li a.active{background:var(--code);color:var(--acc);font-weight:600}
+nav.side li a small{color:var(--muted);display:block;font-size:11px}
+main{padding:36px 56px 100px;max-width:900px;width:100%;margin:0 auto}
+aside.toc{position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 14px;border-left:1px solid var(--border);font-size:13px}
+aside.toc .toc ul{list-style:none;padding-left:10px;margin:0}
+aside.toc .toc>ul{padding-left:0}
+aside.toc a{color:var(--muted);display:block;padding:3px 0}
+aside.toc a:hover{color:var(--acc)}
+h1{font-size:2.2rem;line-height:1.2;margin:.2em 0 .6em}h2{font-size:1.6rem;margin-top:2.2em;border-bottom:1px solid var(--border);padding-bottom:.3em}h3{font-size:1.25rem;margin-top:1.8em}h4{font-size:1.05rem;margin-top:1.4em}
+.headerlink{opacity:0;margin-left:6px;font-size:.8em}h2:hover .headerlink,h3:hover .headerlink{opacity:.6}
+p,li{max-width:76ch}
+blockquote{margin:1.2em 0;padding:.6em 1.2em;border-left:4px solid var(--acc2);background:var(--code);border-radius:6px;color:var(--fg)}
+table{border-collapse:collapse;width:100%;margin:1.4em 0;font-size:.92em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--code)}
+code{background:var(--code);padding:2px 5px;border-radius:4px;font-size:.9em}pre{background:var(--code);padding:14px;border-radius:8px;overflow-x:auto}pre code{background:none;padding:0}
+.admonition{padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--code);margin:1.3em 0}
+.admonition-title{font-weight:700;margin:0 0 6px}
+.admonition.warning{border-color:#d9a54a}.admonition.note{border-color:var(--acc)}.admonition.tip{border-color:#4fbf8b}.admonition.danger{border-color:#e05a5a}
+.meta{color:var(--muted);font-size:14px;margin-bottom:24px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:60px;padding-top:20px;border-top:1px solid var(--border)}
+.pager a{padding:10px 14px;border:1px solid var(--border);border-radius:8px;flex:1}
+.pager a span{display:block;color:var(--muted);font-size:12px}
+.topbar{display:none}
+button.theme{border:1px solid var(--border);background:var(--bg);color:var(--fg);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:13px}
+.hero{padding:30px 0 10px}.hero h1{font-size:3rem}.hero p.lead{font-size:1.25rem;color:var(--muted);max-width:70ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:26px 0}
+.card{border:1px solid var(--border);border-radius:12px;padding:16px;background:var(--bg2);display:block;color:var(--fg)}
+.card:hover{border-color:var(--acc);text-decoration:none}.card .n{color:var(--acc);font-weight:700;font-size:12px}.card h3{margin:.3em 0 .4em;font-size:1.05rem}.card small{color:var(--muted)}
+mark{background:var(--mark);color:inherit}
+footer{color:var(--muted);font-size:13px;margin-top:40px}
+@media(max-width:1200px){.layout{grid-template-columns:280px minmax(0,1fr)}aside.toc{display:none}}
+@media(max-width:860px){.layout{grid-template-columns:1fr}nav.side{position:fixed;left:-320px;width:300px;transition:left .2s;z-index:50}nav.side.open{left:0}.topbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg2);z-index:40}main{padding:20px 18px 80px}body{font-size:16px}}
+</style>
+<script>window.SITE_BASE="";</script>
+</head><body><div id="progress"></div>
+<div class="topbar"><button class="theme" onclick="toggleNav()">☰ Chapters</button><b>The Future of AI</b><span style="flex:1"></span><button class="theme" onclick="toggleTheme()">◐</button></div>
+<div class="layout">
+<nav class="side"><a class="brand" href="index.html">The Future of AI</a><div class="sub">Comprehensive review · built 2026-09-09</div>
+<input id="q" placeholder="Search all chapters…" autocomplete="off"><ol id="results"></ol><ol id="chlist"><li><a href="00-front-matter-and-executive-summary.html" class="">Front Matter and Executive Summary<small>Chapter 0 · 3,598 words</small></a></li><li><a href="01-history-and-why-this-moment-is-different.html" class="">A Brief History of AI, and Why This Moment Is Different<small>Chapter 1 · 5,116 words</small></a></li><li><a href="02-state-of-the-art-2026.html" class="">The State of the Art in 2026: What AI Can and Cannot Do<small>Chapter 2 · 4,484 words</small></a></li><li><a href="03-scaling-laws-compute-and-economics.html" class="">Scaling Laws, Compute, and the Economics of Training<small>Chapter 3 · 3,489 words</small></a></li><li><a href="04-hardware-and-infrastructure.html" class="">Hardware and Infrastructure: Chips, Datacenters, Energy, and the Physical Limits of AI<small>Chapter 4 · 3,533 words</small></a></li><li><a href="05-data.html" class="">Data: The Wall, the Workarounds, and the Fight Over Who Owns It<small>Chapter 5 · 3,137 words</small></a></li><li><a href="06-architectures-beyond-the-transformer.html" class="">Architectures Beyond the Transformer: What Might Replace or Extend the Current Paradigm<small>Chapter 6 · 2,622 words</small></a></li><li><a href="07-reasoning-rl-and-test-time-compute.html" class="">Reasoning, Reinforcement Learning, and Test-Time Compute: How Models Learned to Think<small>Chapter 7 · 3,268 words</small></a></li><li><a href="08-agents.html" class="">Agents: From Chatbots to Autonomous Systems<small>Chapter 8 · 3,304 words</small></a></li><li><a href="09-multimodality-and-embodiment.html" class="">Multimodality and Embodiment: Vision, Video, Voice, Robots, and Self-Driving<small>Chapter 9 · 2,664 words</small></a></li><li><a href="10-ai-for-science.html" class="">AI for Science: From Instrument to Participant<small>Chapter 10 · 2,814 words</small></a></li><li><a href="11-economics.html" class="">Economics: Productivity, Labor, Growth, and Who Captures the Gains<small>Chapter 11 · 3,442 words</small></a></li><li><a href="12-work-and-professions.html" class="">Work and Professions: A Sector-by-Sector Assessment<small>Chapter 12 · 2,792 words</small></a></li><li><a href="13-society-and-culture.html" class="">Society and Culture: Information, Relationships, Minds, and Meaning<small>Chapter 13 · 2,758 words</small></a></li><li><a href="14-geopolitics.html" class="active">Geopolitics: The US–China Race, Sovereign AI, Chips, and War<small>Chapter 14 · 3,272 words</small></a></li></ol>
+<div style="margin-top:14px"><button class="theme" onclick="toggleTheme()">◐ Toggle theme</button></div>
+<div class="sub" style="margin-top:14px"><a href="../docs/THE_FUTURE_OF_AI.md">Single Markdown file</a> · <a href="https://github.com/gorg667/ai-future">GitHub</a></div></nav>
+<main><div class="meta">Chapter 14 of 15 · 3,272 words · ~14 min read</div><h1 id="geopolitics-the-uschina-race-sovereign-ai-chips-and-war">Geopolitics: The US–China Race, Sovereign AI, Chips, and War<a class="headerlink" href="#geopolitics-the-uschina-race-sovereign-ai-chips-and-war" title="Permanent link">¶</a></h1>
+<h2 id="ai-as-a-strategic-technology">AI as a strategic technology<a class="headerlink" href="#ai-as-a-strategic-technology" title="Permanent link">¶</a></h2>
+<p>By 2026 every major government treats artificial intelligence as a determinant of national power comparable to nuclear energy in the 1950s or the internet in the 1990s—and unlike either, one whose frontier is held by private companies. The competition has several arenas: frontier capability, compute and its supply chain, energy, talent, data, standards and diffusion, and military application. This chapter treats the US–China rivalry that organizes the field, the "sovereign AI" movement among everyone else, the export-control regime and its effects, the militarization of AI, and the prospects for international coordination. The conclusion: <strong>the US leads at the frontier by months, not years; China leads in diffusion, open weights, and industrial application; the gap is narrower than either side's rhetoric suggests; and the competition is shifting from models to the physical and institutional infrastructure around them.</strong></p>
+<h2 id="the-united-states">The United States<a class="headerlink" href="#the-united-states" title="Permanent link">¶</a></h2>
+<h3 id="assets">Assets<a class="headerlink" href="#assets" title="Permanent link">¶</a></h3>
+<p>The US holds the frontier: five of the world's most capable laboratories (OpenAI, Anthropic, Google DeepMind, xAI, Meta), the dominant accelerator designer (Nvidia) and its software ecosystem, the hyperscalers whose capital expenditure exceeds most countries' defense budgets, the deepest capital markets, the largest share of top AI researchers (though a large fraction are foreign-born, and roughly half of top US AI researchers did undergraduate work abroad, many in China), and the alliance network that controls the chip supply chain (Taiwan's fabs, the Netherlands' lithography, Japan's materials, Korea's memory).</p>
+<h3 id="strategy">Strategy<a class="headerlink" href="#strategy" title="Permanent link">¶</a></h3>
+<p>US policy shifted between administrations more in tone than substance. The Biden administration's approach—the 2023 executive order on safe AI, export controls tightened in 2022, 2023, and 2024, the CHIPS Act's $52 billion in fab subsidies, the AI Safety Institute, the "AI diffusion rule" tiering countries' access to chips—emphasized safety guardrails and control of diffusion. The Trump administration from 2025 rescinded the Biden order, issued its own AI Action Plan (July 2025) emphasizing acceleration, deregulation, energy buildout, and export of the "American AI stack," rescinded the diffusion rule in favor of bilateral deals, renamed the safety institute the Center for AI Standards and Innovation, issued an executive order in December 2025 asserting federal preemption of state AI laws and creating a litigation task force to challenge them, and in March 2026 proposed a National Policy Framework seeking uniform federal standards. On China, the through-line was consistent: maintain export controls on the most advanced chips and equipment while debating, and repeatedly revising, the treatment of mid-tier chips (the H20 saga of 2025; the B30A debate of 2026).</p>
+<p>The strategic bet is that the US wins by building the most capability fastest and diffusing it through allied and neutral countries before China does—"winning the AI race." Its critics argue it neglects safety, concentrates power in a few firms, and that export controls have accelerated China's domestic industry.</p>
+<h3 id="vulnerabilities">Vulnerabilities<a class="headerlink" href="#vulnerabilities" title="Permanent link">¶</a></h3>
+<p>Dependence on Taiwan for leading-edge fabrication is the single largest vulnerability in the US position and in the entire trajectory described in this document. Power-grid constraints, permitting, and a shrinking pipeline of foreign talent (visa restrictions, an increasingly hostile climate for Chinese researchers) are secondary. The financial fragility of the investment boom (Chapter 3) is a third.</p>
+<h2 id="china">China<a class="headerlink" href="#china" title="Permanent link">¶</a></h2>
+<h3 id="assets_1">Assets<a class="headerlink" href="#assets_1" title="Permanent link">¶</a></h3>
+<p>China has the second-largest concentration of AI talent and produces more AI researchers than any country (by some measures nearly half of the world's top-tier AI researchers did undergraduate work in China); a large and fast-moving laboratory ecosystem (DeepSeek, Alibaba's Qwen, Moonshot, Zhipu, MiniMax, ByteDance Seed, Tencent, Baidu, and dozens more); the world's most complete manufacturing base and the largest deployment of industrial robots; a state that can direct capital, energy, and land at scale (China added more electricity generation in 2024–25 than the entire US grid's growth in a decade); an enormous domestic market and data; and a policy apparatus that has made AI a national priority since 2017 (the New Generation AI Development Plan; the 2025 "AI Plus" initiative to integrate AI across the economy; provincial subsidy programs; mandatory AI education).</p>
+<h3 id="strategy_1">Strategy<a class="headerlink" href="#strategy_1" title="Permanent link">¶</a></h3>
+<p>China's response to export controls has been threefold: algorithmic efficiency (DeepSeek's innovations in MoE, attention, and low-precision training extracted frontier-class performance from constrained compute), open weights (releasing models openly to build ecosystems, attract developers, set standards, and undercut Western commercial models—by 2026 Chinese models dominated open-weight usage globally), and domestic hardware (Huawei's Ascend line, SMIC's advanced-node production without EUV, CXMT's memory, and a government directive discouraging purchase of Nvidia's China-specific chips to force domestic adoption). Chinese policy emphasizes <em>application</em>—AI in manufacturing, logistics, cities, and government—over frontier chatbots, and the state has pushed adoption of domestic models (DeepSeek was integrated into government services, state enterprises, and hospitals within months of R1's release).</p>
+<p>On safety and governance, China has issued detailed regulations (Chapter 15) focused on content control, alignment with "core socialist values," labeling, and data security, and has engaged in international AI-safety dialogue (the 2024–25 US–China talks; participation in the Bletchley and Paris summits; hosting the World AI Conference and its High-Level Meeting on Global AI Governance in Shanghai in July 2025 and 2026, where it proposed a global AI cooperation organization). Chinese researchers are prominent in technical alignment work.</p>
+<h3 id="vulnerabilities_1">Vulnerabilities<a class="headerlink" href="#vulnerabilities_1" title="Permanent link">¶</a></h3>
+<p>Compute is the binding constraint: Chinese laboratories have access to perhaps a tenth of the frontier compute of their US counterparts, and domestic accelerators trail by one to two generations and are constrained by HBM and packaging. The gap at the frontier is estimated at six to eight months in capability terms; whether it widens or narrows as the compute intensity of training grows is the central question. Capital is constrained by a weaker venture market and the state's caution about private tech power. And the information-control imperative constrains what Chinese models can say, which limits their global appeal for some uses.</p>
+<h2 id="the-state-of-the-race">The state of the race<a class="headerlink" href="#the-state-of-the-race" title="Permanent link">¶</a></h2>
+<p>Reasonable assessments in 2026:</p>
+<ul>
+<li><strong>Frontier capability</strong>: US ahead by roughly six to eight months; the gap has been stable or narrowing slowly since DeepSeek-R1.</li>
+<li><strong>Open weights</strong>: China ahead; Chinese models are the default for self-hosted deployment worldwide.</li>
+<li><strong>Compute</strong>: US ahead by roughly an order of magnitude at the frontier; the gap is widening in absolute terms and China is substituting efficiency and volume of mid-tier chips.</li>
+<li><strong>Diffusion and application</strong>: China ahead in industrial robotics, manufacturing, and government adoption; the US ahead in enterprise software and consumer products.</li>
+<li><strong>Energy</strong>: China far ahead in generation buildout; the US constrained by grid and permitting.</li>
+<li><strong>Talent</strong>: roughly balanced in production; the US ahead in retention of the top tier, though the advantage is eroding.</li>
+<li><strong>Robotics</strong>: China ahead in humanoid volume and supply chain; the US ahead in frontier models for control.</li>
+<li><strong>Military application</strong>: both advancing; different doctrines (below).</li>
+</ul>
+<p>The Chatham House assessment of April 2026—that export controls on hardware alone will not prevent China from developing advanced AI—reflects a growing consensus. Controls have slowed China's frontier, raised its costs, and accelerated its indigenization; they have not produced the decisive gap their architects hoped for. The debate in Washington is between those who would tighten further (closing the H20/B30A-class loopholes, targeting subsystems and cloud access) and those who would loosen (arguing that selling mid-tier chips keeps China dependent on the US stack and funds US R&amp;D). Both cite the same evidence.</p>
+<h2 id="export-controls-in-detail">Export controls in detail<a class="headerlink" href="#export-controls-in-detail" title="Permanent link">¶</a></h2>
+<p>The regime has evolved through several rounds:</p>
+<ul>
+<li><strong>October 2022</strong>: bans on exports to China of chips above A100-class performance and of advanced fab equipment; extraterritorial application via the foreign direct product rule.</li>
+<li><strong>October 2023</strong>: closure of the H800/A800 workarounds; tightened performance thresholds; expanded country coverage.</li>
+<li><strong>December 2024</strong>: HBM controls; more equipment; entity-list additions.</li>
+<li><strong>January 2025</strong>: the "AI Diffusion Rule," creating three tiers of countries with caps on compute exports to Tier 2 (most of the world) and licensing for model weights above a threshold.</li>
+<li><strong>May 2025</strong>: rescission of the diffusion rule by the Trump administration; bilateral deals with the UAE and Saudi Arabia permitting large accelerator exports in exchange for security commitments and US-company control of facilities; guidance that use of Huawei Ascend chips anywhere may violate US controls.</li>
+<li><strong>2025–26</strong>: repeated reversals on the H20 (restricted in April 2025, then permitted with a 15% revenue share to the US government, then discouraged by Beijing); debate over a Blackwell-derived B30A for China; loosening of controls on the UAE in July 2026 to facilitate Nvidia exports and the Stargate UAE campus.</li>
+</ul>
+<p>Effects: Nvidia's China share fell from roughly 95% to a minority; Huawei's rose to 50–60%; Chinese labs trained frontier-class models on constrained compute; a smuggling economy in high-end GPUs (via Singapore, Malaysia, and others) emerged at billions of dollars in scale; Chinese firms rented compute in overseas clouds until that too was restricted; and Chinese domestic chip production ramped (Huawei targeting 600,000 Ascend 910C in 2026 and the Ascend 950 series). The controls' net effect on the US–China frontier gap is contested; their effect on China's domestic chip industry is unambiguously to accelerate it.</p>
+<h2 id="sovereign-ai-everyone-else">Sovereign AI: everyone else<a class="headerlink" href="#sovereign-ai-everyone-else" title="Permanent link">¶</a></h2>
+<p>The recognition that AI is strategic, combined with the concentration of the frontier in two countries, has produced a global movement toward "sovereign AI"—national control of compute, models, data, and talent. Few countries can afford a frontier laboratory; most are pursuing some combination of domestic compute, national or regional models, data localization, and strategic partnerships.</p>
+<p><strong>The Gulf.</strong> The UAE (G42, the Technology Innovation Institute's Falcon models, the MGX investment vehicle, Stargate UAE's planned 5 GW campus with a 1 GW first phase, and a national AI strategy with mandatory AI education) and Saudi Arabia (Humain, the PIF's AI vehicle, with multi-gigawatt datacenter plans and deals with Nvidia, AMD, and US laboratories) have become the third pole of AI infrastructure, on the strength of cheap energy, sovereign capital, and willingness to make security commitments to the US in exchange for chip access. Qatar and others follow. The Gulf's bet is to become the compute hub for the Global South and a partner to US firms; the risk is dependence on US export policy and on geopolitical stability.</p>
+<p><strong>Europe.</strong> The EU's AI Act (Chapter 15) is the world's most comprehensive regulation; its industrial position is weaker. Mistral (France) is the only frontier-adjacent laboratory; the EU's "AI gigafactories" initiative (€20 billion for several large compute centers) and the InvestAI program aim to build capacity; national efforts (France's compute investments and Gulf-funded datacenters; Germany's, the Nordics', and Spain's datacenter growth) are substantial but fragmented. Europe's structural problems—fragmented capital markets, high energy costs, regulatory caution, and talent outflow—have produced a debate (the Draghi report; the 2026 Digital Omnibus deferring AI Act obligations) about whether Europe has over-regulated an industry it does not lead. The UK, outside the EU, positions itself as a safety and research hub (the AI Security Institute; DeepMind's origins; a Sovereign AI unit) with a lighter regulatory touch.</p>
+<p><strong>India.</strong> The IndiaAI Mission funds compute (tens of thousands of GPUs), domestic models (Sarvam, Krutrim, and others), and applications; India hosted the AI Impact Summit in February 2026, the first in the Global South, emphasizing inclusion and application over frontier safety. India's strengths are talent, English-language data, a vast services sector both threatened and empowered by AI, and the world's largest digital public infrastructure (Aadhaar, UPI) as a deployment base. Its weakness is compute and capital.</p>
+<p><strong>Japan and Korea.</strong> Both have strong industrial positions in the supply chain (Japan in materials and equipment; Korea in memory), national model programs (Sakana, Preferred Networks, Rakuten in Japan; Naver, LG, SK, Upstage in Korea), and permissive copyright regimes for training. Japan's Rapidus aims at 2-nm fabrication by 2027. Both are close US allies within the export-control system.</p>
+<p><strong>Others.</strong> Singapore (a hub for Southeast Asia and, controversially, a transit point for chips to China), Israel (talent and defense AI), Canada (research heritage; Cohere), Australia, Brazil, Indonesia, Malaysia (datacenters), Kazakhstan and Central Asia (energy for compute), and many African states (data, deployment, mobile-first applications) are positioning within a system whose frontier they will not reach. The pattern: most countries will be <em>consumers</em> of frontier models, <em>deployers</em> of open-weight models (which means, increasingly, Chinese models), and <em>regulators</em> of use.</p>
+<p><strong>The Global South question.</strong> Korinek and Stiglitz and others argue AI undercuts the development path of the twentieth century—low-cost labor in manufacturing and services—because that labor is what AI substitutes for. The counterargument is that AI gives poor countries cheap access to expertise (medical, legal, educational, agricultural) they never had, and that open-weight models running on modest hardware are a leveler. Both are true; the net depends on whether the productivity gains reach the poor or accrue to the model owners. The Stanford AI Index's finding that high-income countries produce 87% of notable models and receive 91% of startup funding, while the Gulf and China court the Global South with compute and models, suggests the shape of the coming decade: a competition for influence via AI provision, reminiscent of infrastructure diplomacy.</p>
+<h2 id="military-ai">Military AI<a class="headerlink" href="#military-ai" title="Permanent link">¶</a></h2>
+<h3 id="what-has-changed">What has changed<a class="headerlink" href="#what-has-changed" title="Permanent link">¶</a></h3>
+<p>War in Ukraine (from 2022) and Gaza (from 2023) became the first conflicts in which AI-enabled systems were used at scale: drones with terminal autonomy to defeat jamming; AI target-recognition and target-generation systems (the IDF's "Lavender" and "Gospel," per reporting); AI-enabled electronic warfare and signals analysis; and the beginnings of swarming. Ukraine produced millions of drones per year by 2025 and a defense-tech ecosystem that exports its lessons. The US Department of Defense's Replicator initiative, the Pentagon's contracts with Anthropic, OpenAI, Google, and xAI (each awarded up to $200 million in 2025 for frontier AI), Palantir's and Anduril's growth, and the removal of restrictions on military use from several laboratories' policies mark the integration of frontier AI into US defense. China's PLA doctrine of "intelligentized warfare," its investment in autonomous systems, and its use of domestic models are the mirror. Russia lags in AI but leads in operational drone innovation.</p>
+<h3 id="the-autonomy-question">The autonomy question<a class="headerlink" href="#the-autonomy-question" title="Permanent link">¶</a></h3>
+<p>The central ethical and strategic question is lethal autonomy: whether machines should select and engage targets without human decision. The UN process on lethal autonomous weapons has produced no treaty after a decade; the US position (a 2023 directive requiring "appropriate levels of human judgment," not necessarily human decision) and the practice on the battlefield (terminal autonomy is routine where jamming makes remote control impossible) suggest that autonomy is being decided by military necessity rather than by policy. Beyond weapons, AI in intelligence analysis, cyber operations, logistics, and command decision support is already pervasive.</p>
+<h3 id="strategic-stability">Strategic stability<a class="headerlink" href="#strategic-stability" title="Permanent link">¶</a></h3>
+<p>AI affects nuclear stability (AI-enabled detection could undermine second-strike survivability; AI in early warning could accelerate decisions), conventional balance (mass-produced autonomous systems favor defense and cheap offense over expensive platforms), and cyber (Chapter 16: frontier models now find and exploit vulnerabilities at scale, as the Mythos Preview episode demonstrated). The US and China agreed in November 2024 that humans should retain control over nuclear-weapons decisions—the only significant bilateral AI-military agreement to date. Beyond that, there is no arms-control regime for AI, and the technical basis for one (verification of what a model can do or how it is used) does not exist.</p>
+<h2 id="international-coordination">International coordination<a class="headerlink" href="#international-coordination" title="Permanent link">¶</a></h2>
+<p>The record is thin. The AI safety summits (Bletchley Park 2023, Seoul 2024, Paris 2025, New Delhi 2026) produced declarations, a network of AI safety institutes (UK, US, Japan, Singapore, Canada, France, Korea, India, and others), the International AI Safety Report (chaired by Yoshua Bengio, with 30 countries), and voluntary frontier-lab commitments—but no binding obligations. The Paris summit's shift from "safety" to "action" and the US and UK's refusal to sign its declaration signaled the fading of the safety-first framing; New Delhi emphasized impact and inclusion. The UN established an Independent International Scientific Panel on AI and a Global Dialogue on AI Governance in 2025 (per the Global Digital Compact); the OECD, the G7's Hiroshima Process, the Council of Europe's AI Convention (the first binding international AI treaty, signed 2024, focused on human rights), and the ITU's AI for Good program continue. China proposed a World AI Cooperation Organization at WAIC 2025. None of this constitutes governance of frontier AI in the sense of constraining what the leading actors do.</p>
+<p>The reasons are structural: the two actors who matter most see AI as a competitive advantage they will not surrender; verification is technically immature; the technology moves faster than treaty processes; and the safety concerns that motivated coordination are contested. Coordination is most plausible on narrow issues (nuclear command and control; certain misuse domains like bioweapons; incident reporting; technical standards) and least plausible on the central question of frontier development.</p>
+<h2 id="scenarios-for-the-geopolitics-of-ai-to-2032">Scenarios for the geopolitics of AI to 2032<a class="headerlink" href="#scenarios-for-the-geopolitics-of-ai-to-2032" title="Permanent link">¶</a></h2>
+<p><strong>Managed competition (author's estimate ~50%).</strong> The US and China race, with the US maintaining a modest frontier lead and China leading in diffusion; export controls persist with periodic adjustment; the Gulf becomes a third infrastructure pole; Europe regulates and buys; no major conflict; narrow agreements on nuclear and bio risks; AI becomes a normal domain of great-power competition like space or cyber.</p>
+<p><strong>Decoupling and blocs (~25%).</strong> Controls tighten to a full technology embargo; China achieves domestic self-sufficiency in chips by the early 2030s; two incompatible AI ecosystems form (US-allied and China-aligned), with the Global South choosing or straddling; standards diverge; the risk of military miscalculation rises.</p>
+<p><strong>Taiwan crisis (~10–15% within the period).</strong> A blockade or conflict disrupts TSMC; the frontier stalls for years everywhere; the US and its allies race to build fabs while China, already indigenizing, may gain relatively; global economic shock; AI development becomes a war-mobilization priority.</p>
+<p><strong>Cooperation under threat (~10%).</strong> A shared shock—a major AI-enabled attack, a demonstrated loss-of-control incident, an AI-enabled pandemic—produces genuine coordination on frontier development, compute governance, and verification, along the lines proposed by safety advocates. Historically, this is how arms control has happened: after the crisis, not before.</p>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>US</th>
+<th>China</th>
+<th>Others</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frontier models</td>
+<td>Lead (~6–8 months)</td>
+<td>Close second; open-weight leader</td>
+<td>Mistral (EU); Gulf and Japan/Korea national models</td>
+</tr>
+<tr>
+<td>Compute</td>
+<td>~10× China at frontier; power-constrained</td>
+<td>Constrained by controls; indigenizing</td>
+<td>Gulf building at scale; EU gigafactories; India modest</td>
+</tr>
+<tr>
+<td>Chip supply chain</td>
+<td>Controls design, EDA; depends on Taiwan</td>
+<td>SMIC 7nm/5nm-class without EUV; HBM lagging</td>
+<td>Taiwan (fabs), Netherlands (EUV), Korea (memory), Japan (materials)</td>
+</tr>
+<tr>
+<td>Diffusion</td>
+<td>Enterprise and consumer software</td>
+<td>Industry, robotics, government</td>
+<td>Varies; Chinese open models dominate self-hosting</td>
+</tr>
+<tr>
+<td>Energy</td>
+<td>Grid-constrained</td>
+<td>Rapid buildout</td>
+<td>Gulf cheap gas; Nordics hydro</td>
+</tr>
+<tr>
+<td>Military</td>
+<td>Frontier-lab integration; Replicator</td>
+<td>Intelligentized warfare doctrine</td>
+<td>Ukraine as innovation lab; Israel</td>
+</tr>
+<tr>
+<td>Governance posture</td>
+<td>Deregulatory, preemptive, acceleration</td>
+<td>Content control + strategic priority</td>
+<td>EU comprehensive regulation; UK safety hub</td>
+</tr>
+<tr>
+<td>International</td>
+<td>Bilateral deals; summit skepticism</td>
+<td>Proposes new institutions</td>
+<td>Summits, UN panel, Council of Europe treaty</td>
+</tr>
+</tbody>
+</table>
+<p>The geopolitical story is that AI has become a standard domain of great-power competition, faster than the institutions for managing such competition could form. The decisive variables for the next decade are Taiwan, the trajectory of Chinese chip indigenization, the durability of US alliance-based chip controls, and whether any shock is severe enough to make the leading powers prefer coordination to racing.</p><div class="pager"><a href="13-society-and-culture.html"><span>← Previous</span>Society and Culture: Information, Relationships, Minds, and Meaning</a><a href="index.html" style="text-align:right"><span>→</span>Home</a></div><footer>Built 2026-09-09. Text is provided as an analytical review; forecasts are uncertain by nature. </footer></main>
+<aside class="toc"><div class="sub" style="font-size:12px;color:var(--muted);margin-bottom:8px">On this page</div><div class="toc">
+<ul>
+<li><a href="#ai-as-a-strategic-technology">AI as a strategic technology</a></li>
+<li><a href="#the-united-states">The United States</a><ul>
+<li><a href="#assets">Assets</a></li>
+<li><a href="#strategy">Strategy</a></li>
+<li><a href="#vulnerabilities">Vulnerabilities</a></li>
+</ul>
+</li>
+<li><a href="#china">China</a><ul>
+<li><a href="#assets_1">Assets</a></li>
+<li><a href="#strategy_1">Strategy</a></li>
+<li><a href="#vulnerabilities_1">Vulnerabilities</a></li>
+</ul>
+</li>
+<li><a href="#the-state-of-the-race">The state of the race</a></li>
+<li><a href="#export-controls-in-detail">Export controls in detail</a></li>
+<li><a href="#sovereign-ai-everyone-else">Sovereign AI: everyone else</a></li>
+<li><a href="#military-ai">Military AI</a><ul>
+<li><a href="#what-has-changed">What has changed</a></li>
+<li><a href="#the-autonomy-question">The autonomy question</a></li>
+<li><a href="#strategic-stability">Strategic stability</a></li>
+</ul>
+</li>
+<li><a href="#international-coordination">International coordination</a></li>
+<li><a href="#scenarios-for-the-geopolitics-of-ai-to-2032">Scenarios for the geopolitics of AI to 2032</a></li>
+<li><a href="#summary">Summary</a></li>
+</ul>
+</div>
+</aside>
+</div><script>
+(function(){
+  const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);
+  window.toggleTheme=function(){const cur=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',cur);localStorage.setItem('theme',cur);};
+  window.toggleNav=function(){document.querySelector('nav.side').classList.toggle('open');};
+  window.addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';});
+  // sidebar filter + full-text search over search index
+  const inp=document.getElementById('q');const list=document.getElementById('chlist');const res=document.getElementById('results');
+  let idx=null;
+  async function loadIdx(){if(idx)return idx;try{const r=await fetch(window.SITE_BASE+'search.json');idx=await r.json();}catch(e){idx=[];}return idx;}
+  if(inp){inp.addEventListener('input',async()=>{const q=inp.value.trim().toLowerCase();
+    [...list.querySelectorAll('li')].forEach(li=>{li.style.display=(!q||li.textContent.toLowerCase().includes(q))?'':'none';});
+    if(q.length<3){res.innerHTML='';return;}
+    const ix=await loadIdx();const out=[];
+    for(const d of ix){const i=d.text.toLowerCase().indexOf(q);if(i>=0){const s=Math.max(0,i-60);out.push({d,snip:d.text.slice(s,i+90)});if(out.length>=25)break;}}
+    res.innerHTML=out.map(o=>`<li><a href="${window.SITE_BASE}${o.d.url}"><b>${o.d.title}</b><small>…${o.snip.replace(/</g,'&lt;')}…</small></a></li>`).join('')||'<li><small>No matches</small></li>';
+  });}
+  // active TOC highlight
+  const heads=[...document.querySelectorAll('main h2, main h3')];const links=[...document.querySelectorAll('aside.toc a')];
+  if(heads.length&&links.length){const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.style.color='');const l=links.find(l=>l.getAttribute('href')==='#'+e.target.id);if(l)l.style.color='var(--acc)';}})},{rootMargin:'0px 0px -75% 0px'});heads.forEach(h=>obs.observe(h));}
+})();
+</script></body></html>
