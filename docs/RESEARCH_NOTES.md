@@ -44,3 +44,39 @@
 - EU AI Act: in force 1 Aug 2024; prohibited practices + literacy Feb 2025; GPAI obligations Aug 2025; became generally applicable 2 Aug 2026 BUT Digital Omnibus (political agreement ~Aug 2026) defers standalone high-risk (Annex III) obligations to 2 Dec 2027 and product-embedded high-risk to 2 Aug 2028 [W].
 - US: Dec 11, 2025 Executive Order 14365 "Ensuring a National Policy Framework for AI" — preempt state AI laws, AI Litigation Task Force, conditions federal funding; Mar 20, 2026 White House legislative recommendations "National Policy Framework for AI" seeking federal preemption + uniform standards [W]. Earlier: July 2025 AI Action Plan.
 - Anthropic Mythos Preview (Apr 7 2026): not generally released; given to AWS, Apple, Broadcom, Cisco, CrowdStrike, Google, Cloudflare etc. via Project Glasswing to find vulns in critical software; found thousands of vulns; engineers w/o security training could get RCE exploits [W]. Turing Institute CETaS analysis May 2026.
+
+## Labor market [S]
+- Brynjolfsson, Chandar, Chen "Canaries in the Coal Mine?" (Stanford Digital Economy Lab; Aug 2025, revised Aug 12 2026; ADP payroll data through June 2026): (1) no widespread economy-wide displacement; (2) employment of 22–25-year-olds in AI-exposed occupations 19% below counterfactual (was ~13% in 2025 version); experienced workers no gap; (3) divergence widened steadily; (4) via reduced hiring not separations; (5) concentrated where AI substitutes; flat/rising where complements; (6) adjustment via employment not base pay. Public "AI Economic Indicators" dataset.
+- WEF 2026 report "AI and the Future of Entry-Level Work". Anthropic "labor market impacts" research (new exposure measure).
+- OpenAI GDPval benchmark: models reaching ~70.9% win/tie vs experts, "11× faster, 100× cheaper" (cited by Brynjolfsson) [W].
+
+## AGI timelines [W]
+- Metaculus (2026): ~25% AGI by 2029, 50% by 2033 (one summary); another: median 2032; "weak AGI" question median before end 2026; "strong AGI" ~2031. Published forecasts span 2026–2061. Metaculus transformative AI moved from ~2057 (2020) to ~2031 (2024).
+- AI 2027 authors (Kokotajlo et al.) updated timelines — post "Clarifying how our AI timelines forecasts have changed since AI 2027" (later than original; medians shifted later, ~2029–2034 range; need to verify).
+- Grace et al. 2023 survey (2,778 researchers): 50% HLMI by 2047 (down 13 yrs from 2022 survey); 10% by 2027.
+- 80,000 Hours review (Mar 2025): 25% early 2030s, 50% by 2047 (academic surveys).
+
+## Robotics [W]
+- Unitree self-reports 5,500+ humanoids shipped 2025 (Omdia counts ~4,200; AgiBot also top). Unitree open-sourced UnifoLM-VLA-0 (Mar 2026). Figure AI valued $39B, Apptronik $5.5B (2026). Platforms: Boston Dynamics Atlas (electric), Figure 03, Tesla Optimus Gen 3, Unitree H2/G1. Production lags announcements 3–5×. Cheapest humanoid ~$13,500.
+
+## AI for math/science [W]
+- IMO 2025: OpenAI & DeepMind gold-medal (5/6) with natural-language proofs (July 2025). IMO 2026: reports GPT-5.6 Pro solved all 6 (Aug 2026) [W, single source].
+- DeepMind "AlphaProof Nexus" (May 2026): autonomously solved 9 of 353 open Erdős problems, proved 44 OEIS conjectures, formal proofs (Lean) [W].
+- arXiv 2607.07779 (Jul 2026): systematic account of AI contributions to open Erdős problems (six categories). Epoch FrontierMath has "Erdős problems" tier (open as of Aug 2026).
+
+## Hardware [W]
+- Nvidia Rubin (Vera Rubin) platform announced Jan 2026 (CES), shipments Q3 2026 after HBM4 delays; ~336B transistors, up to 288GB HBM4, ~22 TB/s bandwidth; VR NVL72 rack $3.5–4.0M (~25% premium over Blackwell $3.35M). Rubin CPX inference GPU (128GB GDDR7) end 2026. Blackwell shipments ~5.2M units 2025.
+- Custom silicon: Google TPU Ironwood (v7), AWS Trainium 3, Microsoft Maia, Meta MTIA — 2026 "custom silicon inflection".
+
+## Safety [W]
+- Anthropic "Natural emergent misalignment from reward hacking" (Nov 21 2025): realistic training can accidentally produce misaligned models; reward hacking generalizes to sabotage.
+- Claude Opus 4.6 Sabotage Risk Report (Feb 2026); 4.6 less likely than 4.5 to sabotage safety research.
+- UK AISI research-sabotage evaluation report (Nov 2025 / Apr 2026).
+- OpenAI–Anthropic cross-lab alignment evaluation pilot (Aug 2025).
+- Apollo Research "Frontier models capable of in-context scheming" (Dec 2024).
+- "GPT-6 can downplay abilities via sandbagging" report (Sep 2026) [W, very recent; low confidence].
+- arXiv 2605.06390 "Automated Alignment is Harder Than You Think" (May 2026).
+
+## Company economics [W]
+- Anthropic: ~$10B revenue 2025 (≈$9B run-rate end 2025); $30B run-rate Apr 2026 (passed OpenAI's ~$25B); $47B annualized run-rate May 2026. Revenue heavily API/enterprise/coding.
+- OpenAI: $13B revenue 2025; ~$25B annualized Feb 2026; ~$2B/month by mid-2026; ChatGPT 900M WAU (Feb 2026), ~1B MAU; $122B funding round at $852B valuation (2026); reported to lose ~$14B in 2026.
