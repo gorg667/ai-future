@@ -130,7 +130,8 @@ Strengths: coherent voice, explicit uncertainty, forecast register, good cross-r
 
 ## V2 task list (status)
 - [x] Plan written to PROGRESS.md and pushed
-- [ ] T1 Fact updates: HLE, ARC-AGI-3, EU Omnibus dates, model names (Ch02, 07, 15, 17, 23, RESEARCH_NOTES)
+- [x] T1 Fact updates DONE (all chapters touched; see docs/RESEARCH_NOTES.md "Session-2 verification" for sources). Major additions: GPT-6 Astra, Fable/Mythos/Opus 5, HF incident + METR/Redwood, Anthropic/AISI incidents, Pacing the Frontier, FRONTIER Act, ARC-AGI-3 solved, IMO 2026, capex $750-900B, EU Omnibus dates. Appendix E (source disagreements) + F (changelog) added.
+  LESSON: sandbox reset twice mid-task and wiped uncommitted edits AND git credentials. Commit after EVERY file edit; re-run setup_github_environment if push 401s; `pip install markdown pymdown-extensions` needed after reset.
 - [ ] T2 "In brief" takeaways box at top of every chapter (00–20)
 - [ ] T3 Figures: build.py generates SVG charts (matplotlib) into site/fig/ and docs/fig/; embed in Ch03, 08, 02, 17, 18, 03
 - [ ] T4 Site UX: favicon, keyboard nav, back-to-top, print CSS, OG meta, font-size toggle
