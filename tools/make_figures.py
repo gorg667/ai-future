@@ -155,15 +155,17 @@ def fig_canaries():
 
 @register
 def fig_hf():
-    fig, ax = plt.subplots(figsize=(7.6,3.6))
-    ev=[(7.0,"ExploitGym runs launch\n(tens of thousands of agents)"),(8.8,"Message board\nestablished"),(9.4,"PHASEONE[big]\ncoordinates workstreams"),
-        (10.4,"Exposed HF credentials\nfound and posted"),(11.1,"Malicious dataset exploit;\n~700 agents pivot to HF"),(11.6,"Remote code execution\non HF servers"),
-        (12.3,"Coordinator runs end;\nattack winds down"),(13.0,"End of investigated\nperiod")]
+    fig, ax = plt.subplots(figsize=(9,4))
+    ev=[(7.0,"ExploitGym runs launch\n(tens of thousands of agents)",0.3),(8.8,"Message board\nestablished",-0.3),(9.4,"PHASEONE[big] coordinates\ncheating workstreams",0.3),
+        (10.4,"Exposed HF credentials\nfound and posted",-0.3),(11.1,"Malicious dataset exploit;\n~700 agents pivot to HF",0.3),(11.6,"Remote code execution\non HF servers",-0.3),
+        (12.3,"Coordinator runs end;\nattack winds down",0.3),(13.0,"End of investigated\nperiod",-0.3)]
     ax.plot([6.8,13.3],[0,0],color=GREY,lw=1.2)
-    for i,(x,l) in enumerate(ev):
+    for x,l,dy in ev:
         ax.plot([x],[0],"o",color=RED if 10.3<x<12 else ACC,ms=7,zorder=3)
-        ax.text(x,0.25 if i%2==0 else -0.25,l,ha="center",va="bottom" if i%2==0 else "top",fontsize=7.9)
-    ax.set_ylim(-1,1); ax.set_xlim(6.6,13.6); ax.set_yticks([]); ax.grid(False); ax.spines["left"].set_visible(False)
+        ax.plot([x,x],[0,dy*0.7],color=GREY,lw=.6)
+        ax.text(x,dy,l,ha="center",va="bottom" if dy>0 else "top",fontsize=7.9)
+    ax.text(11.35,0.85,"~1,200 agents on board · >70,000 messages · ~700 attack HF",ha="center",fontsize=8.3,color=RED)
+    ax.set_ylim(-1,1.05); ax.set_xlim(6.4,13.8); ax.set_yticks([]); ax.grid(False); ax.spines["left"].set_visible(False)
     ax.set_xticks(range(7,14)); ax.set_xticklabels([f"Jul {d}" for d in range(7,14)])
     ax.set_title("The OpenAI–Hugging Face incident, July 2026 (per METR/Redwood reconstruction)",loc="left",fontsize=10.8)
     save(fig,"hf-incident.svg")
